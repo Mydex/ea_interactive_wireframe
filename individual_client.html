@@ -10,236 +10,238 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a href="https://tashaford.github.io/ea_interactive_wireframe/home_loggedin.html">
-            <img class="rounded" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="50">
-        </a>        
-        <div class="collapse navbar-collapse" id="nav-content">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/home_loggedin.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/send_link.html" class="nav-link">Send Link</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/client_list.html" class="nav-link">Client List</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/reports.html" class="nav-link">Reports</a></li>
-                <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/notifications.html" class="nav-link">Notifications <span class="badge badge-danger">4</span></a></li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
-          </form class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <ul class="navbar-nav my-2 my-lg-0">
-              <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/index.html" class="nav-link">Logout</a></li>
-          </ul>
-      </div>
-  </nav>
-
-
-  <div class="container mt-4 mb-2">
-    <h3>Client Name Here</h3>
-</div>
-
-<main>
     <div class="container">
-        <h4 class="mb-2">Client information</h4>
-        <div class="row justify-content-center align-items-center">
-            <div class="container col-xs-12 col-sm-8 col-md-8">
-                <ul id="information-nav" class="nav nav-tabs" role="tablist">
-                    <li class="nav-item"><a class="nav-link active" href="#personal" role="tab" id="personal-tab" data-toggle="tab" aria-controls="personal" >Personal</a></li>
-                    <!-- family -->
-                    <li class="nav-item"><a class="nav-link" href="#family" role="tab" id="family-tab" data-toggle="tab" aria-controls="family" >Family</a></li>
-                    <!-- property -->
-                    <li class="nav-item"><a class="nav-link " href="#property" role="tab" id="property-tab" data-toggle="tab" aria-controls="property">Property</a></li>
-                    <!-- fuel -->
-                    <li class="nav-item"><a class="nav-link " href="#fuel" role="tab" id="fuel-tab" data-toggle="tab" aria-controls="fuel">Fuel</a></li>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="https://tashaford.github.io/ea_interactive_wireframe/home_loggedin.html">
+                <img class="rounded" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="50">
+            </a>        
+            <div class="collapse navbar-collapse" id="nav-content">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/home_loggedin.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/send_link.html" class="nav-link">Send Link</a></li>
+                    <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/client_list.html" class="nav-link">Client List</a></li>
+                    <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/reports.html" class="nav-link">Reports</a></li>
+                    <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/notifications.html" class="nav-link">Notifications <span class="badge badge-danger">4</span></a></li>
                 </ul>
-                <!-- table content -->
-                <div id="information-nav-content" class="tab-content">
-                    <!-- personal informaiton table -->
-                    <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
-                        <table class="table table-striped table-sm">
-                            <tbody>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">First Name</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">Citizen</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Surame</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">Twenty</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">DOB</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">01/01/01</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Address</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">12 Fake Street<br>
-                                        FakeTown<br>
-                                    FA12 3KE</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- family information table-->
-                    <div role="tadpanel" class="tab-pane fade" id="family" aria-labelledby="family-tab">
-                        <table class="table table-striped table-sm">
-                            <tbody>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">No of adults at property</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">2</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Total no of children</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">3</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Children under 5</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">1</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- property information table -->
-                    <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
-                        <table class="table table-striped table-sm">
-                            <tbody>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Property Type</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">House</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Home type</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">Mid terrace</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">No of bedrooms</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">Three</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- fuel information table -->
-                    <div role="tadpanel" class="tab-pane fade" id="fuel" aria-labelledby="fuel-tab">
-                        <table class="table table-striped table-sm">
-                            <tbody>
-                                <tr class="table-primary" >
-                                    <th colspan="2">Electrcity</th>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4">00000000000</td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr class="table-primary">
-                                    <th colspan="2">Gas</th>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                                <tr>
-                                    <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
-                                    <td class="col-xs-12 col-sm-6 col-md-4"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <div class="container">
-            <h4>Home Visit Form</h4>
-            <p>Brief information</p>
-            <a href="#" class="btn btn-info btn-sm">Form</a>
-        </div>
-        <br>
-        <div class="container">
-            <h4>Client Action Plan</h4>
-            <div class="d-flex flex-row flex-wrap">
-                <div class="p-2 col-md-4 col-lg-3">
-                    <div class="card">
-                        <h5 class="card-header">Warm Home Discount</h5>
-                        <div class="card-body">
-                            <p>Brief information</p>
-                            <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                            <a href="https://tashaford.github.io/ea_interactive_wireframe/whd.html" class="btn btn-info btn-sm">Application</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-2 col-md-4 col-lg-3">
-                    <div class="card">
-                        <h5 class="card-header">Trust Fund</h5>
-                        <div class="card-body">
-                            <p>Brief information</p>
-                            <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                            <a href="#" class="btn btn-info btn-sm">Application</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-2 col-md-4 col-lg-3">
-                    <div class="card">
-                        <h5 class="card-header">Complaints</h5>
-                        <div class="card-body">
-                            <p>Brief information</p>
-                            <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                            <a href="#" class="btn btn-info btn-sm">List</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-2 col-md-4 col-lg-3">
-                    <div class="card">
-                        <h5 class="card-header">Change Supplier</h5>
-                        <div class="card-body">
-                            <p>Brief information</p>
-                            <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                            <a href="#" class="btn btn-info btn-sm">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container mt-2 mb-2">
-                <p>Edit your information below</p>
-                <a href="https://tashaford.github.io/citizen_interactive_wireframe/edit_info.html" class="btn btn-primary">Edit</a>
-            </div>
-        </div>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+              </form class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <ul class="navbar-nav my-2 my-lg-0">
+                  <li class="nav-item"><a href="https://tashaford.github.io/ea_interactive_wireframe/index.html" class="nav-link">Logout</a></li>
+              </ul>
+          </div>
+      </nav>
+
+
+      <div class="container mt-4 mb-2">
+        <h3>Client Name Here</h3>
     </div>
-</main>
-<br><br>
-<footer>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">  
-        <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-        <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-    </nav>
-</footer>
+
+    <main>
+        <div class="container">
+            <h4 class="mb-2">Client information</h4>
+            <div class="row justify-content-center align-items-center">
+                <div class="container col-xs-12 col-sm-8 col-md-8">
+                    <ul id="information-nav" class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" href="#personal" role="tab" id="personal-tab" data-toggle="tab" aria-controls="personal" >Personal</a></li>
+                        <!-- family -->
+                        <li class="nav-item"><a class="nav-link" href="#family" role="tab" id="family-tab" data-toggle="tab" aria-controls="family" >Family</a></li>
+                        <!-- property -->
+                        <li class="nav-item"><a class="nav-link " href="#property" role="tab" id="property-tab" data-toggle="tab" aria-controls="property">Property</a></li>
+                        <!-- fuel -->
+                        <li class="nav-item"><a class="nav-link " href="#fuel" role="tab" id="fuel-tab" data-toggle="tab" aria-controls="fuel">Fuel</a></li>
+                    </ul>
+                    <!-- table content -->
+                    <div id="information-nav-content" class="tab-content">
+                        <!-- personal informaiton table -->
+                        <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
+                            <table class="table table-striped table-sm">
+                                <tbody>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">First Name</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">Citizen</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Surame</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">Twenty</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">DOB</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">01/01/01</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Address</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">12 Fake Street<br>
+                                            FakeTown<br>
+                                        FA12 3KE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- family information table-->
+                        <div role="tadpanel" class="tab-pane fade" id="family" aria-labelledby="family-tab">
+                            <table class="table table-striped table-sm">
+                                <tbody>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">No of adults at property</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">2</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Total no of children</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">3</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Children under 5</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- property information table -->
+                        <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
+                            <table class="table table-striped table-sm">
+                                <tbody>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Property Type</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">House</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Home type</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">Mid terrace</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">No of bedrooms</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">Three</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- fuel information table -->
+                        <div role="tadpanel" class="tab-pane fade" id="fuel" aria-labelledby="fuel-tab">
+                            <table class="table table-striped table-sm">
+                                <tbody>
+                                    <tr class="table-primary" >
+                                        <th colspan="2">Electrcity</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4">00000000000</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <th colspan="2">Gas</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Meter point number</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Supplier</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Account Reference</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Tariff</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-xs-12 col-sm-6 col-md-4">Meter Serial Number</th>
+                                        <td class="col-xs-12 col-sm-6 col-md-4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="container">
+                <h4>Home Visit Form</h4>
+                <p>Brief information</p>
+                <a href="#" class="btn btn-info btn-sm">Form</a>
+            </div>
+            <br>
+            <div class="container">
+                <h4>Client Action Plan</h4>
+                <div class="d-flex flex-row flex-wrap">
+                    <div class="p-2 col-md-4 col-lg-3">
+                        <div class="card">
+                            <h5 class="card-header">Warm Home Discount</h5>
+                            <div class="card-body">
+                                <p>Brief information</p>
+                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+                                <a href="https://tashaford.github.io/ea_interactive_wireframe/whd.html" class="btn btn-info btn-sm">Application</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 col-md-4 col-lg-3">
+                        <div class="card">
+                            <h5 class="card-header">Trust Fund</h5>
+                            <div class="card-body">
+                                <p>Brief information</p>
+                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+                                <a href="#" class="btn btn-info btn-sm">Application</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 col-md-4 col-lg-3">
+                        <div class="card">
+                            <h5 class="card-header">Complaints</h5>
+                            <div class="card-body">
+                                <p>Brief information</p>
+                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+                                <a href="#" class="btn btn-info btn-sm">List</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 col-md-4 col-lg-3">
+                        <div class="card">
+                            <h5 class="card-header">Change Supplier</h5>
+                            <div class="card-body">
+                                <p>Brief information</p>
+                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+                                <a href="#" class="btn btn-info btn-sm">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-2 mb-2">
+                    <p>Edit your information below</p>
+                    <a href="https://tashaford.github.io/citizen_interactive_wireframe/edit_info.html" class="btn btn-primary">Edit</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <br><br>
+    <footer>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">  
+            <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+            <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+        </nav>
+    </footer>
 </div>
 </body>
 
