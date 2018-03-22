@@ -180,65 +180,111 @@
                     <a href="https://tashaford.github.io/citizen_interactive_wireframe/edit_info.html" class="btn btn-primary">Edit</a>
                 </div>
             </div>
-            <div class="container mt-3">
+            <div class="container mt-4">
                 <h4>Home Visit Form</h4>
                 <p>Brief information</p>
-                <a href="#" class="btn btn-info btn-sm">Form</a>
+                <a href="#" class="btn btn-outline-info btn-sm">Form</a>
             </div>
-            <div class="container mt-3">
+            <div class="container mt-4">
                 <h4>Client Action Plan</h4>
-                <div class="d-flex flex-row flex-wrap">
-                    <div class="p-2 col-md-5 col-lg-4">
+                <div class="accordion">
+                    <div class="container col-lg-6 col-md-12 col-sm-12">
+                        <h5>Applications</h5>
                         <div class="card">
-                            <h6 class="card-header">Warm Home Discount</h6>
-                            <div class="card-body">
-                                <p>Brief information</p>
-                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                                <a href="https://tashaford.github.io/ea_interactive_wireframe/whd.html" class="btn btn-info btn-sm">Application</a>
+                            <div class="card-header bg-light" id=headingWdh>
+                                <div class="card-body">
+                                    <h5 class="mb-0">
+                                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseWhd" aria-expanded="false" aria-controls="collapseWhd">
+                                        Warm Home Discount
+                                    </button>
+                                </h5>
                             </div>
-                        </div>
-                    </div>
-                    <div class="p-2 col-md-5 col-lg-4">
-                        <div class="card">
-                            <h6 class="card-header">Trust Fund</h6>
-                            <div class="card-body">
-                                <p>Brief information</p>
-                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                                <a href="#" class="btn btn-info btn-sm">Application</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-2 col-md-5 col-lg-4">
-                        <div class="card">
-                            <h6 class="card-header">Complaints</h6>
-                            <div class="card-body">
-                                <p>Brief information</p>
-                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                                <a href="#" class="btn btn-info btn-sm">List</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-2 col-md-5 col-lg-4">
-                        <div class="card">
-                            <h6 class="card-header">Change Supplier</h6>
-                            <div class="card-body">
-                                <p>Brief information</p>
-                                <p> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-                                <a href="#" class="btn btn-info btn-sm">Link</a>
-                            </div>
-                        </div>
+                            <div id="collapseWhd" class="collapse" aria-labelledby="headingWdh" data-parent="#accordion">
+                                <div class="card-body">
+                                  <p>Brief information</p>
+                                  <div class="row">
+                                    <p class="col-lg-8 col-md-6 col-sm-6"> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                      <a href="https://tashaford.github.io/ea_interactive_wireframe/whd.html" class="btn btn-outline-info btn-sm">Application</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header bg-light" id=headingTrust>
+                      <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTrust" aria-expanded="false" aria-controls="collapseTrust">
+                          Trust Fund
+                      </button>
+                  </h5>
+              </div>
+              <div id="collapseTrust" class="collapse" aria-labelledby="headingTrust" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>Brief information</p>
+                    <div class="row">
+                      <p class="col-lg-8 col-md-6 col-sm-6"> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+                      <div class="col-lg-4 col-md-6 col-sm-6">
+                        <a href="#" class="btn btn-outline-info btn-sm">Application</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</div>
+<div class="container col-lg-6 col-md-12 col-sm-12">
+    <h5>Forms</h5>
+    <div class="card">
+      <div class="card-header" id=headingComplaint>
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseComplaint" aria-expanded="false" aria-controls="collapseComplaint">
+            Complaints
+        </button>
+    </h5>
+</div>
+<div id="collapseComplaint" class="collapse" aria-labelledby="headingComplaint" data-parent="#accordion">
+    <div class="card-body">
+      <p>Brief information</p>
+      <div class="row">
+        <p class="col-lg-8 col-md-6 col-sm-6"> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <a href="#" class="btn btn-outline-info btn-sm">List</a>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="card">
+  <div class="card-header" id=headingComplaint>
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseChange" aria-expanded="false" aria-controls="collapseChange">
+        Change Supplier
+    </button>
+</h5>
+</div>
+<div id="collapseChange" class="collapse" aria-labelledby="headingChange" data-parent="#accordion">
+    <div class="card-body">
+      <p>Brief information</p>
+      <div class="row">
+        <p class="col-lg-8 col-md-6 col-sm-6"> In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <a href="#" class="btn btn-outline-info btn-sm">Link</a>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
 
-    <footer class="mt-5">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">  
-            <img class="rounded mx-auto mb-2" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-            <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-        </nav>
-    </footer>
+<footer class="mt-5">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">  
+        <img class="rounded mx-auto mb-2" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+        <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+</footer>
 </div>
 </body>
 
