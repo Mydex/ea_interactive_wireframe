@@ -182,6 +182,13 @@
                   </div>   
                 </div>
               </nav>
+              <script>
+                $(document).ready(function () {
+                  $("button").click(function(){
+                    $("a").removeClass("active");
+                  });
+                });
+              </script>
               <!-- page 1 -->
               <li class="nav-item"><a class="nav-link active" href="#pageone" role="tab" id="pageone-tab" data-toggle="tab" aria-controls="pageone" >Personal & household</a></li>
               <!-- page 2 -->
