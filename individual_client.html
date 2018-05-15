@@ -67,8 +67,8 @@
               <div class="modal-dialog" role="document" style="margin-top: 35%;">
                 <div class="modal-content">
                   <div class="modal-header">
+                    <h5>All past home visits</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <h5>All past home visits</h5>
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -79,21 +79,36 @@
                          <tr>
                             <th>Date</th>
                             <th>Time</th>
+                            <th>Outcome</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                           <td>01/01/2018</td>
                           <td>09:00</td>
-                      </tr>
-                      <tr>
-                        <td>02/02/2018</td>
-                        <td>15:00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                          <td>
+                              <form action="#">
+                                <select name="propType">
+                                  <option value="default">Assign</option>
+                                  <option value="prop1">House</option>
+                                  <option value="prop2">Flat</option>
+                                  <option value="prop3">Bungalow</option>
+                                  <option value="prop4">Maisonette</option>
+                              </select>
+                          </form>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>02/02/2018</td>
+                    <td>15:00</td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 </div>
 </div>
 </div>
