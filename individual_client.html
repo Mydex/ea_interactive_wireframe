@@ -56,8 +56,51 @@
         <div class="col-md-4 col-lg-4">
             <h5 class=" mt-2 mb-2">Next Home Visit</h5>
             <div>
-                Date: <br>
-                Time:
+                Date: 03/03/2018<br>
+                Time: 09:00
+            </div>
+            <h5 class=" mt-2 mb-2">Past Home Visits</h5>
+            <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+              Past Visits
+            </button>
+            <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+              <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="mt-2">Invite new citizen to service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="/#">
+                      <div class="form-group row">
+                        <div for="forename" class="col-12 mb-1">Forename</div>
+                        <div class="col-12 mb-1">
+                          <input type="text" class="form-control" id="forename" name="forename">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div for="surname" class="col-12 mb-1">Surname</div>
+                        <div class="col-12 mb-1">
+                          <input type="text" class="form-control" id="surname" name="surname">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-12 mb-1">
+                          <select name="assignadvocate">
+                            <option value="default">Contact method</option>
+                            <option value="ea1">Mobile</option>
+                            <option value="ea2">Email</option>
+                          </select>
+                          <input type="text" class="form-control" id="mobile" name="mobile">
+                        </div>
+                      </div>
+                    </form>
+                    <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
         <div class="col-md-4 col-lg-4">
