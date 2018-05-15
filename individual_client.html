@@ -62,229 +62,204 @@
             <h5 class=" mt-2 mb-2">Past Home Visits</h5>
             <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
               Past Visits
-            </button>
-            <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+          </button>
+          <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
               <div class="modal-dialog" role="document" style="margin-top: 35%;">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="mt-2">Invite new citizen to service</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="/#">
-                      <div class="form-group row">
-                        <div for="forename" class="col-12 mb-1">Forename</div>
-                        <div class="col-12 mb-1">
-                          <input type="text" class="form-control" id="forename" name="forename">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div for="surname" class="col-12 mb-1">Surname</div>
-                        <div class="col-12 mb-1">
-                          <input type="text" class="form-control" id="surname" name="surname">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-12 mb-1">
-                          <select name="assignadvocate">
-                            <option value="default">Contact method</option>
-                            <option value="ea1">Mobile</option>
-                            <option value="ea2">Email</option>
-                          </select>
-                          <input type="text" class="form-control" id="mobile" name="mobile">
-                        </div>
-                      </div>
-                    </form>
-                    <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
-                  </div>
-                </div>
+                  </button>
               </div>
+              <div class="modal-body">
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-lg-4">
+    <h5 class=" mt-2 mb-2">View all messages</h5>
+    <!-- modal required -->
+    <h5 class=" mt-2 mb-2">Send a message to Client Name</h5>
+    <form action="/#">
+        <textarea class="form-control form-control-sm" id="textarea1" rows="3"></textarea>
+    </form>
+    <a href="#" class="btn btn-sm btn-outline-primary mt-0 mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
+</div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-7 col-lg-7">
+        <h4 class="mb-2">Client information</h4>
+        <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+          <div class="dropdown">
+            <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More info</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" id="service-tab" href="#service" role="tab" data-toggle="tab" aria-controls="service">Service Information</a>
+                <a class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
+                <a class="dropdown-item" id="property-tab" href="#property" role="tab" data-toggle="tab" aria-controls="property">Property</a>
+                <a class="dropdown-item" id="heating-tab" href="#heating" role="tab" data-toggle="tab" aria-controls="heating">Heating</a>
+                <a class="dropdown-item" id="energy-tab" href="#energy" role="tab" data-toggle="tab" aria-controls="energy">Energy</a>
+                <a class="dropdown-item" id="safety-tab" href="#safety" role="tab" data-toggle="tab" aria-controls="safety">Safety</a>
+                <a class="dropdown-item" id="household-tab" href="#household" role="tab" data-toggle="tab" aria-controls="household">Household</a>
+                <a class="dropdown-item" id="electricity-tab" href="#electricity" role="tab" data-toggle="tab" aria-controls="electricity">Electricity</a>
+                <a class="dropdown-item" id="gas-tab" href="#gas" role="tab" data-toggle="tab" aria-controls="gas">Gas</a>
+                <a class="dropdown-item" id="oil-tab" href="#oil" role="tab" data-toggle="tab" aria-controls="oil">Oil</a>
+                <a class="dropdown-item" id="notes-tab" href="#notes" role="tab" data-toggle="tab" aria-controls="notes">Notes</a>
+                <a class="dropdown-item" id="data-tab" href="#data" role="tab" data-toggle="tab" aria-controls="data">Data Protection & Mandate</a>
             </div>
         </div>
-        <div class="col-md-4 col-lg-4">
-            <h5 class=" mt-2 mb-2">View all messages</h5>
-            <!-- modal required -->
-            <h5 class=" mt-2 mb-2">Send a message to Client Name</h5>
-            <form action="/#">
-                <textarea class="form-control form-control-sm" id="textarea1" rows="3"></textarea>
-            </form>
-            <a href="#" class="btn btn-sm btn-outline-primary mt-0 mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
-        </div>
+    </nav>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function(){
+          $("a").removeClass("active");
+      });
+    });
+</script>
+
+<!-- table content -->
+<div id="information-nav-content" class="tab-content">
+    <!-- service informaiton table -->
+    <div role="tadpanel" class="tab-pane fade show active" id="service" aria-labelledby="service-tab">
+        <table class="table table-striped table-bordered table-sm text-left">
+            <thead>
+                <th colspan="2" class="bg-primary">Service Information</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="text-primary">Reference</th>
+                    <td>abd123</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Referred by</th>
+                    <td>C4R</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Reason for visit</th>
+                    <td class="font-italic">To be added</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Visit Date</th>
+                    <td>01/01/2001</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Advisor</th>
+                    <td>Energy Advocate 1</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
     </div>
-
-    <div class="row mt-4">
-        <div class="col-md-7 col-lg-7">
-            <h4 class="mb-2">Client information</h4>
-            <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-              <div class="dropdown">
-                <button class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More info</button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" id="service-tab" href="#service" role="tab" data-toggle="tab" aria-controls="service">Service Information</a>
-                    <a class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
-                    <a class="dropdown-item" id="property-tab" href="#property" role="tab" data-toggle="tab" aria-controls="property">Property</a>
-                    <a class="dropdown-item" id="heating-tab" href="#heating" role="tab" data-toggle="tab" aria-controls="heating">Heating</a>
-                    <a class="dropdown-item" id="energy-tab" href="#energy" role="tab" data-toggle="tab" aria-controls="energy">Energy</a>
-                    <a class="dropdown-item" id="safety-tab" href="#safety" role="tab" data-toggle="tab" aria-controls="safety">Safety</a>
-                    <a class="dropdown-item" id="household-tab" href="#household" role="tab" data-toggle="tab" aria-controls="household">Household</a>
-                    <a class="dropdown-item" id="electricity-tab" href="#electricity" role="tab" data-toggle="tab" aria-controls="electricity">Electricity</a>
-                    <a class="dropdown-item" id="gas-tab" href="#gas" role="tab" data-toggle="tab" aria-controls="gas">Gas</a>
-                    <a class="dropdown-item" id="oil-tab" href="#oil" role="tab" data-toggle="tab" aria-controls="oil">Oil</a>
-                    <a class="dropdown-item" id="notes-tab" href="#notes" role="tab" data-toggle="tab" aria-controls="notes">Notes</a>
-                    <a class="dropdown-item" id="data-tab" href="#data" role="tab" data-toggle="tab" aria-controls="data">Data Protection & Mandate</a>
-                </div>
-            </div>
-        </nav>
-
-        <script>
-          $(document).ready(function () {
-            $("button").click(function(){
-              $("a").removeClass("active");
-          });
-        });
-    </script>
-
-    <!-- table content -->
-    <div id="information-nav-content" class="tab-content">
-        <!-- service informaiton table -->
-        <div role="tadpanel" class="tab-pane fade show active" id="service" aria-labelledby="service-tab">
-            <table class="table table-striped table-bordered table-sm text-left">
-                <thead>
-                    <th colspan="2" class="bg-primary">Service Information</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="text-primary">Reference</th>
-                        <td>abd123</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Referred by</th>
-                        <td>C4R</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Reason for visit</th>
-                        <td class="font-italic">To be added</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Visit Date</th>
-                        <td>01/01/2001</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Advisor</th>
-                        <td>Energy Advocate 1</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
-        </div>
-        <!-- personal informaiton table -->
-        <div role="tadpanel" class="tab-pane fade" id="personal" aria-labelledby="personal-tab">
-            <table class="table table-striped table-bordered table-sm text-left mb-0">
-                <thead>
-                    <th colspan="2" class="bg-primary">Personal Information</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="text-primary">Title</th>
-                        <td>Ms</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Forename</th>
-                        <td>Citizen</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Surame</th>
-                        <td>Twenty</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Address</th>
-                        <td>12 Fake Street<br>FakeTown
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Postcode</th>
-                        <td>FA12 3KE</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Telephone</th>
-                        <td>012345 678901</td>
-                    </tr>
-                    <tr>
-                        <th class="text-primary">Mobile</th>
-                        <td>077123456789</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-            <a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
-        </div>
-        <!-- property information table -->
-        <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
-            <table class="table table-striped table-bordered table-sm text-left mb-0">
-                <thead>
-                    <th colspan="2" class="bg-primary">Property Information</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="text-primary">Property Type</th>
-                        <td>
-                            <form action="#">
-                              <select name="propType">
-                                <option value="default">Assign</option>
-                                <option value="prop1">House</option>
-                                <option value="prop2">Flat</option>
-                                <option value="prop3">Bungalow</option>
-                                <option value="prop4">Maisonette</option>
-                            </select>
-                        </form>
+    <!-- personal informaiton table -->
+    <div role="tadpanel" class="tab-pane fade" id="personal" aria-labelledby="personal-tab">
+        <table class="table table-striped table-bordered table-sm text-left mb-0">
+            <thead>
+                <th colspan="2" class="bg-primary">Personal Information</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="text-primary">Title</th>
+                    <td>Ms</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Forename</th>
+                    <td>Citizen</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Surame</th>
+                    <td>Twenty</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Address</th>
+                    <td>12 Fake Street<br>FakeTown
                     </td>
                 </tr>
                 <tr>
-                    <th class="text-primary">Home type</th>
+                    <th class="text-primary">Postcode</th>
+                    <td>FA12 3KE</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Telephone</th>
+                    <td>012345 678901</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Mobile</th>
+                    <td>077123456789</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
+    </div>
+    <!-- property information table -->
+    <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
+        <table class="table table-striped table-bordered table-sm text-left mb-0">
+            <thead>
+                <th colspan="2" class="bg-primary">Property Information</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="text-primary">Property Type</th>
                     <td>
                         <form action="#">
-                          <select name="homeType">
+                          <select name="propType">
                             <option value="default">Assign</option>
-                            <option value="home1" class="active">Detached</option>
-                            <option value="home2">Semi</option>
-                            <option value="home3">Mid terrace</option>
-                            <option value="home4">End terrace</option>
+                            <option value="prop1">House</option>
+                            <option value="prop2">Flat</option>
+                            <option value="prop3">Bungalow</option>
+                            <option value="prop4">Maisonette</option>
                         </select>
                     </form>
                 </td>
             </tr>
             <tr>
-                <th class="text-primary">Tenure</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">No of bedrooms</th>
+                <th class="text-primary">Home type</th>
                 <td>
-                    <div>
-                        <form action="#" class="m-0">
-                            <select name="room">
-                                <option value="default">Assign</option>
-                                <option value="roomOne">1</option>
-                                <option value="roomTwo">2</option>
-                                <option value="roomThree">3</option>
-                                <option value="roomFour">4</option>
-                            </select>
-                        </form>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th class="text-primary">Flat type</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">Flat position</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
+                    <form action="#">
+                      <select name="homeType">
+                        <option value="default">Assign</option>
+                        <option value="home1" class="active">Detached</option>
+                        <option value="home2">Semi</option>
+                        <option value="home3">Mid terrace</option>
+                        <option value="home4">End terrace</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">Tenure</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">No of bedrooms</th>
+            <td>
+                <div>
+                    <form action="#" class="m-0">
+                        <select name="room">
+                            <option value="default">Assign</option>
+                            <option value="roomOne">1</option>
+                            <option value="roomTwo">2</option>
+                            <option value="roomThree">3</option>
+                            <option value="roomFour">4</option>
+                        </select>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">Flat type</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Flat position</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+    </tbody>
+</table>
+<a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 </div>
 <!-- heating information table -->
 <div role="tadpanel" class="tab-pane fade" id="heating" aria-labelledby="heating-tab">
@@ -423,107 +398,107 @@
                 <td class="font-italic">
                     <br>
                     <div>
-                       <form action="#" class="m-0">
-                          <select name="adultOne">
-                            <option value="adultZero">0</option>
-                            <option value="adultOne">1</option>
-                            <option value="adultTwo">2</option>
-                            <option value="adultThree">3</option>
-                            <option value="adultFour">4</option>
-                        </select>
-                    </form>
-                </div>
-                <div>
-                   <form action="#" class="m-0">
-                      <select name="childrenOne">
-                        <option value="childrenZero">0</option>
-                        <option value="childrenOne">1</option>
-                        <option value="childrenTwo">2</option>
-                        <option value="childrenThree">3</option>
-                        <option value="childrenFour">4</option>
+                     <form action="#" class="m-0">
+                      <select name="adultOne">
+                        <option value="adultZero">0</option>
+                        <option value="adultOne">1</option>
+                        <option value="adultTwo">2</option>
+                        <option value="adultThree">3</option>
+                        <option value="adultFour">4</option>
                     </select>
                 </form>
             </div>
-        </td>
-    </tr>
-    <tr>
-        <th class="text-primary">Age group
-            <ul class="m-0">0-5</ul>
-            <ul class="m-0">6-15</ul>
-            <ul class="m-0">16-24</ul>
-            <ul class="m-0">25-60</ul>
-            <ul class="m-0">60+</ul>
-        </th>
-        <td class="font-italic">
-            <br>
             <div>
-                <form action="#" class="m-0">
-                   <select name="ageOne">
-                    <option value="oneZero">0</option>
-                    <option value="oneOne">1</option>
-                    <option value="oneTwo">2</option>
-                    <option value="oneThree">3</option>
-                    <option value="oneFour">4</option>
-                </select>
-            </form>
-        </div>
+             <form action="#" class="m-0">
+              <select name="childrenOne">
+                <option value="childrenZero">0</option>
+                <option value="childrenOne">1</option>
+                <option value="childrenTwo">2</option>
+                <option value="childrenThree">3</option>
+                <option value="childrenFour">4</option>
+            </select>
+        </form>
+    </div>
+</td>
+</tr>
+<tr>
+    <th class="text-primary">Age group
+        <ul class="m-0">0-5</ul>
+        <ul class="m-0">6-15</ul>
+        <ul class="m-0">16-24</ul>
+        <ul class="m-0">25-60</ul>
+        <ul class="m-0">60+</ul>
+    </th>
+    <td class="font-italic">
+        <br>
         <div>
             <form action="#" class="m-0">
-               <select name="ageTwo">
-                 <option value="twoZero">0</option>
-                 <option value="twoOne">1</option>
-                 <option value="twoTwo">2</option>
-                 <option value="twoThree">3</option>
-                 <option value="twoFour">4</option>
-             </select>
-         </form>
-     </div>
-     <div>
+             <select name="ageOne">
+                <option value="oneZero">0</option>
+                <option value="oneOne">1</option>
+                <option value="oneTwo">2</option>
+                <option value="oneThree">3</option>
+                <option value="oneFour">4</option>
+            </select>
+        </form>
+    </div>
+    <div>
         <form action="#" class="m-0">
-           <select name="ageThree">
-             <option value="threeZero">0</option>
-             <option value="threeOne">1</option>
-             <option value="threeTwo">2</option>
-             <option value="threeThree">3</option>
-             <option value="threeFour">4</option>
-         </select>
-     </form>
- </div>
- <div>
-    <form action="#" class="m-0">
-       <select name="ageFour">
-         <option value="fourZero">0</option>
-         <option value="fourOne">1</option>
-         <option value="fourTwo">2</option>
-         <option value="fourThree">3</option>
-         <option value="fourFour">4</option>
-     </select>
- </form>
+         <select name="ageTwo">
+           <option value="twoZero">0</option>
+           <option value="twoOne">1</option>
+           <option value="twoTwo">2</option>
+           <option value="twoThree">3</option>
+           <option value="twoFour">4</option>
+       </select>
+   </form>
 </div>
 <div>
     <form action="#" class="m-0">
-       <select name="ageFive">
-         <option value="fiveZero">0</option>
-         <option value="fiveOne">1</option>
-         <option value="fiveTwo">2</option>
-         <option value="fiveThree">3</option>
-         <option value="fiveFour">4</option>
-     </select>
- </form>
+     <select name="ageThree">
+       <option value="threeZero">0</option>
+       <option value="threeOne">1</option>
+       <option value="threeTwo">2</option>
+       <option value="threeThree">3</option>
+       <option value="threeFour">4</option>
+   </select>
+</form>
+</div>
+<div>
+    <form action="#" class="m-0">
+     <select name="ageFour">
+       <option value="fourZero">0</option>
+       <option value="fourOne">1</option>
+       <option value="fourTwo">2</option>
+       <option value="fourThree">3</option>
+       <option value="fourFour">4</option>
+   </select>
+</form>
+</div>
+<div>
+    <form action="#" class="m-0">
+     <select name="ageFive">
+       <option value="fiveZero">0</option>
+       <option value="fiveOne">1</option>
+       <option value="fiveTwo">2</option>
+       <option value="fiveThree">3</option>
+       <option value="fiveFour">4</option>
+   </select>
+</form>
 </div>
 </td>
 </tr>
 <tr>
- <th class="text-primary">Warm home deal</th>
- <td class="font-italic">To be added</td>
+   <th class="text-primary">Warm home deal</th>
+   <td class="font-italic">To be added</td>
 </tr>
 <tr>
- <th class="text-primary">Core group</th>
- <td class="font-italic">To be added</td>
+   <th class="text-primary">Core group</th>
+   <td class="font-italic">To be added</td>
 </tr>
 <tr>
- <th class="text-primary">Broader group</th>
- <td class="font-italic">To be added</td>
+   <th class="text-primary">Broader group</th>
+   <td class="font-italic">To be added</td>
 </tr>
 </tbody>
 </table>
@@ -858,24 +833,24 @@
     <div class="col-lg-7 col-md-7">
         <h4 class="mb-2">Client task list</h4>
         <div class="table-responsive">
-         <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
-          <thead class="table-info">
-            <tr>
-             <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-             <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-             <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-             <th>Complete</th>
-         </tr>
-     </thead>
-     <tbody>
-      <tr>
-        <td>Citizen has requested a phone call</td>
-        <td>03/04/2005</td>
-        <td>Phone call - citizen</td>
-        <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-    </tr>
-</tbody>
-</table>
+           <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
+              <thead class="table-info">
+                <tr>
+                   <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                   <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                   <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                   <th>Complete</th>
+               </tr>
+           </thead>
+           <tbody>
+              <tr>
+                <td>Citizen has requested a phone call</td>
+                <td>03/04/2005</td>
+                <td>Phone call - citizen</td>
+                <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <h5 class="mt-2">Add task to task list</h5>
 <form action="/#">
