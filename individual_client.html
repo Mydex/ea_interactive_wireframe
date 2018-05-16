@@ -176,47 +176,8 @@
 
 <!-- table content -->
 <div id="information-nav-content" class="tab-content">
-    <!-- service informaiton table -->
-    <div role="tadpanel" class="tab-pane fade show active" id="service" aria-labelledby="service-tab">
-        <table class="table table-striped table-bordered table-sm text-left">
-            <thead>
-                <th colspan="2" class="bg-primary">Service Information</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="text-primary">Reference</th>
-                    <td>abd123</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">Referred by</th>
-                    <td>C4R</td>
-                </tr>
-                <tr>
-                    <th class="text-primary">Reason for visit</th>
-                    <td class="font-italic">
-                        <form action="#">
-                            <select name="reasonType">
-                              <option value="reason1">Billing Issues</option>
-                              <option value="reason2">Fuel Debt</option>
-                              <option value="reason3">Meter Issues</option>
-                          </select>
-                      </form>
-                  </td>
-              </tr>
-              <tr>
-                <th class="text-primary">Visit Date</th>
-                <td>01/01/2001</td>
-            </tr>
-            <tr>
-                <th class="text-primary">Advisor</th>
-                <td>Energy Advocate 1</td>
-            </tr>
-        </tbody>
-    </table>
-    <a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
-</div>
 <!-- personal informaiton table -->
-<div role="tadpanel" class="tab-pane fade" id="personal" aria-labelledby="personal-tab">
+<div role="tadpanel" class="tab-pane fade active" id="personal" aria-labelledby="personal-tab">
     <table class="table table-striped table-bordered table-sm text-left mb-0">
         <thead>
             <th colspan="2" class="bg-primary">Personal Information</th>
@@ -845,6 +806,45 @@
                 <td class="font-italic">No data</td>
                 <td class="font-italic">No data</td>
                 <td class="font-italic">No data</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#" class="btn btn-outline-primary btn-sm mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
+</div>
+    <!-- service informaiton table -->
+    <div role="tadpanel" class="tab-pane fade show" id="service" aria-labelledby="service-tab">
+        <table class="table table-striped table-bordered table-sm text-left">
+            <thead>
+                <th colspan="2" class="bg-primary">Service Information</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="text-primary">Reference</th>
+                    <td>abd123</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Referred by</th>
+                    <td>C4R</td>
+                </tr>
+                <tr>
+                    <th class="text-primary">Reason for visit</th>
+                    <td class="font-italic">
+                        <form action="#">
+                            <select name="reasonType">
+                              <option value="reason1">Billing Issues</option>
+                              <option value="reason2">Fuel Debt</option>
+                              <option value="reason3">Meter Issues</option>
+                          </select>
+                      </form>
+                  </td>
+              </tr>
+              <tr>
+                <th class="text-primary">Visit Date</th>
+                <td>01/01/2001</td>
+            </tr>
+            <tr>
+                <th class="text-primary">Advisor</th>
+                <td>Energy Advocate 1</td>
             </tr>
         </tbody>
     </table>
