@@ -66,11 +66,11 @@
             </div>
             <div class="modal-body">
               <form action="/#">
-                <div for="forename" class="col-12 mb-1">Forename</div>
+                <label for="forename" class="col-12 mb-1">Forename</label>
                 <div class="col-12 mb-1">
                   <input type="text" class="form-control" id="forename" name="forename">
                 </div>
-                <div for="surname" class="col-12 mb-1">Surname</div>
+                <label for="surname" class="col-12 mb-1">Surname</label>
                 <div class="col-12 mb-1">
                   <input type="text" class="form-control" id="surname" name="surname">
                 </div>
@@ -85,6 +85,15 @@
                     <input type="text" class="form-control" id="mobile" name="mobile">
                   </div>
                 </div>
+                <label for="referral">Referral from</label>
+                <select name="referral">
+                  <option value="referral1">Advice works</option>
+                  <option value="referral2">C4R</option>
+                  <option value="referral3">Council</option>
+                  <option value="referral4">Family First</option>
+                  <option value="referral5">Food bank</option>
+                  <option value="referral6">RAMH</option>
+                </select>
               </form>
               <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
             </div>
