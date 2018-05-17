@@ -372,7 +372,7 @@
                 <script type="text/javascript">
                   function showHeating(name){
                     if(name == 'mainFuelFour') {
-                      document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="fuel_other" name="fuel_other"/>';
+                      document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="heatingOther" name="heatingOther"/>';
                   } else {
                       document.getElementById('mainFuelOther').innerHTML='';
                   } 
@@ -452,7 +452,7 @@
                 <script type="text/javascript">
                     function showSmoke(name){
                       if(name == 'smoke2') {
-                        document.getElementById('smokeAlarmYes').innerHTML = 'Notes for smoke alarms:<br> <input type="text" class="form-control" id="fuel_other" name="fuel_other"/>';
+                        document.getElementById('smokeAlarmYes').innerHTML = 'Notes for smoke alarms:<br> <input type="text" class="form-control" id="smokeNotes" name="smokeNotes"/>';
                     } else {
                         document.getElementById('smokeAlarmYes').innerHTML='';
                     } 
@@ -474,7 +474,7 @@
             <script type="text/javascript">
                 function showCarbon(name){
                   if(name == 'carbon2') {
-                    document.getElementById('carbonAlarmYes').innerHTML = 'Notes for carbon monoxide:<br> <input type="text" class="form-control" id="fuel_other" name="fuel_other"/>';
+                    document.getElementById('carbonAlarmYes').innerHTML = 'Notes for carbon monoxide:<br> <input type="text" class="form-control" id="carbonNotes" name="carbonNotes"/>';
                 } else {
                     document.getElementById('carbonAlarmYes').innerHTML='';
                 } 
@@ -589,14 +589,24 @@
         <tbody>
             <tr>
                 <th class="text-primary">How does the householder pay fuel bills?</th>
+                    <script type="text/javascript">
+                        function showElecPay(name){
+                          if(name == 'elecPay3') {
+                            document.getElementById('elecPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="elecPay_other" name="elecPay_other"/>';
+                        } else {
+                            document.getElementById('elecPayOther').innerHTML='';
+                        } 
+                    }
+                </script>
                 <td class="font-italic" colspan="2">
                     <form action="#" class="m-0">
-                       <select name="elecPay">
+                       <select name="elecPay" id="elecPay" onchange="showElecPay(this.options[this.selectedIndex].value)" required>
                         <option value="elecPay1">Credit</option>
                         <option value="elecPay2">Prepaid</option>
                         <option value="elecPay3">Other</option>
                     </select>
                 </form>
+                <div id="elecPayOther"></div>
             </td>
         </tr>
         <tr>
