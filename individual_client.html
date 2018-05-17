@@ -450,8 +450,8 @@
                 <th class="text-primary">Do you have working smoke alarms?</th>
                 <script type="text/javascript">
                     function showSmoke(name){
-                      if(name == 'smokeAlarmTwo') {
-                        document.getElementById('smokeAlarmYes').innerHTML = 'Notes:<br> <input type="text" class="form-control" id="fuel_other" name="fuel_other"/>';
+                      if(name == 'smoke2') {
+                        document.getElementById('smokeAlarmYes').innerHTML = 'Notes for smoke alarms:<br> <input type="text" class="form-control" id="fuel_other" name="fuel_other"/>';
                     } else {
                         document.getElementById('smokeAlarmYes').innerHTML='';
                     } 
@@ -460,9 +460,9 @@
             <td class="font-italic">
                 <form action="#" class="m-0">
                     <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
-                        <option value="smokeAlarmDefault"></option>
-                        <option value="smokeAlarmOne">No</option>
-                        <option value="smokeAlarmTwo">Yes</option>
+                        <option value="smokeDefault"></option>
+                        <option value="smoke1">No</option>
+                        <option value="smoke2">Yes</option>
                     </select>
                 </form>
                 <div id="smokeAlarmYes"></div>
@@ -470,15 +470,26 @@
         </tr>
         <tr>
             <th class="text-primary">Are carbon monoxide monitors fitted?</th>
-            <td class="font-italic">
-                <form action="#" class="m-0">
-                 <select name="monoxide">
-                    <option value="monoxide1">No</option>
-                    <option value="monoxide2">Yes</option>
-                </select>
-            </form>
-        </td>
-    </tr>
+            <script type="text/javascript">
+                function showCarbon(name){
+                  if(name == 'carbon2') {
+                    document.getElementById('smokeAlarmYes').innerHTML = 'Notes for carbon monoxide:<br> <input type="text" class="form-control" id="fuel_other" name="fuel_other"/>';
+                } else {
+                    document.getElementById('carbonAlarmYes').innerHTML='';
+                } 
+            }
+        </script>
+        <td class="font-italic">
+            <form action="#" class="m-0">
+             <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
+                <option value="carbon1">No</option>
+                <option value="carbon2">Yes</option>
+            </select>
+        </form>
+        <div id="carbonAlarmYes"></div>
+
+    </td>
+</tr>
 </tbody>
 </table>
 <!-- <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
