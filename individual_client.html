@@ -75,8 +75,8 @@
                 <div class="modal-body">
                     <div class="table-responsive">
                       <table class="table table-striped table-bordered table-sm text-left">
-                         <thead class="table-info">
-                           <tr>
+                       <thead class="table-info">
+                         <tr>
                             <th>Date</th>
                             <th>Time</th>
                             <th>Outcome</th>
@@ -368,64 +368,74 @@
             </tr>
             <tr>
                 <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-                <td class="font-italic">
-                    <form action="#" class="m-0">
-                        <select name="mainFuel">
-                            <option value="mainFuelZero">No answer</option>
-                            <option value="mainFuelOne">Electrical storage heating</option>
-                            <option value="mainFuelTwo">Gas central heating</option>
-                            <option value="mainFuelThree">None</option>
-                            <option value="mainFuelFour">Other</option>
-                        </select>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <th class="text-primary">How old is your boiler?</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">Make and model of boiler</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">What is property glazing type? (%)</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">How old is your boiler?</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">Make and model of boiler</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">How is your water heated?</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">What is the size of the hot water cylinder?</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">What type of insulaion does it have?</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-        </tbody>
-    </table>
+                <script type="text/javascript">
+                  function showfield(name){
+                    if(name == 'ea1') {
+                      document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="fuel_other" name="fuel_other"/>';
+                      else {
+                          document.getElementById('mainFuelOther').innerHTML='';
+                      } 
+                  }
+              </script>
+              <td class="font-italic">
+                <form action="#" class="m-0">
+                    <select name="mainFuel" id="mainFuel" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)" required>
+                        <option value="mainFuelZero">No answer</option>
+                        <option value="mainFuelOne">Electrical storage heating</option>
+                        <option value="mainFuelTwo">Gas central heating</option>
+                        <option value="mainFuelThree">None</option>
+                        <option value="mainFuelFour">Other</option>
+                    </select>
+                </form>
+                <div id="mainFuelOther"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">How old is your boiler?</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Make and model of boiler</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">What is property glazing type? (%)</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">How old is your boiler?</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Make and model of boiler</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">How is your water heated?</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">What is the size of the hot water cylinder?</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">What type of insulaion does it have?</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+    </tbody>
+</table>
 <!--     <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 -->
 </div>
@@ -440,7 +450,7 @@
                 <th class="text-primary">Do you have working smoke alarms?</th>
                 <td class="font-italic">
                     <form action="#" class="m-0">
-                       <select name="smokeAlarm">
+                     <select name="smokeAlarm">
                         <option value="smokeAlarm1">Yes</option>
                         <option value="smokeAlarm2">No</option>
                     </select>
@@ -451,7 +461,7 @@
             <th class="text-primary">Are carbon monoxide monitors fitted?</th>
             <td class="font-italic">
                 <form action="#" class="m-0">
-                   <select name="monoxide">
+                 <select name="monoxide">
                     <option value="monoxide1">Yes</option>
                     <option value="monoxide2">No</option>
                 </select>
@@ -473,7 +483,7 @@
                 <th class="text-primary">Is a member of the house in receipt of any benefits?</th>
                 <td class="font-italic">
                     <form action="#" class="m-0">
-                       <select name="benefits">
+                     <select name="benefits">
                         <option value="benefits1">Yes</option>
                         <option value="benefits2">No</option>
                     </select>
@@ -488,7 +498,7 @@
             <th class="text-primary">Would you like a benefit check?</th>
             <td class="font-italic">
                 <form action="#" class="m-0">
-                   <select name="check">
+                 <select name="check">
                     <option value="check1">Yes</option>
                     <option value="check2">No</option>
                 </select>
@@ -504,27 +514,27 @@
         <td class="font-italic">
             <br>
             <div>
-               <form action="#" class="m-0">
-                  <select name="adultOne">
-                    <option value="adultZero">0</option>
-                    <option value="adultOne">1</option>
-                    <option value="adultTwo">2</option>
-                    <option value="adultThree">3</option>
-                    <option value="adultFour">4</option>
-                </select>
-            </form>
-        </div>
-        <div>
-           <form action="#" class="m-0">
-              <select name="childrenOne">
-                <option value="childrenZero">0</option>
-                <option value="childrenOne">1</option>
-                <option value="childrenTwo">2</option>
-                <option value="childrenThree">3</option>
-                <option value="childrenFour">4</option>
+             <form action="#" class="m-0">
+              <select name="adultOne">
+                <option value="adultZero">0</option>
+                <option value="adultOne">1</option>
+                <option value="adultTwo">2</option>
+                <option value="adultThree">3</option>
+                <option value="adultFour">4</option>
             </select>
         </form>
     </div>
+    <div>
+     <form action="#" class="m-0">
+      <select name="childrenOne">
+        <option value="childrenZero">0</option>
+        <option value="childrenOne">1</option>
+        <option value="childrenTwo">2</option>
+        <option value="childrenThree">3</option>
+        <option value="childrenFour">4</option>
+    </select>
+</form>
+</div>
 </td>
 </tr>
 <tr>
@@ -533,12 +543,12 @@
     </td>
 </tr>
 <tr>
- <th class="text-primary">Warm Home Deal: Core group</th>
- <td class="font-italic">To be added</td>
+   <th class="text-primary">Warm Home Deal: Core group</th>
+   <td class="font-italic">To be added</td>
 </tr>
 <tr>
- <th class="text-primary">Warm Home Deal: Broader group</th>
- <td class="font-italic">To be added</td>
+   <th class="text-primary">Warm Home Deal: Broader group</th>
+   <td class="font-italic">To be added</td>
 </tr>
 </tbody>
 </table>
@@ -555,7 +565,7 @@
                 <th class="text-primary">How does the householder pay fuel bills?</th>
                 <td class="font-italic" colspan="2">
                     <form action="#" class="m-0">
-                       <select name="elecPay">
+                     <select name="elecPay">
                         <option value="elecPay1">Credit</option>
                         <option value="elecPay2">Prepaid</option>
                         <option value="elecPay3">Other</option>
@@ -644,7 +654,7 @@
                 <th class="text-primary">How does the householder pay fuel bills?</th>
                 <td class="font-italic" colspan="2">
                     <form action="#" class="m-0">
-                       <select name="gasPay">
+                     <select name="gasPay">
                         <option value="gasPay1">Credit</option>
                         <option value="gasPay2">Prepaid</option>
                         <option value="gasPay3">Other</option>
@@ -948,24 +958,24 @@
     <div class="col-lg-7 col-md-7">
         <h4 class="mb-2">Client task list</h4>
         <div class="table-responsive">
-         <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
-          <thead class="table-info">
-            <tr>
-             <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-             <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-             <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-             <th>Complete</th>
-         </tr>
-     </thead>
-     <tbody>
-      <tr>
-        <td>Citizen has requested a phone call</td>
-        <td>03/04/2005</td>
-        <td>Phone call - citizen</td>
-        <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-    </tr>
-</tbody>
-</table>
+           <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
+              <thead class="table-info">
+                <tr>
+                   <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                   <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                   <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                   <th>Complete</th>
+               </tr>
+           </thead>
+           <tbody>
+              <tr>
+                <td>Citizen has requested a phone call</td>
+                <td>03/04/2005</td>
+                <td>Phone call - citizen</td>
+                <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <h5 class="mt-2">Add task to task list</h5>
 <form action="/#">
@@ -998,54 +1008,54 @@
             </div>
             <div id="collapseRef" class="collapse" aria-labelledby="headingRef" data-parent="#accordion">
                 <div class="card-body">
-                   <div class="table-responsive">
+                 <div class="table-responsive">
                     <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
-                     <thead class="table-info">
-                       <tr>
-                        <th>Referred to</th>
-                        <th>Referral made (date & notes)</th>
-                        <th>Waiting on outcome</th>
-                        <th>Outcome/feedback</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Fire</th>
-                        <td><input type="date" name="">
-                            <p class="m-0">To be added</p>
-                        </td>
-                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                        <td>To be added</td>
-                    </tr>
-                    <tr>
-                        <th>Food Bank</th>
-                        <td><input type="date" name="">
-                            <p class="m-0">To be added</p>
-                        </td>
-                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                        <td>To be added</td>
-                    </tr>
-                    <tr>
-                        <th>Council Services</th>
-                        <td><input type="date" name="">
-                            <p class="m-0">To be added</p>
-                        </td>
-                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                        <td>To be added</td>
-                    </tr>
-                    <tr>
-                        <th> </th>
-                        <td><input type="date" name="">
-                            <p class="m-0">To be added</p>
-                        </td>
-                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                        <td>To be added</td>
-                    </tr>
-                </tbody>
-            </table>
+                       <thead class="table-info">
+                         <tr>
+                            <th>Referred to</th>
+                            <th>Referral made (date & notes)</th>
+                            <th>Waiting on outcome</th>
+                            <th>Outcome/feedback</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Fire</th>
+                            <td><input type="date" name="">
+                                <p class="m-0">To be added</p>
+                            </td>
+                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                            <td>To be added</td>
+                        </tr>
+                        <tr>
+                            <th>Food Bank</th>
+                            <td><input type="date" name="">
+                                <p class="m-0">To be added</p>
+                            </td>
+                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                            <td>To be added</td>
+                        </tr>
+                        <tr>
+                            <th>Council Services</th>
+                            <td><input type="date" name="">
+                                <p class="m-0">To be added</p>
+                            </td>
+                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                            <td>To be added</td>
+                        </tr>
+                        <tr>
+                            <th> </th>
+                            <td><input type="date" name="">
+                                <p class="m-0">To be added</p>
+                            </td>
+                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                            <td>To be added</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 </div>
 </div>
 </div>
