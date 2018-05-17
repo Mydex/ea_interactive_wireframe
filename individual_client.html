@@ -688,14 +688,24 @@
         <tbody>
             <tr>
                 <th class="text-primary">How does the householder pay fuel bills?</th>
+                    <script type="text/javascript">
+                        function showGasPay(name){
+                          if(name == 'gasPay3') {
+                            document.getElementById('gasPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="gasPay_other" name="gasPay_other"/>';
+                        } else {
+                            document.getElementById('gasPayOther').innerHTML='';
+                        } 
+                    }
+                </script>
                 <td class="font-italic" colspan="2">
                     <form action="#" class="m-0">
-                       <select name="gasPay">
+                       <select name="gasPay" id="gasPay" onchange="showGasPay(this.options[this.selectedIndex].value)" required>
                         <option value="gasPay1">Credit</option>
                         <option value="gasPay2">Prepaid</option>
                         <option value="gasPay3">Other</option>
                     </select>
                 </form>
+                <div id="gasPayOther"></div>
             </td>
         </tr>
         <tr>
