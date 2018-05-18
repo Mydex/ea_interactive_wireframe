@@ -90,29 +90,31 @@
                           <td>
                               <form action="#" class="m-0">
                                 <select name="visitType">
-                                  <option value="visit1">No show</option>
-                                  <option value="visit2">Successful</option>
-                                  <option value="visit3">Rearranged</option>
-                              </select>
-                          </form>
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>02/02/2018</td>
-                    <td>15:00</td>
-                    <td>
-                        <form action="#" class="m-0">
-                          <select name="visitType">
-                            <option value="visit1">No show</option>
-                            <option value="visit2">Successful</option>
-                            <option value="visit3">Rearranged</option>
-                        </select>
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                                    <option value="visitDefault"></option>
+                                    <option value="visit1">No show</option>
+                                    <option value="visit2">Successful</option>
+                                    <option value="visit3">Rearranged</option>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02/02/2018</td>
+                        <td>15:00</td>
+                        <td>
+                            <form action="#" class="m-0">
+                              <select name="visitType">
+                                <option value="visitDefault"></option>
+                                <option value="visit1">No show</option>
+                                <option value="visit2">Successful</option>
+                                <option value="visit3">Rearranged</option>
+                            </select>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 </div>
 </div>
@@ -251,6 +253,7 @@
                 <td>
                     <form action="#" class="m-0">
                       <select name="propType">
+                        <option value="propDefault"></option>
                         <option value="prop1">Bungalow</option>
                         <option value="prop2">Flat</option>
                         <option value="prop3">House</option>
@@ -264,6 +267,7 @@
             <td>
                 <form action="#" class="m-0">
                   <select name="homeType">
+                    <option value="homeDefault"></option>
                     <option value="home1">Detached</option>
                     <option value="home2">End terrace</option>
                     <option value="home3">Flat - 4 block</option>
@@ -285,11 +289,11 @@
         <td>
             <form action="#" class="m-0">
                 <select name="room">
-                    <option value="default">Assign</option>
-                    <option value="roomOne">1</option>
-                    <option value="roomTwo">2</option>
-                    <option value="roomThree">3</option>
-                    <option value="roomFour">4</option>
+                    <option value="default"></option>
+                    <option value="room1">1</option>
+                    <option value="room2">2</option>
+                    <option value="room3">3</option>
+                    <option value="room4">4</option>
                 </select>
             </form>
         </td>
@@ -320,121 +324,132 @@
         <tbody>
             <tr>
                 <th class="text-primary">What is the main wall type?</th>
-                <td class="font-italic">
-                    <form action="#" class="m-0">
-                        <select name="wall">
-                            <option value="wallZero">No answer</option>
-                            <option value="wallOne">Cavity wall</option>
-                            <option value="wallTwo">Cavity wall - filled</option>
-                            <option value="wallThree">Solid wall</option>
-                            <option value="wallFour">System built</option>
-                        </select>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <th class="text-primary">How much loft insulation?</th>
-                <td class="font-italic">
-                    <form action="#" class="m-0">
-                        <select name="loft">
-                            <option value="loftZero">No answer</option>
-                            <option value="loftOne">100ml or less</option>
-                            <option value="loftTwo">150ml</option>
-                            <option value="loftThree">270ml (up to standard)</option>
-                        </select>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <th class="text-primary">What is property glazing type? <br>(%)</th>
-                <td class="font-italic">
-                    <form action="#" class="m-0">
-                        <select name="glazing">
-                            <option value="glazingZero">No answer</option>
-                            <option value="glazingOne">Double post 2003</option>
-                            <option value="glazingTwo">Double pre 2003</option>
-                            <option value="glazingThree">Single</option>
-                        </select>
-                    </form>
-                    <p>To be added</p>
-                </td>
-            </tr>
-            <tr>
-                <th class="text-primary">Year windows were last updated? If known</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-                <td class="font-italic">To be added</td>
-            </tr>
-            <tr>
-                <th class="text-primary">What is the main heating fuel used to heat the property?</th>
                 <script type="text/javascript">
-                  function showHeating(name){
-                    if(name == 'mainFuelFour') {
-                      document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="heatingOther" name="heatingOther"/>';
-                  } else {
-                      document.getElementById('mainFuelOther').innerHTML='';
-                  } 
-              }
-          </script>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-                <select name="mainFuel" id="mainFuel" onchange="showHeating(this.options[this.selectedIndex].value)" required>
-                    <option value="mainFuelZero">No answer</option>
-                    <option value="mainFuelOne">Electrical storage heating</option>
-                    <option value="mainFuelTwo">Gas central heating</option>
-                    <option value="mainFuelThree">None</option>
-                    <option value="mainFuelFour">Other</option>
-                </select>
-            </form>
-            <div id="mainFuelOther"></div>
-        </td>
-    </tr>
-    <tr>
-        <th class="text-primary">How old is your boiler?</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Make and model of boiler</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">What is property glazing type? (%)</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">How old is your boiler?</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Make and model of boiler</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">How is your water heated?</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">What is the size of the hot water cylinder?</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">What type of insulaion does it have?</th>
-        <td class="font-italic">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
-        <td class="font-italic">To be added</td>
-    </tr>
+                    function showWall(name){
+                      if(name == 'wall5') {
+                        document.getElementById('wallOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="wallOther" name="wallOther"/>';
+                    } else {
+                        document.getElementById('wallOther').innerHTML='';
+                    } 
+                }
+            </script>
+            <td class="font-italic">
+                <form action="#" class="m-0">
+                    <select name="wall" id="wall" onchange="showWall(this.options[this.selectedIndex].value)" required>
+                        <option value="wallDefault"></option>
+                        <option value="wall1">Cavity wall</option>
+                        <option value="wall2">Cavity wall - filled</option>
+                        <option value="wall3">Solid wall</option>
+                        <option value="wall4">System built</option>
+                        <option value="wall5">Other</option>
+                    </select>
+                </form>
+                <div id="wallOther"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">How much loft insulation?</th>
+            <td class="font-italic">
+                <form action="#" class="m-0">
+                    <select name="loft">
+                        <option value="loftDefault"></option>
+                        <option value="loft1">100ml or less</option>
+                        <option value="loft2">150ml</option>
+                        <option value="loft3">270ml (up to standard)</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">What is property glazing type? <br>(%)</th>
+            <td class="font-italic">
+                <form action="#" class="m-0">
+                    <select name="glazing">
+                        <option value="glazingDefault"></option>
+                        <option value="glazing1">Double post 2003</option>
+                        <option value="glazing2">Double pre 2003</option>
+                        <option value="glazing3">Single</option>
+                    </select>
+                </form>
+                <p>To be added</p>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">Year windows were last updated? If known</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+            <td class="font-italic">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+            <script type="text/javascript">
+              function showFuel(name){
+                if(name == 'mainFuelFour') {
+                  document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="fuelOther" name="fuelOther"/>';
+              } else {
+                  document.getElementById('mainFuelOther').innerHTML='';
+              } 
+          }
+      </script>
+      <td class="font-italic">
+        <form action="#" class="m-0">
+            <select name="mainFuel" id="mainFuel" onchange="showFuel(this.options[this.selectedIndex].value)" required>
+                <option value="mainFuelDefault"></option>
+                <option value="mainFuel1">Electrical storage heating</option>
+                <option value="mainFuel2">Gas central heating</option>
+                <option value="mainFuel3">None</option>
+                <option value="mainFuel4">Other</option>
+            </select>
+        </form>
+        <div id="mainFuelOther"></div>
+    </td>
+</tr>
+<tr>
+    <th class="text-primary">How old is your boiler?</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">Make and model of boiler</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">What is property glazing type? (%)</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">How old is your boiler?</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">Make and model of boiler</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">How is your water heated?</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">What is the size of the hot water cylinder?</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">What type of insulaion does it have?</th>
+    <td class="font-italic">To be added</td>
+</tr>
+<tr>
+    <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
+    <td class="font-italic">To be added</td>
+</tr>
 </tbody>
 </table>
 <!--     <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
@@ -542,22 +557,23 @@
             <div>
                <form action="#" class="m-0">
                   <select name="adultOne">
-                    <option value="adultZero">0</option>
-                    <option value="adultOne">1</option>
-                    <option value="adultTwo">2</option>
-                    <option value="adultThree">3</option>
-                    <option value="adultFour">4</option>
+                    <option value="adultDefault"></option>
+                    <option value="adult1">1</option>
+                    <option value="adult2">2</option>
+                    <option value="adult3">3</option>
+                    <option value="adult4">4</option>
                 </select>
             </form>
         </div>
         <div>
            <form action="#" class="m-0">
               <select name="childrenOne">
-                <option value="childrenZero">0</option>
-                <option value="childrenOne">1</option>
-                <option value="childrenTwo">2</option>
-                <option value="childrenThree">3</option>
-                <option value="childrenFour">4</option>
+                <option value="childrenDeault"></option>
+                <option value="children0">0</option>
+                <option value="children1">1</option>
+                <option value="children2">2</option>
+                <option value="children3">3</option>
+                <option value="children4">4</option>
             </select>
         </form>
     </div>
@@ -589,93 +605,94 @@
         <tbody>
             <tr>
                 <th class="text-primary">How does the householder pay fuel bills?</th>
-                    <script type="text/javascript">
-                        function showElecPay(name){
-                          if(name == 'elecPay3') {
-                            document.getElementById('elecPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="elecPay_other" name="elecPay_other"/>';
-                        } else {
-                            document.getElementById('elecPayOther').innerHTML='';
-                        } 
-                    }
-                </script>
-                <td class="font-italic" colspan="2">
-                    <form action="#" class="m-0">
-                       <select name="elecPay" id="elecPay" onchange="showElecPay(this.options[this.selectedIndex].value)" required>
-                        <option value="elecPay1">Credit</option>
-                        <option value="elecPay2">Prepaid</option>
-                        <option value="elecPay3">Other</option>
-                    </select>
-                </form>
-                <div id="elecPayOther"></div>
-            </td>
-        </tr>
-        <tr>
-            <th class="text-primary">MPAN</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Supplier</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Account Reference</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Tariff</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Meter Serial Number</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr class="table-primary">
-            <th>Date</th>
-            <th>Present reading</th>
-            <th>Previous reading</th>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <th class="table-primary" colspan="3">Notes</th>
-        </tr>
-        <tr>
-            <th>Date</th>
-            <th colspan="2">Comments</th>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic" colspan="2">No data</td>
-        </tr>
-    </tbody>
+                <script type="text/javascript">
+                    function showElecPay(name){
+                      if(name == 'elecPay3') {
+                        document.getElementById('elecPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="elecPay_other" name="elecPay_other"/>';
+                    } else {
+                        document.getElementById('elecPayOther').innerHTML='';
+                    } 
+                }
+            </script>
+            <td class="font-italic" colspan="2">
+                <form action="#" class="m-0">
+                   <select name="elecPay" id="elecPay" onchange="showElecPay(this.options[this.selectedIndex].value)" required>
+                    <option value="elecDefault"></option>
+                    <option value="elecPay1">Credit</option>
+                    <option value="elecPay2">Prepaid</option>
+                    <option value="elecPay3">Other</option>
+                </select>
+            </form>
+            <div id="elecPayOther"></div>
+        </td>
+    </tr>
+    <tr>
+        <th class="text-primary">MPAN</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Supplier</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Account Reference</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Tariff</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Meter Serial Number</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr class="table-primary">
+        <th>Date</th>
+        <th>Present reading</th>
+        <th>Previous reading</th>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <th class="table-primary" colspan="3">Notes</th>
+    </tr>
+    <tr>
+        <th>Date</th>
+        <th colspan="2">Comments</th>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic" colspan="2">No data</td>
+    </tr>
+</tbody>
 </table>
 <!-- <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 --></div>
@@ -688,82 +705,83 @@
         <tbody>
             <tr>
                 <th class="text-primary">How does the householder pay fuel bills?</th>
-                    <script type="text/javascript">
-                        function showGasPay(name){
-                          if(name == 'gasPay3') {
-                            document.getElementById('gasPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="gasPay_other" name="gasPay_other"/>';
-                        } else {
-                            document.getElementById('gasPayOther').innerHTML='';
-                        } 
-                    }
-                </script>
-                <td class="font-italic" colspan="2">
-                    <form action="#" class="m-0">
-                       <select name="gasPay" id="gasPay" onchange="showGasPay(this.options[this.selectedIndex].value)" required>
-                        <option value="gasPay1">Credit</option>
-                        <option value="gasPay2">Prepaid</option>
-                        <option value="gasPay3">Other</option>
-                    </select>
-                </form>
-                <div id="gasPayOther"></div>
-            </td>
-        </tr>
-        <tr>
-            <th class="text-primary">Meter point number</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Supplier</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Account Reference</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Tariff</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Meter Serial Number</th>
-            <td class="font-italic" colspan="2">To be added</td>
-        </tr>
-        <tr class="table-primary">
-            <th>Date</th>
-            <th>Present reading</th>
-            <th>Previous reading</th>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-        <tr>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-            <td class="font-italic">No data</td>
-        </tr>
-    </tbody>
+                <script type="text/javascript">
+                    function showGasPay(name){
+                      if(name == 'gasPay3') {
+                        document.getElementById('gasPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="gasPay_other" name="gasPay_other"/>';
+                    } else {
+                        document.getElementById('gasPayOther').innerHTML='';
+                    } 
+                }
+            </script>
+            <td class="font-italic" colspan="2">
+                <form action="#" class="m-0">
+                   <select name="gasPay" id="gasPay" onchange="showGasPay(this.options[this.selectedIndex].value)" required>
+                    <option value="gasDefault"></option>
+                    <option value="gasPay1">Credit</option>
+                    <option value="gasPay2">Prepaid</option>
+                    <option value="gasPay3">Other</option>
+                </select>
+            </form>
+            <div id="gasPayOther"></div>
+        </td>
+    </tr>
+    <tr>
+        <th class="text-primary">Meter point number</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Supplier</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Account Reference</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Tariff</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr>
+        <th class="text-primary">Meter Serial Number</th>
+        <td class="font-italic" colspan="2">To be added</td>
+    </tr>
+    <tr class="table-primary">
+        <th>Date</th>
+        <th>Present reading</th>
+        <th>Previous reading</th>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+    <tr>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+        <td class="font-italic">No data</td>
+    </tr>
+</tbody>
 </table>
 <!-- <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 --></div>
@@ -882,6 +900,7 @@
                 <td>
                   <form action="#" class="m-0">
                       <select name="referral">
+                        <option value="referralDefault"></option>
                         <option value="referral1">Advice works</option>
                         <option value="referral2">C4R</option>
                         <option value="referral3">Council</option>
@@ -898,22 +917,23 @@
             <td class="font-italic">
                 <form action="#" class="m-0">
                     <select name="reasonType">
-                      <option value="reason1">Billing Issues</option>
-                      <option value="reason2">Fuel Debt</option>
-                      <option value="reason3">Meter Issues</option>
-                  </select>
-              </form>
-          </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Visit Date</th>
-        <td>01/01/2001</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Advisor</th>
-        <td>Energy Advocate 1</td>
-    </tr>
-</tbody>
+                        <option value="reasonDefault"></option>
+                        <option value="reason1">Billing Issues</option>
+                        <option value="reason2">Fuel Debt</option>
+                        <option value="reason3">Meter Issues</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">Visit Date</th>
+            <td>01/01/2001</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Advisor</th>
+            <td>Energy Advocate 1</td>
+        </tr>
+    </tbody>
 </table>
 <!-- <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 --></div>
@@ -1029,11 +1049,12 @@
     <textarea class="form-control form-control-sm mb-0" id="exampleFormControlTextarea1" rows="3"></textarea>
     <label for="taskType" class="mt-0 mb-0">Type</label>
     <select class="form-control form-control-sm" id="taskType">
-        <option>Phone call - citizen</option>
-        <option>Phone call - home visit</option>
-        <option>Contact - update</option>
-        <option>Contact - electricity company</option>
-        <option>Complete - application</option>
+        <option value="taskDefault"></option>
+        <option value="task1">Phone call - citizen</option>
+        <option value="task2">Phone call - home visit</option>
+        <option value="task3">Contact - update</option>
+        <option value="task4">Contact - electricity company</option>
+        <option value="task5">Complete - application</option>
     </select>
 </form>
 <a href="#" class="btn btn-outline-primary mt-0" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
@@ -1047,7 +1068,7 @@
         <div class="card">
             <div class="card-header alert alert-primary m-0" id=headingRef style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
                 <h5 class="mb-0">
-                    <button class="btn btn-link collapsed"data-toggle="collapse" data-target="#collapseRef" aria-expanded="false" aria-controls="collapseRef">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseRef" aria-expanded="false" aria-controls="collapseRef">
                         Referral List
                     </button>
                 </h5>
