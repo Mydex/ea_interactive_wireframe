@@ -49,7 +49,27 @@
   <main style=" min-height:75%;">
     <div class="container">
       <h3 class="mt-4 mb-4">Messages</h3>
-      <h5 for="#" class="mb-2">Send message to your manager</h5>
+      <h5 for="#" class="mb-2">Send message to your manager and other advocates</h5>
+          <script type="text/javascript">
+              function showWall(name){
+                if(name == 'wall5') {
+                  document.getElementById('wallOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="wallOther" name="wallOther"/>';
+              } else {
+                  document.getElementById('wallOther').innerHTML='';
+              } 
+          }
+      </script>
+      <form action="#" class="m-0">
+          <select name="wall" id="wall" onchange="showWall(this.options[this.selectedIndex].value)" required>
+              <option value="wallDefault"></option>
+              <option value="wall1">Cavity wall</option>
+              <option value="wall2">Cavity wall - filled</option>
+              <option value="wall3">Solid wall</option>
+              <option value="wall4">System built</option>
+              <option value="wall5">Other</option>
+          </select>
+      </form>
+      <div id="wallOther"></div>
       <form action="/#">
         <textarea class="form-control form-control-sm" id="textarea1" rows="3"></textarea>
       </form>
