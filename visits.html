@@ -57,21 +57,31 @@
           <h4 for="#" class="mb-2">Add home visit</h4>
           <form action="/#">
             <label for="clientName" class="mt-0 mb-0">Assign to a client</label>
-            <select class="form-control" id="clientName">
-              <option>N/a</option>
-              <option>Citizen Four</option>
-              <option>Citizen Seven</option>
-              <option>Citizen Nine</option>
-              <option>Citizen Thirteen</option>
-              <option>Citizen Fifteen</option>
-              <option>Citizen Ninenteen</option>
-              <option>Citizen Twenty</option>
-              <option>Citizen Twenty-four</option>
-              <option>Citizen Twenty-eight</option>
-              <option>Citizen Twenty-nine</option>
-              <option>Citizen Thirty-two</option>
-              <option>Citizen Thirty-six</option>
+            <script type="text/javascript">
+              function showClientInfo(name){
+                if(name == 'client') {
+                  document.getElementById('clientInfo').innerHTML = 'Address:<br>';
+                } else {
+                  document.getElementById('clientInfo').innerHTML='';
+                } 
+              }
+            </script>
+            <select id="clientName" id="clientName" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>
+              <option name="noClient">No client</option>
+              <option name="client">Citizen Four</option>
+              <option name="client">Citizen Seven</option>
+              <option name="client">Citizen Nine</option>
+              <option name="client">Citizen Thirteen</option>
+              <option name="client">Citizen Fifteen</option>
+              <option name="client">Citizen Ninenteen</option>
+              <option name="client">Citizen Twenty</option>
+              <option name="client">Citizen Twenty-four</option>
+              <option name="client">Citizen Twenty-eight</option>
+              <option name="client">Citizen Twenty-nine</option>
+              <option name="client">Citizen Thirty-two</option>
+              <option name="client">Citizen Thirty-six</option>
             </select>
+            <div id="clientInfo"></div>
             <label for="clientAddress" class="mt-0 mb-0">Client address</label>
             <select class="form-control" id="clientAddress">
               <option>Pick from list</option>
