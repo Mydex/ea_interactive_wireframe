@@ -228,7 +228,7 @@
 
            function onInputEvent(e) {
              input = e.target;
-             var tables = document.getElementsByClassName('pastTable');
+             var tables = document.getElementsByClassName('pastFilter');
              Arr.forEach.call(tables, function(table) {
                Arr.forEach.call(table.tBodies, function(tbody) {
                  Arr.forEach.call(tbody.rows, filterRow);
