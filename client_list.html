@@ -53,29 +53,68 @@
       <h3 class="mb-4">Client List</h3>
 
       <script>
-        function filterName() {
-          var input, filter, table, tr, td, i;
-          input = document.getElementById("input");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("clientTable");
-          tr = table.getElementsByTagName("tr");
+        // function filterName() {
+        //   var input, filter, table, tr, td, i;
+        //   input = document.getElementById("input");
+        //   filter = input.value.toUpperCase();
+        //   table = document.getElementById("clientTable");
+        //   tr = table.getElementsByTagName("tr");
 
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
+        //   for (i = 0; i < tr.length; i++) {
+        //     td = tr[i].getElementsByTagName("td")[0];
+        //     if (td) {
+        //       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        //         tr[i].style.display = "";
+        //       } else {
+        //         tr[i].style.display = "none";
+        //       }
+        //     } 
+        //   }
+        // }
+        (function(document) {
+          'use strict';
+
+          var LightTableFilter = (function(Arr) {
+
+            var _input;
+
+            function _onInputEvent(e) {
+              _input = e.target;
+              var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+              Arr.forEach.call(tables, function(table) {
+                Arr.forEach.call(table.tBodies, function(tbody) {
+                  Arr.forEach.call(tbody.rows, _filter);
+                });
+              });
+            }
+
+            function _filter(row) {
+              var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+              row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+              init: function() {
+                var inputs = document.getElementsByClassName('light-table-filter');
+                Arr.forEach.call(inputs, function(input) {
+                  input.oninput = _onInputEvent;
+                });
               }
-            } 
-          }
-        }
+            };
+          })(Array.prototype);
+
+          document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'complete') {
+              LightTableFilter.init();
+            }
+          });
+
+        })(document);
       </script>
 
 
       <div class="table-responsive">
-        <table class="table table-striped table-bordered table-sm text-left sortable" id="clientTable">
+        <table class="order-table table table-striped table-bordered table-sm text-left sortable" id="clientTable">
           <thead class="table-info">
             <tr class="header">
               <th data-sort="name">Forename <img class="rounded" src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10">
@@ -90,7 +129,7 @@
               <th>Notes</th>
             </tr>
             <tr>
-              <th><input type="text" id="input" onkeyup="filterName()" placeholder="Search for first name.."></th>
+              <th><input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></th>
               <th><input type="text" id="input" onkeyup="filterName()" placeholder="Search for surname.."></th>
               <th><input type="text" id="input" onkeyup="filterName()" placeholder="Search for address.."></th>
               <th></th>
