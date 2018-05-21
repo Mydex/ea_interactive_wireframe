@@ -124,7 +124,7 @@
       <script>
         (function(document) {
           'use strict';
-          var TableFilter = (function(Arr) {
+          var StatusFilter = (function(Arr) {
             var input;
 
             function onInputEvent(e) {
@@ -154,17 +154,17 @@
 
           document.addEventListener('readystatechange', function() {
             if (document.readyState === 'complete') {
-              TableFilter.init();
+              StatusFilter.init();
             }
           });
 
         })(document);
       </script>
 
-      <input type="search" class="tableFilter form-control col-4" data-table="order-table" placeholder="Filter table here...">
+      <input type="search" class="tableFilter form-control col-4" data-table="status-table" placeholder="Filter table here...">
 
       <div class="table-responsive">
-       <table class="order-table table table-striped table-bordered table-sm text-left">
+       <table class="status-table table table-striped table-bordered table-sm text-left">
         <thead class="table-info">
           <tr>
             <th>Citizens name</th>
@@ -313,7 +313,7 @@
     <script>
       (function(document) {
         'use strict';
-        var TableFilter = (function(Arr) {
+        var HistoricFilter = (function(Arr) {
           var input;
 
           function onInputEvent(e) {
@@ -343,17 +343,17 @@
 
         document.addEventListener('readystatechange', function() {
           if (document.readyState === 'complete') {
-            TableFilter.init();
+            HistoricFilter.init();
           }
         });
 
       })(document);
     </script>
 
-    <input type="search" class="tableFilter form-control col-4" data-table="order-table" placeholder="Filter table here...">
+    <input type="search" class="tableFilter form-control col-4" data-table="historic-table" placeholder="Filter table here...">
 
     <div class="table-responsive">
-     <table class="order-table table table-striped table-bordered table-sm text-left">
+     <table class="historic-table table table-striped table-bordered table-sm text-left">
       <thead class="table-info">
         <tr>
           <th>Citizens name</th>
