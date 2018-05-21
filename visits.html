@@ -145,127 +145,10 @@
         })(document);
       </script>
 
-      <div class="row mt-4">
-        <div class="col-lg-6 col-md-6">
-          <h4>Upcoming visits</h4>
-          <input type="search" class="upcomingFilter form-control col-4 mb-2" data-table="upcoming-table" placeholder="Filter table here...">
-          <div class="table-responsive">
-            <table class="upcoming-table table table-striped table-bordered table-sm text-left sortable" id="upcomingTable">
-              <thead class="table-info">
-                <tr>
-                  <th data-sort="name">Client  <img src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-                  <th data-sort="date">Date  <img src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-                  <th>Time</th>
-                  <th>Address</th>
-                  <th>Contact</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Fifteen</a></td>
-                  <td>09/09/2018</td>
-                  <td>09:00</td>
-                  <td>12 Fake Street<br>
-                   FakeTown<br>
-                 FA12 3KE</td>
-                 <td>07712345678</td>
-               </tr>
-               <tr>
-                 <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Nine</a></td>
-                 <td>09/09/2018</td>
-                 <td>12:00</td>
-                 <td>12 Fake Street<br>
-                   FakeTown<br>
-                 FA12 3KE</td>
-                 <td>07712345678</td>
-               </tr>
-               <tr>
-                 <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-four</a></td>
-                 <td>09/09/2018</td>
-                 <td>15:00</td>
-                 <td>12 Fake Street<br>
-                   FakeTown<br>
-                 FA12 3KE</td>
-                 <td>07712345678</td>
-               </tr>
-               <tr>
-                 <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-Nine</a></td>
-                 <td>06/06/2018</td>
-                 <td>15:00</td>
-                 <td>12 Fake Street<br>
-                   FakeTown<br>
-                 FA12 3KE</td>
-                 <td>07712345678</td>
-               </tr>
-               <tr>
-                <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty</a></td>
-                <td>05/05/2018</td>
-                <td>09:00</td>
-                <td>12 Fake Street<br>
-                 FakeTown<br>
-               FA12 3KE</td>
-               <td>07712345678</td>
-             </tr>
-             <tr>
-               <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Thirty-two</a></td>
-               <td>06/06/2018</td>
-               <td>12:00</td>
-               <td>12 Fake Street<br>
-                 FakeTown<br>
-               FA12 3KE</td>
-               <td>07712345678</td>
-             </tr>
-           </tbody>
-         </table>
-       </div>
-     </div>
-
-     <script>
-       (function(document) {
-         'use strict';
-         var PastFilter = (function(Arr) {
-           var input;
-
-           function onInputEvent(e) {
-             input = e.target;
-             var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-             Arr.forEach.call(tables, function(table) {
-               Arr.forEach.call(table.tBodies, function(tbody) {
-                 Arr.forEach.call(tbody.rows, filterRow);
-               });
-             });
-           }
-
-           function filterRow(row) {
-             var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-             row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-           }
-
-           return {
-             init: function() {
-               var inputs = document.getElementsByClassName('pastFilter');
-               Arr.forEach.call(inputs, function(input) {
-                 input.oninput = onInputEvent;
-               });
-             }
-           };
-         })(Array.prototype);
-
-         document.addEventListener('readystatechange', function() {
-           if (document.readyState === 'complete') {
-             PastFilter.init();
-           }
-         });
-
-       })(document);
-     </script>
-
-     <div class="col-lg-5 col-md-6 p-0 m-0">
-      <h4>Past visits</h4>
-      <input type="search" class="pastFilter form-control col-4 mb-2" data-table="order-table" placeholder="Filter table here...">
-
+      <h4>Upcoming visits</h4>
+      <input type="search" class="upcomingFilter form-control col-4 mb-2" data-table="upcoming-table" placeholder="Filter table here...">
       <div class="table-responsive">
-        <table class="past-table table table-striped table-bordered table-sm text-left sortable" id="pastTable">
+        <table class="upcoming-table table table-striped table-bordered table-sm text-left sortable" id="upcomingTable">
           <thead class="table-info">
             <tr>
               <th data-sort="name">Client  <img src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
@@ -277,8 +160,8 @@
           </thead>
           <tbody>
             <tr>
-              <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty</a></td>
-              <td>01/01/2018</td>
+              <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Fifteen</a></td>
+              <td>09/09/2018</td>
               <td>09:00</td>
               <td>12 Fake Street<br>
                FakeTown<br>
@@ -286,8 +169,8 @@
              <td>07712345678</td>
            </tr>
            <tr>
-             <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Thirty-three</a></td>
-             <td>02/02/2018</td>
+             <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Nine</a></td>
+             <td>09/09/2018</td>
              <td>12:00</td>
              <td>12 Fake Street<br>
                FakeTown<br>
@@ -295,8 +178,26 @@
              <td>07712345678</td>
            </tr>
            <tr>
-            <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Fifteen</a></td>
-            <td>03/03/2018</td>
+             <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-four</a></td>
+             <td>09/09/2018</td>
+             <td>15:00</td>
+             <td>12 Fake Street<br>
+               FakeTown<br>
+             FA12 3KE</td>
+             <td>07712345678</td>
+           </tr>
+           <tr>
+             <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-Nine</a></td>
+             <td>06/06/2018</td>
+             <td>15:00</td>
+             <td>12 Fake Street<br>
+               FakeTown<br>
+             FA12 3KE</td>
+             <td>07712345678</td>
+           </tr>
+           <tr>
+            <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty</a></td>
+            <td>05/05/2018</td>
             <td>09:00</td>
             <td>12 Fake Street<br>
              FakeTown<br>
@@ -304,27 +205,9 @@
            <td>07712345678</td>
          </tr>
          <tr>
-           <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Nine</a></td>
-           <td>02/02/2018</td>
-           <td>15:00</td>
-           <td>12 Fake Street<br>
-             FakeTown<br>
-           FA12 3KE</td>
-           <td>07712345678</td>
-         </tr>
-         <tr>
-           <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-four</a></td>
-           <td>01/01/2018</td>
-           <td>15:00</td>
-           <td>12 Fake Street<br>
-             FakeTown<br>
-           FA12 3KE</td>
-           <td>07712345678</td>
-         </tr>
-         <tr>
-           <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-Nine</a></td>
-           <td>03/03/2018</td>
-           <td>15:00</td>
+           <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Thirty-two</a></td>
+           <td>06/06/2018</td>
+           <td>12:00</td>
            <td>12 Fake Street<br>
              FakeTown<br>
            FA12 3KE</td>
@@ -333,7 +216,118 @@
        </tbody>
      </table>
    </div>
- </div>
+
+   <script>
+     (function(document) {
+       'use strict';
+       var PastFilter = (function(Arr) {
+         var input;
+
+         function onInputEvent(e) {
+           input = e.target;
+           var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+           Arr.forEach.call(tables, function(table) {
+             Arr.forEach.call(table.tBodies, function(tbody) {
+               Arr.forEach.call(tbody.rows, filterRow);
+             });
+           });
+         }
+
+         function filterRow(row) {
+           var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+           row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+         }
+
+         return {
+           init: function() {
+             var inputs = document.getElementsByClassName('pastFilter');
+             Arr.forEach.call(inputs, function(input) {
+               input.oninput = onInputEvent;
+             });
+           }
+         };
+       })(Array.prototype);
+
+       document.addEventListener('readystatechange', function() {
+         if (document.readyState === 'complete') {
+           PastFilter.init();
+         }
+       });
+
+     })(document);
+   </script>
+
+   <h4>Past visits</h4>
+   <input type="search" class="pastFilter form-control col-4 mb-2" data-table="order-table" placeholder="Filter table here...">
+
+   <div class="table-responsive">
+    <table class="past-table table table-striped table-bordered table-sm text-left sortable" id="pastTable">
+      <thead class="table-info">
+        <tr>
+          <th data-sort="name">Client  <img src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+          <th data-sort="date">Date  <img src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+          <th>Time</th>
+          <th>Address</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty</a></td>
+          <td>01/01/2018</td>
+          <td>09:00</td>
+          <td>12 Fake Street<br>
+           FakeTown<br>
+         FA12 3KE</td>
+         <td>07712345678</td>
+       </tr>
+       <tr>
+         <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Thirty-three</a></td>
+         <td>02/02/2018</td>
+         <td>12:00</td>
+         <td>12 Fake Street<br>
+           FakeTown<br>
+         FA12 3KE</td>
+         <td>07712345678</td>
+       </tr>
+       <tr>
+        <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Fifteen</a></td>
+        <td>03/03/2018</td>
+        <td>09:00</td>
+        <td>12 Fake Street<br>
+         FakeTown<br>
+       FA12 3KE</td>
+       <td>07712345678</td>
+     </tr>
+     <tr>
+       <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Nine</a></td>
+       <td>02/02/2018</td>
+       <td>15:00</td>
+       <td>12 Fake Street<br>
+         FakeTown<br>
+       FA12 3KE</td>
+       <td>07712345678</td>
+     </tr>
+     <tr>
+       <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-four</a></td>
+       <td>01/01/2018</td>
+       <td>15:00</td>
+       <td>12 Fake Street<br>
+         FakeTown<br>
+       FA12 3KE</td>
+       <td>07712345678</td>
+     </tr>
+     <tr>
+       <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-Nine</a></td>
+       <td>03/03/2018</td>
+       <td>15:00</td>
+       <td>12 Fake Street<br>
+         FakeTown<br>
+       FA12 3KE</td>
+       <td>07712345678</td>
+     </tr>
+   </tbody>
+ </table>
 </div>
 
 <script>
