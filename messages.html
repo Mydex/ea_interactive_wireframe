@@ -69,7 +69,7 @@
           <script>
             (function(document) {
               'use strict';
-              var TableFilter = (function(Arr) {
+              var HistoricFilter = (function(Arr) {
                 var input;
 
                 function onInputEvent(e) {
@@ -99,7 +99,7 @@
 
               document.addEventListener('readystatechange', function() {
                 if (document.readyState === 'complete') {
-                  TableFilter.init();
+                  HistoricFilter.init();
                 }
               });
 
