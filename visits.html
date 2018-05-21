@@ -148,7 +148,7 @@
       <div class="row mt-4">
         <div class="col-lg-6 col-md-6">
           <h4>Upcoming visits</h4>
-          <input type="search" class="tableFilter form-control col-4" data-table="order-table" placeholder="Filter table here...">
+          <input type="search" class="tableFilter form-control col-4 mb-2" data-table="order-table" placeholder="Filter table here...">
           <div class="table-responsive">
             <table class="order-table table table-striped table-bordered table-sm text-left sortable" id="upcomingTable">
               <thead class="table-info">
@@ -220,10 +220,51 @@
        </div>
      </div>
 
+     <script>
+       (function(document) {
+         'use strict';
+         var TableFilter = (function(Arr) {
+           var input;
+
+           function onInputEvent(e) {
+             input = e.target;
+             var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+             Arr.forEach.call(tables, function(table) {
+               Arr.forEach.call(table.tBodies, function(tbody) {
+                 Arr.forEach.call(tbody.rows, filterRow);
+               });
+             });
+           }
+
+           function filterRow(row) {
+             var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+             row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+           }
+
+           return {
+             init: function() {
+               var inputs = document.getElementsByClassName('tableFilter');
+               Arr.forEach.call(inputs, function(input) {
+                 input.oninput = onInputEvent;
+               });
+             }
+           };
+         })(Array.prototype);
+
+         document.addEventListener('readystatechange', function() {
+           if (document.readyState === 'complete') {
+             TableFilter.init();
+           }
+         });
+
+       })(document);
+     </script>
+
      <div class="col-lg-5 col-md-6 p-0 m-0">
       <h4>Past visits</h4>
+      <input type="search" class="tableFilter form-control col-4 mb-2" data-table="order-table" placeholder="Filter table here...">
       <div class="table-responsive">
-        <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
+        <table class="table table-striped table-bordered table-sm text-left sortable" id="pastTable">
           <thead class="table-info">
             <tr>
               <th data-sort="name">Client  <img src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
