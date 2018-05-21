@@ -220,7 +220,7 @@
    <script>
      (function(document) {
        'use strict';
-       var PastFilter = (function(Arr) {
+       var TableFilter = (function(Arr) {
          var input;
 
          function onInputEvent(e) {
@@ -240,7 +240,7 @@
 
          return {
            init: function() {
-             var inputs = document.getElementsByClassName('pastFilter');
+             var inputs = document.getElementsByClassName('tableFilter');
              Arr.forEach.call(inputs, function(input) {
                input.oninput = onInputEvent;
              });
@@ -250,7 +250,7 @@
 
        document.addEventListener('readystatechange', function() {
          if (document.readyState === 'complete') {
-           PastFilter.init();
+           TableFilter.init();
          }
        });
 
@@ -258,7 +258,7 @@
    </script>
 
    <h4>Past visits</h4>
-   <input type="search" class="pastFilter form-control col-4 mb-2" data-table="order-table" placeholder="Filter table here...">
+   <input type="search" class="tableFilter form-control col-4" data-table="order-table" placeholder="Filter table here...">
 
    <div class="table-responsive">
     <table class="past-table table table-striped table-bordered table-sm text-left sortable" id="pastTable">
