@@ -53,27 +53,8 @@
       <h3 class="mb-4">Client List</h3>
 
       <script>
-        // function filterName() {
-        //   var input, filter, table, tr, td, i;
-        //   input = document.getElementById("input");
-        //   filter = input.value.toUpperCase();
-        //   table = document.getElementById("clientTable");
-        //   tr = table.getElementsByTagName("tr");
-
-        //   for (i = 0; i < tr.length; i++) {
-        //     td = tr[i].getElementsByTagName("td")[0];
-        //     if (td) {
-        //       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        //         tr[i].style.display = "";
-        //       } else {
-        //         tr[i].style.display = "none";
-        //       }
-        //     } 
-        //   }
-        // }
         (function(document) {
           'use strict';
-
           var LightTableFilter = (function(Arr) {
 
             var _input;
@@ -95,7 +76,7 @@
 
             return {
               init: function() {
-                var inputs = document.getElementsByClassName('light-table-filter');
+                var inputs = document.getElementsByClassName('tablefilter');
                 Arr.forEach.call(inputs, function(input) {
                   input.oninput = _onInputEvent;
                 });
@@ -112,7 +93,7 @@
         })(document);
       </script>
 
-      <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+      <input type="search" class="tablefilter" data-table="order-table" placeholder="Filter table here...">
       <div class="table-responsive">
         <table class="order-table table table-striped table-bordered table-sm text-left sortable" id="clientTable">
           <thead class="table-info">
@@ -128,15 +109,6 @@
               <th data-sort="name">Referrer <img class="rounded" src="https://tashaford.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></i></th>
               <th>Notes</th>
             </tr>
-<!--             <tr>
-              <th><input type="text" id="input" onkeyup="filterName()" placeholder="Search for first name.."></th>
-              <th><input type="text" id="input" onkeyup="filterName()" placeholder="Search for surname.."></th>
-              <th><input type="text" id="input" onkeyup="filterName()" placeholder="Search for address.."></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr> -->
           </thead>
           <tbody>
             <tr>
