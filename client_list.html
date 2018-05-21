@@ -55,7 +55,7 @@
       <script>
         (function(document) {
           'use strict';
-          var LightTableFilter = (function(Arr) {
+          var TableFilter = (function(Arr) {
 
             var _input;
 
@@ -76,7 +76,7 @@
 
             return {
               init: function() {
-                var inputs = document.getElementsByClassName('tablefilter');
+                var inputs = document.getElementsByClassName('tableFilter');
                 Arr.forEach.call(inputs, function(input) {
                   input.oninput = _onInputEvent;
                 });
@@ -86,14 +86,14 @@
 
           document.addEventListener('readystatechange', function() {
             if (document.readyState === 'complete') {
-              LightTableFilter.init();
+              TableFilter.init();
             }
           });
 
         })(document);
       </script>
 
-      <input type="search" class="tablefilter" data-table="order-table" placeholder="Filter table here...">
+      <input type="search" class="tableFilter" data-table="order-table" placeholder="Filter table here...">
       <div class="table-responsive">
         <table class="order-table table table-striped table-bordered table-sm text-left sortable" id="clientTable">
           <thead class="table-info">
