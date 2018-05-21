@@ -113,7 +113,7 @@
 
             function onInputEvent(e) {
               input = e.target;
-              var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+              var tables = document.getElementsByClassName(input.getAttribute('upcoming-table'));
               Arr.forEach.call(tables, function(table) {
                 Arr.forEach.call(table.tBodies, function(tbody) {
                   Arr.forEach.call(tbody.rows, filterRow);
@@ -228,7 +228,7 @@
 
            function onInputEvent(e) {
              input = e.target;
-             var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+             var tables = document.getElementsByClassName(input.getAttribute('past-table'));
              Arr.forEach.call(tables, function(table) {
                Arr.forEach.call(table.tBodies, function(tbody) {
                  Arr.forEach.call(tbody.rows, filterRow);
