@@ -356,10 +356,10 @@
                         <td>
                             <script>
                                 $(document).ready(function(){
-                                    $('[data-toggle="popover"]').popover();   
+                                    $('#myPopover').popover();  
                                 });
                             </script>
-                            <a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>
+                            <a href="#" title="Dismissible popover" id="myPopover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>
                             <!-- <button type="button" class="btn btn-sm btn-outline-primary p-1" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
                             <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3">
                               <div class="modal-dialog " role="document" style="margin-top: 50%;">
