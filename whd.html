@@ -342,9 +342,9 @@
  </div>
  <script type="text/javascript">
    function showLink(name){
-    if(name =! 'supplierDefault') {
-      document.getElementById('whdIframe').href = name;
-      document.getElementById('whdIframe').innerHTML = '<a href=""  target="_blank">Link to WHD page</a>';
+    if(name != 'supplierDefault') {
+      document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href=""  target="_blank">Link to WHD page</a>';
+      document.getElementById('linkIframe').href = name;
     } else {
      document.getElementById('whdIframe').innerHTML='';
    } 
