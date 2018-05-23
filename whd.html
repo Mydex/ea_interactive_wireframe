@@ -332,23 +332,23 @@
    <div class="row container">
     <form action="#" class="m-0">
      <select name="supplier" onchange="showLink(this.options[this.selectedIndex].value)" required>
-      <option id="supplierDefault" value=""></option>
-       <option id="Scottish Power" value="https://www.scottishpower.co.uk/whd.process?execution=e1s1">Scottish Power</option>
-       <option id="Briish Gas" value="https://www.britishgas.co.uk/energy/energy-saving/warm-home-discount.html">British Gas</option>
-       <option id="EDF Energy" value="https://www.edfenergy.com/for-home/help-support/warm-home-discount">EDF Energy</option>
-       <option id="E.ON" value="https://www.eonenergy.com/for-your-home/saving-energy/need-little-extra-help/warm-home-discount">E.ON</option>
-     </select>
-   </form>
- </div>
- <script type="text/javascript">
-   function showLink(site){
-    if(site != 'supplierDefault') {
-      document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to name WHD page</a>';
-      document.getElementById('linkIframe').href = site;
-    } else {
-     document.getElementById('whdIframe').innerHTML='';
-   } 
- }
+      <option value=""></option>
+      <option value="https://www.scottishpower.co.uk/whd.process?execution=e1s1">Scottish Power</option>
+      <option value="https://www.britishgas.co.uk/energy/energy-saving/warm-home-discount.html">British Gas</option>
+      <option value="https://www.edfenergy.com/for-home/help-support/warm-home-discount">EDF Energy</option>
+      <option value="https://www.eonenergy.com/for-your-home/saving-energy/need-little-extra-help/warm-home-discount">E.ON</option>
+    </select>
+  </form>
+</div>
+<script type="text/javascript">
+ function showLink(site){
+  if(site != 'supplierDefault') {
+    document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to name WHD page</a>';
+    document.getElementById('linkIframe').href = site;
+  } else {
+   document.getElementById('whdIframe').innerHTML='';
+ } 
+}
 </script>
 <div id="whdIframe"></div>
 </div>
