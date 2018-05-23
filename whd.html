@@ -340,10 +340,16 @@
        </select>
      </form>
    </div>
-   <script>
-     
+       <script type="text/javascript">
+           function showIframe(name){
+             if(name == 'wall5') {
+               document.getElementById('wallOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="wallOther" name="wallOther"/>';
+           } else {
+               document.getElementById('wallOther').innerHTML='';
+           } 
+       }
    </script>
-   <iframe src="https://www.scottishpower.co.uk/whd.process?execution=e1s1" frameborder="1" width="100%" height="1000px"></iframe>
+   <iframe src="https://www.scottishpower.co.uk/whd.process?execution=e1s1" frameborder="1" width="100%" height="800px"></iframe>
  </div>
 </main>
 
