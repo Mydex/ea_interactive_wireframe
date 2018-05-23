@@ -331,19 +331,27 @@
    <h4 class="mt-4 mb-2">Apply for WHD</h4>
    <div class="row container">
     <form action="#" class="m-0">
-     <select name="supplier" onchange="document.getElementById('whdIframe').href = this.options[this.selectedIndex].value">
-       <option value="https://tashaford.github.io/ea_interactive_wireframe/index.html"></option>
-       <option value="https://www.scottishpower.co.uk/whd.process?execution=e1s1">Scottish Power</option>
-       <option value="https://www.britishgas.co.uk/energy/energy-saving/warm-home-discount.html">British Gas</option>
-       <option value="https://www.edfenergy.com/for-home/help-support/warm-home-discount">EDF Energy</option>
-       <option value="https://www.eonenergy.com/for-your-home/saving-energy/need-little-extra-help/warm-home-discount">E.ON</option>
-     </select>
-   </form>
- </div>
- 
- <div>
-   <a href="" id="whdIframe">Link to WHD page</a>
- </div>
+     <select name="supplier" onchange="showLink(this.options[this.selectedIndex].value)" required
+     onchange="document.getElementById('whdIframe').href = this.options[this.selectedIndex].value">
+     <option id="supplierDefault" value="https://tashaford.github.io/ea_interactive_wireframe/index.html"></option>
+     <option id="supplier1" value="https://www.scottishpower.co.uk/whd.process?execution=e1s1">Scottish Power</option>
+     <option id="supplier2" value="https://www.britishgas.co.uk/energy/energy-saving/warm-home-discount.html">British Gas</option>
+     <option id="supplier3" value="https://www.edfenergy.com/for-home/help-support/warm-home-discount">EDF Energy</option>
+     <option id="supplier4" value="https://www.eonenergy.com/for-your-home/saving-energy/need-little-extra-help/warm-home-discount">E.ON</option>
+   </select>
+ </form>
+</div>
+<script type="text/javascript">
+ function showLink(name){
+   if(name != 'supplierDefault') {
+    document.getElementById('whdIframe').href = name;
+    document.getElementById('whdIframe').innerHTML = '<a href="" >Link to WHD page</a>';
+  } else {
+   document.getElementById('whdIframe').innerHTML='';
+ } 
+}
+</script>
+<div id="whdIframe"></div>
 </div>
 </main>
 
