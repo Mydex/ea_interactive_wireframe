@@ -331,7 +331,7 @@
    <h4 class="mt-4 mb-2">Apply for WHD</h4>
    <div class="row container">
     <form action="#" class="m-0">
-     <select name="supplier" onchange="document.getElementById('whdIframe').src = this.options[this.selectedIndex].value">
+     <select name="supplier" onchange="document.getElementById('whdIframe').href = this.options[this.selectedIndex].value">
        <option value="https://tashaford.github.io/ea_interactive_wireframe/index.html"></option>
        <option value="https://www.scottishpower.co.uk/whd.process?execution=e1s1">Scottish Power</option>
        <option value="https://www.britishgas.co.uk/energy/energy-saving/warm-home-discount.html">British Gas</option>
@@ -341,7 +341,9 @@
    </form>
  </div>
  
- <iframe id="whdIframe" frameborder="1" width="100%" height="800px"></iframe>
+ <div>
+   <a href="" id="whdIframe">Link to WHD page</a>
+ </div>
 </div>
 </main>
 
