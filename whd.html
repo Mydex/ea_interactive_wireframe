@@ -331,7 +331,7 @@
    <h4 class="mt-4 mb-2">Apply for WHD</h4>
    <div class="row container">
     <form action="#" class="m-0">
-     <select name="supplier" onchange="showLink(this.options[this.selectedIndex].value, this.option[this.selectedIndex].id)" required>
+     <select name="supplier" onchange="showLink(this.options[this.selectedIndex].value)" required>
       <option id="supplierDefault" value=""></option>
        <option id="Scottish Power" value="https://www.scottishpower.co.uk/whd.process?execution=e1s1">Scottish Power</option>
        <option id="Briish Gas" value="https://www.britishgas.co.uk/energy/energy-saving/warm-home-discount.html">British Gas</option>
@@ -341,7 +341,7 @@
    </form>
  </div>
  <script type="text/javascript">
-   function showLink(site, name){
+   function showLink(site){
     if(site != 'supplierDefault') {
       document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to name WHD page</a>';
       document.getElementById('linkIframe').href = site;
