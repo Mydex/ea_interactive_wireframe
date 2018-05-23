@@ -60,14 +60,13 @@
             <script type="text/javascript">
               function showClientInfo(name){
                 if(name == 'client') {
-                  document.getElementById('clientInfo').style = 'mt-2';
                   document.getElementById('clientInfo').innerHTML = 'Address: 12 Fake Street <br>Profile: <a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">view</a>';
                 } else {
                   document.getElementById('clientInfo').innerHTML='';
                 } 
               }
             </script>
-            <select id="clientName" id="clientName" class="form-control" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>
+            <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>
               <option value="noClient">No client</option>
               <option value="client">Citizen Four</option>
               <option value="client">Citizen Seven</option>
@@ -89,7 +88,7 @@
               <option>12 Fake Street</option>
               <option>31 Mock Avenue</option>
             </select> -->
-            <div class="mt-0 mb-0"><label placeholder="01/01/2018" class="mt-0 mb-0">Date</label></div>
+            <div class="mt-1 mb-1"><label placeholder="01/01/2018" class="mt-0 mb-0">Date</label></div>
             <input class=" mt-0 p-1 form-control" type="date">
             <div class="row mt-1">
               <div class="col-lg-6 col-md-6">
