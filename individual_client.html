@@ -1026,17 +1026,15 @@
     <th class="text-primary">Date of births for all children</th>
     <td class="font-italic">
         <input type="date" name="dob">
-        <a href="#" class="addDOB btn btn-sm btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</a>
+        <a href="#/" onclick="addDOB()" required class="btn btn-sm btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</a>
         <script type="text/javascript">
-            $('addDOB').click(function(e)
-            {
-               document.getElementById('dob1').innerHTML = "<input type='date' name='dob'>";
-
-               e.preventDefault();
-           });
-       </script>
-       <div id="dob1"></div>
-   </td>
+          function addDOB(e){
+            e.preventDefault();
+            document.getElementById('dob1').innerHTML = "<input type='date' name='dob'>";
+        }
+    </script>
+    <div id="dob1"></div>
+</td>
 </tr>
 <tr>
  <th class="text-primary">Warm Home Deal: Core group</th>
