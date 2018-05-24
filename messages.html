@@ -123,17 +123,12 @@
                 <tr>
                   <td>Citizen 1 One</td>
                   <td>
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                      View
-                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                     <div class="modal fade " id="modal1" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                       <div class="modal-dialog" role="document" style="margin-top: 35%;">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="mt-2">From : Citizen One</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
+                          <div class="modal-header"><h5 class="mt-2">From : Citizen One</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                           </div>
                           <div class="modal-body">
                             <p>Citizen One has given you permission to view and update their information.</p>
@@ -158,17 +153,12 @@
                 <tr>
                   <td>EA manager</td>
                   <td>
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                      View
-                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                     <div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                       <div class="modal-dialog" role="document" style="margin-top: 35%;">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="mt-2">From : EA manager</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
+                          <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                           </div>
                           <div class="modal-body">
                             <p>New citizen referral. Citizen Thirty-Nine, 077123456789, 12 Fake Street</p>
@@ -193,17 +183,12 @@
                 <tr>
                   <td>EA manager</td>
                   <td>
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                      View
-                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                     <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                       <div class="modal-dialog" role="document" style="margin-top: 35%;">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="mt-2">From : EA manager</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
+                          <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                           </div>
                           <div class="modal-body">
                             <p>Has assessment for Citizen Thirteen been completed? Please update.</p>
@@ -228,21 +213,22 @@
                 <tr>
                   <td>EA manager</td>
                   <td>
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                      View
-                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                     <div class="modal fade " id="modal4" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                       <div class="modal-dialog" role="document" style="margin-top: 35%;">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="mt-2">From : EA manager</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
+                          <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                           </div>
                           <div class="modal-body">
                             <p>New citizen referral. Citizen Forty-seven, 077123456789, 12 Fake Street</p>
-                            <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <a href="#" onclick="showReply()" requiredclass="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply(){
+                                document.getElementById('reply1').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm' id='textarea1' rows='3' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply1"></div>
                           </div>
                         </div>
                       </div>
