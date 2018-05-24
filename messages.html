@@ -161,306 +161,310 @@
                         </li>
                       </ul>
                     </div> -->
+                    <script>
+                      select#importance option[value="normal"]   { background-image:url(https://tashaford.github.io/ea_interactive_wireframe/images/green.png);   }
+                      select#importance option[value="important"] { background-image:url(https://tashaford.github.io/ea_interactive_wireframe/images/orange.png); }
+                      select#importance option[value="urgent"] { background-image:url(https://tashaford.github.io/ea_interactive_wireframe/images/red.png); }
+                    </script>
+                    <form action="#">
+                      <select id="importance" name="importance">
+                        <option value="normal"></option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EA manager</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
+                    <div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                        <div class="modal-content">
+                          <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>New citizen referral. Citizen Thirty-Nine, 077123456789, 12 Fake Street</p>
+                            <a href="#" onclick="showReply2()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply2(){
+                                document.getElementById('reply2').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply2"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>04/04/2018</td>
+                  <td><input type="date" name="" class="input-group-text"></td>
+                  <td>
                     <form action="#">
                       <select name="importance">
-                        <option value="normal"><a href="javascript:void(0);">
-                          <img src="https://tashaford.github.io/ea_interactive_wireframe/images/green.png" width="20px"/></a></option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>EA manager</td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
-                      <div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                          <div class="modal-content">
-                            <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            </div>
-                            <div class="modal-body">
-                              <p>New citizen referral. Citizen Thirty-Nine, 077123456789, 12 Fake Street</p>
-                              <a href="#" onclick="showReply2()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                              <script type="text/javascript">
-                                function showReply2(){
-                                  document.getElementById('reply2').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                                }
-                              </script>
-                              <div id="reply2"></div>
-                            </div>
+                        <option value="normal">Normal</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EA manager</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
+                    <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                        <div class="modal-content">
+                          <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Has assessment for Citizen Thirteen been completed? Please update.</p>
+                            <a href="#" onclick="showReply3()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply3(){
+                                document.getElementById('reply3').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply3"></div>
                           </div>
                         </div>
                       </div>
-                    </td>
-                    <td>04/04/2018</td>
-                    <td><input type="date" name="" class="input-group-text"></td>
-                    <td>
-                      <form action="#">
-                        <select name="importance">
-                          <option value="normal">Normal</option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>EA manager</td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
-                      <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                          <div class="modal-content">
-                            <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            </div>
-                            <div class="modal-body">
-                              <p>Has assessment for Citizen Thirteen been completed? Please update.</p>
-                              <a href="#" onclick="showReply3()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                              <script type="text/javascript">
-                                function showReply3(){
-                                  document.getElementById('reply3').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                                }
-                              </script>
-                              <div id="reply3"></div>
-                            </div>
+                    </div>
+                  </td>
+                  <td>02/02/2018</td>
+                  <td><input type="date" name="" class="input-group-text"></td>
+                  <td>
+                    <form action="#">
+                      <select name="importance">
+                        <option value="normal">Normal</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EA manager</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
+                    <div class="modal fade " id="modal4" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                        <div class="modal-content">
+                          <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>New citizen referral. Citizen Forty-seven, 077123456789, 12 Fake Street</p>
+                            <a href="#" onclick="showReply4()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply4(){
+                                document.getElementById('reply4').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply4"></div>
                           </div>
                         </div>
                       </div>
-                    </td>
-                    <td>02/02/2018</td>
-                    <td><input type="date" name="" class="input-group-text"></td>
-                    <td>
-                      <form action="#">
-                        <select name="importance">
-                          <option value="normal">Normal</option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>EA manager</td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
-                      <div class="modal fade " id="modal4" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                          <div class="modal-content">
-                            <div class="modal-header"><h5 class="mt-2">From : EA manager</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            </div>
-                            <div class="modal-body">
-                              <p>New citizen referral. Citizen Forty-seven, 077123456789, 12 Fake Street</p>
-                              <a href="#" onclick="showReply4()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                              <script type="text/javascript">
-                                function showReply4(){
-                                  document.getElementById('reply4').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                                }
-                              </script>
-                              <div id="reply4"></div>
-                            </div>
+                    </div>
+                  </td>
+                  <td>03/03/2018</td>
+                  <td><input type="date" name="" class="input-group-text"></td>
+                  <td>
+                    <form action="#">
+                      <select name="importance">
+                        <option value="normal">Normal</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Citizen 4 Four</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+                      View
+                    </button>
+                    <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="mt-2">From : Citizen Four</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Citizen Four has confirmed they are happy with their Action Plan.</p>
+                            <a href="#" onclick="showReply5()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply5(){
+                                document.getElementById('reply5').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply5"></div>
                           </div>
                         </div>
                       </div>
-                    </td>
-                    <td>03/03/2018</td>
-                    <td><input type="date" name="" class="input-group-text"></td>
-                    <td>
-                      <form action="#">
-                        <select name="importance">
-                          <option value="normal">Normal</option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Citizen 4 Four</td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                        View
-                      </button>
-                      <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="mt-2">From : Citizen Four</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <p>Citizen Four has confirmed they are happy with their Action Plan.</p>
-                              <a href="#" onclick="showReply5()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                              <script type="text/javascript">
-                                function showReply5(){
-                                  document.getElementById('reply5').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                                }
-                              </script>
-                              <div id="reply5"></div>
-                            </div>
+                    </div>
+                  </td>
+                  <td>04/04/2018</td>
+                  <td><input type="date" name="" class="input-group-text"></td>
+                  <td>
+                    <form action="#">
+                      <select name="importance">
+                        <option value="normal">Normal</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Citizen 10 Ten</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+                      View
+                    </button>
+                    <div class="modal fade " id="modal5" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="mt-2">From : Citizen Ten</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Citizen Ten has confirmed they are happy with their Action Plan.</p>
+                            <a href="#" onclick="showReply6()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply6(){
+                                document.getElementById('reply6').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply6"></div>
                           </div>
                         </div>
                       </div>
-                    </td>
-                    <td>04/04/2018</td>
-                    <td><input type="date" name="" class="input-group-text"></td>
-                    <td>
-                      <form action="#">
-                        <select name="importance">
-                          <option value="normal">Normal</option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Citizen 10 Ten</td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                        View
-                      </button>
-                      <div class="modal fade " id="modal5" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="mt-2">From : Citizen Ten</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <p>Citizen Ten has confirmed they are happy with their Action Plan.</p>
-                              <a href="#" onclick="showReply6()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                              <script type="text/javascript">
-                                function showReply6(){
-                                  document.getElementById('reply6').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                                }
-                              </script>
-                              <div id="reply6"></div>
-                            </div>
+                    </div>
+                  </td>
+                  <td>04/04/2018</td>
+                  <td><input type="date" name="" class="input-group-text"></td>
+                  <td>
+                    <form action="#">
+                      <select name="importance">
+                        <option value="normal">Normal</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EA manager</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+                      View
+                    </button>
+                    <div class="modal fade " id="modal6" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>New citizen referral. Citizen Forty-eight, 077123456789, 12 Fake Street</p>
+                            <a href="#" onclick="showReply7()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply7(){
+                                document.getElementById('reply7').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply7"></div>
                           </div>
                         </div>
                       </div>
-                    </td>
-                    <td>04/04/2018</td>
-                    <td><input type="date" name="" class="input-group-text"></td>
-                    <td>
-                      <form action="#">
-                        <select name="importance">
-                          <option value="normal">Normal</option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>EA manager</td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                        View
-                      </button>
-                      <div class="modal fade " id="modal6" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="mt-2">From : EA manager</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <p>New citizen referral. Citizen Forty-eight, 077123456789, 12 Fake Street</p>
-                              <a href="#" onclick="showReply7()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                              <script type="text/javascript">
-                                function showReply7(){
-                                  document.getElementById('reply7').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                                }
-                              </script>
-                              <div id="reply7"></div>
-                            </div>
+                    </div>
+                  </td>
+                  <td>04/04/2018</td>
+                  <td><input type="date" name="" class="input-group-text"></td>
+                  <td>
+                    <form action="#">
+                      <select name="importance">
+                        <option value="normal">Normal</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EA manager</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+                      View
+                    </button>
+                    <div class="modal fade " id="modal7" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="mt-2">From : EA manager</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Has Citizen Fourteen confirmed they received their WHD?</p>
+                            <a href="#" onclick="showReply8()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply8(){
+                                document.getElementById('reply8').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply8"></div>
                           </div>
                         </div>
                       </div>
-                    </td>
-                    <td>04/04/2018</td>
-                    <td><input type="date" name="" class="input-group-text"></td>
-                    <td>
-                      <form action="#">
-                        <select name="importance">
-                          <option value="normal">Normal</option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>EA manager</td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                        View
-                      </button>
-                      <div class="modal fade " id="modal7" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="mt-2">From : EA manager</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <p>Has Citizen Fourteen confirmed they received their WHD?</p>
-                              <a href="#" onclick="showReply8()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                              <script type="text/javascript">
-                                function showReply8(){
-                                  document.getElementById('reply8').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                                }
-                              </script>
-                              <div id="reply8"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>04/04/2018</td>
-                    <td><input type="date" name="" class="input-group-text"></td>
-                    <td>
-                      <form action="#">
-                        <select name="importance">
-                          <option value="normal">Normal</option>
-                          <option value="important">Important</option>
-                          <option value="urgent">Urgent</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                    </div>
+                  </td>
+                  <td>04/04/2018</td>
+                  <td><input type="date" name="" class="input-group-text"></td>
+                  <td>
+                    <form action="#">
+                      <select name="importance">
+                        <option value="normal">Normal</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="mt-2" style="height:30px; margin-top:-30px;">
-      <nav class="navbar navbar-expand-sm">  
-        <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-        <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-        <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-      </nav>
-    </footer>
-  </body>
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
+</body>
 
-  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
