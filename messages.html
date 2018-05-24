@@ -192,7 +192,13 @@
                           </div>
                           <div class="modal-body">
                             <p>Has assessment for Citizen Thirteen been completed? Please update.</p>
-                            <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <a href="#" onclick="showReply()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply(){
+                                document.getElementById('reply5').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply5"></div>
                           </div>
                         </div>
                       </div>
@@ -225,7 +231,7 @@
                             <a href="#" onclick="showReply()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
                             <script type="text/javascript">
                               function showReply(){
-                                document.getElementById('reply4').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea1' rows='3' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                                document.getElementById('reply4').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
                               }
                             </script>
                             <div id="reply4"></div>
