@@ -346,8 +346,9 @@
     document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
     document.getElementById('linkIframe').href = site;
   } else {
-   document.getElementById('whdIframe').innerHTML='';
- } 
+    document.getElementById('whdIframe').innerHTML.remove();
+    document.getElementById('whdIframe').innerHTML='';
+  } 
 }
 </script>
 <div id="whdIframe"></div>
