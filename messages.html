@@ -132,7 +132,13 @@
                           </div>
                           <div class="modal-body">
                             <p>Citizen One has given you permission to view and update their information.</p>
-                            <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <a href="#" onclick="showReply1()" required  class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply1(){
+                                document.getElementById('reply1').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply1"></div>
                           </div>
                         </div>
                       </div>
@@ -162,7 +168,13 @@
                           </div>
                           <div class="modal-body">
                             <p>New citizen referral. Citizen Thirty-Nine, 077123456789, 12 Fake Street</p>
-                            <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <a href="#" onclick="showReply2()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <script type="text/javascript">
+                              function showReply2(){
+                                document.getElementById('reply2').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              }
+                            </script>
+                            <div id="reply2"></div>
                           </div>
                         </div>
                       </div>
@@ -192,13 +204,13 @@
                           </div>
                           <div class="modal-body">
                             <p>Has assessment for Citizen Thirteen been completed? Please update.</p>
-                            <a href="#" onclick="showReply()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                            <a href="#" onclick="showReply3()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
                             <script type="text/javascript">
-                              function showReply(){
-                                document.getElementById('reply5').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
+                              function showReply3(){
+                                document.getElementById('reply3').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
                               }
                             </script>
-                            <div id="reply5"></div>
+                            <div id="reply3"></div>
                           </div>
                         </div>
                       </div>
