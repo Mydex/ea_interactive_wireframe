@@ -198,10 +198,23 @@
                       </div>
                     </td>
                   </tr>
+
                   <tr>
                     <td>EA manager</td>
                     <td>
-                      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
+                      <div style="max-width: 100%;">
+                        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                        <h5 id="popoverMessage3Title" style="display: none">From : Citizen One</h5>
+                        <div id="popoverMessage3Content" style="display: none">
+                          <p>Has assessment for Citizen Thirteen been completed? Please update.</p>
+                          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                          <form action='#/''>
+                            <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
+                          </form>
+                          <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>
+                        </div>
+                      </div>
+                      <!-- <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                       <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                         <div class="modal-dialog" role="document" style="margin-top: 35%;">
                           <div class="modal-content">
@@ -220,7 +233,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div> -->
                     </td>
                     <td>02/02/2018</td>
                     <td><input type="date" name="" class="input-group-text"></td>
@@ -502,6 +515,25 @@
          }
        });
      });
+       //popover for message 3
+       $(function(){
+         $("#popoverMessage3").popover({
+           html : true, 
+           content: function() {
+             return $('#popoverMessage3Content').html();
+           },
+           title: function() {
+             return $('#popoverMessage3Title').html();
+           }
+         });
+       })
+       $('body').on('click', function (e) {
+        $('#popoverMessage3').each(function () {
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+          }
+        });
+      });
    </script>
    <script>
 //For table filters
