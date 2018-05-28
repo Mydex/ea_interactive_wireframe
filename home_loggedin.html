@@ -65,13 +65,6 @@
      });
    })
 
-    $('html').on('click', function(e) {
-      if (typeof $(e.target).data('original-title') == 'undefined' &&
-       !$(e.target).parents().is('.popover.in')) {
-        $('[data-original-title]').popover('hide');
-    }
-  });
-
 </script>
 
 <main style=" min-height:70%;">
@@ -103,7 +96,7 @@
             <td>
 
               <div style="max-width: 100%;">
-                <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" id="popoverTaskList1">View</a>
+                <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" data-trigger="focus" id="popoverTaskList1">View</a>
 
                 <div id="popoverTaskList1Title" style="display: none">All tasks</div>
 
