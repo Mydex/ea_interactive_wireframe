@@ -63,17 +63,18 @@
          return $('#popoverTaskList1Title').html();
        }
      });
+   });
 
-   }).on('shown.bs.popover', function(e){
-      var popover = jQuery(this);
-      jQuery(this).parent().find('div.popover .close').on('click', function(e){
-        popover.popover('hide');
-      });
-    });
+    $('html').on('click', function(e) {
+      if (typeof $(e.target).data('original-title') == 'undefined' &&
+       !$(e.target).parents().is('.popover.in')) {
+        $('[data-original-title]').popover('hide');
+    }
+  });
 
- </script>
+</script>
 
- <main style=" min-height:70%;">
+<main style=" min-height:70%;">
   <div class="container mt-4">
     <h3 class="mb-4">Energy Advocate Dashboard</h3>
 
@@ -104,7 +105,7 @@
               <div style="max-width: 100%;">
                 <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" id="popoverTaskList1">View</a>
 
-               <div id="popoverTaskList1Title" style="display: none">
+                <div id="popoverTaskList1Title" style="display: none">
                  <button id="popovercloseid" type="button" class="close">&times;</button>All tasks
                </div>
 
