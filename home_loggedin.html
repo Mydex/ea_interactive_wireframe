@@ -67,7 +67,7 @@
 
     $('html').on('click', function(e) {
       if (typeof $(e.target).data('original-title') == 'undefined' && !$(e.target).parents().is('.popover.in')) {
-        $('[popoverTaskList1]').popover('hide');
+        $('#popoverTaskList1').popover('hide');
     }
   });
 
