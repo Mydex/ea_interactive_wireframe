@@ -67,13 +67,31 @@
 
     $('body').on('click', function (e) {
       $('#popoverTaskList1').each(function () {
-            //the 'is' for buttons that trigger popups
-            //the 'has' for icons within a button that triggers a popup
-            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-              $(this).popover('hide');
-            }
-          });
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+          $(this).popover('hide');
+        }
+      });
     });
+
+    $(function(){
+      $("#popoverTaskList2").popover({
+        html : true, 
+        content: function() {
+          return $('#popoverTaskList2Content').html();
+        },
+        title: function() {
+          return $('#popoverTaskList2Title').html();
+        }
+      });
+    })
+
+    $('body').on('click', function (e) {
+     $('#popoverTaskList2').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
 
   //   $('html').on('click', function(e) {
   //     if (typeof $(e.target).data('original-title') == 'undefined' && !$(e.target).parents().is('.popover.in')) {
@@ -134,22 +152,22 @@
           FA12 3KE</td>
           <td>07712345678</td>
           <td>
-              <div style="max-width: 100%;">
-                <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList2">View</a>
-                <div id="popoverTaskList2Title" style="display: none">All tasks</div>
-                <div id="popoverTaskList2Content" style="display: none">
-                 <table class="table table-bordered" style="width:100%">
-                  <tbody>                  
-                    <tr><th>Task</th></tr>
-                    <tr><td>Full task content display here</td></tr>
-                    <tr><td>Full task content display here</td></tr>
-                    <tr><td>Full task content display here</td></tr>
-                  </tbody>
-                </table>
-              </div>
+            <div style="max-width: 100%;">
+              <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList2">View</a>
+              <div id="popoverTaskList2Title" style="display: none">All tasks</div>
+              <div id="popoverTaskList2Content" style="display: none">
+               <table class="table table-bordered" style="width:100%">
+                <tbody>                  
+                  <tr><th>Task</th></tr>
+                  <tr><td>Full task content display here</td></tr>
+                  <tr><td>Full task content display here</td></tr>
+                  <tr><td>Full task content display here</td></tr>
+                </tbody>
+              </table>
             </div>
+          </div>
 
-            <!-- <button class="btn btn-primary btn-sm p-1" data-toggle="modal" data-target="#modalTasks2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button> -->
+          <!-- <button class="btn btn-primary btn-sm p-1" data-toggle="modal" data-target="#modalTasks2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button> -->
             <!-- <div class="modal fade" id="modalTasks2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
               <div class="modal-dialog" role="document" style="margin-top: 15%;">
                 <div class="modal-content">
