@@ -88,9 +88,9 @@
                   <td>Citizen 1 One</td>
                   <td>
                     <div style="max-width: 100%;">
-                      <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" data-trigger="click" id="popover1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-                      <div id="popover1Title" style="display: none">Tasks for Client Nine</div>
-                      <div id="popover1Content" style="display: none">
+                      <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" data-trigger="click" id="popoverMessage1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                      <div id="popoverMessage1Title" style="display: none">Tasks for Client Nine</div>
+                      <div id="popoverMessage1Content" style="display: none">
                        <table class="table table-bordered" style="width:100%">
                         <tbody>                  
                           <tr><th>Tasks</th></tr>
@@ -451,24 +451,24 @@
         // })
      //popover for client 1
      $(function(){
-       $("#popoverTaskList1").popover({
+       $("#popoverMessage1").popover({
          html : true, 
          content: function() {
-           return $('#popoverTaskList1Content').html();
+           return $('#popoverMessage1Content').html();
          },
          title: function() {
-           return $('#popoverTaskList1Title').html();
+           return $('#popoverMessage1Title').html();
          }
        });
      })
      $('body').on('click', function (e) {
-      $('#popoverTaskList1').each(function () {
+      $('#popoverMessage1').each(function () {
         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
           $(this).popover('hide');
         }
       });
      });
-     
+
 //For table filters
 (function(document) {
   'use strict';
