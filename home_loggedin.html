@@ -113,7 +113,6 @@
                 </table>
               </div>
             </div>
-
             <!-- <button class="btn btn-primary btn-sm p-1" data-toggle="modal" data-target="#modalTasks2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button> -->
             <!-- <div class="modal fade" id="modalTasks2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
               <div class="modal-dialog" role="document" style="margin-top: 15%;">
@@ -125,18 +124,9 @@
                     <div class="table-responsive" width="100%">
                       <table width="100%">
                         <tbody>                  
-                          <tr>
-                            <th>Task</th>
-                            <th>Complete</th>
-                          </tr>
-                          <tr>
-                            <td>Full task content display here</td>
-                            <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-                          </tr>
-                          <tr>
-                            <td>Full task content display here</td>
-                            <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-                          </tr>
+                          <tr><th>Task</th><th>Complete</th></tr>
+                          <tr><td>Full task content display here</td><td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td></tr>
+                          <tr><td>Full task content display here</td><td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td></tr>
                         </tbody>
                       </table>
                     </div>
@@ -154,7 +144,21 @@
           FA12 3KE</td>
           <td>07712345678</td>
           <td>
-            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalTasks3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
+              <div style="max-width: 100%;">
+                <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                <div id="popoverTaskList3Title" style="display: none">Tasks for Client Twenty-four</div>
+                <div id="popoverTaskList3Content" style="display: none">
+                 <table class="table table-bordered" style="width:100%">
+                  <tbody>                  
+                    <tr><th>Tasks</th></tr>
+                    <tr><td>Full task content display here</td></tr>
+                    <tr><td>Full task content display here</td></tr>
+                    <tr><td>Full task content display here</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalTasks3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
             <div class="modal fade" id="modalTasks3" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
               <div class="modal-dialog" role="document" style="margin-top: 15%;">
                 <div class="modal-content">
@@ -191,7 +195,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </td>
         </tr>
       </tbody>
