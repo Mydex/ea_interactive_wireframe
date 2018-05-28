@@ -67,43 +67,7 @@
       <div class="row mt-4">
         <div class="col-12">
           <script>
-            (function(document) {
-              'use strict';
-              var TableFilter = (function(Arr) {
-                var input;
-
-                function onInputEvent(e) {
-                  input = e.target;
-                  var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-                  Arr.forEach.call(tables, function(table) {
-                    Arr.forEach.call(table.tBodies, function(tbody) {
-                      Arr.forEach.call(tbody.rows, filterRow);
-                    });
-                  });
-                }
-
-                function filterRow(row) {
-                  var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-                  row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-                }
-
-                return {
-                  init: function() {
-                    var inputs = document.getElementsByClassName('tableFilter');
-                    Arr.forEach.call(inputs, function(input) {
-                      input.oninput = onInputEvent;
-                    });
-                  }
-                };
-              })(Array.prototype);
-
-              document.addEventListener('readystatechange', function() {
-                if (document.readyState === 'complete') {
-                  TableFilter.init();
-                }
-              });
-
-            })(document);
+            
           </script>
 
           <input type="search" class="tableFilter form-control col-4" data-table="order-table" placeholder="Filter table here...">
@@ -123,7 +87,21 @@
                 <tr>
                   <td>Citizen 1 One</td>
                   <td>
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
+                    <div style="max-width: 100%;">
+                      <a tabindex="0" role="button" class="btn btn-sm btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                      <div id="popoverTaskList1Title" style="display: none">Tasks for Client Nine</div>
+                      <div id="popoverTaskList1Content" style="display: none">
+                       <table class="table table-bordered" style="width:100%">
+                        <tbody>                  
+                          <tr><th>Tasks</th></tr>
+                          <tr><td>Full task content display here</td></tr>
+                          <tr><td>Full task content display here</td></tr>
+                          <tr><td>Full task content display here</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                    <!-- <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                     <div class="modal fade " id="modal1" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                       <div class="modal-dialog" role="document" style="margin-top: 35%;">
                         <div class="modal-content">
@@ -142,7 +120,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </td>
                   <td>02/02/2018</td>
                   <td><input type="date" name="" class="input-group-text"></td>
@@ -467,16 +445,76 @@
       </div>
     </main>
 
-    <footer class="mt-2" style="height:30px; margin-top:-30px;">
-      <nav class="navbar navbar-expand-sm">  
-        <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-        <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-        <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-      </nav>
-    </footer>
-  </body>
+    <script>
+      $(function(){
+        $("#popover1").popover({
+          html : true, 
+          content: function() {
+            return $('#popover1Content').html();
+          },
+          title: function() {
+            return $('#popover1Title').html();
+          }
+        });
+      })
+      $('body').on('click', function (e) {
+       $('#popover1').each(function () {
+         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+           $(this).popover('hide');
+         }
+       });
+     });
 
-  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+//For table filters
+(function(document) {
+  'use strict';
+  var TableFilter = (function(Arr) {
+    var input;
+
+    function onInputEvent(e) {
+      input = e.target;
+      var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+      Arr.forEach.call(tables, function(table) {
+        Arr.forEach.call(table.tBodies, function(tbody) {
+          Arr.forEach.call(tbody.rows, filterRow);
+        });
+      });
+    }
+
+    function filterRow(row) {
+      var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+    }
+
+    return {
+      init: function() {
+        var inputs = document.getElementsByClassName('tableFilter');
+        Arr.forEach.call(inputs, function(input) {
+          input.oninput = onInputEvent;
+        });
+      }
+    };
+  })(Array.prototype);
+
+  document.addEventListener('readystatechange', function() {
+    if (document.readyState === 'complete') {
+      TableFilter.init();
+    }
+  });
+
+})(document);
+</script>
+
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
+</body>
+
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
