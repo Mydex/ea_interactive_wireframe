@@ -64,7 +64,12 @@
        }
      });
 
-   });
+   }).on('shown.bs.popover', function(e){
+      var popover = jQuery(this);
+      jQuery(this).parent().find('div.popover .close').on('click', function(e){
+        popover.popover('hide');
+      });
+    });
 
  </script>
 
