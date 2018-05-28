@@ -56,13 +56,13 @@
     $(function(){
 
      // Enabling Popover Example 2 - JS (hidden content and title capturing)
-     $("#popoverExampleTwo").popover({
+     $("#popoverTaskList1").popover({
        html : true, 
        content: function() {
-         return $('#popoverExampleTwoHiddenContent').html();
+         return $('#popoverTaskList1Content').html();
        },
        title: function() {
-         return $('#popoverExampleTwoHiddenTitle').html();
+         return $('#popoverTaskList1Title').html();
        }
      });
 
@@ -98,11 +98,10 @@
             <td>07712345678</td>
             <td>
 
-              <!-- <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="">View</a> -->
-              <div class="span12" style="margin-top: 150px;width:100%">
-               <a tabindex="0" role="button" data-trigger="focus" class="btn-sm btn-info" data-placement="top" id="popoverExampleTwo"><i class="fa fa-comments" ></i> View</a>
+              <div style="margin-top: 150px; width:100%">
+               <a tabindex="0" role="button" data-trigger="focus" class="btn-sm btn-info" data-placement="right" id="popoverTaskList1">View</a>
                <!-- Popover 2 hidden content -->
-               <div id="popoverExampleTwoHiddenContent" style="display: none">
+               <div id="popoverTaskList1Content" style="display: none">
                 <div>
                  <table border="1" style="width:100%">
                   <tr>
@@ -125,8 +124,8 @@
              </div>
            </div>
            <!-- Popover 2 hidden title -->
-           <div id="popoverExampleTwoHiddenTitle" style="display: none">
-            Error comments
+           <div id="popoverTaskList1Title" style="display: none">
+            All tasks
           </div>
         </div>
                 <!-- <table width='100%''>
