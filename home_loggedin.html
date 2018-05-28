@@ -53,25 +53,20 @@
       $('[data-toggle="popover"]').popover()
     })
 
-    $('[data-toggle=popover]').popover({
-     content: $('#myPopoverContent').html(),
-     html: true
-   }).click(function() {
-     $(this).popover('show');
+    $(function(){
+
+     // Enabling Popover Example 2 - JS (hidden content and title capturing)
+     $("#popoverExampleTwo").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverExampleTwoHiddenContent').html();
+       },
+       title: function() {
+         return $('#popoverExampleTwoHiddenTitle').html();
+       }
+     });
+
    });
-   // $(function() {
-   //   $("[data-toggle=popover]").popover({
-   //     html: true,
-   //     content: function() {
-   //       var content = $(this).attr("data-popover-content");
-   //       return $(content).children(".popover-body").html();
-   //     },
-   //     title: function() {
-   //       var title = $(this).attr("data-popover-content");
-   //       return $(title).children(".popover-heading").html();
-   //     }
-   //   });
-   // });
 
  </script>
 
@@ -104,27 +99,36 @@
             <td>
 
               <!-- <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="">View</a> -->
-          <div id="myPopoverContent">
-             <table border="1" style="width:100%">
-            <tr>
-              <td>Jill</td>
-              <td>Smith</td>    
-              <td>50</td>
-            </tr>
-            <tr>
-              <td>Eve</td>
-              <td>Jackson</td>    
-              <td>94</td>
-            </tr>
-            <tr>
-              <td>John</td>
-              <td>Doe</td>    
-              <td>80</td>
-            </tr>
-          </table>
+              <div class="span12" style="margin-top: 150px;width:100%">
+               <a tabindex="0" role="button" data-trigger="focus" class="btn-sm btn-info" data-placement="top" id="popoverExampleTwo"><i class="fa fa-comments" ></i> View</a>
+               <!-- Popover 2 hidden content -->
+               <div id="popoverExampleTwoHiddenContent" style="display: none">
+                <div>
+                 <table border="1" style="width:100%">
+                  <tr>
+                   <th width="30%">Comment date</th>
+                   <th width="70%">Comment</th>
+                 </tr>
+                 <tr>
+                   <td>12/03/2015 16:45</td>
+                   <td>*Username - Testing1</td>
+                 </tr>
+                 <tr>
+                   <td>12/03/2015 16:55</td>
+                   <td>*Username - Testing2</td>
+                 </tr>
+                 <tr>
+                   <td>12/03/2015 17:13</td>
+                   <td>*Username - Testing3</td>
+                 </tr>
+               </table>
+             </div>
+           </div>
+           <!-- Popover 2 hidden title -->
+           <div id="popoverExampleTwoHiddenTitle" style="display: none">
+            Error comments
           </div>
-          <a ng-href="" data-toggle="popover" data-placement="bottom" id="test"><span class="badge"></span>Click Here</a>
-
+        </div>
                 <!-- <table width='100%''>
                   <tbody>                  
                     <tr>
