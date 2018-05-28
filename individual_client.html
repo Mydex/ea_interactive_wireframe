@@ -90,8 +90,8 @@
             <div class="modal-body">
                 <div class="table-responsive">
                   <table class="table table-striped table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
+                     <thead class="table-info">
+                       <tr>
                         <th>Date</th>
                         <th>Time</th>
                         <th>Outcome</th>
@@ -342,102 +342,94 @@
             </div>
         </nav>
 
-        <script>
-          $(document).ready(function () {
-            $("button").click(function(){
-              $("a").removeClass("active");
-          });
-        });
-    </script>
-
-    <!-- table content -->
-    <div id="information-nav-content" class="tab-content">
-        <!-- personal informaiton table -->
-        <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
-            <table class="table table-striped table-bordered table-sm text-left mb-0" width="100%">
-                <thead>
-                    <th colspan="3" class="bg-primary">Personal Information</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="text-primary">Title</th>
-                        <td contenteditable="true" spellcheck="true">Ms</td>
-                        <td>
-                            <button type="button" class="btn btn-sm btn-outline-primary p-1" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
-                            <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3">
-                              <div class="modal-dialog " role="document" style="margin-top: 50%;">
-                                <div class="modal-content">
-                                  <div class="modal-header"><h5>History</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!-- table content -->
+        <div id="information-nav-content" class="tab-content">
+            <!-- personal informaiton table -->
+            <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
+                <table class="table table-striped table-bordered table-sm text-left mb-0" width="100%">
+                    <thead>
+                        <th colspan="3" class="bg-primary">Personal Information</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="text-primary">Title</th>
+                            <td contenteditable="true" spellcheck="true">Ms</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-primary p-1" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
+                                <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3">
+                                  <div class="modal-dialog " role="document" style="margin-top: 50%;">
+                                    <div class="modal-content">
+                                      <div class="modal-header"><h5>History</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="table-responsive">
+                                          <table class="table table-bordered table-sm text-left">
+                                           <thead class="table-info">
+                                             <tr>
+                                                <th>Previous entry</th>
+                                                <th>Date & time</th>
+                                                <th>By</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ms</td>
+                                                <td>04/04/2018 16:12</td>
+                                                <td>EA</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mr</td>
+                                                <td>01/01/2018 13:42</td>
+                                                <td>EA</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="modal-body">
-                                    <div class="table-responsive">
-                                      <table class="table table-bordered table-sm text-left">
-                                         <thead class="table-info">
-                                           <tr>
-                                            <th>Previous entry</th>
-                                            <th>Date & time</th>
-                                            <th>By</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Ms</td>
-                                            <td>04/04/2018 16:12</td>
-                                            <td>EA</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mr</td>
-                                            <td>01/01/2018 13:42</td>
-                                            <td>EA</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <th class="text-primary">Forename</th>
-        <td contenteditable="true" spellcheck="true">Citizen</td>
-        <td>
-            <button type="button" class="btn btn-sm btn-outline-primary p-1" data-toggle="modal" data-target="#modal4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
-            <div class="modal fade " id="modal4" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-              <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                <div class="modal-content">
-                  <div class="modal-header"><h5>History</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">Forename</th>
+            <td contenteditable="true" spellcheck="true">Citizen</td>
+            <td>
+                <button type="button" class="btn btn-sm btn-outline-primary p-1" data-toggle="modal" data-target="#modal4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
+                <div class="modal fade " id="modal4" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+                  <div class="modal-dialog" role="document" style="margin-top: 35%;">
+                    <div class="modal-content">
+                      <div class="modal-header"><h5>History</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-sm text-left">
+                             <thead class="table-info">
+                               <tr>
+                                <th>Previous entry</th>
+                                <th>Date & time</th>
+                                <th>By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Citizen</td>
+                                <td>04/04/2018 16:12</td>
+                                <td>EA</td>
+                            </tr>
+                            <tr>
+                                <td>citizen</td>
+                                <td>01/01/2018 13:42</td>
+                                <td>EA</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="modal-body">
-                    <div class="table-responsive">
-                      <table class="table table-bordered table-sm text-left">
-                       <thead class="table-info">
-                         <tr>
-                            <th>Previous entry</th>
-                            <th>Date & time</th>
-                            <th>By</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Citizen</td>
-                            <td>04/04/2018 16:12</td>
-                            <td>EA</td>
-                        </tr>
-                        <tr>
-                            <td>citizen</td>
-                            <td>01/01/2018 13:42</td>
-                            <td>EA</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
-</div>
 </div>
 </td>
 </tr>
@@ -455,8 +447,8 @@
             <div class="modal-body">
                 <div class="table-responsive">
                   <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
+                     <thead class="table-info">
+                       <tr>
                         <th>Previous entry</th>
                         <th>Date & time</th>
                         <th>By</th>
@@ -496,8 +488,8 @@
             <div class="modal-body">
                 <div class="table-responsive">
                   <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
+                     <thead class="table-info">
+                       <tr>
                         <th>Previous entry</th>
                         <th>Date & time</th>
                         <th>By</th>
@@ -537,8 +529,8 @@
             <div class="modal-body">
                 <div class="table-responsive">
                   <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
+                     <thead class="table-info">
+                       <tr>
                         <th>Previous entry</th>
                         <th>Date & time</th>
                         <th>By</th>
@@ -578,8 +570,8 @@
             <div class="modal-body">
                 <div class="table-responsive">
                   <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
+                     <thead class="table-info">
+                       <tr>
                         <th>Previous entry</th>
                         <th>Date & time</th>
                         <th>By</th>
@@ -619,8 +611,8 @@
             <div class="modal-body">
                 <div class="table-responsive">
                   <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
+                     <thead class="table-info">
+                       <tr>
                         <th>Previous entry</th>
                         <th>Date & time</th>
                         <th>By</th>
@@ -660,8 +652,8 @@
             <div class="modal-body">
                 <div class="table-responsive">
                   <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
+                     <thead class="table-info">
+                       <tr>
                         <th>Previous entry</th>
                         <th>Date & time</th>
                         <th>By</th>
@@ -769,134 +761,116 @@
         <tbody>
             <tr>
                 <th class="text-primary">What is the main wall type?</th>
-                <script type="text/javascript">
-                    function showWall(name){
-                      if(name == 'wall5') {
-                        document.getElementById('wallOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="wallOther" name="wallOther"/>';
-                    } else {
-                        document.getElementById('wallOther').innerHTML='';
-                    } 
-                }
-            </script>
-            <td class="font-italic">
-                <form action="#" class="m-0">
-                    <select name="wall" id="wall" onchange="showWall(this.options[this.selectedIndex].value)" required>
-                        <option value="wallDefault"></option>
-                        <option value="wall1">Cavity wall</option>
-                        <option value="wall2">Cavity wall - filled</option>
-                        <option value="wall3">Solid wall</option>
-                        <option value="wall4">System built</option>
-                        <option value="wall5">Other</option>
-                    </select>
-                </form>
-                <div id="wallOther"></div>
-            </td>
-        </tr>
-        <tr>
-            <th class="text-primary">How much loft insulation?</th>
-            <td class="font-italic">
-                <form action="#" class="m-0">
-                    <select name="loft">
-                        <option value="loftDefault"></option>
-                        <option value="loft1">100ml or less</option>
-                        <option value="loft2">150ml</option>
-                        <option value="loft3">270ml (up to standard)</option>
-                    </select>
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <th class="text-primary">What is property glazing type? <br>(%)</th>
-            <td class="font-italic">
-                <form action="#" class="m-0">
-                    <select name="glazing">
-                        <option value="glazingDefault"></option>
-                        <option value="glazing1">Double post 2003</option>
-                        <option value="glazing2">Double pre 2003</option>
-                        <option value="glazing3">Single</option>
-                    </select>
-                </form>
-                <p contenteditable="true" spellcheck="true">To be added</p>
-            </td>
-        </tr>
-        <tr>
-            <th class="text-primary">Year windows were last updated? If known</th>
-            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-            <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-            <script type="text/javascript">
-              function showFuel(name){
-                if(name == 'mainFuel4') {
-                  document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="fuelOther" name="fuelOther"/>';
-              } else {
-                  document.getElementById('mainFuelOther').innerHTML='';
-              } 
-          }
-      </script>
-      <td class="font-italic">
-        <form action="#" class="m-0">
-            <select name="mainFuel" id="mainFuel" onchange="showFuel(this.options[this.selectedIndex].value)" required>
-                <option value="mainFuelDefault"></option>
-                <option value="mainFuel1">Electrical storage heating</option>
-                <option value="mainFuel2">Gas central heating</option>
-                <option value="mainFuel3">None</option>
-                <option value="mainFuel4">Other</option>
-            </select>
-        </form>
-        <div id="mainFuelOther"></div>
-    </td>
-</tr>
-<tr>
-    <th class="text-primary">How old is your boiler?</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">Make and model of boiler</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">What is property glazing type? (%)</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">How old is your boiler?</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">Make and model of boiler</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">How is your water heated?</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">What is the size of the hot water cylinder?</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">What type of insulaion does it have?</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
-    <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
-    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-</tbody>
-</table>
+                <td class="font-italic">
+                    <form action="#" class="m-0">
+                        <select name="wall" id="wall" onchange="showWall(this.options[this.selectedIndex].value)" required>
+                            <option value="wallDefault"></option>
+                            <option value="wall1">Cavity wall</option>
+                            <option value="wall2">Cavity wall - filled</option>
+                            <option value="wall3">Solid wall</option>
+                            <option value="wall4">System built</option>
+                            <option value="wall5">Other</option>
+                        </select>
+                    </form>
+                    <div id="wallOther"></div>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-primary">How much loft insulation?</th>
+                <td class="font-italic">
+                    <form action="#" class="m-0">
+                        <select name="loft">
+                            <option value="loftDefault"></option>
+                            <option value="loft1">100ml or less</option>
+                            <option value="loft2">150ml</option>
+                            <option value="loft3">270ml (up to standard)</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-primary">What is property glazing type? <br>(%)</th>
+                <td class="font-italic">
+                    <form action="#" class="m-0">
+                        <select name="glazing">
+                            <option value="glazingDefault"></option>
+                            <option value="glazing1">Double post 2003</option>
+                            <option value="glazing2">Double pre 2003</option>
+                            <option value="glazing3">Single</option>
+                        </select>
+                    </form>
+                    <p contenteditable="true" spellcheck="true">To be added</p>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-primary">Year windows were last updated? If known</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+                <td class="font-italic">
+                    <form action="#" class="m-0">
+                        <select name="mainFuel" id="mainFuel" onchange="showFuel(this.options[this.selectedIndex].value)" required>
+                            <option value="mainFuelDefault"></option>
+                            <option value="mainFuel1">Electrical storage heating</option>
+                            <option value="mainFuel2">Gas central heating</option>
+                            <option value="mainFuel3">None</option>
+                            <option value="mainFuel4">Other</option>
+                        </select>
+                    </form>
+                    <div id="mainFuelOther"></div>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-primary">How old is your boiler?</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">Make and model of boiler</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">What is property glazing type? (%)</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">How old is your boiler?</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">Make and model of boiler</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">How is your water heated?</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">What is the size of the hot water cylinder?</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">What type of insulaion does it have?</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+            <tr>
+                <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
+                <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+            </tr>
+        </tbody>
+    </table>
 <!--     <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 -->
 </div>
@@ -909,50 +883,31 @@
         <tbody>
             <tr>
                 <th class="text-primary">Do you have working smoke alarms?</th>
-                <script type="text/javascript">
-                    function showSmoke(name){
-                      if(name == 'smoke2') {
-                        document.getElementById('smokeAlarmYes').innerHTML = 'Notes for smoke alarms:<br> <input type="text" class="form-control" id="smokeNotes" name="smokeNotes"/>';
-                    } else {
-                        document.getElementById('smokeAlarmYes').innerHTML='';
-                    } 
-                }
-            </script>
-            <td class="font-italic">
-                <form action="#" class="m-0">
-                    <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
-                        <option value="smokeDefault"></option>
-                        <option value="smoke1">No</option>
-                        <option value="smoke2">Yes</option>
+                <td class="font-italic">
+                    <form action="#" class="m-0">
+                        <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
+                            <option value="smokeDefault"></option>
+                            <option value="smoke1">No</option>
+                            <option value="smoke2">Yes</option>
+                        </select>
+                    </form>
+                    <div id="smokeAlarmYes"></div>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-primary">Are carbon monoxide monitors fitted?</th>
+                <td class="font-italic">
+                    <form action="#" class="m-0">
+                       <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
+                        <option value="carbonDefault"></option>
+                        <option value="carbon1">No</option>
+                        <option value="carbon2">Yes</option>
                     </select>
                 </form>
-                <div id="smokeAlarmYes"></div>
+                <div id="carbonAlarmYes"></div>
             </td>
         </tr>
-        <tr>
-            <th class="text-primary">Are carbon monoxide monitors fitted?</th>
-            <script type="text/javascript">
-                function showCarbon(name){
-                  if(name == 'carbon2') {
-                    document.getElementById('carbonAlarmYes').innerHTML = 'Notes for carbon monoxide:<br> <input type="text" class="form-control" id="carbonNotes" name="carbonNotes"/>';
-                } else {
-                    document.getElementById('carbonAlarmYes').innerHTML='';
-                } 
-            }
-        </script>
-        <td class="font-italic">
-            <form action="#" class="m-0">
-             <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
-                <option value="carbonDefault"></option>
-                <option value="carbon1">No</option>
-                <option value="carbon2">Yes</option>
-            </select>
-        </form>
-        <div id="carbonAlarmYes"></div>
-
-    </td>
-</tr>
-</tbody>
+    </tbody>
 </table>
 <!-- <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 --></div>
@@ -967,7 +922,7 @@
                 <th class="text-primary">Is a member of the house in receipt of any benefits?</th>
                 <td class="font-italic">
                     <form action="#" class="m-0">
-                     <select name="benefits">
+                       <select name="benefits">
                         <option value="benefitsDefault"></option>
                         <option value="benefits1">Yes</option>
                         <option value="benefits2">No</option>
@@ -983,7 +938,7 @@
             <th class="text-primary">Would you like a benefit check?</th>
             <td class="font-italic">
                 <form action="#" class="m-0">
-                 <select name="check">
+                   <select name="check">
                     <option value="checkDefault"></option>
                     <option value="check1">Yes</option>
                     <option value="check2">No</option>
@@ -1000,28 +955,28 @@
         <td class="font-italic">
             <br>
             <div>
-             <form action="#" class="m-0">
-              <select name="adultOne">
-                <option value="adultDefault"></option>
-                <option value="adult1">1</option>
-                <option value="adult2">2</option>
-                <option value="adult3">3</option>
-                <option value="adult4">4</option>
+               <form action="#" class="m-0">
+                  <select name="adultOne">
+                    <option value="adultDefault"></option>
+                    <option value="adult1">1</option>
+                    <option value="adult2">2</option>
+                    <option value="adult3">3</option>
+                    <option value="adult4">4</option>
+                </select>
+            </form>
+        </div>
+        <div>
+           <form action="#" class="m-0">
+              <select name="childrenOne">
+                <option value="childrenDeault"></option>
+                <option value="children0">0</option>
+                <option value="children1">1</option>
+                <option value="children2">2</option>
+                <option value="children3">3</option>
+                <option value="children4">4</option>
             </select>
         </form>
     </div>
-    <div>
-     <form action="#" class="m-0">
-      <select name="childrenOne">
-        <option value="childrenDeault"></option>
-        <option value="children0">0</option>
-        <option value="children1">1</option>
-        <option value="children2">2</option>
-        <option value="children3">3</option>
-        <option value="children4">4</option>
-    </select>
-</form>
-</div>
 </td>
 </tr>
 <tr>
@@ -1031,24 +986,16 @@
             <input type="date" name="dob1">
             <button onclick="addDOB()" required class="btn btn-sm btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
         </div>
-        <script type="text/javascript">
-          function addDOB(){
-            counter=0;
-            if(counter == 0){
-                document.getElementById('dob1').innerHTML = "<input type='date' name='dob2'>";
-            }
-        }
-    </script>
-    <div id="dob1"></div>
-</td>
+        <div id="dob1"></div>
+    </td>
 </tr>
 <tr>
-   <th class="text-primary">Warm Home Deal: Core group</th>
-   <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+ <th class="text-primary">Warm Home Deal: Core group</th>
+ <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
 </tr>
 <tr>
-   <th class="text-primary">Warm Home Deal: Broader group</th>
-   <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+ <th class="text-primary">Warm Home Deal: Broader group</th>
+ <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
 </tr>
 </tbody>
 </table>
@@ -1063,94 +1010,85 @@
         <tbody>
             <tr>
                 <th class="text-primary">How does the householder pay fuel bills?</th>
-                <script type="text/javascript">
-                    function showElecPay(name){
-                      if(name == 'elecPay3') {
-                        document.getElementById('elecPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="elecPay_other" name="elecPay_other"/>';
-                    } else {
-                        document.getElementById('elecPayOther').innerHTML='';
-                    } 
-                }
-            </script>
-            <td class="font-italic" colspan="2">
-                <form action="#" class="m-0">
-                 <select name="elecPay" id="elecPay" onchange="showElecPay(this.options[this.selectedIndex].value)" required>
-                    <option value="elecDefault"></option>
-                    <option value="elecPay1">Credit</option>
-                    <option value="elecPay2">Prepaid</option>
-                    <option value="elecPay3">Other</option>
-                </select>
-            </form>
-            <div id="elecPayOther"></div>
-        </td>
-    </tr>
-    <tr>
-        <th class="text-primary" colspan="2">MPAN</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary" colspan="2">Supplier</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary" colspan="2">Account Reference</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary" colspan="2">Tariff</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary" colspan="2">Meter Serial Number</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr class="table-primary">
-        <th>Date</th>
-        <th>Reading</th>
-        <th>Time taken</th>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="date" name="" class="m-1"></td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="date" name="" class="m-1"></td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="date" name="" class="m-1"></td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="date" name="" class="m-1"></td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="date" name="" class="m-1"></td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="date" name="" class="m-1"></td>
-    </tr>
-    <tr>
-        <th class="table-primary" colspan="3">Notes</th>
-    </tr>
-    <tr>
-        <th>Date</th>
-        <th colspan="2">Comments</th>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">No data</td>
-    </tr>
-</tbody>
+                <td class="font-italic" colspan="2">
+                    <form action="#" class="m-0">
+                       <select name="elecPay" id="elecPay" onchange="showElecPay(this.options[this.selectedIndex].value)" required>
+                        <option value="elecDefault"></option>
+                        <option value="elecPay1">Credit</option>
+                        <option value="elecPay2">Prepaid</option>
+                        <option value="elecPay3">Other</option>
+                    </select>
+                </form>
+                <div id="elecPayOther"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary" colspan="2">MPAN</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary" colspan="2">Supplier</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary" colspan="2">Account Reference</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary" colspan="2">Tariff</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary" colspan="2">Meter Serial Number</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr class="table-primary">
+            <th>Date</th>
+            <th>Reading</th>
+            <th>Time taken</th>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td><input type="date" name="" class="m-1"></td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td><input type="date" name="" class="m-1"></td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td><input type="date" name="" class="m-1"></td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td><input type="date" name="" class="m-1"></td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td><input type="date" name="" class="m-1"></td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td><input type="date" name="" class="m-1"></td>
+        </tr>
+        <tr>
+            <th class="table-primary" colspan="3">Notes</th>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <th colspan="2">Comments</th>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+    </tbody>
 </table>
 <!-- <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 --></div>
@@ -1163,83 +1101,74 @@
         <tbody>
             <tr>
                 <th class="text-primary">How does the householder pay fuel bills?</th>
-                <script type="text/javascript">
-                    function showGasPay(name){
-                      if(name == 'gasPay3') {
-                        document.getElementById('gasPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="gasPay_other" name="gasPay_other"/>';
-                    } else {
-                        document.getElementById('gasPayOther').innerHTML='';
-                    } 
-                }
-            </script>
-            <td class="font-italic" colspan="2">
-                <form action="#" class="m-0">
-                 <select name="gasPay" id="gasPay" onchange="showGasPay(this.options[this.selectedIndex].value)" required>
-                    <option value="gasDefault"></option>
-                    <option value="gasPay1">Credit</option>
-                    <option value="gasPay2">Prepaid</option>
-                    <option value="gasPay3">Other</option>
-                </select>
-            </form>
-            <div id="gasPayOther"></div>
-        </td>
-    </tr>
-    <tr>
-        <th class="text-primary">Meter point number</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Supplier</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Account Reference</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Tariff</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-        <th class="text-primary">Meter Serial Number</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr class="table-primary">
-        <th>Date</th>
-        <th>Present reading</th>
-        <th>Previous reading</th>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-    </tr>
-    <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-    </tr>
-</tbody>
+                <td class="font-italic" colspan="2">
+                    <form action="#" class="m-0">
+                       <select name="gasPay" id="gasPay" onchange="showGasPay(this.options[this.selectedIndex].value)" required>
+                        <option value="gasDefault"></option>
+                        <option value="gasPay1">Credit</option>
+                        <option value="gasPay2">Prepaid</option>
+                        <option value="gasPay3">Other</option>
+                    </select>
+                </form>
+                <div id="gasPayOther"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-primary">Meter point number</th>
+            <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Supplier</th>
+            <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Account Reference</th>
+            <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Tariff</th>
+            <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+            <th class="text-primary">Meter Serial Number</th>
+            <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr class="table-primary">
+            <th>Date</th>
+            <th>Present reading</th>
+            <th>Previous reading</th>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+    </tbody>
 </table>
 <!-- <a href="#" class="btn btn-outline-primary mt-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Edit</a>
 --></div>
@@ -1476,24 +1405,24 @@
     <div class="col-lg-7 col-md-7">
         <h4 class="mb-2">Client task list</h4>
         <div class="table-responsive">
-           <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
-              <thead class="table-info">
-                <tr>
-                   <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                   <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                   <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                   <th>Complete</th>
-               </tr>
-           </thead>
-           <tbody>
-              <tr>
-                <td>Citizen has requested a phone call</td>
-                <td>03/04/2005</td>
-                <td>Phone call - citizen</td>
-                <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-            </tr>
-        </tbody>
-    </table>
+         <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
+          <thead class="table-info">
+            <tr>
+             <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+             <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+             <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+             <th>Complete</th>
+         </tr>
+     </thead>
+     <tbody>
+      <tr>
+        <td>Citizen has requested a phone call</td>
+        <td>03/04/2005</td>
+        <td>Phone call - citizen</td>
+        <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
+    </tr>
+</tbody>
+</table>
 </div>
 <h5 class="mt-2">Add task to task list</h5>
 <form action="/#">
@@ -1527,54 +1456,54 @@
             </div>
             <div id="collapseRef" class="collapse" aria-labelledby="headingRef" data-parent="#accordion">
                 <div class="card-body">
-                 <div class="table-responsive">
+                   <div class="table-responsive">
                     <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
-                       <thead class="table-info">
-                         <tr>
-                            <th>Referred to</th>
-                            <th>Referral made (date & notes)</th>
-                            <th>Waiting on outcome</th>
-                            <th>Outcome/feedback</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Fire</th>
-                            <td><input type="date" name="">
-                                <p class="m-0">To be added</p>
-                            </td>
-                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                            <td>To be added</td>
-                        </tr>
-                        <tr>
-                            <th>Food Bank</th>
-                            <td><input type="date" name="">
-                                <p class="m-0">To be added</p>
-                            </td>
-                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                            <td>To be added</td>
-                        </tr>
-                        <tr>
-                            <th>Council Services</th>
-                            <td><input type="date" name="">
-                                <p class="m-0">To be added</p>
-                            </td>
-                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                            <td>To be added</td>
-                        </tr>
-                        <tr>
-                            <th> </th>
-                            <td><input type="date" name="">
-                                <p class="m-0">To be added</p>
-                            </td>
-                            <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
-                            <td>To be added</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                     <thead class="table-info">
+                       <tr>
+                        <th>Referred to</th>
+                        <th>Referral made (date & notes)</th>
+                        <th>Waiting on outcome</th>
+                        <th>Outcome/feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Fire</th>
+                        <td><input type="date" name="">
+                            <p class="m-0">To be added</p>
+                        </td>
+                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                        <td>To be added</td>
+                    </tr>
+                    <tr>
+                        <th>Food Bank</th>
+                        <td><input type="date" name="">
+                            <p class="m-0">To be added</p>
+                        </td>
+                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                        <td>To be added</td>
+                    </tr>
+                    <tr>
+                        <th>Council Services</th>
+                        <td><input type="date" name="">
+                            <p class="m-0">To be added</p>
+                        </td>
+                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                        <td>To be added</td>
+                    </tr>
+                    <tr>
+                        <th> </th>
+                        <td><input type="date" name="">
+                            <p class="m-0">To be added</p>
+                        </td>
+                        <td><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label></td>
+                        <td>To be added</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>
@@ -1699,6 +1628,73 @@
 </div>
 </div>
 </main>
+<script type="text/javascript">
+    function showWall(name){
+      if(name == 'wall5') {
+        document.getElementById('wallOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="wallOther" name="wallOther"/>';
+    } else {
+        document.getElementById('wallOther').innerHTML='';
+    } 
+}
+
+function showFuel(name){
+  if(name == 'mainFuel4') {
+    document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="fuelOther" name="fuelOther"/>';
+} else {
+    document.getElementById('mainFuelOther').innerHTML='';
+} 
+}
+
+function showSmoke(name){
+  if(name == 'smoke2') {
+    document.getElementById('smokeAlarmYes').innerHTML = 'Notes for smoke alarms:<br> <input type="text" class="form-control" id="smokeNotes" name="smokeNotes"/>';
+} else {
+    document.getElementById('smokeAlarmYes').innerHTML='';
+} 
+}
+
+function showCarbon(name){
+  if(name == 'carbon2') {
+    document.getElementById('carbonAlarmYes').innerHTML = 'Notes for carbon monoxide:<br> <input type="text" class="form-control" id="carbonNotes" name="carbonNotes"/>';
+} else {
+    document.getElementById('carbonAlarmYes').innerHTML='';
+} 
+}
+
+function addDOB(){
+    counter=0;
+    if(counter == 0){
+        document.getElementById('dob1').innerHTML = "<input type='date' name='dob2'>";
+    }
+}
+
+function showElecPay(name){
+  if(name == 'elecPay3') {
+    document.getElementById('elecPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="elecPay_other" name="elecPay_other"/>';
+} else {
+    document.getElementById('elecPayOther').innerHTML='';
+} 
+}
+
+function showGasPay(name){
+  if(name == 'gasPay3') {
+    document.getElementById('gasPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="gasPay_other" name="gasPay_other"/>';
+} else {
+    document.getElementById('gasPayOther').innerHTML='';
+} 
+}
+</script>
+
+
+
+<script>
+  $(document).ready(function () {
+    $("button").click(function(){
+      $("a").removeClass("active");
+  });
+});
+</script>
+
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
