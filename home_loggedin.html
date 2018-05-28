@@ -52,6 +52,20 @@
     $(function () {
       $('[data-toggle="popover"]').popover()
     })
+    
+    $(function() {
+      $("[data-toggle=popover]").popover({
+        html: true,
+        content: function() {
+          var content = $(this).attr("data-popover-content");
+          return $(content).children(".popover-body").html();
+        },
+        title: function() {
+          var title = $(this).attr("data-popover-content");
+          return $(title).children(".popover-heading").html();
+        }
+      });
+    });
   </script>
 
   <main style=" min-height:70%;">
@@ -82,28 +96,35 @@
               <td>07712345678</td>
               <td>
 
-                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="<table width='100%''>
-                  <tbody>                  
-                    <tr>
-                      <th>Task</th>
-                      <th>Complete</th>
-                    </tr>
-                    <tr>
-                      <td>Full task content display here</td>
-                      <td>&nbsp;<input class='form-check-label' type='checkbox' id='inlineCheckbox' value=''></td>
-                    </tr>
-                    <tr>
-                      <td>Full task content display here</td>
-                      <td>&nbsp;<input class='form-check-label' type='checkbox' id='inlineCheckbox' value=''></td>
-                    </tr>
-                    <tr>
-                      <td>Full task content display here</td>
-                      <td>&nbsp;<input class='form-check-label' type='checkbox' id='inlineCheckbox' value=''></td>
-                    </tr>
-                  </tbody>
-                </table>">View</a>
+                <!-- <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="">View</a> -->
+                <a href="#" class="btn btn-primary" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="right">View</a>
 
-                <button class="btn btn-outline-info btn-sm p-1" data-toggle="modal" data-target="#modalTasks1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>View</small></button>
+                <div id="a1" class="hidden">
+                  <div class="popover-body">
+                    <table width='100%''>
+                      <tbody>                  
+                        <tr>
+                          <th>Task</th>
+                          <th>Complete</th>
+                        </tr>
+                        <tr>
+                          <td>Full task content display here</td>
+                          <td>&nbsp;<input class='form-check-label' type='checkbox' id='inlineCheckbox' value=''></td>
+                        </tr>
+                        <tr>
+                          <td>Full task content display here</td>
+                          <td>&nbsp;<input class='form-check-label' type='checkbox' id='inlineCheckbox' value=''></td>
+                        </tr>
+                        <tr>
+                          <td>Full task content display here</td>
+                          <td>&nbsp;<input class='form-check-label' type='checkbox' id='inlineCheckbox' value=''></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- <button class="btn btn-outline-info btn-sm p-1" data-toggle="modal" data-target="#modalTasks1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>View</small></button>
                 <div class="modal fade" id="modalTasks1" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                   <div class="modal-dialog" role="document" style="margin-top: 30%;">
                     <div class="modal-content">
@@ -112,12 +133,13 @@
                       </div>
                       <div class="modal-body">
                         <div class="table-responsive" width="100%">
-                          
+
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
+
               </td>
             </tr>
             <tr>
