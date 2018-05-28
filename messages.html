@@ -95,8 +95,8 @@
                           <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
                         </form>
                         <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>
-                     </div>
-                   </div>
+                      </div>
+                    </div>
                     <!-- <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                     <div class="modal fade " id="modal1" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                       <div class="modal-dialog" role="document" style="margin-top: 35%;">
@@ -150,18 +150,18 @@
                 <tr>
                   <td>EA manager</td>
                   <td>
-                     <div style="max-width: 100%;">
-                       <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-                       <div id="popoverMessage2Title" style="display: none">Tasks for Client Nine</div>
-                       <div id="popoverMessage2Content" style="display: none">
-                         <p>Citizen One has given you permission to view and update their information.</p>
-                         <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                         <form action='#/''>
-                           <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
-                         </form>
-                         <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>
-                      </div>
-                    </div>
+                   <div style="max-width: 100%;">
+                     <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                     <div id="popoverMessage2Title" style="display: none">Tasks for Client Nine</div>
+                     <div id="popoverMessage2Content" style="display: none">
+                       <p>Citizen One has given you permission to view and update their information.</p>
+                       <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                       <form action='#/''>
+                         <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
+                       </form>
+                       <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>
+                     </div>
+                   </div>
                     <!-- <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
                     <div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
                       <div class="modal-dialog" role="document" style="margin-top: 35%;">
@@ -464,7 +464,7 @@
         // $(function () {
         //   $('[data-toggle="popover"]').popover()
         // })
-     //popover for client 1
+     //popover for message 1
      $(function(){
        $("#popoverMessage1").popover({
          html : true, 
@@ -483,8 +483,27 @@
         }
       });
     });
-  </script>
-  <script>
+      //popover for message 2
+      $(function(){
+        $("#popoverMessage2").popover({
+          html : true, 
+          content: function() {
+            return $('#popoverMessage2Content').html();
+          },
+          title: function() {
+            return $('#popoverMessage2Title').html();
+          }
+        });
+      })
+      $('body').on('click', function (e) {
+       $('#popoverMessage2').each(function () {
+         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+           $(this).popover('hide');
+         }
+       });
+     });
+   </script>
+   <script>
 //For table filters
 (function(document) {
   'use strict';
