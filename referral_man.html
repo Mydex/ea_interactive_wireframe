@@ -60,43 +60,66 @@
       </p>
       <div class="collapse" id="collapseNewClient" aria-labelledby="headingNewClient">
         <div class="card card-body">
-          <div class="table-responsive">
-            <table class="table table-striped table-bordered table-sm text-left">
-              <thead class="bg-primary">
-                <tr>
+          <form action="/#">
+            <label for="forename" class="col-12 mb-1">Forename</label>
+            <div class="col-12 mb-1">
+              <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+            </div>
+            <label for="surname" class="col-12 mb-1">Surname</label>
+            <div class="col-12 mb-1">
+              <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
+            </div>
+            <script type="text/javascript">
+              function showfield(name){
+                if(name == 'ea1') {
+                  document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+                } else if (name == 'ea2') {
+                  document.getElementById('input').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+                } else if (name == 'ea3') {
+                  document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+                }
+                else {
+                  document.getElementById('input').innerHTML='';
+                } 
+              }
+            </script>
+            <div class="col-12 mb-1">
+              <select name="select_opt" id="select_opt" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)" required>
+                <option value="default">Contact method</option>
+                <option value="ea1">Mobile</option>
+                <option value="ea2">Email</option>
+                <option value="ea3">Mobile & Email</option>
+              </select>
+              <div id="input"></div>
+            </div>
+            <label for="referral" class="col-12 mb-1">Referral from</label>
+            <div class="col-12 mb-1">
+              <select name="referral">
+                <option value="referral1">Advice works</option>
+                <option value="referral2">C4R</option>
+                <option value="referral3">Council</option>
+                <option value="referral4">Family First</option>
+                <option value="referral5">Food bank</option>
+                <option value="referral6">RAMH</option>
+              </select>
+            </div>
+            <label for="referee" class="col-12 mb-1">Referee</label>
+            <div class="col-12 mb-1">
+              <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+            </div>
+          </form>
+          <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>  
+        </div>
+      </div>
 
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                 <td>Client Name</td>
-                 <td></td>
-                 <td>01/01/2018</td>
-                 <td><input type="date" name="" class="m-1"></td>
-                 <td>
-                   <form action="#">
-                     <select name="importance">
-                       <option value="normal">Normal</option>
-                       <option value="important">Important</option>
-                       <option value="urgent">Urgent</option>
-                     </select>
-                   </form>
-                 </td>
-               </tr>
-             </tbody>
-           </table>    
-         </div>   
-       </div>
-     </div>
 
 
 
 
-
-     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+    <!--  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
       Invite
-    </button>
-    <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+    </button> -->
+<!--     <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
       <div class="modal-dialog" role="document" style="margin-top: 35%;">
         <div class="modal-content">
           <div class="modal-header">
@@ -105,8 +128,8 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <form action="/#">
+          <div class="modal-body"> -->
+          <!--   <form action="/#">
               <label for="forename" class="col-12 mb-1">Forename</label>
               <div class="col-12 mb-1">
                 <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
@@ -154,11 +177,11 @@
                 <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
               </div>
             </form>
-            <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
-          </div>
+            <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a> -->
+<!--           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <h4 class="mt-4 mb-2">Status of previously invited citizens</h4>
     <script>
