@@ -115,9 +115,6 @@
         </div>
       </div>
 
-
-
-
     <!--  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
       Invite
     </button> -->
@@ -186,48 +183,7 @@
     </div> -->
 
     <h4 class="mt-4 mb-2">Status of previously invited citizens</h4>
-    <script>
-      (function(document) {
-        'use strict';
-        var StatusFilter = (function(Arr) {
-          var input;
-
-          function onInputEvent(e) {
-            input = e.target;
-            var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-            Arr.forEach.call(tables, function(table) {
-              Arr.forEach.call(table.tBodies, function(tbody) {
-                Arr.forEach.call(tbody.rows, filterRow);
-              });
-            });
-          }
-
-          function filterRow(row) {
-            var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-            row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-          }
-
-          return {
-            init: function() {
-              var inputs = document.getElementsByClassName('tableFilter');
-              Arr.forEach.call(inputs, function(input) {
-                input.oninput = onInputEvent;
-              });
-            }
-          };
-        })(Array.prototype);
-
-        document.addEventListener('readystatechange', function() {
-          if (document.readyState === 'complete') {
-            StatusFilter.init();
-          }
-        });
-
-      })(document);
-    </script>
-
-    <input type="search" class="tableFilter form-control col-4" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
-
+    <input type="search" class="tableFilter form-control col-12 col-md-6 col-lg-6" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
     <div class="table-responsive">
      <table class="status-table table table-striped table-bordered table-sm text-left">
       <thead class="table-info">
@@ -370,49 +326,7 @@
   </div>
 
   <h4 class="mt-4 mb-2">Historic data</h4>
-
-  <script>
-    (function(document) {
-      'use strict';
-      var HistoricFilter = (function(Arr) {
-        var input;
-
-        function onInputEvent(e) {
-          input = e.target;
-          var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-          Arr.forEach.call(tables, function(table) {
-            Arr.forEach.call(table.tBodies, function(tbody) {
-              Arr.forEach.call(tbody.rows, filterRow);
-            });
-          });
-        }
-
-        function filterRow(row) {
-          var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-          row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-        }
-
-        return {
-          init: function() {
-            var inputs = document.getElementsByClassName('tableFilter');
-            Arr.forEach.call(inputs, function(input) {
-              input.oninput = onInputEvent;
-            });
-          }
-        };
-      })(Array.prototype);
-
-      document.addEventListener('readystatechange', function() {
-        if (document.readyState === 'complete') {
-          HistoricFilter.init();
-        }
-      });
-
-    })(document);
-  </script>
-
-  <input type="search" class="tableFilter form-control col-4" spellcheck="true" data-table="historic-table" placeholder="Filter table here...">
-
+  <input type="search" class="tableFilter form-control col-12 col-md-6 col-lg-6" spellcheck="true" data-table="historic-table" placeholder="Filter table here...">
   <div class="table-responsive">
    <table class="historic-table table table-striped table-bordered table-sm text-left">
     <thead class="table-info">
@@ -496,8 +410,84 @@
 </main>
 
 <script>
+  (function(document) {
+    'use strict';
+    var HistoricFilter = (function(Arr) {
+      var input;
 
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
+
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        HistoricFilter.init();
+      }
+    });
+
+  })(document);
 </script>
+<script>
+  (function(document) {
+    'use strict';
+    var StatusFilter = (function(Arr) {
+      var input;
+
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
+
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        StatusFilter.init();
+      }
+    });
+
+  })(document);
+</script>
+
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
