@@ -57,15 +57,7 @@
           <h4 for="#" class="mb-2">Add home visit</h4>
           <form action="/#">
             <label for="clientName" class="mt-1 mb-1">Assign to a client</label>
-            <script type="text/javascript">
-              function showClientInfo(name){
-                if(name == 'client') {
-                  document.getElementById('clientInfo').innerHTML = 'Address: 12 Fake Street <br>Profile: <a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">view</a>';
-                } else {
-                  document.getElementById('clientInfo').innerHTML='';
-                } 
-              }
-            </script>
+            
             <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>
               <option value="noClient">No client</option>
               <option value="client">Citizen Four</option>
@@ -104,49 +96,9 @@
           <a href="#" class="btn btn-outline-primary mt-0" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
         </div>
       </div>
-
-      <script>
-        (function(document) {
-          'use strict';
-          var UpcomingFilter = (function(Arr) {
-            var input;
-
-            function onInputEvent(e) {
-              input = e.target;
-              var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-              Arr.forEach.call(tables, function(table) {
-                Arr.forEach.call(table.tBodies, function(tbody) {
-                  Arr.forEach.call(tbody.rows, filterRow);
-                });
-              });
-            }
-
-            function filterRow(row) {
-              var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-              row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-            }
-
-            return {
-              init: function() {
-                var inputs = document.getElementsByClassName('upcomingFilter');
-                Arr.forEach.call(inputs, function(input) {
-                  input.oninput = onInputEvent;
-                });
-              }
-            };
-          })(Array.prototype);
-
-          document.addEventListener('readystatechange', function() {
-            if (document.readyState === 'complete') {
-              UpcomingFilter.init();
-            }
-          });
-
-        })(document);
-      </script>
-
+      
       <h4 class="mt-4">Upcoming visits</h4>
-      <input type="search" class="upcomingFilter form-control col-4 mb-2"  spellcheck="true"data-table="upcoming-table" placeholder="Filter table here...">
+      <input type="search" class="upcomingFilter form-control col-11 col-md-6 col-lg-6 mb-2"  spellcheck="true"data-table="upcoming-table" placeholder="Filter table here...">
       <div class="table-responsive">
         <table class="upcoming-table table table-striped table-bordered table-sm text-left sortable" id="upcomingTable">
           <thead class="table-info mt-2">
@@ -217,48 +169,10 @@
      </table>
    </div>
 
-   <script>
-     (function(document) {
-       'use strict';
-       var TableFilter = (function(Arr) {
-         var input;
-
-         function onInputEvent(e) {
-           input = e.target;
-           var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-           Arr.forEach.call(tables, function(table) {
-             Arr.forEach.call(table.tBodies, function(tbody) {
-               Arr.forEach.call(tbody.rows, filterRow);
-             });
-           });
-         }
-
-         function filterRow(row) {
-           var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-           row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-         }
-
-         return {
-           init: function() {
-             var inputs = document.getElementsByClassName('tableFilter');
-             Arr.forEach.call(inputs, function(input) {
-               input.oninput = onInputEvent;
-             });
-           }
-         };
-       })(Array.prototype);
-
-       document.addEventListener('readystatechange', function() {
-         if (document.readyState === 'complete') {
-           TableFilter.init();
-         }
-       });
-
-     })(document);
-   </script>
+   
 
    <h4 class="mt-4">Past visits</h4>
-   <input type="search" class="tableFilter form-control col-4" data-table="past-table" placeholder="Filter table here...">
+   <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6" data-table="past-table" placeholder="Filter table here...">
 
    <div class="table-responsive mt-2 mb-0">
     <table class="past-table table table-striped table-bordered table-sm text-left sortable" id="pastTable">
@@ -385,6 +299,97 @@
     });
   });
 </script>
+
+<script type="text/javascript">
+  function showClientInfo(name){
+    if(name == 'client') {
+      document.getElementById('clientInfo').innerHTML = 'Address: 12 Fake Street <br>Profile: <a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">view</a>';
+    } else {
+      document.getElementById('clientInfo').innerHTML='';
+    } 
+  }
+</script>
+
+<script>
+  (function(document) {
+    'use strict';
+    var TableFilter = (function(Arr) {
+      var input;
+
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
+
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        TableFilter.init();
+      }
+    });
+
+  })(document);
+</script>
+
+<script>
+  (function(document) {
+    'use strict';
+    var UpcomingFilter = (function(Arr) {
+      var input;
+
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
+        });
+      }
+
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('upcomingFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        UpcomingFilter.init();
+      }
+    });
+
+  })(document);
+</script>
+
 
 </main>
 
