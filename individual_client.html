@@ -1285,7 +1285,7 @@
   <th class="text-primary">Date of births for all children</th>
   <td class="font-italic">
     <input type="date" name="dob1">
-    <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
+    <button onclick="addDOB()" required class="btn btn-outline-primary" >+</button>
     <div id="content">
     </td>
   </tr>
@@ -1293,7 +1293,7 @@
    <th class="text-primary">Warm Home Deal: Core group</th>
    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
  </tr>
- <tr>
+ <tr>style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"
    <th class="text-primary">Warm Home Deal: Broader group</th>
    <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
  </tr>
@@ -2021,7 +2021,7 @@
     // newDiv.className = 'row';
     newDiv.innerHTML = 
     "<input type='date' name='dob" + dobCounter + "'>\
-    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)'>";
+    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>";
     document.getElementById('content').appendChild(newDiv);
     dobCounter ++;
   }
