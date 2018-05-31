@@ -2015,14 +2015,20 @@
     } 
   }
 
-  var i = 2;
+  var dobCounter = 2;
   function addDOB(){
     var newDiv = document.createElement('div');
     // newDiv.className = 'row';
-    newDiv.innerHTML = "<input type='date' name='dob" + i + "'>";
+    newDiv.innerHTML = 
+    "<input type='date' name='dob" + dobCounter + "'>\
+    <input type='button' value='-' onclick='removeRow(this)'>";
     document.getElementById('content').appendChild(newDiv);
-    i ++;
+    dobCounter ++;
   }
+  function removeRow(input) {
+    document.getElementById('content').removeChild(input.parentNode);
+  }
+
 
   function showElecPay(name){
     if(name == 'elecPay3') {
