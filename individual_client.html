@@ -2018,12 +2018,12 @@
   }
 
   function addDOB(){
+    i = 1;
     var div = document.createElement('div');
     div.className = 'row';
-    div.innerHTML =
-    "<input type='date'>";
+    div.innerHTML = "<input type='date' name='dob'" + i + ">";
     document.getElementById('content').appendChild(div);
-
+    i+=;
   }
 
   function showElecPay(name){
