@@ -131,13 +131,13 @@
               </td>
               <td>Family First : name</td>
               <td>
-                 <div style="max-width: 100%;">
-                   <h5 class="m-0 p-0"><a tabindex="0" role="button" class="badge badge-danger text-white p-2" data-placement="left" data-trigger="click" id="popoverTaskList2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">*</a></h5>
-                   <div id="popoverTaskList2Title" style="display: none">Notes</div>
-                   <div id="popoverTaskList2Content" style="display: none">
-                    <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
-                  </div>
+               <div style="max-width: 100%;">
+                 <h5 class="m-0 p-0"><a tabindex="0" role="button" class="badge badge-danger text-white p-2" data-placement="left" data-trigger="click" id="popoverTaskList2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">*</a></h5>
+                 <div id="popoverTaskList2Title" style="display: none">Notes</div>
+                 <div id="popoverTaskList2Content" style="display: none">
+                  <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
                 </div>
+              </div>
                 <!-- <h5 data-toggle="modal" data-target="#modal2" class="m-0 font-bold">
                   <span class="badge badge-warning text-white p-1">*</span>
                 </h5>
@@ -173,13 +173,13 @@
               </td>
               <td>Council : name</td>
               <td>
-                 <div style="max-width: 100%;">
-                   <h5 class="m-0 p-0"><a tabindex="0" role="button" class="badge badge-danger text-white p-3" data-placement="left" data-trigger="click" id="popoverTaskList3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">*</a></h5>
-                   <div id="popoverTaskList3Title" style="display: none">Notes</div>
-                   <div id="popoverTaskList3Content" style="display: none">
-                    <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
-                  </div>
+               <div style="max-width: 100%;">
+                 <h5 class="m-0 p-0"><a tabindex="0" role="button" class="badge badge-danger text-white p-3" data-placement="left" data-trigger="click" id="popoverTaskList3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">*</a></h5>
+                 <div id="popoverTaskList3Title" style="display: none">Notes</div>
+                 <div id="popoverTaskList3Content" style="display: none">
+                  <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
                 </div>
+              </div>
                 <!-- <h5 data-toggle="modal" data-target="#modal3" class="m-0 font-bold">
                   <span class="badge badge-warning text-white p-1">*</span>
                 </h5>
@@ -629,7 +629,7 @@
 
     <script>
 
-    //popover for client 1
+    //popover 1
     $(function(){
       $("#popoverTaskList1").popover({
         html : true, 
@@ -648,7 +648,7 @@
        }
      });
    });
-       //popover for client 2
+       //popover 2
        $(function(){
          $("#popoverTaskList2").popover({
            html : true, 
@@ -667,7 +667,7 @@
           }
         });
       });
-        //popover for client 3
+        //popover 3
         $(function(){
           $("#popoverTaskList3").popover({
             html : true, 
@@ -686,6 +686,66 @@
            }
          });
        });
+
+         //popover 4
+         $(function(){
+           $("#popoverTaskList4").popover({
+             html : true, 
+             content: function() {
+               return $('#popoverTaskList4Content').html();
+             },
+             title: function() {
+               return $('#popoverTaskList4Title').html();
+             }
+           });
+         })
+         $('body').on('click', function (e) {
+          $('#popoverTaskList4').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+            }
+          });
+        });
+
+          //popover 5
+          $(function(){
+            $("#popoverTaskList5").popover({
+              html : true, 
+              content: function() {
+                return $('#popoverTaskList5Content').html();
+              },
+              title: function() {
+                return $('#popoverTaskList5Title').html();
+              }
+            });
+          })
+          $('body').on('click', function (e) {
+           $('#popoverTaskList5').each(function () {
+             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+               $(this).popover('hide');
+             }
+           });
+         });
+
+           //popover 6
+           $(function(){
+             $("#popoverTaskList6").popover({
+               html : true, 
+               content: function() {
+                 return $('#popoverTaskList6Content').html();
+               },
+               title: function() {
+                 return $('#popoverTaskList6Title').html();
+               }
+             });
+           })
+           $('body').on('click', function (e) {
+            $('#popoverTaskList6').each(function () {
+              if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+              }
+            });
+          });
 
     // For sorting tables
     var compare = {
