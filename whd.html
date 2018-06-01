@@ -341,7 +341,19 @@
     </select>
   </form>
 </div>
+<div id="whdIframe"></div>
+</div>
+</main>
+
 <script type="text/javascript">
+
+var dobCounter = 2;
+function addDOB(){
+  var newDiv = document.createElement('div');
+  newDiv.innerHTML = 
+  "<input type='date' name='dob' +"
+}
+
  function showLink(site){
   if(site != 'supplierDefault') {
     document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
@@ -351,9 +363,6 @@
   } 
 }
 </script>
-<div id="whdIframe"></div>
-</div>
-</main>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
   <nav class="navbar navbar-expand-sm">  
