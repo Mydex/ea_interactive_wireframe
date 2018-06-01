@@ -203,7 +203,12 @@
           <td>Council : name</td>
           <td>077123456789</td>
           <td>
-            <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverNote1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+            <div id="popoverNote1Content" class="row" style="display: none">
+              <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+            </div>
+          </div>
+            <!-- <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
               View
             </button>
             <div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
@@ -220,7 +225,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </td>
           <td>
             <button type="button" class="close m-0" aria-label="Close">
@@ -410,6 +415,56 @@
 </main>
 
 <script>
+  <script>
+    $(function(){
+      $("#popoverNote1").popover({
+        html : true, 
+        content: function() {
+          return $('#popoverNote1Content').html();
+        }
+      });
+    })
+    $('body').on('click', function (e) {
+     $('#popoverNote1').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+
+    $(function(){
+      $("#popoverNote2").popover({
+        html : true, 
+        content: function() {
+          return $('#popoverNote2Content').html();
+        }
+      });
+    })
+    $('body').on('click', function (e) {
+     $('#popoverNote2').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+
+    $(function(){
+     $("#popoverNote3").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverNote3Content').html();
+       }
+     });
+   })
+    $('body').on('click', function (e) {
+      $('#popoverNote3').each(function () {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+          $(this).popover('hide');
+        }
+      });
+    });
+
+
   (function(document) {
     'use strict';
     var HistoricFilter = (function(Arr) {
