@@ -203,7 +203,7 @@
                   <th>Children living at property</th>
                   <td>
                     <input type="date" name="dob1" class="mb-2">
-                    <button onclick='addDOB()' required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
+                    <button onclick="addDOB()"" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
                     <div id="content"></div>
                   </td>
                 </tr>
@@ -356,19 +356,19 @@
     document.getElementById('content').appendChild(newDiv);
     dobCounter ++;
   }
-  function removeRow(input){
-    document.getElementById('content').removeChild(input.parentNode);
-  }
+  function removeRow(input) {
+   document.getElementById('content').removeChild(input.parentNode);
+ }
 
 
-  function showLink(site){
-    if(site != 'supplierDefault') {
-      document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
-      document.getElementById('linkIframe').href = site;
-    } else {
-      document.getElementById('whdIframe').innerHTML='';
-    } 
-  }
+ function showLink(site){
+  if(site != 'supplierDefault') {
+    document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
+    document.getElementById('linkIframe').href = site;
+  } else {
+    document.getElementById('whdIframe').innerHTML='';
+  } 
+}
 </script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
