@@ -347,21 +347,28 @@
 
 <script type="text/javascript">
 
-var dobCounter = 2;
-function addDOB(){
-  var newDiv = document.createElement('div');
-  newDiv.innerHTML = 
-  "<input type='date' name='dob' +"
-}
+  var dobCounter = 2;
+  function addDOB(){
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    "<input type='date' name='dob" + dobCounter + "' class='mb-2'>\
+    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this' style='bow-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' >";
+    document.getElementById('content').appendChild(newDiv);
+    dobCounter ++;
+  }
+  function removeRow(input){
+    document.getElementById('content').removeChild(input.parentNode);
+  }
 
- function showLink(site){
-  if(site != 'supplierDefault') {
-    document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
-    document.getElementById('linkIframe').href = site;
-  } else {
-    document.getElementById('whdIframe').innerHTML='';
-  } 
-}
+
+  function showLink(site){
+    if(site != 'supplierDefault') {
+      document.getElementById('whdIframe').innerHTML = '<a id="linkIframe" href="" target="_blank">Link to WHD page</a>';
+      document.getElementById('linkIframe').href = site;
+    } else {
+      document.getElementById('whdIframe').innerHTML='';
+    } 
+  }
 </script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
