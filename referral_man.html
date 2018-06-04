@@ -56,9 +56,7 @@
       <div class="row">
         <div class="col-md-6 col-lg-6">
           <p class="m-0">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNewClient" aria-expanded="false" aria-controls="collapseNewClient">
-              Messages
-            </button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNewClient" aria-expanded="false" aria-controls="collapseNewClient">Invite</button>
           </p>
           <div class="collapse" id="collapseNewClient" aria-labelledby="headingNewClient">
             <div class="card card-body">
@@ -102,117 +100,32 @@
         </div>
       </div>
 
-    <!--  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-      Invite
-    </button> -->
-<!--     <div class="modal fade " id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-      <div class="modal-dialog" role="document" style="margin-top: 35%;">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="mt-2">Invite new citizen to service</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body"> -->
-          <!--   <form action="/#">
-              <label for="forename" class="col-12 mb-1">Forename</label>
-              <div class="col-12 mb-1">
-                <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+      <h4 class="mt-4 mb-2">Status of previously invited citizens</h4>
+      <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
+      <div class="table-responsive">
+       <table class="status-table table table-striped table-bordered table-sm text-left">
+        <thead class="table-info">
+          <tr>
+            <th>Citizens name</th>
+            <th>Status</th>
+            <th>Referrer</th>
+            <th>Contact Info</th>
+            <th>Notes</th>
+            <th>Move to historic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Citizen Forty-four</td>
+            <td>Pending</td>
+            <td>Council : name</td>
+            <td>077123456789</td>
+            <td>
+              <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverNote1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+              <div id="popoverNote1Content" class="row" style="display: none">
+                <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
               </div>
-              <label for="surname" class="col-12 mb-1">Surname</label>
-              <div class="col-12 mb-1">
-                <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
-              </div>
-              <script type="text/javascript">
-                function showfield(name){
-                  if(name == 'ea1') {
-                    document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
-                  } else if (name == 'ea2') {
-                    document.getElementById('input').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-                  } else if (name == 'ea3') {
-                    document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-                  }
-                  else {
-                    document.getElementById('input').innerHTML='';
-                  } 
-                }
-              </script>
-              <div class="col-12 mb-1">
-                <select name="select_opt" id="select_opt" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)" required>
-                  <option value="default">Contact method</option>
-                  <option value="ea1">Mobile</option>
-                  <option value="ea2">Email</option>
-                  <option value="ea3">Mobile & Email</option>
-                </select>
-                <div id="input"></div>
-              </div>
-              <label for="referral" class="col-12 mb-1">Referral from</label>
-              <div class="col-12 mb-1">
-                <select name="referral">
-                  <option value="referral1">Advice works</option>
-                  <option value="referral2">C4R</option>
-                  <option value="referral3">Council</option>
-                  <option value="referral4">Family First</option>
-                  <option value="referral5">Food bank</option>
-                  <option value="referral6">RAMH</option>
-                </select>
-              </div>
-              <label for="referee" class="col-12 mb-1">Referee</label>
-              <div class="col-12 mb-1">
-                <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
-              </div>
-            </form>
-            <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a> -->
-<!--           </div>
-        </div>
-      </div>
-    </div> -->
-
-    <h4 class="mt-4 mb-2">Status of previously invited citizens</h4>
-    <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
-    <div class="table-responsive">
-     <table class="status-table table table-striped table-bordered table-sm text-left">
-      <thead class="table-info">
-        <tr>
-          <th>Citizens name</th>
-          <th>Status</th>
-          <th>Referrer</th>
-          <th>Contact Info</th>
-          <th>Notes</th>
-          <th>Move to historic</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Citizen Forty-four</td>
-          <td>Pending</td>
-          <td>Council : name</td>
-          <td>077123456789</td>
-          <td>
-            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverNote1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-            <div id="popoverNote1Content" class="row" style="display: none">
-              <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
             </div>
-          </div>
-            <!-- <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-              View
-            </button>
-            <div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-              <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                <div class="modal-content">
-                  <div class="modal-header m-0">
-                    <h5>Notes</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </td>
           <td>
             <button type="button" class="close m-0" aria-label="Close">
@@ -231,186 +144,132 @@
               <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
             </div>
           </div>
-            <!-- <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-              View
-            </button>
-            <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-              <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="mt-2">Notes</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-          </td>
-          <td>
-            <button type="button" class="close m-0" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Citizen Fifty</td>
-          <td>Pending</td>
-          <td>Council : name</td>
-          <td>name@email.com</td>
-          <td>
-            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverNote3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-            <div id="popoverNote3Content" class="row" style="display: none">
-              <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-            </div>
-          </div>
-            <!-- <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-              View
-            </button>
-            <div class="modal fade " id="modal4" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-              <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="mt-2">Notes</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-          </td>
-          <td>
-            <button type="button" class="close m-0" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Citizen Twenty-three</td>
-          <td>Pending</td>
-          <td>RAMH : name</td>
-          <td>077123456789</td>
-          <td>
-            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverNote4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-            <div id="popoverNote4Content" class="row" style="display: none">
-              <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-            </div>
-          </div>
-            <!-- <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-              View
-            </button>
-            <div class="modal fade " id="modal5" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-              <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="mt-2">Notes</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-          </td>
-          <td>
-            <button type="button" class="close m-0" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h4 class="mt-4 mb-2">Historic data</h4>
-  <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="historic-table" placeholder="Filter table here...">
-  <div class="table-responsive">
-   <table class="historic-table table table-striped table-bordered table-sm text-left">
-    <thead class="table-info">
-      <tr>
-        <th>Citizens name</th>
-        <th>Status</th>
-        <th>Referrer</th>
-        <th>Contact Info</th>
-        <th>Notes</th>
-        <th>Move back to waiting</th>
+        </td>
+        <td>
+          <button type="button" class="close m-0" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td>Citizen Thirteen</td>
-        <td>No contact</td>
+        <td>Citizen Fifty</td>
+        <td>Pending</td>
         <td>Council : name</td>
-        <td>077123456789</td>
+        <td>name@email.com</td>
         <td>
-          <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-            View
-          </button>
-          <div class="modal fade " id="modal6" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-            <div class="modal-dialog" role="document" style="margin-top: 35%;">
-              <div class="modal-content">
-                <div class="modal-header m-0">
-                  <h5>Notes</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-                </div>
+          <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverNote3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+          <div id="popoverNote3Content" class="row" style="display: none">
+            <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <button type="button" class="close m-0" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Citizen Twenty-three</td>
+      <td>Pending</td>
+      <td>RAMH : name</td>
+      <td>077123456789</td>
+      <td>
+        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverNote4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+        <div id="popoverNote4Content" class="row" style="display: none">
+          <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
+        </div>
+      </div>
+    </td>
+    <td>
+      <button type="button" class="close m-0" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<h4 class="mt-4 mb-2">Historic data</h4>
+<input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="historic-table" placeholder="Filter table here...">
+<div class="table-responsive">
+ <table class="historic-table table table-striped table-bordered table-sm text-left">
+  <thead class="table-info">
+    <tr>
+      <th>Citizens name</th>
+      <th>Status</th>
+      <th>Referrer</th>
+      <th>Contact Info</th>
+      <th>Notes</th>
+      <th>Move back to waiting</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Citizen Thirteen</td>
+      <td>No contact</td>
+      <td>Council : name</td>
+      <td>077123456789</td>
+      <td>
+        <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+          View
+        </button>
+        <div class="modal fade " id="modal6" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+          <div class="modal-dialog" role="document" style="margin-top: 35%;">
+            <div class="modal-content">
+              <div class="modal-header m-0">
+                <h5>Notes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
               </div>
             </div>
           </div>
-        </td>
-        <td>
-          <button type="button" class="close m-0" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <td>Citizen Twenty-two</td>
-        <td>No contact</td>
-        <td>RAMH : name</td>
-        <td>077123456789</td>
-        <td>
-          <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-            View
-          </button>
-          <div class="modal fade " id="modal7" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-            <div class="modal-dialog" role="document" style="margin-top: 35%;">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="mt-2">Notes</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-                </div>
+        </div>
+      </td>
+      <td>
+        <button type="button" class="close m-0" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Citizen Twenty-two</td>
+      <td>No contact</td>
+      <td>RAMH : name</td>
+      <td>077123456789</td>
+      <td>
+        <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modal7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
+          View
+        </button>
+        <div class="modal fade " id="modal7" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
+          <div class="modal-dialog" role="document" style="margin-top: 35%;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="mt-2">Notes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
               </div>
             </div>
           </div>
-        </td>
-        <td>
-          <button type="button" class="close m-0" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </div>
+      </td>
+      <td>
+        <button type="button" class="close m-0" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 </div>
