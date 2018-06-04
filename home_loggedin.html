@@ -247,38 +247,38 @@
   function showForm(name){
     console.log('started');
     if(name == 'homeVisit') {
-      document.getElementById('formGenerated').innerHTML = 
-      '<form action="/#">\
-      <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
-      <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>\
-      <option value="noClient">No client</option>\
-      <option value="client">Citizen Four</option>\
-      <option value="client">Citizen Seven</option>\
-      <option value="client">Citizen Nine</option>\
-      <option value="client">Citizen Thirteen</option>\
-      <option value="client">Citizen Fifteen</option>\
-      <option value="client">Citizen Ninenteen</option>\
-      <option value="client">Citizen Twenty</option>\
-      <option value="client">Citizen Twenty-four</option>\
-      <option value="client">Citizen Twenty-eight</option>\
-      <option value="client">Citizen Twenty-nine</option>\
-      <option value="client">Citizen Thirty-two</option>\
-      <option value="client">Citizen Thirty-six</option>\
-      </select>\
-      <div id="clientInfo"></div>\
-      <div class="mt-1 mb-1"><label placeholder="01/01/2018" class="mt-0 mb-0">Date</label></div>\
-      <input class=" mt-0 p-1 form-control" type="date">\
-      <div class="row mt-1 mb-1">\
-      <div class="col-lg-6 col-md-6">\
-      <div class="mt-0 mb-0"><label class="mt-0 mb-0">Start time</label></div>\
-      <input class="mt-0 p-1 form-control" type="time">\
-      </div>\
-      <div class="col-lg-6 col-md-6">\
-      <div class="mt-0 mb-0"><label class="mt-0 mb-0">End time</label></div>\
-      <input class="mt-0 p-1 form-control" type="time">\
-      </div>\
-      </div>\
-      </form>';
+      document.getElementById('formGenerated').innerHTML = "<div>Hello</div>";
+      // '<form action="/#">\
+      // <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
+      // <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>\
+      // <option value="noClient">No client</option>\
+      // <option value="client">Citizen Four</option>\
+      // <option value="client">Citizen Seven</option>\
+      // <option value="client">Citizen Nine</option>\
+      // <option value="client">Citizen Thirteen</option>\
+      // <option value="client">Citizen Fifteen</option>\
+      // <option value="client">Citizen Ninenteen</option>\
+      // <option value="client">Citizen Twenty</option>\
+      // <option value="client">Citizen Twenty-four</option>\
+      // <option value="client">Citizen Twenty-eight</option>\
+      // <option value="client">Citizen Twenty-nine</option>\
+      // <option value="client">Citizen Thirty-two</option>\
+      // <option value="client">Citizen Thirty-six</option>\
+      // </select>\
+      // <div id="clientInfo"></div>\
+      // <div class="mt-1 mb-1"><label placeholder="01/01/2018" class="mt-0 mb-0">Date</label></div>\
+      // <input class=" mt-0 p-1 form-control" type="date">\
+      // <div class="row mt-1 mb-1">\
+      // <div class="col-lg-6 col-md-6">\
+      // <div class="mt-0 mb-0"><label class="mt-0 mb-0">Start time</label></div>\
+      // <input class="mt-0 p-1 form-control" type="time">\
+      // </div>\
+      // <div class="col-lg-6 col-md-6">\
+      // <div class="mt-0 mb-0"><label class="mt-0 mb-0">End time</label></div>\
+      // <input class="mt-0 p-1 form-control" type="time">\
+      // </div>\
+      // </div>\
+      // </form>';
     } else if ( name == 'phoneCitizen'){
       document.getElementById('formGenerated').innerHTML =
       '<div>\
