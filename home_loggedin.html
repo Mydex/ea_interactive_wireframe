@@ -221,34 +221,38 @@
 <div class="col-md-4 col-lg-4">
   <h4 class="mt-4 mb-2">Add task</h4>
   <form action="/#">
-    <label for="taskType" class="mt-1 mb-1">Type</label>
-    <select name="taskType" id="taskType" onchange="showForm(this.options[this.selectedIndex].value)" required>
-      <option id="default"></option>
-      <option id="homeVisit">Add home visit</option>
-      <option id="phoneCitizen">Phone call - citizen</option>
-      <option id="phoneHomeVisit">Phone call - home visit</option>
-      <option id="contactUpdate">Contact - update</option>
-    </select>
-
-
-    <label>Task Details</label>
-    <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>
-    <label for="taskType" class="mt-1 mb-1">Assign to a client</label>
-    <select class="form-control form-control-sm" id="taskType">
-      <option>N/a</option>
-      <option>Citizen Four</option>
-      <option>Citizen Seven</option>
-      <option>Citizen Nine</option>
-      <option>Citizen Thirteen</option>
-      <option>Citizen Fifteen</option>
-      <option>Citizen Ninenteen</option>
-      <option>Citizen Twenty</option>
-      <option>Citizen Twenty-four</option>
-      <option>Citizen Twenty-eight</option>
-      <option>Citizen Twenty-nine</option>
-      <option>Citizen Thirty-two</option>
-      <option>Citizen Thirty-six</option>
-    </select>
+    <div>
+      <label for="taskType" class="mt-1 mb-1">Type</label>
+      <select name="taskType" id="taskType" onchange="showForm(this.options[this.selectedIndex].value)" required>
+        <option id="default"></option>
+        <option id="homeVisit">Add home visit</option>
+        <option id="phoneCitizen">Phone call - citizen</option>
+        <option id="phoneHomeVisit">Phone call - home visit</option>
+        <option id="contactUpdate">Contact - update</option>
+      </select>
+    </div>
+    <div>
+      <label>Task Details</label>
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>
+    </div>
+    <div>
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>
+      <select class="form-control form-control-sm" id="taskType">
+        <option>N/a</option>
+        <option>Citizen Four</option>
+        <option>Citizen Seven</option>
+        <option>Citizen Nine</option>
+        <option>Citizen Thirteen</option>
+        <option>Citizen Fifteen</option>
+        <option>Citizen Ninenteen</option>
+        <option>Citizen Twenty</option>
+        <option>Citizen Twenty-four</option>
+        <option>Citizen Twenty-eight</option>
+        <option>Citizen Twenty-nine</option>
+        <option>Citizen Thirty-two</option>
+        <option>Citizen Thirty-six</option>
+      </select>
+    </div>
   </form>
   <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
 </div>
