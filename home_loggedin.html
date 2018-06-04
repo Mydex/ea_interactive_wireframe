@@ -219,16 +219,20 @@
 </div>
 
 <div class="col-md-4 col-lg-4">
-  <h4 class="mt-4 mb-2">Add general task</h4>
+  <h4 class="mt-4 mb-2">Add task</h4>
   <form action="/#">
-    <label for="mydexid">Task Details</label>
-    <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>
+    <label>Task Details</label>
     <label for="taskType" class="mt-1 mb-1">Type</label>
-    <select class="form-control form-control-sm" id="taskType">
-      <option>Phone call - citizen</option>
-      <option>Phone call - home visit</option>
-      <option>Contact - update</option>
+    <select name="taskType" id="taskType" onchange="showForm(this.options[this.selectedIndex].value)" required>
+      <option id="homeVisit">Add home visit</option>
+      <option id="phoneCitizen">Phone call - citizen</option>
+      <option id="phoneHomeVisit">Phone call - home visit</option>
+      <option id="contactUpdate">Contact - update</option>
     </select>
+
+
+
+    <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>
     <label for="taskType" class="mt-1 mb-1">Assign to a client</label>
     <select class="form-control form-control-sm" id="taskType">
       <option>N/a</option>
