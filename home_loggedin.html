@@ -293,15 +293,15 @@ $('body').on('click', function (e) {
 
      //popover for client notes 1
      $(function(){
-       $("#popoverNotes1").popover({
+       $("#popoverNote1").popover({
          html : true, 
          content: function() {
-           return $('#popoverNotes1Content').html();
+          return $('#popoverNote1Content').html();
          }
        });
      })
      $('body').on('click', function (e) {
-      $('#popoverNotes1').each(function () {
+      $('#popoverNote1').each(function () {
         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
           $(this).popover('hide');
         }
