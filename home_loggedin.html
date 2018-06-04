@@ -231,6 +231,7 @@
         <option id="contactUpdate">Contact - update</option>
       </select>
     </div>
+    <div id="formGenerated"></div>
     <div>
       <label>Task Details</label>
       <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>
@@ -265,7 +266,7 @@
 <script>
   function showForm(name){
     if(name == 'homeVisit') {
-      document.getElementById('wallOther').innerHTML = 
+      document.getElementById('formGenerated').innerHTML = 
       '<form action="/#">\
       <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
       <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>\
@@ -298,7 +299,7 @@
       </div>\
       </form>';
     } else {
-      document.getElementById('wallOther').innerHTML='';
+      document.getElementById('formGenerated').innerHTML='';
     } 
   }
 
