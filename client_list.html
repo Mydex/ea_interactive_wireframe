@@ -617,7 +617,6 @@
            }
          });
        });
-
          //popover 4
          $(function(){
            $("#popoverTaskList4").popover({
@@ -637,7 +636,6 @@
             }
           });
         });
-
           //popover 5
           $(function(){
             $("#popoverTaskList5").popover({
@@ -657,7 +655,6 @@
              }
            });
          });
-
            //popover 6
            $(function(){
              $("#popoverTaskList6").popover({
@@ -677,6 +674,159 @@
               }
             });
           });
+            //popover 7
+            $(function(){
+              $("#popoverTaskList7").popover({
+                html : true, 
+                content: function() {
+                  return $('#popoverTaskList7Content').html();
+                },
+                title: function() {
+                  return $('#popoverTaskList7Title').html();
+                }
+              });
+            })
+            $('body').on('click', function (e) {
+             $('#popoverTaskList7').each(function () {
+               if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                 $(this).popover('hide');
+               }
+             });
+           });
+             //popover 8
+             $(function(){
+               $("#popoverTaskList8").popover({
+                 html : true, 
+                 content: function() {
+                   return $('#popoverTaskList8Content').html();
+                 },
+                 title: function() {
+                   return $('#popoverTaskList8Title').html();
+                 }
+               });
+             })
+             $('body').on('click', function (e) {
+              $('#popoverTaskList8').each(function () {
+                if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                  $(this).popover('hide');
+                }
+              });
+            });
+              //popover 9
+              $(function(){
+                $("#popoverTaskList9").popover({
+                  html : true, 
+                  content: function() {
+                    return $('#popoverTaskList9Content').html();
+                  },
+                  title: function() {
+                    return $('#popoverTaskList9Title').html();
+                  }
+                });
+              })
+              $('body').on('click', function (e) {
+               $('#popoverTaskList9').each(function () {
+                 if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                   $(this).popover('hide');
+                 }
+               });
+             });
+               //popover 10
+               $(function(){
+                 $("#popoverTaskList10").popover({
+                   html : true, 
+                   content: function() {
+                     return $('#popoverTaskList10Content').html();
+                   },
+                   title: function() {
+                     return $('#popoverTaskList10Title').html();
+                   }
+                 });
+               })
+               $('body').on('click', function (e) {
+                $('#popoverTaskList10').each(function () {
+                  if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                    $(this).popover('hide');
+                  }
+                });
+              });
+                //popover 11
+                $(function(){
+                  $("#popoverTaskList11").popover({
+                    html : true, 
+                    content: function() {
+                      return $('#popoverTaskList11Content').html();
+                    },
+                    title: function() {
+                      return $('#popoverTaskList11Title').html();
+                    }
+                  });
+                })
+                $('body').on('click', function (e) {
+                 $('#popoverTaskList11').each(function () {
+                   if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                     $(this).popover('hide');
+                   }
+                 });
+               });
+                 //popover 12
+                 $(function(){
+                   $("#popoverTaskList12").popover({
+                     html : true, 
+                     content: function() {
+                       return $('#popoverTaskList12Content').html();
+                     },
+                     title: function() {
+                       return $('#popoverTaskList12Title').html();
+                     }
+                   });
+                 })
+                 $('body').on('click', function (e) {
+                  $('#popoverTaskList12').each(function () {
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                      $(this).popover('hide');
+                    }
+                  });
+                });
+                  //popover 13
+                  $(function(){
+                    $("#popoverTaskList13").popover({
+                      html : true, 
+                      content: function() {
+                        return $('#popoverTaskList13Content').html();
+                      },
+                      title: function() {
+                        return $('#popoverTaskList13Title').html();
+                      }
+                    });
+                  })
+                  $('body').on('click', function (e) {
+                   $('#popoverTaskList13').each(function () {
+                     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                       $(this).popover('hide');
+                     }
+                   });
+                 });
+                   //popover 14
+                   $(function(){
+                     $("#popoverTaskList14").popover({
+                       html : true, 
+                       content: function() {
+                         return $('#popoverTaskList14Content').html();
+                       },
+                       title: function() {
+                         return $('#popoverTaskList14Title').html();
+                       }
+                     });
+                   })
+                   $('body').on('click', function (e) {
+                    $('#popoverTaskList14').each(function () {
+                      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                        $(this).popover('hide');
+                      }
+                    });
+                  });
+
 
     // For sorting tables
     var compare = {
