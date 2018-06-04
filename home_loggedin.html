@@ -91,43 +91,27 @@
                 </div>
               </div>
             </td>
-          </tr>
-          <tr>
-            <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Nine</a></td>
-            <td>12:00</td>
-            <td>12 Fake Street<br>
-              FakeTown<br>
-            FA12 3KE</td>
-            <td>07712345678</td>
             <td>
-              <div style="max-width: 100%;">
-                <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-                <div id="popoverTaskList2Title" style="display: none">Tasks for Client Nine</div>
-                <div id="popoverTaskList2Content" style="display: none">
-                 <table class="table table-bordered" style="width:100%">
-                  <tbody>                  
-                    <tr><th>Tasks</th></tr>
-                    <tr><td>Full task content display here</td></tr>
-                    <tr><td>Full task content display here</td></tr>
-                    <tr><td>Full task content display here</td></tr>
-                  </tbody>
-                </table>
+             <div style="max-width: 100%;">
+               <h3 class="m-0 p-0"><a tabindex="0" role="button" class="badge badge-dark text-white p-2" data-placement="left" data-trigger="click" id="popoverNote1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></h3>
+               <div id="popoverNote1Content" style="display: none">
+                <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
               </div>
             </div>
           </td>
         </tr>
         <tr>
-          <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-four</a></td>
-          <td>15:00</td>
+          <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Nine</a></td>
+          <td>12:00</td>
           <td>12 Fake Street<br>
             FakeTown<br>
           FA12 3KE</td>
           <td>07712345678</td>
           <td>
             <div style="max-width: 100%;">
-              <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-              <div id="popoverTaskList3Title" style="display: none">Tasks for Client Twenty-four</div>
-              <div id="popoverTaskList3Content" style="display: none">
+              <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+              <div id="popoverTaskList2Title" style="display: none">Tasks for Client Nine</div>
+              <div id="popoverTaskList2Content" style="display: none">
                <table class="table table-bordered" style="width:100%">
                 <tbody>                  
                   <tr><th>Tasks</th></tr>
@@ -140,8 +124,32 @@
           </div>
         </td>
       </tr>
-    </tbody>
-  </table>
+      <tr>
+        <td><a href="https://tashaford.github.io/ea_interactive_wireframe/individual_client.html">Citizen Twenty-four</a></td>
+        <td>15:00</td>
+        <td>12 Fake Street<br>
+          FakeTown<br>
+        FA12 3KE</td>
+        <td>07712345678</td>
+        <td>
+          <div style="max-width: 100%;">
+            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="left" data-trigger="click" id="popoverTaskList3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+            <div id="popoverTaskList3Title" style="display: none">Tasks for Client Twenty-four</div>
+            <div id="popoverTaskList3Content" style="display: none">
+             <table class="table table-bordered" style="width:100%">
+              <tbody>                  
+                <tr><th>Tasks</th></tr>
+                <tr><td>Full task content display here</td></tr>
+                <tr><td>Full task content display here</td></tr>
+                <tr><td>Full task content display here</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 </div>
 </div>
 </div>
@@ -225,10 +233,7 @@
 
 <script>
 
-   // $(function () {
-   //   $('[data-toggle="popover"]').popover()
-   // })
-//popover for client 1
+//popover for client tasks 1 
 $(function(){
   $("#popoverTaskList1").popover({
     html : true, 
@@ -247,7 +252,7 @@ $('body').on('click', function (e) {
    }
  });
 });
-   //popover for client 2
+   //popover for client tasks 2
    $(function(){
      $("#popoverTaskList2").popover({
        html : true, 
@@ -266,7 +271,7 @@ $('body').on('click', function (e) {
       }
     });
   });
-    //popover for client 3
+    //popover for client tasks 3
     $(function(){
       $("#popoverTaskList3").popover({
         html : true, 
@@ -286,8 +291,28 @@ $('body').on('click', function (e) {
      });
    });
 
+     //popover for client notes 1
+     $(function(){
+       $("#popoverNotes1").popover({
+         html : true, 
+         content: function() {
+           return $('#popoverNotes1Content').html();
+         }
+       });
+     })
+     $('body').on('click', function (e) {
+      $('#popoverNotes1').each(function () {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+          $(this).popover('hide');
+        }
+      });
+    });
 
-    var compare = {
+
+
+
+
+     var compare = {
       name: function(a, b) {
         a = a.replace(/^the /i, '');
         b = b.replace(/^the /i, '');
