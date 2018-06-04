@@ -172,21 +172,24 @@
 
 <div class="row">
   <h4 class="mt-4 mb-2">Add task</h4>
-  <form action="#/">
-    <div>
-      <label for="taskType" class="mt-1 mb-1">Type</label>
-      <select name="taskType" id="taskType" onchange="showForm(this.options[this.selectedIndex].value)" required>
-        <option id="default"></option>
-        <option id="homeVisit">Add home visit</option>
-        <option id="phoneCitizen">Phone call - citizen</option>
-        <option id="phoneHomeVisit">Phone call - home visit</option>
-        <option id="contactUpdate">Contact - update</option>
-      </select>
-    </div>
-    <div id="formGenerated"></div>
-  </form>
-  <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
+  <div>
+    <form action="#/">
+      <div>
+        <label for="taskType" class="mt-1 mb-1">Type</label>
+        <select name="taskType" id="taskType" onchange="showForm(this.options[this.selectedIndex].value)" required>
+          <option id="default"></option>
+          <option id="homeVisit">Add home visit</option>
+          <option id="phoneCitizen">Phone call - citizen</option>
+          <option id="phoneHomeVisit">Phone call - home visit</option>
+          <option id="contactUpdate">Contact - update</option>
+        </select>
+      </div>
+      <div id="formGenerated"></div>
+    </form>
+    <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
+  </div>
 </div>
+
 <div class="row">
   <h4 class="mt-4 mb-2">Task List</h4>
   <div class="table-responsive">
