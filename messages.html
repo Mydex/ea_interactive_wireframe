@@ -251,39 +251,12 @@
                       <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
                       <h5 id="popoverMessage6Title" style="display: none">From : Citizen 10 Ten</h5>
                       <div id="popoverMessage6Content" style="display: none">
-                        <p>itizen Ten has confirmed they are happy with their Action Plan.</p>
+                        <p>Citizen Ten has confirmed they are happy with their Action Plan.</p>
                         <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
                         <form action='#/''>
                           <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
                         </form>
                         <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Send</a>
-                      </div>
-                    </div>
-
-
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                      View
-                    </button>
-                    <div class="modal fade " id="modal5" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                      <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="mt-2">From : Citizen Ten</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <p>Citizen Ten has confirmed they are happy with their Action Plan.</p>
-                            <a href="#" onclick="showReply6()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                            <script type="text/javascript">
-                              function showReply6(){
-                                document.getElementById('reply6').innerHTML = "<form action='/#''><textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea></form><a href='#' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);''>Send</a>";
-                              }
-                            </script>
-                            <div id="reply6"></div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </td>
@@ -306,6 +279,20 @@
                   <td>EA manager</td>
                   <td>Current EA</td>
                   <td>
+                    <div style="max-width: 100%;">
+                      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                      <h5 id="popoverMessage7Title" style="display: none">From : EA manager</h5>
+                      <div id="popoverMessage7Content" style="display: none">
+                        <p>New citizen referral. Citizen Forty-eight, 077123456789, 12 Fake Street</p>
+                        <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                        <form action='#/''>
+                          <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
+                        </form>
+                        <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Send</a>
+                      </div>
+                    </div>
+
+
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
                       View
                     </button>
@@ -351,6 +338,20 @@
                   <td>EA manager</td>
                   <td>Current EA</td>
                   <td>
+                    <div style="max-width: 100%;">
+                      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage8" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                      <h5 id="popoverMessage8Title" style="display: none">From : EA manager</h5>
+                      <div id="popoverMessage8Content" style="display: none">
+                        <p>Has Citizen Fourteen confirmed they received their WHD?</p>
+                        <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
+                        <form action='#/''>
+                          <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
+                        </form>
+                        <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Send</a>
+                      </div>
+                    </div>
+
+
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
                       View
                     </button>
@@ -518,9 +519,47 @@
              }
            });
          });
-       </script>
-       
-       <script>
+           //popover for message 7
+           $(function(){
+             $("#popoverMessage7").popover({
+               html : true, 
+               content: function() {
+                 return $('#popoverMessage7Content').html();
+               },
+               title: function() {
+                 return $('#popoverMessage7Title').html();
+               }
+             });
+           })
+           $('body').on('click', function (e) {
+            $('#popoverMessage7').each(function () {
+              if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+              }
+            });
+          });
+            //popover for message 8
+            $(function(){
+              $("#popoverMessage8").popover({
+                html : true, 
+                content: function() {
+                  return $('#popoverMessage8Content').html();
+                },
+                title: function() {
+                  return $('#popoverMessage8Title').html();
+                }
+              });
+            })
+            $('body').on('click', function (e) {
+             $('#popoverMessage8').each(function () {
+               if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                 $(this).popover('hide');
+               }
+             });
+           });
+         </script>
+
+         <script>
 //For table filters
 (function(document) {
   'use strict';
