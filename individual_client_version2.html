@@ -87,11 +87,11 @@
                <span class="sr-only">Previous</span>
              </a>
            </li>
-           <li class="page-item"><a class="page-link" href="#interactions">Interactions</a></li>
-           <li class="page-item"><a class="page-link" href="#clientInformation">Client Infomation</a></li>
-           <li class="page-item"><a class="page-link" href="#clientProgress">Client Progress</a></li>
-           <li class="page-item"><a class="page-link" href="#clientReferrals">Client Referrals</a></li>
-           <li class="page-item"><a class="page-link" href="#clientActionPlan">Client Action Plan</a></li>
+           <li class="page-item"><a class="page-link" href="#page1">Interactions</a></li>
+           <li class="page-item"><a class="page-link" href="#page2">Client Infomation</a></li>
+           <li class="page-item"><a class="page-link" href="#page3">Client Progress</a></li>
+           <li class="page-item"><a class="page-link" href="#page4">Client Referrals</a></li>
+           <li class="page-item"><a class="page-link" href="#page5">Client Action Plan</a></li>
            <li class="page-item">
              <a class="page-link" href="#" aria-label="Next">
                <span aria-hidden="true">&raquo;</span>
@@ -102,7 +102,10 @@
        </nav>
      </div>
 
-     <div class="container col-12 mt-4" id="interactions">
+     <ul id="pagination-demo" class="pagination-lg pull-right"></ul>
+
+
+     <div class="container col-12 mt-4" id="page1">
        <p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInteractionsTable" aria-expanded="false" aria-controls="collapseInteractionsTable">Interaction table</button>
       </p>
@@ -168,11 +171,11 @@
 
 </div>
 
-<div class="row" id="clientInformation">
+<div class="row" id="page2">
   <p>Client information</p>
 </div>
 
-<div class="row" id="clientProgress">
+<div class="row" id="page3">
   <div class="col-lg-4 col-md-4">
     <h4 class="mt-4 mb-2">Clients overall progress</h4>
     <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial contact and first home visit</p>
@@ -212,18 +215,57 @@
 </div>
 </div>
 
-<div class="row" id="clientReferrals">
+<div class="row" id="page4">
   <h4 class="mt-4 mb-2">Client Referrals</h4>
 
 </div>
 
-<div class="row" id="clientActionPlan">
+<div class="row" id="page5">
   <h4 class="mt-4 mb-2">Client Action Plan</h4>
 
 </div>
 </div>
 
 </main>
+
+<script>
+  $('#pagination-demo').twbsPagination({
+    totalPages: 5,
+  // the current page that show on start
+  startPage: Interactions,
+
+  // maximum visible pages
+  visiblePages: 5,
+
+  initiateStartPageClick: true,
+
+  // template for pagination links
+  href: false,
+
+  // variable name in href template for page number
+  hrefVariable: '{{number}}',
+
+
+  // callback function
+  onPageClick: function (event, page) {
+    $('.page-active').removeClass('page-active');
+    $('#page'+page).addClass('page-active');
+  },
+
+  // pagination Classes
+  paginationClass: 'pagination',
+  nextClass: 'next',
+  prevClass: 'prev',
+  lastClass: 'last',
+  firstClass: 'first',
+  pageClass: 'page',
+  activeClass: 'active',
+  disabledClass: 'disabled'
+
+});
+
+
+</script>
 
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
