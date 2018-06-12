@@ -484,38 +484,26 @@
         <th class="text-primary">Postcode</th>
         <td contenteditable="true" spellcheck="true">FA12 3KE</td>
         <td>
-          <button type="button" class="btn btn-outline-primary p-1" data-toggle="modal" data-target="#modal7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
-          <div class="modal fade " id="modal7" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-            <div class="modal-dialog" role="document" style="margin-top: 35%;">
-              <div class="modal-content">
-                <div class="modal-header"><h5>History</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-sm text-left">
-                     <thead class="table-info">
-                       <tr>
-                        <th>Entry</th>
-                        <th>Date & time</th>
-                        <th>By</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>FA12 8KE</td>
-                        <td>04/04/2018 16:12</td>
-                        <td>EA</td>
-                      </tr>
-                      <tr>
-                        <td>To be added</td>
-                        <td>01/01/2018 13:42</td>
-                        <td>EA</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+          <div style="max-width: 1000%; max-width: none">
+            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+            <div id="popoverHistory5Content" class="row" style="display: none">
+              <div class="table-responsive">
+               <table class="table table-bordered table-sm text-left" style="width:200%;">
+                 <thead class="table-info">
+                   <tr>
+                    <th class="p-1">Entry</th>
+                    <th class="p-1">Date & time</th>
+                    <th class="p-1">By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>FA12 8KE</td>
+                    <td>01/01/2018 13:42</td>
+                    <td>EA</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -1646,7 +1634,7 @@
     });
   });
 
-   $(function(){
+  $(function(){
     $("#popoverHistory4").popover({
       html : true, 
       content: function() {
@@ -1654,61 +1642,61 @@
       }
     });
   })
-   $('body').on('click', function (e) {
-     $('#popoverHistory4').each(function () {
-       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-         $(this).popover('hide');
-       }
-     });
+  $('body').on('click', function (e) {
+   $('#popoverHistory4').each(function () {
+     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+       $(this).popover('hide');
+     }
    });
+ });
 
-    $(function(){
-     $("#popoverHistory5").popover({
-       html : true, 
-       content: function() {
-         return $('#popoverHistory5Content').html();
-       }
-     });
-   })
-    $('body').on('click', function (e) {
-      $('#popoverHistory5').each(function () {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-          $(this).popover('hide');
-        }
-      });
+  $(function(){
+   $("#popoverHistory5").popover({
+     html : true, 
+     content: function() {
+       return $('#popoverHistory5Content').html();
+     }
+   });
+ })
+  $('body').on('click', function (e) {
+    $('#popoverHistory5').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
     });
+  });
 
-     $(function(){
-      $("#popoverHistory6").popover({
-        html : true, 
-        content: function() {
-          return $('#popoverHistory6Content').html();
-        }
-      });
-    })
-     $('body').on('click', function (e) {
-       $('#popoverHistory6').each(function () {
-         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-           $(this).popover('hide');
-         }
-       });
-     });
+  $(function(){
+    $("#popoverHistory6").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverHistory6Content').html();
+      }
+    });
+  })
+  $('body').on('click', function (e) {
+   $('#popoverHistory6').each(function () {
+     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+       $(this).popover('hide');
+     }
+   });
+ });
 
-      $(function(){
-       $("#popoverHistory7").popover({
-         html : true, 
-         content: function() {
-           return $('#popoverHistory7Content').html();
-         }
-       });
-     })
-      $('body').on('click', function (e) {
-        $('#popoverHistory7').each(function () {
-          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
-          }
-        });
-      });
+  $(function(){
+   $("#popoverHistory7").popover({
+     html : true, 
+     content: function() {
+       return $('#popoverHistory7Content').html();
+     }
+   });
+ })
+  $('body').on('click', function (e) {
+    $('#popoverHistory7').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
 </script>
 
 
