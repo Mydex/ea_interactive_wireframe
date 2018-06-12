@@ -1665,6 +1665,22 @@
       }
     });
   });
+
+   $(function(){
+    $("#popoverHistory8").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverHistory8Content').html();
+      }
+    });
+  })
+   $('body').on('click', function (e) {
+     $('#popoverHistory8').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
 </script>
 
 
