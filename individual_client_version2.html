@@ -104,19 +104,7 @@
 
      <ul id="pagination-demo" class="pagination-sm"></ul>
 
-     <div class="wrapper">
-       <div class="container">
-         
-         <div class="row">
-           <div class="col-sm-12">
-             <h1>jQuery Bootpag Pagination Example</h1>
-             <p>Showcaes the jQueyr Bootpag pagination JS library for creating simple, quick JS based pagination.</p>
-             <p id="pagination-here"></p>
-             <p id="content">Dynamic page content</p>
-           </div>
-         </div>
-       </div>
-     </div>
+
     <!--  <div class="container col-12 mt-4" id="page1">
        <p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInteractionsTable" aria-expanded="false" aria-controls="collapseInteractionsTable">Interaction table</button>
@@ -242,19 +230,7 @@
 
 <script>
 
-  $('#pagination-here').bootpag({
-    total: 10,          
-    page: 1,            
-    maxVisible: 5,     
-    leaps: true,
-    href: "#result-page-{{number}}",
-  })
 
-  //page click action
-  $('#pagination-here').on("page", function(event, num){
-      //show / hide content or pull via ajax etc
-      $("#content").html("Page " + num); 
-    });
 
   </script>
 
