@@ -101,13 +101,13 @@
          </ul>
        </nav>
 
-       <input type="button" onclick="unhide(this, 'about') " value="unhide">
+       <p style="padding-top:20px">
+         <a href="javascript:unhide('link', 'about')" class="button">This is a link</a><br><br>
+         <a href="javascript:unhide('about', 'link')" class="button">About</a>
+       </p>
 
 
-       
      </div>
-
-     <ul id="pagination-demo" class="pagination-sm"></ul>
 
 
      <section class="container col-12 mt-4" id="page1">
@@ -233,26 +233,21 @@
 
 <style>
 .hidden{
-    display:none;
+  display:none;
 }
 
 .unhidden{
-    display:block;
+  display:block;
 }
 </style>
 <script type="text/javascript">
-function unhide(clickedButton, divID) {
-var item = document.getElementById(divID);
-if (item) {
-    if(item.className=='hidden'){
-        item.className = 'unhidden' ;
-        clickedButton.value = 'hide'
-    }else{
-        item.className = 'hidden';
-        clickedButton.value = 'unhide'
+  function unhide(divID, otherDivId) {
+    var item = document.getElementById(divID);
+    if (item) {
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
     }
-}}
-
+    document.getElementById(otherDivId).className = 'hidden';
+  }
 </script>
 
 
