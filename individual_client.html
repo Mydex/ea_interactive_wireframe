@@ -1645,6 +1645,70 @@
       }
     });
   });
+
+   $(function(){
+    $("#popoverHistory4").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverHistory4Content').html();
+      }
+    });
+  })
+   $('body').on('click', function (e) {
+     $('#popoverHistory4').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+
+    $(function(){
+     $("#popoverHistory5").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverHistory5Content').html();
+       }
+     });
+   })
+    $('body').on('click', function (e) {
+      $('#popoverHistory5').each(function () {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+          $(this).popover('hide');
+        }
+      });
+    });
+
+     $(function(){
+      $("#popoverHistory6").popover({
+        html : true, 
+        content: function() {
+          return $('#popoverHistory6Content').html();
+        }
+      });
+    })
+     $('body').on('click', function (e) {
+       $('#popoverHistory6').each(function () {
+         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+           $(this).popover('hide');
+         }
+       });
+     });
+
+      $(function(){
+       $("#popoverHistory7").popover({
+         html : true, 
+         content: function() {
+           return $('#popoverHistory7Content').html();
+         }
+       });
+     })
+      $('body').on('click', function (e) {
+        $('#popoverHistory7').each(function () {
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+          }
+        });
+      });
 </script>
 
 
