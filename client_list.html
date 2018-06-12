@@ -112,8 +112,8 @@
                   </div>
                 </div>
 
-                <div style="max-width: 100%;" id="popoverRisk1" style="visibility: hidden;">
-                  <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a></p>
+                <div style="max-width: 100%;">
+                  <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" style="visibility: hidden;">View</a></p>
                   <div id="popoverTaskList1Title" style="display: none">Notes</div>
                   <div id="popoverTaskList1Content" style="display: none">
                    <p class="font-italic" contenteditable="true" spellcheck="true" id="popovertaskList1Data">Can add details here</p>
@@ -846,7 +846,7 @@
     function dataAdded()
     {
       var elem = document.getElementById("popoverTaskList1");
-      document.getElementById("popoverRisk1").style.visibility = "visible";
+      document.getElementById("popoverTaskList1").style.visibility = "visible";
       var data =  document.getElementById("popovertaskList1Data");
       if (data.value=="Can add details here") elem.value = "Add";
       else elem.value = "View";
