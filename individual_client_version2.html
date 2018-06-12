@@ -102,15 +102,15 @@
        </nav>
 
        <p style="padding-top:20px">
-         <a href="javascript:unhide('link', 'about')" class="button">This is a link</a><br><br>
-         <a href="javascript:unhide('about', 'link')" class="button">About</a>
+        <a href="javascript:unhide('link', 'page1')" class="button">This is a link</a><br><br>
+         <a href="javascript:unhide('about', 'page2')" class="button">About</a>
        </p>
 
 
      </div>
 
 
-     <section class="container col-12 mt-4" id="page1">
+     <section class="container col-12 mt-4 hidden" id="page1">
        <p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInteractionsTable" aria-expanded="false" aria-controls="collapseInteractionsTable">Interaction table</button>
       </p>
@@ -176,11 +176,11 @@
 
 </section>
 
-<section class="row" id="page2">
+<section class="row hidden" id="page2">
   <p>Client information</p>
 </section>
 
-<section class="row" id="page3">
+<section class="row hidden" id="page3">
   <div class="col-lg-4 col-md-4">
     <h4 class="mt-4 mb-2">Clients overall progress</h4>
     <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial contact and first home visit</p>
@@ -220,7 +220,7 @@
 </div>
 </section>
 
-<section class="row" id="page4">
+<section class="row hidden" id="page4">
   <h4 class="mt-4 mb-2">Client Referrals</h4>
 </section>
 
