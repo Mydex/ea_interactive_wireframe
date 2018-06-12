@@ -104,8 +104,20 @@
 
      <ul id="pagination-demo" class="pagination-sm"></ul>
 
-
-     <div class="container col-12 mt-4" id="page1">
+     <div class="wrapper">
+       <div class="container">
+         
+         <div class="row">
+           <div class="col-sm-12">
+             <h1>jQuery Bootpag Pagination Example</h1>
+             <p>Showcaes the jQueyr Bootpag pagination JS library for creating simple, quick JS based pagination.</p>
+             <p id="pagination-here"></p>
+             <p id="content">Dynamic page content</p>
+           </div>
+         </div>
+       </div>
+     </div>
+    <!--  <div class="container col-12 mt-4" id="page1">
        <p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInteractionsTable" aria-expanded="false" aria-controls="collapseInteractionsTable">Interaction table</button>
       </p>
@@ -169,13 +181,13 @@
    </div>
  </div> 
 
-</div>
+</div> -->
 
-<div class="row" id="page2">
+<!-- <div class="row" id="page2">
   <p>Client information</p>
-</div>
+</div> -->
 
-<div class="row" id="page3">
+<!-- <div class="row" id="page3">
   <div class="col-lg-4 col-md-4">
     <h4 class="mt-4 mb-2">Clients overall progress</h4>
     <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial contact and first home visit</p>
@@ -187,8 +199,8 @@
     <div class="progress bg-dark">
       <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-  </div>
-  <div class="col-lg-7 col-md-7">
+  </div> -->
+<!--   <div class="col-lg-7 col-md-7">
     <h4 class="mt-4">Client task list</h4>
     <div class="table-responsive">
      <table class="table table-striped table-bordered table-sm text-left sortable" id="table">
@@ -213,40 +225,47 @@
 <h5 class="mt-2">Add task to task list</h5>
 
 </div>
-</div>
+</div> -->
 
-<div class="row" id="page4">
+<!-- <div class="row" id="page4">
   <h4 class="mt-4 mb-2">Client Referrals</h4>
 
-</div>
+</div> -->
 
-<div class="row" id="page5">
+<!-- <div class="row" id="page5">
   <h4 class="mt-4 mb-2">Client Action Plan</h4>
 
-</div>
+</div> -->
 </div>
 
 </main>
 
 <script>
-  $('#pagination-demo').twbsPagination({
-    totalPages: 5,
-    visiblePages: 2,
-    onPageClick: function (event, page) {
-      $('#page-content').text('Page ' + page);
-    }
-  });
 
-</script>
+  $('#pagination-here').bootpag({
+    total: 10,          
+    page: 1,            
+    maxVisible: 5,     
+    leaps: true,
+    href: "#result-page-{{number}}",
+  })
+
+  //page click action
+  $('#pagination-here').on("page", function(event, num){
+      //show / hide content or pull via ajax etc
+      $("#content").html("Page " + num); 
+    });
+
+  </script>
 
 
-<footer class="mt-2" style="height:30px; margin-top:-30px;">
-  <nav class="navbar navbar-expand-sm">  
-    <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-    <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-  </nav>
-</footer>
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://tashaford.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
 </body>
 
 
