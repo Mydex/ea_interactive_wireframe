@@ -566,13 +566,42 @@
     </div>
   </td>
 </tr>
+  <tr>
+    <th class="text-primary">Email</th>
+    <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+    <td>
+      <div style="max-width: 1000%; max-width: none">
+        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory8" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+        <div id="popoverHistory8Content" class="row" style="display: none">
+          <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left" style="width:200%;">
+             <thead class="table-info">
+               <tr>
+                <th class="p-1">Entry</th>
+                <th class="p-1">Date & time</th>
+                <th class="p-1">By</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>citizen@twenty.com</td>
+                <td>01/01/2018 13:42</td>
+                <td>EA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
 <tr>
   <th class="text-primary">Date of Birth</th>
   <td><input type="date" name="dob" value="1980-01-01"></td>
   <td>
     <div style="max-width: 1000%; max-width: none">
-      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory8" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-      <div id="popoverHistory8Content" class="row" style="display: none">
+      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory9" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+      <div id="popoverHistory9Content" class="row" style="display: none">
         <div class="table-responsive">
          <table class="table table-bordered table-sm text-left" style="width:200%;">
            <thead class="table-info">
@@ -1681,6 +1710,22 @@
        }
      });
    });
+
+    $(function(){
+     $("#popoverHistory9").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverHistory9Content').html();
+       }
+     });
+   })
+    $('body').on('click', function (e) {
+      $('#popoverHistory9').each(function () {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+          $(this).popover('hide');
+        }
+      });
+    });
 </script>
 
 
