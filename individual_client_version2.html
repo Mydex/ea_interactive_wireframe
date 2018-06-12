@@ -73,7 +73,23 @@
       </div>
 
       <div class="container mt-4">
+         <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Interactions</button>
+        </p>
+         <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseClientInfo" aria-expanded="false" aria-controls="collapseClientInfo">Client Infomation</button>
+        </p>
+         <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseClientProgress" aria-expanded="false" aria-controls="collapseClientInfo">Client Progress</button>
+        </p>
+         <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseClientReferrals" aria-expanded="false" aria-controls="collapseClientReferrals">Client Referrals</button>
+        </p>
+         <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseClientActionPlan" aria-expanded="false" aria-controls="collapseClientActionPlan">Client Action Plan</button>
+        </p>
         <p>
+
           <a href="#interactions" class="nav-link">Interactions</a> /
           <a href="#clientInformation" class="nav-link">Client Infomation</a> /
           <a href="#clientProgress" class="nav-link">Client Progress</a> /
@@ -82,7 +98,7 @@
         </p>
       </div>
 
-      <div class="container col-12 mt-4" id="interactions" style="display: none;">
+      <div class="container col-12 mt-4" id="interactions">
        <p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInteractionsTable" aria-expanded="false" aria-controls="collapseInteractionsTable">Interaction table</button>
       </p>
@@ -204,248 +220,6 @@
 </div>
 
 </main>
-
-
-<script>
-
-  popoverInteraction1
-
-  $(function(){
-   $("#popoverInteraction1").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverInteraction1Content').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverInteraction1').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-
-
-  $(function(){
-    $("#popoverHistory1").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverHistory1Content').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverHistory1').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-    $("#popoverHistory2").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverHistory2Content').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverHistory2').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverHistory3").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverHistory3Content').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverHistory3').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverHistory4").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverHistory4Content').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverHistory4').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverHistory5").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverHistory5Content').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverHistory5').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverHistory6").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverHistory6Content').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverHistory6').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverHistory7").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverHistory7Content').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverHistory7').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverHistory8").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverHistory8Content').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverHistory8').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverHistory9").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverHistory9Content').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverHistory9').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-</script>
-
-
-
-<script type="text/javascript">
-  function showWall(name){
-    if(name == 'wall5') {
-      document.getElementById('wallOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="wallOther" name="wallOther"/>';
-    } else {
-      document.getElementById('wallOther').innerHTML='';
-    } 
-  }
-
-  function showFuel(name){
-    if(name == 'mainFuel4') {
-      document.getElementById('mainFuelOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="fuelOther" name="fuelOther"/>';
-    } else {
-      document.getElementById('mainFuelOther').innerHTML='';
-    } 
-  }
-
-  function showSmoke(name){
-    if(name == 'smoke2') {
-      document.getElementById('smokeAlarmYes').innerHTML = 'Notes for smoke alarms:<br> <input type="text" class="form-control" id="smokeNotes" name="smokeNotes"/>';
-    } else {
-      document.getElementById('smokeAlarmYes').innerHTML='';
-    } 
-  }
-
-  function showCarbon(name){
-    if(name == 'carbon2') {
-      document.getElementById('carbonAlarmYes').innerHTML = 'Notes for carbon monoxide:<br> <input type="text" class="form-control" id="carbonNotes" name="carbonNotes"/>';
-    } else {
-      document.getElementById('carbonAlarmYes').innerHTML='';
-    } 
-  }
-
-  var dobCounter = 2;
-  function addDOB(){
-    var newDiv = document.createElement('div');
-    newDiv.innerHTML = 
-    "<input type='date' name='dob"+ dobCounter + "' class='mb-2'>\
-    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
-    document.getElementById('content').appendChild(newDiv);
-    dobCounter ++;
-  }
-  function removeRow(input) {
-    document.getElementById('content').removeChild(input.parentNode);
-  }
-
-
-  function showElecPay(name){
-    if(name == 'elecPay3') {
-      document.getElementById('elecPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="elecPay_other" name="elecPay_other"/>';
-    } else {
-      document.getElementById('elecPayOther').innerHTML='';
-    } 
-  }
-
-  function showGasPay(name){
-    if(name == 'gasPay3') {
-      document.getElementById('gasPayOther').innerHTML = 'Other:<br> <input type="text" class="form-control" id="gasPay_other" name="gasPay_other"/>';
-    } else {
-      document.getElementById('gasPayOther').innerHTML='';
-    } 
-  }
-</script>
-
-<script>
-  $(document).ready(function () {
-    $("button").click(function(){
-      $("a").removeClass("active");
-    });
-  });
-</script>
 
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
