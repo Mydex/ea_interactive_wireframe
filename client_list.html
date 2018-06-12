@@ -104,12 +104,12 @@
                       <div class="modal-body">
                         <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
                       </div>
-                      <button onclick="changeData()" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Save</button>
+                      <button onclick="dataAdded()" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Save</button>
                     </div>
                   </div>
                 </div>
                 <div style="max-width: 100%;">
-                  <p class="m-0 p-0"><a tabindex="0" role="button" onclick="changeName" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
+                  <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
                   <div id="popoverTaskList1Title" style="display: none">Notes</div>
                   <div id="popoverTaskList1Content" style="display: none">
                    <p class="font-italic" contenteditable="true" spellcheck="true" id="popovertaskList1Data">Can add details here</p>
@@ -838,7 +838,7 @@
     });
 
     //change name on button
-    function changeName()
+    function dataAdded()
     {
       var elem = document.getElementById("popoverTaskList1");
       var data =  document.getElementById("popovertaskList1Data");
