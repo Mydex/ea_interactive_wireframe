@@ -82,7 +82,7 @@
             <div class="col-12 col-md-7 col-lg-7">
               <h5 for="#" class="mt-4 mb-2">Add Home Visit</h5>
               <div>
-                <form action="#/">       
+                <form action="#/">
                   <div><label placeholder="01/01/2018">Date</label></div>
                   <input class="form-control form-control-sm" type="date">
                   <div class="row">
@@ -106,7 +106,7 @@
               <h5 class="mt-4 mb-2">Past Home Visits</h5>
               <p>
                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePastVisits" aria-expanded="false" aria-controls="collapsePastVisits">View</button>
-              </p>     
+              </p>
               <div class="collapse" id="collapsePastVisits" aria-labelledby="headingPastVisits">
                 <div class="card card-body">
                   <div class="table-responsive">
@@ -141,7 +141,6 @@
                            <select name="visitType">
                              <option value="visitDefault"></option>
                              <option value="visit1">No show</option>
-
                              <option value="visit2">Successful</option>
                              <option value="visit3">Rearranged</option>
                            </select>
@@ -280,7 +279,7 @@
                           <option value="normal">Normal</option>
                           <option value="important">Important</option>
                           <option value="urgent">Urgent</option>
-                        </select>   
+                        </select>
                       </form>
                     </td>
                   </tr>
@@ -315,8 +314,8 @@
                     </td>
                   </tr>
                 </tbody>
-              </table>    
-            </div>   
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -477,7 +476,7 @@
                 </table>
               </div>
             </div>
-          </div>      
+          </div>
         </td>
       </tr>
       <tr>
@@ -513,38 +512,26 @@
       <th class="text-primary">Telephone</th>
       <td contenteditable="true" spellcheck="true">012345 678901</td>
       <td>
-        <button type="button" class="btn btn-outline-primary p-1" data-toggle="modal" data-target="#modal8" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
-        <div class="modal fade " id="modal8" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-          <div class="modal-dialog" role="document" style="margin-top: 35%;">
-            <div class="modal-content">
-              <div class="modal-header"><h5>History</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <div class="modal-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
-                      <th>Entry</th>
-                      <th>Date & time</th>
-                      <th>By</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>>012345 678901</td>
-                      <td>04/04/2018 16:12</td>
-                      <td>EA</td>
-                    </tr>
-                    <tr>
-                      <td>01234</td>
-                      <td>01/01/2018 13:42</td>
-                      <td>EA</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+        <div style="max-width: 1000%; max-width: none">
+          <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+          <div id="popoverHistory6Content" class="row" style="display: none">
+            <div class="table-responsive">
+             <table class="table table-bordered table-sm text-left" style="width:200%;">
+               <thead class="table-info">
+                 <tr>
+                  <th class="p-1">Entry</th>
+                  <th class="p-1">Date & time</th>
+                  <th class="p-1">By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>012345 678901</td>
+                  <td>01/01/2018 13:42</td>
+                  <td>EA</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -554,38 +541,26 @@
     <th class="text-primary">Mobile</th>
     <td contenteditable="true" spellcheck="true">077123456789</td>
     <td>
-      <button type="button" class="btn btn-outline-primary p-1" data-toggle="modal" data-target="#modal9" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><small>History</small></button>
-      <div class="modal fade " id="modal9" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-        <div class="modal-dialog" role="document" style="margin-top: 35%;">
-          <div class="modal-content">
-            <div class="modal-header"><h5>History</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <div class="table-responsive">
-                <table class="table table-bordered table-sm text-left">
-                 <thead class="table-info">
-                   <tr>
-                    <th>Entry</th>
-                    <th>Date & time</th>
-                    <th>By</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>>077123456789 678901</td>
-                    <td>04/04/2018 16:12</td>
-                    <td>EA</td>
-                  </tr>
-                  <tr>
-                    <td>07</td>
-                    <td>01/01/2018 13:42</td>
-                    <td>EA</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+      <div style="max-width: 1000%; max-width: none">
+        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+        <div id="popoverHistory7Content" class="row" style="display: none">
+          <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left" style="width:200%;">
+             <thead class="table-info">
+               <tr>
+                <th class="p-1">Entry</th>
+                <th class="p-1">Date & time</th>
+                <th class="p-1">By</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>077123456789</td>
+                <td>01/01/2018 13:42</td>
+                <td>EA</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -628,7 +603,7 @@
 </td>
 </tr>
 </tbody>
-</table>    
+</table>
 </div>
 <!-- property information table -->
 <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
