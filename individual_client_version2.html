@@ -100,6 +100,11 @@
            </li>
          </ul>
        </nav>
+
+       <input type="button" onclick="unhide(this, 'about') " value="unhide">
+
+
+       
      </div>
 
      <ul id="pagination-demo" class="pagination-sm"></ul>
@@ -235,9 +240,18 @@
     display:block;
 }
 </style>
-<script>
-
-
+<script type="text/javascript">
+function unhide(clickedButton, divID) {
+var item = document.getElementById(divID);
+if (item) {
+    if(item.className=='hidden'){
+        item.className = 'unhidden' ;
+        clickedButton.value = 'hide'
+    }else{
+        item.className = 'hidden';
+        clickedButton.value = 'unhide'
+    }
+}}
 
 </script>
 
