@@ -777,85 +777,85 @@
         <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
       </tr>
       <tr>
-        <th class="text-primary">Make and model of boiler</th>
-        <td><span class="font-italic" contenteditable="true" spellcheck="true">To be added</span><br>
-          <a href="https://www.ncm-pcdb.org.uk/sap/searchpod.jsp?id=17">Helpful website</a>
+        <th class="text-primary">Make and model of boiler<br>
+          <a href="https://www.ncm-pcdb.org.uk/sap/searchpod.jsp?id=17">Helpful website</a></th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">What is property glazing type? (%)</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">How old is your boiler?</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">Make and model of boiler</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">How is your water heated?</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">What is the size of the hot water cylinder?</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">What type of insulaion does it have?</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- safety information table -->
+  <div role="tadpanel" class="tab-pane fade" id="safety" aria-labelledby="safety-tab">
+    <table class="table table-striped table-bordered table-sm text-left mb-0">
+      <thead>
+        <th colspan="2" class="bg-primary">Safety Information</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="text-primary">Do you have working smoke alarms?</th>
+          <td class="font-italic">
+            <form action="#" class="m-0">
+              <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
+                <option value="smokeDefault"></option>
+                <option value="smoke1">No</option>
+                <option value="smoke2">Yes</option>
+              </select>
+            </form>
+            <div id="smokeAlarmYes"></div>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Are carbon monoxide monitors fitted?</th>
+          <td class="font-italic">
+            <form action="#" class="m-0">
+             <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
+              <option value="carbonDefault"></option>
+              <option value="carbon1">No</option>
+              <option value="carbon2">Yes</option>
+            </select>
+          </form>
+          <div id="carbonAlarmYes"></div>
         </td>
-      </tr>
-      <tr>
-        <th class="text-primary">What is property glazing type? (%)</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">How old is your boiler?</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Make and model of boiler</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">How is your water heated?</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">What is the size of the hot water cylinder?</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">What type of insulaion does it have?</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
       </tr>
     </tbody>
   </table>
-</div>
-<!-- safety information table -->
-<div role="tadpanel" class="tab-pane fade" id="safety" aria-labelledby="safety-tab">
-  <table class="table table-striped table-bordered table-sm text-left mb-0">
-    <thead>
-      <th colspan="2" class="bg-primary">Safety Information</th>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="text-primary">Do you have working smoke alarms?</th>
-        <td class="font-italic">
-          <form action="#" class="m-0">
-            <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
-              <option value="smokeDefault"></option>
-              <option value="smoke1">No</option>
-              <option value="smoke2">Yes</option>
-            </select>
-          </form>
-          <div id="smokeAlarmYes"></div>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Are carbon monoxide monitors fitted?</th>
-        <td class="font-italic">
-          <form action="#" class="m-0">
-           <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
-            <option value="carbonDefault"></option>
-            <option value="carbon1">No</option>
-            <option value="carbon2">Yes</option>
-          </select>
-        </form>
-        <div id="carbonAlarmYes"></div>
-      </td>
-    </tr>
-  </tbody>
-</table>
 </div>
 <!-- household information table -->
 <div role="tadpanel" class="tab-pane fade" id="household" aria-labelledby="household-tab">
