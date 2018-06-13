@@ -181,10 +181,14 @@
         <label for="taskType" class="mt-1 mb-1">Type</label>
         <select name="taskType" id="taskType" onchange="showForm(this.options[this.selectedIndex].value)" required>
           <option value="default"></option>
-          <option value="homeVisit">Add home visit</option>
-          <option value="phoneCitizen">Phone call - citizen</option>
-          <option value="phoneHomeVisit">Phone call - home visit</option>
-          <option value="contactUpdate">Contact - update</option>
+          <option value="phoneVisit">Phone call - Arrange Visit</option>
+          <option value="phoneOngoing">Phone call - Ongoing case</option>
+          <option value="visitFirst">Visit - First Visit</option>
+          <option value="visitFollpw">Visit - Follow up visit</option>
+          <option value="admin">Admin</option>
+          <option value="emailOngoing"> Email - Ongoing case</option>
+          <option value="event">Events</option>
+          <option value="trainingWork">Training/work meetings</option>
         </select>
       </div>
       <div id="formGenerated"></div>
