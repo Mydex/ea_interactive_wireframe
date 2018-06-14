@@ -340,161 +340,160 @@
 
   <script>
 
-     //popover for message 1
-     $(function(){
-       $("#popoverMessage1").popover({
-         html : true, 
-         content: function() {
-           return $('#popoverMessage1Content').html();
-         },
-         title: function() {
-           return $('#popoverMessage1Title').html();
-         }
-       });
-     })
-     $('body').on('click', function (e) {
-      $('#popoverMessage1').each(function () {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-          $(this).popover('hide');
-        }
-      });
-    });
-      //popover for message 2
-      $(function(){
-        $("#popoverMessage2").popover({
-          html : true, 
-          content: function() {
-            return $('#popoverMessage2Content').html();
-          },
-          title: function() {
-            return $('#popoverMessage2Title').html();
-          }
-        });
-      })
-      $('body').on('click', function (e) {
-       $('#popoverMessage2').each(function () {
-         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-           $(this).popover('hide');
-         }
-       });
+   $(function(){
+     $("#popoverMessage1").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverMessage1Content').html();
+       },
+       title: function() {
+         return $('#popoverMessage1Title').html();
+       }
      });
-       //popover for message 3
-       $(function(){
-         $("#popoverMessage3").popover({
-           html : true, 
-           content: function() {
-             return $('#popoverMessage3Content').html();
-           },
-           title: function() {
-             return $('#popoverMessage3Title').html();
-           }
-         });
-       })
-       $('body').on('click', function (e) {
-        $('#popoverMessage3').each(function () {
-          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
-          }
-        });
-      });
-        //popover for message 4
-        $(function(){
-          $("#popoverMessage4").popover({
-            html : true, 
-            content: function() {
-              return $('#popoverMessage4Content').html();
-            },
-            title: function() {
-              return $('#popoverMessage4Title').html();
-            }
-          });
-        })
-        $('body').on('click', function (e) {
-         $('#popoverMessage4').each(function () {
-           if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-             $(this).popover('hide');
-           }
-         });
-       });
-         //popover for message 5
-         $(function(){
-           $("#popoverMessage5").popover({
-             html : true, 
-             content: function() {
-               return $('#popoverMessage5Content').html();
-             },
-             title: function() {
-               return $('#popoverMessage5Title').html();
-             }
-           });
-         })
-         $('body').on('click', function (e) {
-          $('#popoverMessage5').each(function () {
-            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-              $(this).popover('hide');
-            }
-          });
-        });
-          //popover for message 6
-          $(function(){
-            $("#popoverMessage6").popover({
-              html : true, 
-              content: function() {
-                return $('#popoverMessage6Content').html();
-              },
-              title: function() {
-                return $('#popoverMessage6Title').html();
-              }
-            });
-          })
-          $('body').on('click', function (e) {
-           $('#popoverMessage6').each(function () {
-             if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-               $(this).popover('hide');
-             }
-           });
-         });
-           //popover for message 7
-           $(function(){
-             $("#popoverMessage7").popover({
-               html : true, 
-               content: function() {
-                 return $('#popoverMessage7Content').html();
-               },
-               title: function() {
-                 return $('#popoverMessage7Title').html();
-               }
-             });
-           })
-           $('body').on('click', function (e) {
-            $('#popoverMessage7').each(function () {
-              if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                $(this).popover('hide');
-              }
-            });
-          });
-            //popover for message 8
-            $(function(){
-              $("#popoverMessage8").popover({
-                html : true, 
-                content: function() {
-                  return $('#popoverMessage8Content').html();
-                },
-                title: function() {
-                  return $('#popoverMessage8Title').html();
-                }
-              });
-            })
-            $('body').on('click', function (e) {
-             $('#popoverMessage8').each(function () {
-               if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                 $(this).popover('hide');
-               }
-             });
-           });
-         </script>
+   })
+   $('body').on('click', function (e) {
+    $('#popoverMessage1').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
 
-         <script>
+   $(function(){
+    $("#popoverMessage2").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverMessage2Content').html();
+      },
+      title: function() {
+        return $('#popoverMessage2Title').html();
+      }
+    });
+  })
+   $('body').on('click', function (e) {
+     $('#popoverMessage2').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+
+   $(function(){
+     $("#popoverMessage3").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverMessage3Content').html();
+       },
+       title: function() {
+         return $('#popoverMessage3Title').html();
+       }
+     });
+   })
+   $('body').on('click', function (e) {
+    $('#popoverMessage3').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
+
+   $(function(){
+    $("#popoverMessage4").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverMessage4Content').html();
+      },
+      title: function() {
+        return $('#popoverMessage4Title').html();
+      }
+    });
+  })
+   $('body').on('click', function (e) {
+     $('#popoverMessage4').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+
+   $(function(){
+     $("#popoverMessage5").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverMessage5Content').html();
+       },
+       title: function() {
+         return $('#popoverMessage5Title').html();
+       }
+     });
+   })
+   $('body').on('click', function (e) {
+    $('#popoverMessage5').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
+
+   $(function(){
+    $("#popoverMessage6").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverMessage6Content').html();
+      },
+      title: function() {
+        return $('#popoverMessage6Title').html();
+      }
+    });
+  })
+   $('body').on('click', function (e) {
+     $('#popoverMessage6').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+
+   $(function(){
+     $("#popoverMessage7").popover({
+       html : true, 
+       content: function() {
+         return $('#popoverMessage7Content').html();
+       },
+       title: function() {
+         return $('#popoverMessage7Title').html();
+       }
+     });
+   })
+   $('body').on('click', function (e) {
+    $('#popoverMessage7').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
+
+   $(function(){
+    $("#popoverMessage8").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverMessage8Content').html();
+      },
+      title: function() {
+        return $('#popoverMessage8Title').html();
+      }
+    });
+  })
+   $('body').on('click', function (e) {
+     $('#popoverMessage8').each(function () {
+       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+         $(this).popover('hide');
+       }
+     });
+   });
+ </script>
+
+ <script>
 //For table filters
 (function(document) {
   'use strict';
