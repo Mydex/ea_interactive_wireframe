@@ -57,19 +57,19 @@
             <form action="#" class="m-0">
              <select name="month" onchange="showData1(this.options[this.selectedIndex].value)" required>
               <option value="default"></option>
-              <option value="Jan">Jan</option>
-              <option value="Feb">Feb</option>
-              <option value="Mar">Mar</option>
-              <option value="Apr">Apr</option>
+              <option value="Jan1">Jan 2018</option>
+              <option value="Feb1">Feb 2018</option>
+              <option value="Mar1">Mar 2018</option>
+              <option value="Apr1">Apr 2018</option>
             </select>
           </form>
           <form action="#" class="m-0">
            <select name="month" onchange="showData2(this.options[this.selectedIndex].value)" required>
             <option value="default"></option>
-            <option value="Jan">Jan</option>
-            <option value="Feb">Feb</option>
-            <option value="Mar">Mar</option>
-            <option value="Apr">Apr</option>
+            <option value="Jan2">Jan 2018</option>
+            <option value="Feb2">Feb 2018</option>
+            <option value="Mar2">Mar 2018</option>
+            <option value="Apr2">Apr 2018</option>
           </select>
         </form>
       </div>
@@ -79,13 +79,13 @@
         document.getElementById('dataMonthFeb').style.display = "none";
         document.getElementById('dataMonthMar').style.display = "none";
         document.getElementById('dataMonthApr').style.display = "none";
-        if(month == 'Jan') {
+        if(month == 'Jan1') {
           document.getElementById('dataMonthJan').style.display = "block";
-        } else if (month == 'Feb') {
+        } else if (month == 'Feb1') {
           document.getElementById('dataMonthFeb').style.display = "block";
-        } else if (month == 'Mar') {
+        } else if (month == 'Mar1') {
           document.getElementById('dataMonthMar').style.display = "block";
-        } else if (month == 'Apr') {
+        } else if (month == 'Apr1') {
           document.getElementById('dataMonthApr').style.display = "block";
         } 
       }
@@ -95,13 +95,13 @@
         document.getElementById('dataMonthFeb').style.display = "none";
         document.getElementById('dataMonthMar').style.display = "none";
         document.getElementById('dataMonthApr').style.display = "none";
-        if(month == 'Jan') {
+        if(month == 'Jan2') {
           document.getElementById('dataMonthJan').style.display = "block";
-        } else if (month == 'Feb') {
+        } else if (month == 'Feb2') {
           document.getElementById('dataMonthFeb').style.display = "block";
-        } else if (month == 'Mar') {
+        } else if (month == 'Mar2') {
           document.getElementById('dataMonthMar').style.display = "block";
-        } else if (month == 'Apr') {
+        } else if (month == 'Apr2') {
           document.getElementById('dataMonthApr').style.display = "block";
         } 
       }
