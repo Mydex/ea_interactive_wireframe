@@ -34,7 +34,8 @@
             <a class="dropdown-item" href="#">Report 5</a>
             <a class="dropdown-item" href="#">Report 6</a>
           </div>
-        </li>        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/messages.html" class="nav-link  text-white font-weight-bold font-italic">Messages <span class="badge badge-danger">4</span></a></li>
+        </li>        
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/messages.html" class="nav-link  text-white font-weight-bold font-italic">Messages <span class="badge badge-danger">4</span></a></li>
         <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/referral_man.html" class="nav-link text-white font-weight-light">Referral Management</a></li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -50,7 +51,7 @@
   <main style=" min-height:75%;">
     <div class="container">
       <h3 class="mt-4 mb-4">Messages</h3>
-      <h5 for="#" class="mb-2">Send message to your manager and other advocates</h5>
+      <h5 for="#" class="mb-2">Send a message to your manager and other advocates</h5>
       <form action="#" class="mb-2">
         <select name="message">
           <option value="messageDefault"></option>
@@ -70,7 +71,7 @@
         <div class="col-12">
           <input type="search" class="tableFilter form-control col-11 col-md-9 col-lg-7 mb-2" data-table="order-table" placeholder="Filter table here...">
           <div class="table-responsive">
-            <table class="order-table table table-striped table-sm text-left sortable"  id="messageTable">
+            <table class="order-table table table-sm text-left sortable"  id="messageTable">
               <thead class="table-info">
                 <tr>
                   <th data-sort="name">From <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
@@ -85,17 +86,13 @@
                   <td>Citizen 1 One</td>
                   <td>Current EA</td>
                   <td>
-                    <div style="max-width: 100%;">
-                      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="right" data-trigger="click" id="popoverMessage1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
-                      <h5 id="popoverMessage1Title" style="display: none">From : Citizen One</h5>
-                      <div id="popoverMessage1Content" style="display: none">
-                        <p>Citizen One has given you permission to view and update their information.</p>
-                        <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Reply</a>
-                        <form action='#/''>
-                          <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
-                        </form>
-                        <a href='#/' class='btn btn-outline-primary mt-0 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Send</a>
-                      </div>
+                    div id="module" class="row">
+                    <p class="collapse col-10" id="collapseExample1" aria-expanded="false">
+                      <i>Citizen One has given you permission to view and update their information.</i>
+                      <form action='#/''>
+                        <textarea class='form-control form-control-sm mt-3' id='textarea4' rows='5' spellcheck='true' type='text'></textarea>
+                      </form>
+                      <a role="button" class="collapsed btn btn-outline-info" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"></a>
                     </div>
                   </td>
                   <td>02/02/2018</td>
@@ -338,162 +335,35 @@
     </div>
   </main>
 
-  <script>
 
-   $(function(){
-     $("#popoverMessage1").popover({
-       html : true, 
-       content: function() {
-         return $('#popoverMessage1Content').html();
-       },
-       title: function() {
-         return $('#popoverMessage1Title').html();
-       }
-     });
-   })
-   $('body').on('click', function (e) {
-    $('#popoverMessage1').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
+  <style>
+  #module {
+    width: 400px;
+  }
 
-   $(function(){
-    $("#popoverMessage2").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverMessage2Content').html();
-      },
-      title: function() {
-        return $('#popoverMessage2Title').html();
-      }
-    });
-  })
-   $('body').on('click', function (e) {
-     $('#popoverMessage2').each(function () {
-       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-         $(this).popover('hide');
-       }
-     });
-   });
+  #module p.collapse[aria-expanded="false"] {
+    height: 21px !important;
+    overflow: hidden;
 
-   $(function(){
-     $("#popoverMessage3").popover({
-       html : true, 
-       content: function() {
-         return $('#popoverMessage3Content').html();
-       },
-       title: function() {
-         return $('#popoverMessage3Title').html();
-       }
-     });
-   })
-   $('body').on('click', function (e) {
-    $('#popoverMessage3').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+  }
 
-   $(function(){
-    $("#popoverMessage4").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverMessage4Content').html();
-      },
-      title: function() {
-        return $('#popoverMessage4Title').html();
-      }
-    });
-  })
-   $('body').on('click', function (e) {
-     $('#popoverMessage4').each(function () {
-       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-         $(this).popover('hide');
-       }
-     });
-   });
+  #module p.collapsing[aria-expanded="false"] {
+    height: 21px !important;
+  }
 
-   $(function(){
-     $("#popoverMessage5").popover({
-       html : true, 
-       content: function() {
-         return $('#popoverMessage5Content').html();
-       },
-       title: function() {
-         return $('#popoverMessage5Title').html();
-       }
-     });
-   })
-   $('body').on('click', function (e) {
-    $('#popoverMessage5').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
+  #module a.collapsed:after  {
+    content: '+';
+  }
 
-   $(function(){
-    $("#popoverMessage6").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverMessage6Content').html();
-      },
-      title: function() {
-        return $('#popoverMessage6Title').html();
-      }
-    });
-  })
-   $('body').on('click', function (e) {
-     $('#popoverMessage6').each(function () {
-       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-         $(this).popover('hide');
-       }
-     });
-   });
+  #module a:not(.collapsed):after {
+    content: '-';
+  }
+</style>
 
-   $(function(){
-     $("#popoverMessage7").popover({
-       html : true, 
-       content: function() {
-         return $('#popoverMessage7Content').html();
-       },
-       title: function() {
-         return $('#popoverMessage7Title').html();
-       }
-     });
-   })
-   $('body').on('click', function (e) {
-    $('#popoverMessage7').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-   $(function(){
-    $("#popoverMessage8").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverMessage8Content').html();
-      },
-      title: function() {
-        return $('#popoverMessage8Title').html();
-      }
-    });
-  })
-   $('body').on('click', function (e) {
-     $('#popoverMessage8').each(function () {
-       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-         $(this).popover('hide');
-       }
-     });
-   });
- </script>
-
- <script>
+<script>
 //For table filters
 (function(document) {
   'use strict';
