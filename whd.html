@@ -135,35 +135,39 @@
         </div>
       </div>
 
+      <div class="mt-4">In order to receive Warm Home Discount you will need to submit an application for each year that you are eligible. You can review and update the information required to check and demonstrate eligibility in this section.</div>
       <div class="row">
-        <div class="container">
-          <nav class="nav nav-tabs active" id="nav-tab" role="tablist">
-            <div class="dropdown">
-              <button class="nav-item nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose here</button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="pageone-tab" href="#pageone" role="tab" data-toggle="tab" aria-controls="pageone">Personal & household</a>
-                <a class="dropdown-item" id="pagetwo-tab" href="#pagetwo" role="tab" data-toggle="tab" aria-controls="pagetwo">Income</a>
-                <a class="dropdown-item" id="pagethree-tab" href="#pagethree" role="tab" data-toggle="tab" aria-controls="pagethree">Fuel Spend</a>
-                <a class="dropdown-item" id="pagefour-tab" href="#pagefour" role="tab" data-toggle="tab" aria-controls="pagefour">Benefits</a>
-                <a class="dropdown-item" id="pagefive-tab" href="#pagefive" role="tab" data-toggle="tab" aria-controls="pagefive">Suppliers</a>
-              </div>   
-            </div>
-          </nav>
+       <p class="mt-2 col-12 col-md-4 col-lg-4">
+         Return to applications<br> <a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a></p>
+       </p>
+     </div>
+     <p class="mt-2 mb-2">Who is your current electricity supplier?</p>
+     <form action="#/">
+       <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
+         <option value="default"></option>
+         <option value="scottishPower">Scottish Power</option>
+         <option value="britishGas">British Gas</option>
+         <option value="edfEnergy">EDF Energy</option>
+         <option value="eon">E.ON</option>
+       </select>
+     </form>
 
-
-          <div id="information-nav-content" class="tab-content">
-            <!-- personal informaiton table -->
-            <div role="tadpanel" class="tab-pane fade show active" id="pageone" aria-labelledby="pageone-tab">
-              <table class="table table-striped table-bordered table-sm text-left">
-                <thead>
-                  <tr>
-                    <th colspan="2" class="bg-primary">Personal and Household</th>
-                  </tr>
-                </thead>
-                <tbody>
+     <div id="scottishPowerContent" style="display: none;">
+       <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
+       <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+       <div id="module" class="container row mt-4">
+         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton'); showSubmitSP();" data-text="Check">Contact Details</a></h5>
+         <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
+           <div class="table-responsive">
+             <table class="table table-bordered table-sm text-left" id="personalSP">
+               <thead>
+                 <th class="bg-primary"></th>
+                 <th class="bg-primary">Data</th>
+               </thead>
+               <tbody>
                  <tr>
                    <th>Title</th>
-                   <td contenteditable="true" spellcheck="true">Ms</td>
+                   <td contenteditable="true" spellcheck="true">Mrs</td>
                  </tr>
                  <tr>
                    <th>Forename</th>
@@ -175,7 +179,7 @@
                  </tr>
                  <tr>
                    <th>Address</th>
-                   <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
+                   <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
                  </tr>
                  <tr>
                    <th>Postcode</th>
@@ -190,271 +194,12 @@
                    <td contenteditable="true" spellcheck="true">077123456789</td>
                  </tr>
                  <tr>
-                  <th>Date of Birth</th>
-                  <td><input type="date" name="dob"></td>
-                </tr>
-                <tr>
-                  <th>Children living at property</th>
-                  <td>
-                    <input type="date" name="dob1" class="mb-2">
-                    <button onclick="addDOB()"" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
-                    <div id="content"></div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- income information table-->
-          <div role="tadpanel" class="tab-pane fade" id="pagetwo" aria-labelledby="pagetwo-tab">
-            <table class="table table-striped table-bordered table-sm text-left">
-              <thead>
-                <tr>
-                  <th colspan="2" class="bg-primary">Income</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Citzen's yearly income</th>
-                  <td class="text-right" contenteditable="true" spellcheck="true">£15000</td>
-                </tr>
-                <tr>
-                  <th>Citzen partners's yearly income</th>
-                  <td class="text-right" contenteditable="true" spellcheck="true">£10000</td>
-                </tr>
-                <tr>
-                  <th>Citzen's total weekly income</th>
-                  <td class="text-right" contenteditable="true" spellcheck="true">£480</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- fuel information table -->
-          <div role="tadpanel" class="tab-pane fade" id="pagethree" aria-labelledby="pagethree-tab">
-            <table class="table table-striped table-bordered table-sm text-left">
-              <thead>
-                <tr>
-                  <th colspan="2" class="bg-primary">Fuel Spend</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Citizen's weekly spend on fuel</th>
-                  <td class="text-right" contenteditable="true" spellcheck="true">£60</td>
-                </tr>
-                <tr>
-                  <th>% on fuel</th>
-                  <td class="text-right" contenteditable="true" spellcheck="true">12.5</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- benefit information table -->
-          <div role="tadpanel" class="tab-pane fade" id="pagefour" aria-labelledby="pagefour-tab">
-            <table class="table table-striped table-bordered table-sm text-left">
-              <thead>
-                <tr>
-                  <th colspan="2" class="bg-primary">Benefits</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Universal Credit</th>
-                  <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-                </tr>
-                <tr>
-                  <th>Employment and Support Allowance</th>
-                  <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-                </tr>
-                <tr>
-                  <th>Child Benefit</th>
-                  <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-                </tr>
-                <tr>
-                  <th>Job Seekers Allowance (JSA)</th>
-                  <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-                </tr>
-                <tr>
-                  <th>Personal Independence Payment (PIP)</th>
-                  <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-                </tr>
-                <tr>
-                  <th>Guaranteed Pension Credit</th>
-                  <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- electrcity information table -->
-          <div role="tadpanel" class="tab-pane fade" id="pagefive" aria-labelledby="pagefive-tab">
-           <table class="table table-striped table-bordered table-sm text-left">
-             <thead>
-               <th colspan="2" class="table-primary">Electricity</th>
-             </thead>
-             <tbody>
-               <tr>
-                 <th>MPAN</th>
-                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-               </tr>
-               <tr>
-                 <th>Supplier</th>
-                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-               </tr>
-               <tr>
-                 <th>Electric Account Number</th>
-                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-               </tr>
-               <tr>
-                 <th>Customer Reference Number (CRM)</th>
-                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-               </tr>
-               <tr>
-                 <th>Tariff</th>
-                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-               </tr>
-               <tr>
-                 <th>Meter Serial Number</th>
-                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-               </tr>
-
-             </tbody>
-           </table>
-         </div>
-       </div>
-     </div>
-
-   </div>
-
-
-
-
-
-         <div class="mt-4">In order to receive Warm Home Discount you will need to submit an application for each year that you are eligible. You can review and update the information required to check and demonstrate eligibility in this section.</div>
-         <div class="row">
-           <p class="mt-2 col-12 col-md-4 col-lg-4">
-             Return to applications<br> <a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a></p>
-           </p>
-         </div>
-         <p class="mt-2 mb-2">Who is your current electricity supplier?</p>
-         <form action="#/">
-           <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
-             <option value="default"></option>
-             <option value="scottishPower">Scottish Power</option>
-             <option value="britishGas">British Gas</option>
-             <option value="edfEnergy">EDF Energy</option>
-             <option value="eon">E.ON</option>
-           </select>
-         </form>
-
-         <div id="scottishPowerContent" style="display: none;">
-           <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
-           <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-           <div id="module" class="container row mt-4">
-             <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton'); showSubmitSP();" data-text="Check">Contact Details</a></h5>
-             <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
-               <div class="table-responsive">
-                 <table class="table table-bordered table-sm text-left" id="personalSP">
-                   <thead>
-                     <th class="bg-primary"></th>
-                     <th class="bg-primary">Data</th>
-                   </thead>
-                   <tbody>
-                     <tr>
-                       <th>Title</th>
-                       <td contenteditable="true" spellcheck="true">Mrs</td>
-                     </tr>
-                     <tr>
-                       <th>Forename</th>
-                       <td contenteditable="true" spellcheck="true">Citizen</td>
-                     </tr>
-                     <tr>
-                       <th>Surame</th>
-                       <td contenteditable="true" spellcheck="true">Twenty</td>
-                     </tr>
-                     <tr>
-                       <th>Address</th>
-                       <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
-                     </tr>
-                     <tr>
-                       <th>Postcode</th>
-                       <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-                     </tr>
-                     <tr>
-                       <th>Telephone</th>
-                       <td contenteditable="true" spellcheck="true">012345 678901</td>
-                     </tr>
-                     <tr>
-                       <th>Mobile</th>
-                       <td contenteditable="true" spellcheck="true">077123456789</td>
-                     </tr>
-                     <tr>
-                       <th>Email</th>
-                       <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
-                     </tr>
-                     <tr>
-                       <th>Date of birth</th>
-                       <td><input type="date" name="dob" value="1980-01-01"></td>
-                     </tr>
-                   </tbody>
-                 </table>
-               </div>
-             </div>
-           </div>
-
-           <div id="module" class="container row mt-3">
-             <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); showSubmitSP();" data-text="Check">Electricity Account</a></h5>
-             <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
-               <div class="table-responsive">
-                 <table class="table table-bordered table-sm text-left" id="supplierSP">
-                   <thead>
-                     <tr>
-                       <th class="bg-primary"></th>
-                       <th class="bg-primary">Data</th>
-                     </tr>
-                   </thead>
-                   <tbody>
-                    <tr>
-                      <th>MPAN</th>
-                      <td contenteditable="true" spellcheck="true">987654321</td>
-                    </tr>
-                    <tr>
-                      <th>Supplier</th>
-                      <td contenteditable="true" spellcheck="true">Scottish Power</td>
-                    </tr>
-                    <tr>
-                      <th>Electric Account Number</th>
-                      <td contenteditable="true" spellcheck="true">987654321</td>
-                    </tr>
-                    <tr>
-                      <th>Customer Reference Number (CRM)</th>
-                      <td contenteditable="true" spellcheck="true">987654321</td>
-                    </tr>
-                    <tr>
-                      <th>Tariff</th>
-                      <td contenteditable="true" spellcheck="true">987654321</td>
-                    </tr>
-                    <tr>
-                      <th>Meter Serial Number</th>
-                      <td contenteditable="true" spellcheck="true">987654321</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div id="module" class="container row mt-3">
-           <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); showSubmitSP();" data-text="Check">Your Household Income</a></h5>
-           <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
-             <div class="table-responsive">
-               <table class="table table-bordered table-sm text-left"id="incomeSP">
-                 <thead>
-                   <th class="bg-primary"></th>
-                   <th class="bg-primary">Data</th>
-                 </thead>
-                 <tbody>
-                  <tr>
-                   <th>Your yearly income</th>
-                   <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+                   <th>Email</th>
+                   <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+                 </tr>
+                 <tr>
+                   <th>Date of birth</th>
+                   <td><input type="date" name="dob" value="1980-01-01"></td>
                  </tr>
                </tbody>
              </table>
@@ -463,82 +208,60 @@
        </div>
 
        <div id="module" class="container row mt-3">
-         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); showSubmitSP();" data-text="Check">Your Fuel Spend</a></h5>
-         <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
+         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); showSubmitSP();" data-text="Check">Electricity Account</a></h5>
+         <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
            <div class="table-responsive">
-             <table class="table table-bordered table-sm text-left" id="fuelSP">
+             <table class="table table-bordered table-sm text-left" id="supplierSP">
                <thead>
-                 <th class="bg-primary"></th>
-                 <th class="bg-primary">Data</th>
+                 <tr>
+                   <th class="bg-primary"></th>
+                   <th class="bg-primary">Data</th>
+                 </tr>
                </thead>
                <tbody>
-                 <tr>
-                   <th>Your weekly spend on electricity</th>
-                   <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
-                 </tr>
-                 <tr>
-                  <th>Your weekly spend on gas</th>
-                  <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+                <tr>
+                  <th>MPAN</th>
+                  <td contenteditable="true" spellcheck="true">987654321</td>
                 </tr>
                 <tr>
-                  <th>Percentage of income spent on fuel</th>
-                  <td class="text-right"">13%</td>
+                  <th>Supplier</th>
+                  <td contenteditable="true" spellcheck="true">Scottish Power</td>
+                </tr>
+                <tr>
+                  <th>Electric Account Number</th>
+                  <td contenteditable="true" spellcheck="true">987654321</td>
+                </tr>
+                <tr>
+                  <th>Customer Reference Number (CRM)</th>
+                  <td contenteditable="true" spellcheck="true">987654321</td>
+                </tr>
+                <tr>
+                  <th>Tariff</th>
+                  <td contenteditable="true" spellcheck="true">987654321</td>
+                </tr>
+                <tr>
+                  <th>Meter Serial Number</th>
+                  <td contenteditable="true" spellcheck="true">987654321</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-      <div class="row" id="submitToEASP" style="display: none;">
-       <div class="col-12 mt-2">
-         Send to Energy Advocate to check & send application<br>
-         <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
-       </div>
-     </div>
-   </div>
 
-
-   <div id="britishGasContent" style="display:none;">
-     <h4 class="mt-2">British Gas Warm Home Discount Application</h4>
-     <h4 class="mt-4 mb-2">New application</h4>
-     <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-     <div id="module" class="container row mt-4">
-       <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalBG" aria-expanded="false" aria-controls="collapsePersonalBG" id="personalBGButton" onclick="checkData('personalBG', 'personalBGButton'); showSubmitBG();" data-text="Check">Contact Details</a></h5>
-       <div class="collapse col-12" id="collapsePersonalBG" aria-labelledby="headingPersonalBG">
+      <div id="module" class="container row mt-3">
+       <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); showSubmitSP();" data-text="Check">Your Household Income</a></h5>
+       <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
          <div class="table-responsive">
-          <table class="table table-bordered table-sm text-left" id="personalBG">
-           <thead>
-             <th class="bg-primary"></th>
-             <th class="bg-primary">Data</th>
-           </thead>
-           <tbody>
-             <tr>
-               <th>Forename</th>
-               <td contenteditable="true" spellcheck="true">Citizen</td>
-             </tr>
-             <tr>
-               <th>Surame</th>
-               <td contenteditable="true" spellcheck="true">Twenty</td>
-             </tr>
-             <tr>
-               <th>Address</th>
-               <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
-             </tr>
-             <tr>
-               <th>Postcode</th>
-               <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-             </tr>
-             <tr>
-               <th>Telephone</th>
-               <td contenteditable="true" spellcheck="true">012345 678901</td>
-             </tr>
-             <tr>
-               <th>Mobile</th>
-               <td contenteditable="true" spellcheck="true">077123456789</td>
-             </tr>
-             <tr>
-               <th>Date of birth</th>
-               <td><input type="date" name="dob" value="1980-01-01"></td>
+           <table class="table table-bordered table-sm text-left"id="incomeSP">
+             <thead>
+               <th class="bg-primary"></th>
+               <th class="bg-primary">Data</th>
+             </thead>
+             <tbody>
+              <tr>
+               <th>Your yearly income</th>
+               <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
              </tr>
            </tbody>
          </table>
@@ -547,24 +270,285 @@
    </div>
 
    <div id="module" class="container row mt-3">
-     <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierBG" aria-expanded="false" aria-controls="collapseSupplierBG" id="supplierBGButton" onclick="checkData('supplierBG', 'supplierBGButton'); showSubmitBG();" data-text="Check">Electricity Account</a></h5>
-     <div class="collapse col-12" id="collapseSupplierBG" aria-labelledby="headingSupplierBG">
+     <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); showSubmitSP();" data-text="Check">Your Fuel Spend</a></h5>
+     <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
        <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left" id="supplierBG">
-         <thead>
-           <tr>
+         <table class="table table-bordered table-sm text-left" id="fuelSP">
+           <thead>
              <th class="bg-primary"></th>
              <th class="bg-primary">Data</th>
-           </tr>
-         </thead>
-         <tbody>
+           </thead>
+           <tbody>
+             <tr>
+               <th>Your weekly spend on electricity</th>
+               <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+             </tr>
+             <tr>
+              <th>Your weekly spend on gas</th>
+              <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+            </tr>
+            <tr>
+              <th>Percentage of income spent on fuel</th>
+              <td class="text-right"">13%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="submitToEASP" style="display: none;">
+   <div class="col-12 mt-2">
+     Send to Energy Advocate to check & send application<br>
+     <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+   </div>
+ </div>
+</div>
+
+
+<div id="britishGasContent" style="display:none;">
+ <h4 class="mt-2">British Gas Warm Home Discount Application</h4>
+ <h4 class="mt-4 mb-2">New application</h4>
+ <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+ <div id="module" class="container row mt-4">
+   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalBG" aria-expanded="false" aria-controls="collapsePersonalBG" id="personalBGButton" onclick="checkData('personalBG', 'personalBGButton'); showSubmitBG();" data-text="Check">Contact Details</a></h5>
+   <div class="collapse col-12" id="collapsePersonalBG" aria-labelledby="headingPersonalBG">
+     <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="personalBG">
+       <thead>
+         <th class="bg-primary"></th>
+         <th class="bg-primary">Data</th>
+       </thead>
+       <tbody>
+         <tr>
+           <th>Forename</th>
+           <td contenteditable="true" spellcheck="true">Citizen</td>
+         </tr>
+         <tr>
+           <th>Surame</th>
+           <td contenteditable="true" spellcheck="true">Twenty</td>
+         </tr>
+         <tr>
+           <th>Address</th>
+           <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+         </tr>
+         <tr>
+           <th>Postcode</th>
+           <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+         </tr>
+         <tr>
+           <th>Telephone</th>
+           <td contenteditable="true" spellcheck="true">012345 678901</td>
+         </tr>
+         <tr>
+           <th>Mobile</th>
+           <td contenteditable="true" spellcheck="true">077123456789</td>
+         </tr>
+         <tr>
+           <th>Date of birth</th>
+           <td><input type="date" name="dob" value="1980-01-01"></td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+ </div>
+</div>
+
+<div id="module" class="container row mt-3">
+ <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierBG" aria-expanded="false" aria-controls="collapseSupplierBG" id="supplierBGButton" onclick="checkData('supplierBG', 'supplierBGButton'); showSubmitBG();" data-text="Check">Electricity Account</a></h5>
+ <div class="collapse col-12" id="collapseSupplierBG" aria-labelledby="headingSupplierBG">
+   <div class="table-responsive">
+    <table class="table table-bordered table-sm text-left" id="supplierBG">
+     <thead>
+       <tr>
+         <th class="bg-primary"></th>
+         <th class="bg-primary">Data</th>
+       </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th>MPAN</th>
+       <td contenteditable="true" spellcheck="true">987654321</td>
+     </tr>
+     <tr>
+       <th>Supplier</th>
+       <td contenteditable="true" spellcheck="true">British Gas</td>
+     </tr>
+     <tr>
+       <th>Electric Account Number</th>
+       <td contenteditable="true" spellcheck="true">987654321</td>
+     </tr>
+     <tr>
+       <th>Customer Reference Number (CRM)</th>
+       <td contenteditable="true" spellcheck="true">987654321</td>
+     </tr>
+     <tr>
+       <th>Tariff</th>
+       <td contenteditable="true" spellcheck="true">987654321</td>
+     </tr>
+     <tr>
+       <th>Meter Serial Number</th>
+       <td contenteditable="true" spellcheck="true">987654321</td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+</div>
+</div>
+
+<div id="module" class="container row mt-3">
+ <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeBG" aria-expanded="false" aria-controls="collapseIncomeBG" id="incomeBGButton" onclick="checkData('incomeBG', 'incomeBGButton'); showSubmitBG();" data-text="Check">Your Household Income</a></h5>
+ <div class="collapse col-12" id="collapseIncomeBG" aria-labelledby="headingIncomeBG">
+   <div class="table-responsive">
+    <table class="table table-bordered table-sm text-left" id="incomeBG">
+     <thead>
+       <th class="bg-primary"></th>
+       <th class="bg-primary">Data</th>
+     </thead>
+     <tbody>
+      <tr>
+       <th>Your yearly income</th>
+       <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+</div>
+</div>
+
+<div id="module" class="container row mt-3">
+ <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelBG" aria-expanded="false" aria-controls="collapseFuelBG" id="fuelBGButton" onclick="checkData('fuelBG', 'fuelBGButton'); showSubmitBG();" data-text="Check">Your Fuel Spend</a></h5>
+ <div class="collapse col-12" id="collapseFuelBG" aria-labelledby="headingFuelBG">
+   <div class="table-responsive">
+    <table class="table table-bordered table-sm text-left" id="fuelBG">
+     <thead>
+       <th class="bg-primary"></th>
+       <th class="bg-primary">Data</th>
+     </thead>
+     <tbody>
+      <tr>
+        <th>Your weekly spend on electricity</th>
+        <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+      </tr>
+      <tr>
+       <th>Your weekly spend on gas</th>
+       <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+     </tr>
+     <tr>
+       <th>Percentage of income spent on fuel</th>
+       <td class="text-right"">13%</td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+</div>
+</div>
+
+<div id="module" class="container row mt-3">
+ <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBenefitsBG" aria-expanded="false" aria-controls="collapseBenefitsBG" id="benefitsBGButton" onclick="checkData('benefitsBG', 'benefitsBGButton'); showSubmitBG();" data-text="Check">Benefits</a></h5>
+ <div class="collapse col-12" id="collapseBenefitsBG" aria-labelledby="headingBenefitsBG">
+   <div class="table-responsive">
+     <table class="table table-bordered table-sm text-left" id="benefitsBG">
+      <thead>
+       <th class="bg-primary"></th>
+       <th class="bg-primary">Data</th>
+     </thead>
+     <tbody>
+      <tr>
+       <th>Is a member of the household in receipt of any benefits?</th>
+       <td contenteditable="true" spellcheck="true">No data</td>
+     </tr>
+     <tr>
+       <th>Benefit type(s)</th>
+       <td contenteditable="true" spellcheck="true">No data</td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+</div>
+</div>
+<div class="row" id="submitToEABG" style="display: none;">
+ <div class="col-12 mt-2">
+   Send to Energy Advocate to check & send application<br>
+   <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+ </div>
+</div>
+</div>
+
+
+<div id="edfEnergyContent" style="display: none;">
+ <h4 class="mt-2">EDF Energy Warm Home Discount</h4>
+ <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+ <div id="module" class="container row mt-4">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEDF" aria-expanded="false" aria-controls="collapsePersonalEDF" id="personalEDFButton" onclick="checkData('personalEDF', 'personalEDFButton'); showSubmitEDF();" data-text="Check">Contact Details</a></h5>
+  <div class="collapse col-12" id="collapsePersonalEDF" aria-labelledby="headingPersonalEDF">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="personalEDF">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary">Data</th>
+        </thead>
+        <tbody>
           <tr>
+            <th>Title</th>
+            <td contenteditable="true" spellcheck="true">Mrs</td>
+          </tr>
+          <tr>
+            <th>Forename</th>
+            <td contenteditable="true" spellcheck="true">Citizen</td>
+          </tr>
+          <tr>
+            <th>Surame</th>
+            <td contenteditable="true" spellcheck="true">Twenty</td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+          </tr>
+          <tr>
+            <th>Postcode</th>
+            <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+          </tr>
+          <tr>
+            <th>Telephone</th>
+            <td contenteditable="true" spellcheck="true">012345 678901</td>
+          </tr>
+          <tr>
+            <th>Mobile</th>
+            <td contenteditable="true" spellcheck="true">077123456789</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+          </tr>
+          <tr>
+            <th>Date of birth</th>
+            <td><input type="date" name="dob" value="1980-01-01"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEDF" aria-expanded="false" aria-controls="collapseSupplierEDF" id="supplierEDFButton" onclick="checkData('supplierEDF', 'supplierEDFButton'); showSubmitEDF();" data-text="Check">Electricity Account</a></h5>
+  <div class="collapse col-12" id="collapseSupplierEDF" aria-labelledby="headingSupplierEDF">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="supplierEDF">
+        <thead>
+          <tr>
+            <th class="bg-primary"></th>
+            <th class="bg-primary">Data</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
            <th>MPAN</th>
            <td contenteditable="true" spellcheck="true">987654321</td>
          </tr>
          <tr>
            <th>Supplier</th>
-           <td contenteditable="true" spellcheck="true">British Gas</td>
+           <td contenteditable="true" spellcheck="true">EDF Energy</td>
          </tr>
          <tr>
            <th>Electric Account Number</th>
@@ -585,39 +569,39 @@
        </tbody>
      </table>
    </div>
-   </div>
-   </div>
+ </div>
+</div>
 
-   <div id="module" class="container row mt-3">
-     <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeBG" aria-expanded="false" aria-controls="collapseIncomeBG" id="incomeBGButton" onclick="checkData('incomeBG', 'incomeBGButton'); showSubmitBG();" data-text="Check">Your Household Income</a></h5>
-     <div class="collapse col-12" id="collapseIncomeBG" aria-labelledby="headingIncomeBG">
-       <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left" id="incomeBG">
-         <thead>
-           <th class="bg-primary"></th>
-           <th class="bg-primary">Data</th>
-         </thead>
-         <tbody>
-          <tr>
-           <th>Your yearly income</th>
-           <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
-         </tr>
-       </tbody>
-     </table>
-   </div>
-   </div>
-   </div>
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEDF" aria-expanded="false" aria-controls="collapseIncomeEDF" id="incomeEDFButton" onclick="checkData('incomeEDF', 'incomeEDFButton'); showSubmitEDF();" data-text="Check">Your Household Income</a></h5>
+  <div class="collapse col-12" id="collapseIncomeEDF" aria-labelledby="headingIncomeEDF">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left"id="incomeEDF">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary">Data</th>
+        </thead>
+        <tbody>
+         <tr>
+          <th>Your yearly income</th>
+          <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
 
-   <div id="module" class="container row mt-3">
-     <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelBG" aria-expanded="false" aria-controls="collapseFuelBG" id="fuelBGButton" onclick="checkData('fuelBG', 'fuelBGButton'); showSubmitBG();" data-text="Check">Your Fuel Spend</a></h5>
-     <div class="collapse col-12" id="collapseFuelBG" aria-labelledby="headingFuelBG">
-       <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left" id="fuelBG">
-         <thead>
-           <th class="bg-primary"></th>
-           <th class="bg-primary">Data</th>
-         </thead>
-         <tbody>
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEDF" aria-expanded="false" aria-controls="collapseFuelEDF" id="fuelEDFButton" onclick="checkData('fuelEDF', 'fuelEDFButton'); showSubmitEDF();" data-text="Check">Your Fuel Spend</a></h5>
+  <div class="collapse col-12" id="collapseFuelEDF" aria-labelledby="headingFuelEDF">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="fuelEDF">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary">Data</th>
+        </thead>
+        <tbody>
           <tr>
             <th>Your weekly spend on electricity</th>
             <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
@@ -633,347 +617,170 @@
        </tbody>
      </table>
    </div>
-   </div>
-   </div>
+ </div>
+</div>
+<div class="row" id="submitToEAEDF" style="display: none;">
+ <div class="col-12 mt-2">
+   Send to Energy Advocate to check & send application<br>
+   <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+ </div>
+</div>
+</div>
 
-   <div id="module" class="container row mt-3">
-     <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBenefitsBG" aria-expanded="false" aria-controls="collapseBenefitsBG" id="benefitsBGButton" onclick="checkData('benefitsBG', 'benefitsBGButton'); showSubmitBG();" data-text="Check">Benefits</a></h5>
-     <div class="collapse col-12" id="collapseBenefitsBG" aria-labelledby="headingBenefitsBG">
-       <div class="table-responsive">
-         <table class="table table-bordered table-sm text-left" id="benefitsBG">
-          <thead>
-           <th class="bg-primary"></th>
-           <th class="bg-primary">Data</th>
-         </thead>
-         <tbody>
+
+<div id="eonContent" style="display: none;">
+ <h4 class="mt-2">E.ON Warm Home Discount Application</h4>
+ <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+ <div id="module" class="container row mt-4">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEON" aria-expanded="false" aria-controls="collapsePersonalEON" id="personalEONButton" onclick="checkData('personalEON', 'personalEONButton'); showSubmitEON();" data-text="Check">Contact Details</a></h5>
+  <div class="collapse col-12" id="collapsePersonalEON" aria-labelledby="headingPersonalEON">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="personalEON">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary">Data</th>
+        </thead>
+        <tbody>
           <tr>
-           <th>Is a member of the household in receipt of any benefits?</th>
-           <td contenteditable="true" spellcheck="true">No data</td>
-         </tr>
-         <tr>
-           <th>Benefit type(s)</th>
-           <td contenteditable="true" spellcheck="true">No data</td>
-         </tr>
-       </tbody>
-     </table>
-   </div>
-   </div>
-   </div>
-   <div class="row" id="submitToEABG" style="display: none;">
-     <div class="col-12 mt-2">
-       Send to Energy Advocate to check & send application<br>
-       <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
-     </div>
-   </div>
-   </div>
-
-
-   <div id="edfEnergyContent" style="display: none;">
-     <h4 class="mt-2">EDF Energy Warm Home Discount</h4>
-     <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-     <div id="module" class="container row mt-4">
-      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEDF" aria-expanded="false" aria-controls="collapsePersonalEDF" id="personalEDFButton" onclick="checkData('personalEDF', 'personalEDFButton'); showSubmitEDF();" data-text="Check">Contact Details</a></h5>
-      <div class="collapse col-12" id="collapsePersonalEDF" aria-labelledby="headingPersonalEDF">
-        <div class="table-responsive">
-          <table class="table table-bordered table-sm text-left" id="personalEDF">
-            <thead>
-              <th class="bg-primary"></th>
-              <th class="bg-primary">Data</th>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Title</th>
-                <td contenteditable="true" spellcheck="true">Mrs</td>
-              </tr>
-              <tr>
-                <th>Forename</th>
-                <td contenteditable="true" spellcheck="true">Citizen</td>
-              </tr>
-              <tr>
-                <th>Surame</th>
-                <td contenteditable="true" spellcheck="true">Twenty</td>
-              </tr>
-              <tr>
-                <th>Address</th>
-                <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
-              </tr>
-              <tr>
-                <th>Postcode</th>
-                <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-              </tr>
-              <tr>
-                <th>Telephone</th>
-                <td contenteditable="true" spellcheck="true">012345 678901</td>
-              </tr>
-              <tr>
-                <th>Mobile</th>
-                <td contenteditable="true" spellcheck="true">077123456789</td>
-              </tr>
-              <tr>
-                <th>Email</th>
-                <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
-              </tr>
-              <tr>
-                <th>Date of birth</th>
-                <td><input type="date" name="dob" value="1980-01-01"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div id="module" class="container row mt-3">
-      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEDF" aria-expanded="false" aria-controls="collapseSupplierEDF" id="supplierEDFButton" onclick="checkData('supplierEDF', 'supplierEDFButton'); showSubmitEDF();" data-text="Check">Electricity Account</a></h5>
-      <div class="collapse col-12" id="collapseSupplierEDF" aria-labelledby="headingSupplierEDF">
-        <div class="table-responsive">
-          <table class="table table-bordered table-sm text-left" id="supplierEDF">
-            <thead>
-              <tr>
-                <th class="bg-primary"></th>
-                <th class="bg-primary">Data</th>
-              </tr>
-            </thead>
-            <tbody>
-             <tr>
-               <th>MPAN</th>
-               <td contenteditable="true" spellcheck="true">987654321</td>
-             </tr>
-             <tr>
-               <th>Supplier</th>
-               <td contenteditable="true" spellcheck="true">EDF Energy</td>
-             </tr>
-             <tr>
-               <th>Electric Account Number</th>
-               <td contenteditable="true" spellcheck="true">987654321</td>
-             </tr>
-             <tr>
-               <th>Customer Reference Number (CRM)</th>
-               <td contenteditable="true" spellcheck="true">987654321</td>
-             </tr>
-             <tr>
-               <th>Tariff</th>
-               <td contenteditable="true" spellcheck="true">987654321</td>
-             </tr>
-             <tr>
-               <th>Meter Serial Number</th>
-               <td contenteditable="true" spellcheck="true">987654321</td>
-             </tr>
-           </tbody>
-         </table>
-       </div>
-     </div>
-   </div>
-
-   <div id="module" class="container row mt-3">
-    <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEDF" aria-expanded="false" aria-controls="collapseIncomeEDF" id="incomeEDFButton" onclick="checkData('incomeEDF', 'incomeEDFButton'); showSubmitEDF();" data-text="Check">Your Household Income</a></h5>
-    <div class="collapse col-12" id="collapseIncomeEDF" aria-labelledby="headingIncomeEDF">
-      <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left"id="incomeEDF">
-          <thead>
-            <th class="bg-primary"></th>
-            <th class="bg-primary">Data</th>
-          </thead>
-          <tbody>
-           <tr>
-            <th>Your yearly income</th>
-            <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+            <th>Title</th>
+            <td contenteditable="true" spellcheck="true">Mrs</td>
+          </tr>
+          <tr>
+            <th>Forename</th>
+            <td contenteditable="true" spellcheck="true">Citizen</td>
+          </tr>
+          <tr>
+            <th>Surame</th>
+            <td contenteditable="true" spellcheck="true">Twenty</td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+          </tr>
+          <tr>
+            <th>Postcode</th>
+            <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+          </tr>
+          <tr>
+            <th>Telephone</th>
+            <td contenteditable="true" spellcheck="true">012345 678901</td>
+          </tr>
+          <tr>
+            <th>Mobile</th>
+            <td contenteditable="true" spellcheck="true">077123456789</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+          </tr>
+          <tr>
+            <th>Date of birth</th>
+            <td><input type="date" name="dob" value="1980-01-01"></td>
           </tr>
         </tbody>
       </table>
     </div>
-   </div>
-   </div>
+  </div>
+</div>
 
-   <div id="module" class="container row mt-3">
-    <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEDF" aria-expanded="false" aria-controls="collapseFuelEDF" id="fuelEDFButton" onclick="checkData('fuelEDF', 'fuelEDFButton'); showSubmitEDF();" data-text="Check">Your Fuel Spend</a></h5>
-    <div class="collapse col-12" id="collapseFuelEDF" aria-labelledby="headingFuelEDF">
-      <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left" id="fuelEDF">
-          <thead>
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEON" aria-expanded="false" aria-controls="collapseSupplierEON" id="supplierEONButton" onclick="checkData('supplierEON', 'supplierEONButton'); showSubmitEON();" data-text="Check">Electricity Account</a></h5>
+  <div class="collapse col-12" id="collapseSupplierEON" aria-labelledby="headingSupplierEON">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="supplierEON">
+        <thead>
+          <tr>
             <th class="bg-primary"></th>
             <th class="bg-primary">Data</th>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Your weekly spend on electricity</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
-            </tr>
-            <tr>
-             <th>Your weekly spend on gas</th>
-             <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
-           </tr>
-           <tr>
-             <th>Percentage of income spent on fuel</th>
-             <td class="text-right"">13%</td>
-           </tr>
-         </tbody>
-       </table>
-     </div>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <th>MPAN</th>
+           <td contenteditable="true" spellcheck="true">987654321</td>
+         </tr>
+         <tr>
+           <th>Supplier</th>
+           <td contenteditable="true" spellcheck="true">E.ON</td>
+         </tr>
+         <tr>
+           <th>Electric Account Number</th>
+           <td contenteditable="true" spellcheck="true">987654321</td>
+         </tr>
+         <tr>
+           <th>Customer Reference Number (CRM)</th>
+           <td contenteditable="true" spellcheck="true">987654321</td>
+         </tr>
+         <tr>
+           <th>Tariff</th>
+           <td contenteditable="true" spellcheck="true">987654321</td>
+         </tr>
+         <tr>
+           <th>Meter Serial Number</th>
+           <td contenteditable="true" spellcheck="true">987654321</td>
+         </tr>
+       </tbody>
+     </table>
    </div>
+ </div>
+</div>
+
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEON" aria-expanded="false" aria-controls="collapseIncomeEON" id="incomeEONButton" onclick="checkData('incomeEON', 'incomeEONButton'); showSubmitEON();" data-text="Check">Your Household Income</a></h5>
+  <div class="collapse col-12" id="collapseIncomeEON" aria-labelledby="headingIncomeEON">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left"id="incomeEON">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary">Data</th>
+        </thead>
+        <tbody>
+         <tr>
+          <th>Your yearly income</th>
+          <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEON" aria-expanded="false" aria-controls="collapseFuelEON" id="fuelEONButton" onclick="checkData('fuelEON', 'fuelEONButton'); showSubmitEON();" data-text="Check">Your Fuel Spend</a></h5>
+  <div class="collapse col-12" id="collapseFuelEON" aria-labelledby="headingFuelEON">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left" id="fuelEON">
+        <thead>
+          <th class="bg-primary"></th>
+          <th class="bg-primary">Data</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Your weekly spend on electricity</th>
+            <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+          </tr>
+          <tr>
+           <th>Your weekly spend on gas</th>
+           <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+         </tr>
+         <tr>
+           <th>Percentage of income spent on fuel</th>
+           <td class="text-right"">13%</td>
+         </tr>
+       </tbody>
+     </table>
    </div>
-   <div class="row" id="submitToEAEDF" style="display: none;">
-     <div class="col-12 mt-2">
-       Send to Energy Advocate to check & send application<br>
-       <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
-     </div>
-   </div>
-   </div>
+ </div>
+</div>
 
 
-   <div id="eonContent" style="display: none;">
-     <h4 class="mt-2">E.ON Warm Home Discount Application</h4>
-     <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-       <div id="module" class="container row mt-4">
-        <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEON" aria-expanded="false" aria-controls="collapsePersonalEON" id="personalEONButton" onclick="checkData('personalEON', 'personalEONButton'); showSubmitEON();" data-text="Check">Contact Details</a></h5>
-        <div class="collapse col-12" id="collapsePersonalEON" aria-labelledby="headingPersonalEON">
-          <div class="table-responsive">
-            <table class="table table-bordered table-sm text-left" id="personalEON">
-              <thead>
-                <th class="bg-primary"></th>
-                <th class="bg-primary">Data</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Title</th>
-                  <td contenteditable="true" spellcheck="true">Mrs</td>
-                </tr>
-                <tr>
-                  <th>Forename</th>
-                  <td contenteditable="true" spellcheck="true">Citizen</td>
-                </tr>
-                <tr>
-                  <th>Surame</th>
-                  <td contenteditable="true" spellcheck="true">Twenty</td>
-                </tr>
-                <tr>
-                  <th>Address</th>
-                  <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
-                </tr>
-                <tr>
-                  <th>Postcode</th>
-                  <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-                </tr>
-                <tr>
-                  <th>Telephone</th>
-                  <td contenteditable="true" spellcheck="true">012345 678901</td>
-                </tr>
-                <tr>
-                  <th>Mobile</th>
-                  <td contenteditable="true" spellcheck="true">077123456789</td>
-                </tr>
-                <tr>
-                  <th>Email</th>
-                  <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
-                </tr>
-                <tr>
-                  <th>Date of birth</th>
-                  <td><input type="date" name="dob" value="1980-01-01"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="module" class="container row mt-3">
-        <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEON" aria-expanded="false" aria-controls="collapseSupplierEON" id="supplierEONButton" onclick="checkData('supplierEON', 'supplierEONButton'); showSubmitEON();" data-text="Check">Electricity Account</a></h5>
-        <div class="collapse col-12" id="collapseSupplierEON" aria-labelledby="headingSupplierEON">
-          <div class="table-responsive">
-            <table class="table table-bordered table-sm text-left" id="supplierEON">
-              <thead>
-                <tr>
-                  <th class="bg-primary"></th>
-                  <th class="bg-primary">Data</th>
-                </tr>
-              </thead>
-              <tbody>
-               <tr>
-                 <th>MPAN</th>
-                 <td contenteditable="true" spellcheck="true">987654321</td>
-               </tr>
-               <tr>
-                 <th>Supplier</th>
-                 <td contenteditable="true" spellcheck="true">E.ON</td>
-               </tr>
-               <tr>
-                 <th>Electric Account Number</th>
-                 <td contenteditable="true" spellcheck="true">987654321</td>
-               </tr>
-               <tr>
-                 <th>Customer Reference Number (CRM)</th>
-                 <td contenteditable="true" spellcheck="true">987654321</td>
-               </tr>
-               <tr>
-                 <th>Tariff</th>
-                 <td contenteditable="true" spellcheck="true">987654321</td>
-               </tr>
-               <tr>
-                 <th>Meter Serial Number</th>
-                 <td contenteditable="true" spellcheck="true">987654321</td>
-               </tr>
-             </tbody>
-           </table>
-         </div>
-       </div>
-     </div>
-
-     <div id="module" class="container row mt-3">
-      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEON" aria-expanded="false" aria-controls="collapseIncomeEON" id="incomeEONButton" onclick="checkData('incomeEON', 'incomeEONButton'); showSubmitEON();" data-text="Check">Your Household Income</a></h5>
-      <div class="collapse col-12" id="collapseIncomeEON" aria-labelledby="headingIncomeEON">
-        <div class="table-responsive">
-          <table class="table table-bordered table-sm text-left"id="incomeEON">
-            <thead>
-              <th class="bg-primary"></th>
-              <th class="bg-primary">Data</th>
-            </thead>
-            <tbody>
-             <tr>
-              <th>Your yearly income</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-     </div>
-     </div>
-
-     <div id="module" class="container row mt-3">
-      <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEON" aria-expanded="false" aria-controls="collapseFuelEON" id="fuelEONButton" onclick="checkData('fuelEON', 'fuelEONButton'); showSubmitEON();" data-text="Check">Your Fuel Spend</a></h5>
-      <div class="collapse col-12" id="collapseFuelEON" aria-labelledby="headingFuelEON">
-        <div class="table-responsive">
-          <table class="table table-bordered table-sm text-left" id="fuelEON">
-            <thead>
-              <th class="bg-primary"></th>
-              <th class="bg-primary">Data</th>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Your weekly spend on electricity</th>
-                <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
-              </tr>
-              <tr>
-               <th>Your weekly spend on gas</th>
-               <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
-             </tr>
-             <tr>
-               <th>Percentage of income spent on fuel</th>
-               <td class="text-right"">13%</td>
-             </tr>
-           </tbody>
-         </table>
-       </div>
-     </div>
-     </div>
-
-
-     <div class="row" id="submitToEAEON" style="display: none;">
-       <div class="col-12 mt-2">
-         Send to Energy Advocate to check & send application<br>
-         <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
-       </div>
-     </div>
-   </div>
+<div class="row" id="submitToEAEON" style="display: none;">
+ <div class="col-12 mt-2">
+   Send to Energy Advocate to check & send application<br>
+   <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+ </div>
+</div>
+</div>
 
 
 </main>
@@ -1003,82 +810,82 @@
 
 <script type="text/javascript">
 
-   function showSubmitSP() {
-    if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-      document.getElementById('submitToEASP').style.display = 'block';
-    } else {
-      document.getElementById('submitToEASP').style.display = 'none'; 
-    }
+ function showSubmitSP() {
+  if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
+    document.getElementById('submitToEASP').style.display = 'block';
+  } else {
+    document.getElementById('submitToEASP').style.display = 'none'; 
   }
+}
 
-  function showSubmitBG() {
-    if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
-      document.getElementById('submitToEABG').style.display = 'block';
-    } else {
-     document.getElementById('submitToEABG').style.display = 'none'; 
-   }
-  }
+function showSubmitBG() {
+  if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
+    document.getElementById('submitToEABG').style.display = 'block';
+  } else {
+   document.getElementById('submitToEABG').style.display = 'none'; 
+ }
+}
 
-  function showSubmitEDF() {
-    if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete'){
-      document.getElementById('submitToEAEDF').style.display = 'block';
-    } else {
-     document.getElementById('submitToEAEDF').style.display = 'none'; 
-   }
-  }
+function showSubmitEDF() {
+  if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete'){
+    document.getElementById('submitToEAEDF').style.display = 'block';
+  } else {
+   document.getElementById('submitToEAEDF').style.display = 'none'; 
+ }
+}
 
-  function showApplciation(name){
-    if(name == 'scottishPower'){
-      document.getElementById('scottishPowerContent').style.display = 'block';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    } else if (name == 'britishGas'){
-      document.getElementById('britishGasContent').style.display = 'block';
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    } else if (name == 'edfEnergy'){
-      document.getElementById('edfEnergyContent').style.display = 'block';
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    } else if (name == 'eon'){
-      document.getElementById('eonContent').style.display = 'block';
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
-    } else {
-      document.getElementById('scottishPowerContent').style.display = 'none';
-      document.getElementById('britishGasContent').style.display = 'none';
-      document.getElementById('edfEnergyContent').style.display = 'none';
-      document.getElementById('eonContent').style.display = 'none';
-    };
-  }
+function showApplciation(name){
+  if(name == 'scottishPower'){
+    document.getElementById('scottishPowerContent').style.display = 'block';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  } else if (name == 'britishGas'){
+    document.getElementById('britishGasContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  } else if (name == 'edfEnergy'){
+    document.getElementById('edfEnergyContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  } else if (name == 'eon'){
+    document.getElementById('eonContent').style.display = 'block';
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+  } else {
+    document.getElementById('scottishPowerContent').style.display = 'none';
+    document.getElementById('britishGasContent').style.display = 'none';
+    document.getElementById('edfEnergyContent').style.display = 'none';
+    document.getElementById('eonContent').style.display = 'none';
+  };
+}
 
-  function checkData(tableName, buttonName) {
-    var table = document.getElementById(tableName);
-    var counter = 0;
-    for (var r = 0, n = table.rows.length; r < n; r++) {
-      for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-        if (table.rows[r].cells[c].innerHTML === "No data") {
-          counter ++;
-          table.rows[r].cells[c].style.color = "red";
-        } else if (table.rows[r].cells[c].innerHTML != "No data") {
-          counter --;
-          table.rows[r].cells[c].style.color = "black";
-        }
+function checkData(tableName, buttonName) {
+  var table = document.getElementById(tableName);
+  var counter = 0;
+  for (var r = 0, n = table.rows.length; r < n; r++) {
+    for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+      if (table.rows[r].cells[c].innerHTML === "No data") {
+        counter ++;
+        table.rows[r].cells[c].style.color = "red";
+      } else if (table.rows[r].cells[c].innerHTML != "No data") {
+        counter --;
+        table.rows[r].cells[c].style.color = "black";
       }
     }
-    var check = 0 - table.rows.length*2;
-    if (counter === check) {
-      document.getElementById(buttonName).dataset.text = 'Complete';
-      counter = 0;
-    } else {
-      document.getElementById(buttonName).dataset.text = 'Check';
-      counter = 0;
-    }
   }
+  var check = 0 - table.rows.length*2;
+  if (counter === check) {
+    document.getElementById(buttonName).dataset.text = 'Complete';
+    counter = 0;
+  } else {
+    document.getElementById(buttonName).dataset.text = 'Check';
+    counter = 0;
+  }
+}
 
 </script>
 
