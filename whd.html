@@ -56,170 +56,170 @@
       <div class="mt-4">In order to receive Warm Home Discount you will need to submit an application for each year that you are eligible. You can review and update the information required to check and demonstrate eligibility in this section.</div>
       <div class="row">
        <p class="mt-2 col-12 col-md-4 col-lg-4">
-         Return to applications<br> <a href="https://mydex.github.io/citizen_interactive_wireframe/action_plan.html" class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a></p>
-       </p>
-     </div>
-     <p class="mt-2 mb-2">Who is your current electricity supplier?</p>
-     <form action="#/">
-       <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
-         <option value="default"></option>
-         <option value="scottishPower">Scottish Power</option>
-         <option value="britishGas">British Gas</option>
-         <option value="edfEnergy">EDF Energy</option>
-         <option value="eon">E.ON</option>
-       </select>
-     </form>
+        Return to client profile<br> <a href="https://mydex.github.io/ea_interactive_wireframe/individual_client_version2.html" class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/citizen_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a></p>
+      </p>
+    </div>
+    <p class="mt-2 mb-2">Who is your current electricity supplier?</p>
+    <form action="#/">
+     <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
+       <option value="default"></option>
+       <option value="scottishPower">Scottish Power</option>
+       <option value="britishGas">British Gas</option>
+       <option value="edfEnergy">EDF Energy</option>
+       <option value="eon">E.ON</option>
+     </select>
+   </form>
 
-     <div id="scottishPowerContent" style="display: none;">
-       <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
-       <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
-       <div id="module" class="container row mt-4">
-         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton'); showSubmitSP();" data-text="Check">Contact Details</a></h5>
-         <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
-           <div class="table-responsive">
-             <table class="table table-bordered table-sm text-left" id="personalSP">
-               <thead>
-                 <th class="bg-primary"></th>
-                 <th class="bg-primary">Data</th>
-               </thead>
-               <tbody>
-                 <tr>
-                   <th>Title</th>
-                   <td contenteditable="true" spellcheck="true">Mrs</td>
-                 </tr>
-                 <tr>
-                   <th>Forename</th>
-                   <td contenteditable="true" spellcheck="true">Citizen</td>
-                 </tr>
-                 <tr>
-                   <th>Surame</th>
-                   <td contenteditable="true" spellcheck="true">Twenty</td>
-                 </tr>
-                 <tr>
-                   <th>Address</th>
-                   <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
-                 </tr>
-                 <tr>
-                   <th>Postcode</th>
-                   <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-                 </tr>
-                 <tr>
-                   <th>Telephone</th>
-                   <td contenteditable="true" spellcheck="true">012345 678901</td>
-                 </tr>
-                 <tr>
-                   <th>Mobile</th>
-                   <td contenteditable="true" spellcheck="true">077123456789</td>
-                 </tr>
-                 <tr>
-                   <th>Email</th>
-                   <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
-                 </tr>
-                 <tr>
-                   <th>Date of birth</th>
-                   <td><input type="date" name="dob" value="1980-01-01"></td>
-                 </tr>
-               </tbody>
-             </table>
-           </div>
-         </div>
-       </div>
-
-       <div id="module" class="container row mt-3">
-         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); showSubmitSP();" data-text="Check">Electricity Account</a></h5>
-         <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
-           <div class="table-responsive">
-             <table class="table table-bordered table-sm text-left" id="supplierSP">
-               <thead>
-                 <tr>
-                   <th class="bg-primary"></th>
-                   <th class="bg-primary">Data</th>
-                 </tr>
-               </thead>
-               <tbody>
-                <tr>
-                  <th>MPAN</th>
-                  <td contenteditable="true" spellcheck="true">987654321</td>
-                </tr>
-                <tr>
-                  <th>Supplier</th>
-                  <td contenteditable="true" spellcheck="true">Scottish Power</td>
-                </tr>
-                <tr>
-                  <th>Electric Account Number</th>
-                  <td contenteditable="true" spellcheck="true">987654321</td>
-                </tr>
-                <tr>
-                  <th>Customer Reference Number (CRM)</th>
-                  <td contenteditable="true" spellcheck="true">987654321</td>
-                </tr>
-                <tr>
-                  <th>Tariff</th>
-                  <td contenteditable="true" spellcheck="true">987654321</td>
-                </tr>
-                <tr>
-                  <th>Meter Serial Number</th>
-                  <td contenteditable="true" spellcheck="true">987654321</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="module" class="container row mt-3">
-       <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); showSubmitSP();" data-text="Check">Your Household Income</a></h5>
-       <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
+   <div id="scottishPowerContent" style="display: none;">
+     <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
+     <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+     <div id="module" class="container row mt-4">
+       <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton'); showSubmitSP();" data-text="Check">Contact Details</a></h5>
+       <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
          <div class="table-responsive">
-           <table class="table table-bordered table-sm text-left"id="incomeSP">
+           <table class="table table-bordered table-sm text-left" id="personalSP">
              <thead>
                <th class="bg-primary"></th>
                <th class="bg-primary">Data</th>
              </thead>
              <tbody>
-              <tr>
-               <th>Your yearly income</th>
-               <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
-             </tr>
-           </tbody>
-         </table>
+               <tr>
+                 <th>Title</th>
+                 <td contenteditable="true" spellcheck="true">Mrs</td>
+               </tr>
+               <tr>
+                 <th>Forename</th>
+                 <td contenteditable="true" spellcheck="true">Citizen</td>
+               </tr>
+               <tr>
+                 <th>Surame</th>
+                 <td contenteditable="true" spellcheck="true">Twenty</td>
+               </tr>
+               <tr>
+                 <th>Address</th>
+                 <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+               </tr>
+               <tr>
+                 <th>Postcode</th>
+                 <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+               </tr>
+               <tr>
+                 <th>Telephone</th>
+                 <td contenteditable="true" spellcheck="true">012345 678901</td>
+               </tr>
+               <tr>
+                 <th>Mobile</th>
+                 <td contenteditable="true" spellcheck="true">077123456789</td>
+               </tr>
+               <tr>
+                 <th>Email</th>
+                 <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+               </tr>
+               <tr>
+                 <th>Date of birth</th>
+                 <td><input type="date" name="dob" value="1980-01-01"></td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
        </div>
      </div>
-   </div>
 
-   <div id="module" class="container row mt-3">
-     <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); showSubmitSP();" data-text="Check">Your Fuel Spend</a></h5>
-     <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
+     <div id="module" class="container row mt-3">
+       <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); showSubmitSP();" data-text="Check">Electricity Account</a></h5>
+       <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
+         <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left" id="supplierSP">
+             <thead>
+               <tr>
+                 <th class="bg-primary"></th>
+                 <th class="bg-primary">Data</th>
+               </tr>
+             </thead>
+             <tbody>
+              <tr>
+                <th>MPAN</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+              <tr>
+                <th>Supplier</th>
+                <td contenteditable="true" spellcheck="true">Scottish Power</td>
+              </tr>
+              <tr>
+                <th>Electric Account Number</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+              <tr>
+                <th>Customer Reference Number (CRM)</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+              <tr>
+                <th>Tariff</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+              <tr>
+                <th>Meter Serial Number</th>
+                <td contenteditable="true" spellcheck="true">987654321</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="module" class="container row mt-3">
+     <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); showSubmitSP();" data-text="Check">Your Household Income</a></h5>
+     <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
        <div class="table-responsive">
-         <table class="table table-bordered table-sm text-left" id="fuelSP">
+         <table class="table table-bordered table-sm text-left"id="incomeSP">
            <thead>
              <th class="bg-primary"></th>
              <th class="bg-primary">Data</th>
            </thead>
            <tbody>
-             <tr>
-               <th>Your weekly spend on electricity</th>
-               <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
-             </tr>
-             <tr>
-              <th>Your weekly spend on gas</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
-            </tr>
             <tr>
-              <th>Percentage of income spent on fuel</th>
-              <td class="text-right"">13%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class="row" id="submitToEASP" style="display: none;">
-   <div class="col-12 mt-2">
-     Send to Energy Advocate to check & send application<br>
-     <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+             <th>Your yearly income</th>
+             <td class="text-right" contenteditable="true" spellcheck="true">£12,000</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
    </div>
  </div>
+
+ <div id="module" class="container row mt-3">
+   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); showSubmitSP();" data-text="Check">Your Fuel Spend</a></h5>
+   <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
+     <div class="table-responsive">
+       <table class="table table-bordered table-sm text-left" id="fuelSP">
+         <thead>
+           <th class="bg-primary"></th>
+           <th class="bg-primary">Data</th>
+         </thead>
+         <tbody>
+           <tr>
+             <th>Your weekly spend on electricity</th>
+             <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+           </tr>
+           <tr>
+            <th>Your weekly spend on gas</th>
+            <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+          </tr>
+          <tr>
+            <th>Percentage of income spent on fuel</th>
+            <td class="text-right"">13%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="row" id="submitToEASP" style="display: none;">
+ <div class="col-12 mt-2">
+   Send to Energy Advocate to check & send application<br>
+   <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+ </div>
+</div>
 </div>
 
 
