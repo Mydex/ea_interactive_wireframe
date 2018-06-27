@@ -1302,150 +1302,121 @@
 <section class="row hidden" id="page5">
 
   <h4 class="mt-4 mb-2">Client Action Plan</h4>
-  <div class="accordion">
-    <div class="col-lg-6 col-md-6">
-      <h5>Applications</h5>
-      <div class="card">
+  <div class="col-12 col-lg-6 col-md-6">
+    <h5 class="mt-4">Applications</h5>
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseWhd" aria-expanded="false" aria-controls="collapseWhd">Warm Home Discount</a></h5>
+      <div class="collapse col-12" id="collapseWhd" aria-labelledby="headingWhd">
         <p class=" m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-        <div class="card-header alert alert-primary m-0" id="headingWdh" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseWhd" aria-expanded="false" aria-controls="collapseWhd">Warm Home Discount</button>
-          </h5>
+        <p class="mb-2">Tasks</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Gathering information for application</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Application finished and sent</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Waiting for reply from energy supplier</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Application accepted or rejected</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) WHD received by client/application ended</p>
+        <p class="mt-2 mb-0">Progress: 1/5</p>
+        <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <div id="collapseWhd" class="collapse" aria-labelledby="headingWdh" data-parent="#accordion">
-          <div class="card-body">
-            <p class="mb-2">Tasks</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Gathering information for application</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Application finished and sent</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Waiting for reply from energy supplier</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Application accepted or rejected</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) WHD received by client/application ended</p>
-            <p class="mt-2 mb-0">Progress: 1/5</p>
-            <div class="progress">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                <a href="https://mydex.github.io/ea_interactive_wireframe/whd.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Application</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <p class=" m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-        <div class="card-header alert alert-primary m-0" id=headingTrust style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTrust" aria-expanded="false" aria-controls="collapseTrust">Trust Fund</button>
-          </h5>
-        </div>
-        <div id="collapseTrust" class="collapse" aria-labelledby="headingTrust" data-parent="#accordion">
-          <div class="card-body">
-            <p class="mb-2">Tasks</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Gathering proofs/information for application</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Application in progress</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Application submitted</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Application received</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) Application successful/declined</p>
-            <p class="mt-2 mb-0">Progress: 1/5</p>
-            <div class="progress">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                <a href="https://mydex.github.io/ea_interactive_wireframe/trust-fund.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Application</a>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <a href='https://mydex.github.io/ea_interactive_wireframe/whd.html' class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Application</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="container col-lg-6 col-md-6">
-      <h5>Services</h5>
-      <div class="card">
+
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseTrust" aria-expanded="false" aria-controls="collapseTrust">Trust Fund</a></h5>
+      <div class="collapse col-12" id="collapseTrust" aria-labelledby="headingTrust">
         <p class=" m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-        <div class="card-header alert alert-primary m-0" id=headingEnergy style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEnergy" aria-expanded="false" aria-controls="collapseEnergy">Energy Advice</button>
-          </h5>
+        <p class="mb-2">Tasks</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Gathering proofs/information for application</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Application in progress</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Application submitted</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Application received</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) Application successful/declined</p>
+        <p class="mt-2 mb-0">Progress: 1/5</p>
+        <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <div id="collapseEnergy" class="collapse" aria-labelledby="headingEnergy" data-parent="#accordion">
-          <div class="card-body">
-            <p class="mb-2">Tasks</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial visit completed</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Follow up visit required</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Follow up completed</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Case closed</p>
-            <p class="mt-2 mb-0">Progress: 1/4</p>
-            <div class="progress">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="row">   
-              <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <p class="m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-        <div class="card-header alert alert-primary m-0" id=headingComplaint style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseComplaint" aria-expanded="false" aria-controls="collapseComplaint">Complaints</button>
-          </h5>
-        </div>
-        <div id="collapseComplaint" class="collapse" aria-labelledby="headingComplaint" data-parent="#accordion">
-          <div class="card-body">
-            <p class="mb-2">Tasks</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Gathering information for complaint</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Complaint raised via phone/email</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Confirmation of complaint received</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Complaint ongoing</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) Complaint resolved satisfactorily/unsatisfactorily</p>
-            <p class="mt-2 mb-0">Progress: 1/5</p>
-            <div class="progress">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">List</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <p class=" m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
-        <div class="card-header alert alert-primary m-0" id=headingComplaint style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseChange" aria-expanded="false" aria-controls="collapseChange">Change Supplier</button>
-          </h5>
-        </div>
-        <div id="collapseChange" class="collapse" aria-labelledby="headingChange" data-parent="#accordion">
-          <div class="card-body">
-            <p class="mb-2">Tasks</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Comparison made</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Supplier switch submitted</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Confirmation of switch received</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Follow up required for unsuccessful application</p>
-            <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) Switch successful/unsuccessful</p>
-            <p class="mt-2 mb-0">Progress: 1/5</p>
-            <div class="progress">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="row">   
-              <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Link</a>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <a href='https://mydex.github.io/ea_interactive_wireframe/trust-fund.html' class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Application</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-</section>
+  <div class="col-12 col-lg-6 col-md-6">
+    <h5 class="mt-4">Services</h5>
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEnergy" aria-expanded="false" aria-controls="collapseEnergy">Energy Advice</a></h5>
+      <div class="collapse col-12" id="collapseEnergy" aria-labelledby="headingEnergy">
+        <p class=" m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+        <p class="mb-2">Tasks</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial visit completed</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Follow up visit required</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Follow up completed</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Case closed</p>
+        <p class="mt-2 mb-0">Progress: 1/4</p>
+        <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="row">   
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <a href='#/' class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseComplaints" aria-expanded="false" aria-controls="collapseComplaints">Complaints</a></h5>
+      <div class="collapse col-12" id="collapseComplaints" aria-labelledby="headingComplaints">
+        <p class="m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+        <p class="mb-2">Tasks</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Gathering information for complaint</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Complaint raised via phone/email</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Confirmation of complaint received</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Complaint ongoing</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) Complaint resolved satisfactorily/unsatisfactorily</p>
+        <p class="mt-2 mb-0">Progress: 1/5</p>
+        <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <a href='#/' class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">List</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseChange" aria-expanded="false" aria-controls="collapseChange">Change Supplier</a></h5>
+      <div class="collapse col-12" id="collapseChange" aria-labelledby="headingChange">
+        <p class=" m-1">In action plan? <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></p>
+        <p class="mb-2">Tasks</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Comparison made</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Supplier switch submitted</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Confirmation of switch received</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Switch successful/unsuccessful</p>
+        <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) Follow up required for unsuccessful application</p>
+        <p class="mt-2 mb-0">Progress: 1/5</p>
+        <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="row">   
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            <a href='#/'  class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
 </div>
 
