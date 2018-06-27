@@ -77,6 +77,8 @@
         <div class="collapse col-12" id="collapseHomeVisits" aria-labelledby="headingHomeVisits">
           <h5 class=" mt-4 mb-2">Next Home Visit</h5>
           <div>Date: 03/03/2018<br>Time: 09:00</div>
+
+
           <h5 for="#" class="mt-4 mb-2">Add Home Visit</h5>
           <div>
             <form action="#/" class="col-6">
@@ -89,68 +91,61 @@
             </form>
             <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
           </div>
+
+
+          <h5 class="mt-4 mb-2">Past Home Visits</h5>
+          <div id="module" class="container row mt-3">
+            <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePastVisits" aria-expanded="false" aria-controls="collapsePastVisits">Past Home Visits</a></h5>
+            <div class="collapse col-12" id="collapsePastVisits" aria-labelledby="headingPastVisits">
+              <div class="table-responsive">
+                <table class="table table-bordered table-sm text-left">
+                 <thead class="table-info">
+                   <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Outcome</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                   <td>01/01/2018</td>
+                   <td>09:00</td>
+                   <td>
+                    <form action="#" class="m-0">
+                      <select name="visitType">
+                        <option value="visitDefault"></option>
+                        <option value="visit1">No show</option>
+                        <option value="visit2">Successful</option> -->
+                        <option value="visit3">Rearranged</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+                <tr>
+                  <td>02/02/2018</td>
+                  <td>15:00</td>
+                  <td>
+                    <form action="#" class="m-0">
+                      <select name="visitType">
+                        <option value="visitDefault"></option>
+                        <option value="visit1">No show</option>
+                        <option value="visit2">Successful</option>
+                        <option value="visit3">Rearranged</option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table> 
+          </div>
         </div>
       </div>
-
-
-      <div class="container row">
-        <div class="row col-12 col-md-5 col-lg-5">
-
-          <div class="row">
-            <div class="col-12">
-              <h5 class="mt-4 mb-2">Past Home Visits</h5>
-              <div id="module" class="container row mt-3">
-                <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePastVisits" aria-expanded="false" aria-controls="collapsePastVisits">Past Home Visits</a></h5>
-                <div class="collapse col-12" id="collapsePastVisits" aria-labelledby="headingPastVisits">
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-sm text-left">
-                     <thead class="table-info">
-                       <tr>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Outcome</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                     <tr>
-                       <td>01/01/2018</td>
-                       <td>09:00</td>
-                       <td>
-                        <form action="#" class="m-0">
-                          <select name="visitType">
-                            <option value="visitDefault"></option>
-                            <option value="visit1">No show</option>
-                            <option value="visit2">Successful</option> -->
-                            <option value="visit3">Rearranged</option>
-                          </select>
-                        </form>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>02/02/2018</td>
-                      <td>15:00</td>
-                      <td>
-                        <form action="#" class="m-0">
-                          <select name="visitType">
-                            <option value="visitDefault"></option>
-                            <option value="visit1">No show</option>
-                            <option value="visit2">Successful</option>
-                            <option value="visit3">Rearranged</option>
-                          </select>
-                        </form>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table> 
-              </div>
-            </div>
-          </div>
-
-
-        </div> 
-      </div>
-
     </div>
+  </div>
+
+
+  <div class="container row">
+
 
     <div class="row col-12 col-md-7 col-lg-7">
       <div class="col-12">
