@@ -325,29 +325,11 @@
   <div class="row">
     <div class="col-md-9 col-lg-9">
       <h4 class=" mt-4 mb-2">Client information</h4>
-      <nav class="nav" id="nav-tab" role="tablist">
-        <div class="dropdown">
-          <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More info</button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" id="personal-tab" href="#personal" role="tab" data-toggle="tab" aria-controls="personal">Personal</a>
-            <a class="dropdown-item" id="property-tab" href="#property" role="tab" data-toggle="tab" aria-controls="property">Property</a>
-            <a class="dropdown-item" id="heating-tab" href="#heating" role="tab" data-toggle="tab" aria-controls="heating">Heating & energy</a>
-            <a class="dropdown-item" id="safety-tab" href="#safety" role="tab" data-toggle="tab" aria-controls="safety">Safety</a>
-            <a class="dropdown-item" id="household-tab" href="#household" role="tab" data-toggle="tab" aria-controls="household">Household</a>
-            <a class="dropdown-item" id="electricity-tab" href="#electricity" role="tab" data-toggle="tab" aria-controls="electricity">Electricity</a>
-            <a class="dropdown-item" id="gas-tab" href="#gas" role="tab" data-toggle="tab" aria-controls="gas">Gas</a>
-            <a class="dropdown-item" id="oil-tab" href="#oil" role="tab" data-toggle="tab" aria-controls="oil">Oil</a>
-            <a class="dropdown-item" id="service-tab" href="#service" role="tab" data-toggle="tab" aria-controls="service">Service Information</a>
-            <a class="dropdown-item" id="notes-tab" href="#notes" role="tab" data-toggle="tab" aria-controls="notes">Notes</a>
-            <a class="dropdown-item" id="data-tab" href="#data" role="tab" data-toggle="tab" aria-controls="data">Data Protection & Mandate</a>
-          </div>
-        </div>
-      </nav>
 
 
-      <div id="information-nav-content" class="tab-content">
-
-        <div role="tadpanel" class="tab-pane fade show active" id="personal" aria-labelledby="personal-tab">
+      <div id="module" class="container row mt-3">
+        <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseReferrals" aria-expanded="false" aria-controls="collapseReferrals">Referrals</a></h5>
+        <div class="collapse col-12" id="collapseReferrals" aria-labelledby="headingReferrals">
           <table class="table table-bordered table-sm text-left mb-0" width="100%">
             <thead>
               <th colspan="3" class="bg-primary">Personal Information</th>
@@ -602,31 +584,34 @@
     <div style="max-width: 1000%; max-width: none">
       <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory9" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
       <div id="popoverHistory9Content" class="row" style="display: none">
-        <div class="table-responsive">
-         <table class="table table-bordered table-sm text-left" style="width:200%;">
-           <thead class="table-info">
-             <tr>
-              <th class="p-1">Entry</th>
-              <th class="p-1">Date & time</th>
-              <th class="p-1">By</th>
-            </tr>
-          </thead>
-          <tbody>
+       <div class="table-responsive">
+        <table class="table table-bordered table-sm text-left" style="width:200%;">
+          <thead class="table-info">
             <tr>
-              <td>01/01/1980</td>
-              <td>01/01/2018 13:42</td>
-              <td>EA</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+             <th class="p-1">Entry</th>
+             <th class="p-1">Date & time</th>
+             <th class="p-1">By</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>01/01/1980</td>
+             <td>01/01/2018 13:42</td>
+             <td>EA</td>
+           </tr>
+         </tbody>
+       </table>
+     </div> 
+   </div>
+ </div>
+</div>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+
 
 
 <div role="tadpanel" class="tab-pane fade" id="property" aria-labelledby="property-tab">
