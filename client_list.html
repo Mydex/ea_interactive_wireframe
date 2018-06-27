@@ -97,6 +97,7 @@
                 </div>
               </td>
             </tr>
+
             <tr>
               <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 6</a></u></td>
               <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Six</a></u></td>
@@ -115,15 +116,15 @@
               </td>
               <td>Family First : Name Three</td>
               <td>
-               <div style="max-width: 100%;">
-                 <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
-                 <div id="popoverTaskList2Title" style="display: none">Notes</div>
-                 <div id="popoverTaskList2Content" style="display: none">
-                  <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
-                </div>
-              </div>
+               <div id="notes">
+                 <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes2" aria-expanded="false" aria-controls="collapseNotes2" onclick="checkData('notes2', 'button2');" id="button2" data-text="Add"></button>
+                 <div class="collapse" id="collapseNotes2" aria-labelledby="headingNotes2">
+                   <div rows="3" id="notes2" contenteditable="true" spellcheck="true">Add any important notes here...</div>
+                 </div>
+               </div>
             </td>
           </tr>
+          
           <tr>
             <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 29</a></u></td>
             <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Twenty-Nine</a></u></td>
@@ -470,7 +471,14 @@
 
   function start(){
     checkData('notes1', 'button1');
-
+    checkData('notes2', 'button2');
+    checkData('notes3', 'button3');
+    checkData('notes4', 'button4');
+    checkData('notes5', 'button5');
+    checkData('notes6', 'button6');
+    checkData('notes7', 'button7');
+    checkData('notes8', 'button8');
+    checkData('notes9', 'button9');
   }
 
   window.onload = start();
