@@ -469,13 +469,11 @@
 
   function checkData(text, buttonName) {
     var textContent = document.getElementById(text).innerHTML;
-    console.log(textContent);
     if (textContent === "Add any important notes here...") {
       document.getElementById(buttonName).dataset.text = 'Add';
     } else {
       document.getElementById(buttonName).dataset.text = 'View';
     }
-    console.log(document.getElementById(buttonName).dataset.text);
   }
 
   function start(){
