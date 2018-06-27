@@ -269,20 +269,55 @@
         <div id="module" class="container row mt-3">
           <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal">Personal</a></h5>
           <div class="collapse col-12 p-0" id="collapsePersonal" aria-labelledby="headingPersonal">
-            <table class="table table-bordered table-sm text-left mb-0" width="100%">
-              <thead>
-                <th colspan="3" class="bg-primary">Personal Information</th>
-              </thead>
-              <tbody>
+            <div class="table-responsive">
+              <table class="table table-bordered table-sm text-left mb-0" width="100%">
+                <thead>
+                  <th colspan="3" class="bg-primary">Personal Information</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="text-primary">Title</th>
+                    <td contenteditable="true" spellcheck="true">Mrs</td>
+                    <td>
+                      <div>
+                        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                        <div id="popoverHistory1Content" class="row" style="display: none">
+                          <div class="table-responsive">
+                           <table class="table table-bordered table-sm text-left">
+                             <thead class="table-info">
+                               <tr>
+                                <th class="p-1">Entry</th>
+                                <th class="p-1">Date & time</th>
+                                <th class="p-1">By</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Mrs</td>
+                                <td>04/04/2018 16:12</td>
+                                <td>EA</td>
+                              </tr>
+                              <tr>
+                                <td>Miss</td>
+                                <td>01/01/2018 13:42</td>
+                                <td>EA</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
                 <tr>
-                  <th class="text-primary">Title</th>
-                  <td contenteditable="true" spellcheck="true">Mrs</td>
+                  <th class="text-primary">Forename</th>
+                  <td contenteditable="true" spellcheck="true">Citizen</td>
                   <td>
                     <div>
-                      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-                      <div id="popoverHistory1Content" class="row" style="display: none">
+                      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                      <div id="popoverHistory2Content" class="row" style="display: none">
                         <div class="table-responsive">
-                         <table class="table table-bordered table-sm text-left">
+                          <table class="table table-bordered table-sm text-left">
                            <thead class="table-info">
                              <tr>
                               <th class="p-1">Entry</th>
@@ -292,12 +327,7 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>Mrs</td>
-                              <td>04/04/2018 16:12</td>
-                              <td>EA</td>
-                            </tr>
-                            <tr>
-                              <td>Miss</td>
+                              <td>Citizen</td>
                               <td>01/01/2018 13:42</td>
                               <td>EA</td>
                             </tr>
@@ -309,14 +339,14 @@
                 </td>
               </tr>
               <tr>
-                <th class="text-primary">Forename</th>
-                <td contenteditable="true" spellcheck="true">Citizen</td>
+                <th class="text-primary">Surname</th>
+                <td contenteditable="true" spellcheck="true">Twenty</td>
                 <td>
-                  <div>
-                    <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-                    <div id="popoverHistory2Content" class="row" style="display: none">
+                  <div style="max-width: 1000%; max-width: none">
+                    <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                    <div id="popoverHistory3Content" class="row" style="display: none">
                       <div class="table-responsive">
-                        <table class="table table-bordered table-sm text-left">
+                       <table class="table table-bordered table-sm text-left" style="width:200%;">
                          <thead class="table-info">
                            <tr>
                             <th class="p-1">Entry</th>
@@ -326,7 +356,12 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Citizen</td>
+                            <td>Twenty</td>
+                            <td>04/04/2018 16:12</td>
+                            <td>EA</td>
+                          </tr>
+                          <tr>
+                            <td>Twelve</td>
                             <td>01/01/2018 13:42</td>
                             <td>EA</td>
                           </tr>
@@ -338,12 +373,12 @@
               </td>
             </tr>
             <tr>
-              <th class="text-primary">Surname</th>
-              <td contenteditable="true" spellcheck="true">Twenty</td>
+              <th class="text-primary">Address</th>
+              <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
               <td>
                 <div style="max-width: 1000%; max-width: none">
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-                  <div id="popoverHistory3Content" class="row" style="display: none">
+                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                  <div id="popoverHistory4Content" class="row" style="display: none">
                     <div class="table-responsive">
                      <table class="table table-bordered table-sm text-left" style="width:200%;">
                        <thead class="table-info">
@@ -355,12 +390,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Twenty</td>
-                          <td>04/04/2018 16:12</td>
-                          <td>EA</td>
-                        </tr>
-                        <tr>
-                          <td>Twelve</td>
+                          <td>12 Fake Street<br>FakeTown</td>
                           <td>01/01/2018 13:42</td>
                           <td>EA</td>
                         </tr>
@@ -372,12 +402,12 @@
             </td>
           </tr>
           <tr>
-            <th class="text-primary">Address</th>
-            <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
+            <th class="text-primary">Postcode</th>
+            <td contenteditable="true" spellcheck="true">FA12 3KE</td>
             <td>
               <div style="max-width: 1000%; max-width: none">
-                <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-                <div id="popoverHistory4Content" class="row" style="display: none">
+                <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                <div id="popoverHistory5Content" class="row" style="display: none">
                   <div class="table-responsive">
                    <table class="table table-bordered table-sm text-left" style="width:200%;">
                      <thead class="table-info">
@@ -389,7 +419,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>12 Fake Street<br>FakeTown</td>
+                        <td>FA12 8KE</td>
                         <td>01/01/2018 13:42</td>
                         <td>EA</td>
                       </tr>
@@ -401,12 +431,12 @@
           </td>
         </tr>
         <tr>
-          <th class="text-primary">Postcode</th>
-          <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+          <th class="text-primary">Telephone</th>
+          <td contenteditable="true" spellcheck="true">012345 678901</td>
           <td>
             <div style="max-width: 1000%; max-width: none">
-              <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-              <div id="popoverHistory5Content" class="row" style="display: none">
+              <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+              <div id="popoverHistory6Content" class="row" style="display: none">
                 <div class="table-responsive">
                  <table class="table table-bordered table-sm text-left" style="width:200%;">
                    <thead class="table-info">
@@ -418,7 +448,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>FA12 8KE</td>
+                      <td>012345 678901</td>
                       <td>01/01/2018 13:42</td>
                       <td>EA</td>
                     </tr>
@@ -430,12 +460,12 @@
         </td>
       </tr>
       <tr>
-        <th class="text-primary">Telephone</th>
-        <td contenteditable="true" spellcheck="true">012345 678901</td>
+        <th class="text-primary">Mobile</th>
+        <td contenteditable="true" spellcheck="true">077123456789</td>
         <td>
           <div style="max-width: 1000%; max-width: none">
-            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-            <div id="popoverHistory6Content" class="row" style="display: none">
+            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+            <div id="popoverHistory7Content" class="row" style="display: none">
               <div class="table-responsive">
                <table class="table table-bordered table-sm text-left" style="width:200%;">
                  <thead class="table-info">
@@ -447,7 +477,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>012345 678901</td>
+                    <td>077123456789</td>
                     <td>01/01/2018 13:42</td>
                     <td>EA</td>
                   </tr>
@@ -459,12 +489,12 @@
       </td>
     </tr>
     <tr>
-      <th class="text-primary">Mobile</th>
-      <td contenteditable="true" spellcheck="true">077123456789</td>
+      <th class="text-primary">Email</th>
+      <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
       <td>
         <div style="max-width: 1000%; max-width: none">
-          <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-          <div id="popoverHistory7Content" class="row" style="display: none">
+          <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory8" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+          <div id="popoverHistory8Content" class="row" style="display: none">
             <div class="table-responsive">
              <table class="table table-bordered table-sm text-left" style="width:200%;">
                <thead class="table-info">
@@ -476,7 +506,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>077123456789</td>
+                  <td>citizen@twenty.com</td>
                   <td>01/01/2018 13:42</td>
                   <td>EA</td>
                 </tr>
@@ -488,12 +518,12 @@
     </td>
   </tr>
   <tr>
-    <th class="text-primary">Email</th>
-    <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+    <th class="text-primary">Date of Birth</th>
+    <td><input type="date" name="dob" value="1980-01-01"></td>
     <td>
       <div style="max-width: 1000%; max-width: none">
-        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory8" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-        <div id="popoverHistory8Content" class="row" style="display: none">
+        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory9" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+        <div id="popoverHistory9Content" class="row" style="display: none">
           <div class="table-responsive">
            <table class="table table-bordered table-sm text-left" style="width:200%;">
              <thead class="table-info">
@@ -505,7 +535,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>citizen@twenty.com</td>
+                <td>01/01/1980</td>
                 <td>01/01/2018 13:42</td>
                 <td>EA</td>
               </tr>
@@ -516,37 +546,9 @@
     </div>
   </td>
 </tr>
-<tr>
-  <th class="text-primary">Date of Birth</th>
-  <td><input type="date" name="dob" value="1980-01-01"></td>
-  <td>
-    <div style="max-width: 1000%; max-width: none">
-      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory9" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-      <div id="popoverHistory9Content" class="row" style="display: none">
-        <div class="table-responsive">
-         <table class="table table-bordered table-sm text-left" style="width:200%;">
-           <thead class="table-info">
-             <tr>
-              <th class="p-1">Entry</th>
-              <th class="p-1">Date & time</th>
-              <th class="p-1">By</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>01/01/1980</td>
-              <td>01/01/2018 13:42</td>
-              <td>EA</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</td>
-</tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 
@@ -554,200 +556,204 @@
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProperty" aria-expanded="false" aria-controls="collapseProperty">Property</a></h5>
   <div class="collapse col-12 p-0" id="collapseProperty" aria-labelledby="headingProperty">
-    <table class="table table-bordered table-sm text-left mb-0">
-      <thead>
-        <th colspan="2" class="bg-primary">Property Information</th>
-      </thead>
-      <tbody>
-        <tr>
-          <th class="text-primary">Property Type</th>
-          <td>
-            <form action="#" class="m-0">
-              <select name="propType">
-                <option value="propDefault"></option>
-                <option value="prop1">Bungalow</option>
-                <option value="prop2">Flat</option>
-                <option value="prop3">House</option>
-                <option value="prop4">Maisonette</option>
-              </select>
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">Home type</th>
-          <td>
-            <form action="#" class="m-0">
-              <select name="homeType">
-                <option value="homeDefault"></option>
-                <option value="home1">Detached</option>
-                <option value="home2">End terrace</option>
-                <option value="home3">Flat - 4 block</option>
-                <option value="home4">Flat - 6 block</option>
-                <option value="home5">High rise</option>
-                <option value="home6">Mid terrace</option>
-                <option value="home7">Multi storey flat</option>
-                <option value="home8">Semi</option>
-              </select>
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">Tenure</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">No of bedrooms</th>
-          <td>
-            <form action="#" class="m-0">
-              <select name="room">
-                <option value="default"></option>
-                <option value="room1">1</option>
-                <option value="room2">2</option>
-                <option value="room3">3</option>
-                <option value="room4">4</option>
-              </select>
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">Flat type</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Flat position</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Age of property</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left mb-0">
+        <thead>
+          <th colspan="2" class="bg-primary">Property Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">Property Type</th>
+            <td>
+              <form action="#" class="m-0">
+                <select name="propType">
+                  <option value="propDefault"></option>
+                  <option value="prop1">Bungalow</option>
+                  <option value="prop2">Flat</option>
+                  <option value="prop3">House</option>
+                  <option value="prop4">Maisonette</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Home type</th>
+            <td>
+              <form action="#" class="m-0">
+                <select name="homeType">
+                  <option value="homeDefault"></option>
+                  <option value="home1">Detached</option>
+                  <option value="home2">End terrace</option>
+                  <option value="home3">Flat - 4 block</option>
+                  <option value="home4">Flat - 6 block</option>
+                  <option value="home5">High rise</option>
+                  <option value="home6">Mid terrace</option>
+                  <option value="home7">Multi storey flat</option>
+                  <option value="home8">Semi</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Tenure</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">No of bedrooms</th>
+            <td>
+              <form action="#" class="m-0">
+                <select name="room">
+                  <option value="default"></option>
+                  <option value="room1">1</option>
+                  <option value="room2">2</option>
+                  <option value="room3">3</option>
+                  <option value="room4">4</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Flat type</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Flat position</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Age of property</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseHeating" aria-expanded="false" aria-controls="collapseHeating">Heating & Energy</a></h5>
   <div class="collapse col-12 p-0" id="collapseHeating" aria-labelledby="headingHeating">
-    <table class="table table-bordered table-sm text-left mb-0">
-      <thead>
-        <th colspan="2" class="bg-primary">Heating & Energy Information</th>
-      </thead>
-      <tbody>
-        <tr>
-          <th class="text-primary">What is the main wall type?</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-              <select name="wall" id="wall" onchange="showWall(this.options[this.selectedIndex].value)" required>
-                <option value="wallDefault"></option>
-                <option value="wall1">Cavity wall</option>
-                <option value="wall2">Cavity wall - filled</option>
-                <option value="wall3">Solid wall</option>
-                <option value="wall4">System built</option>
-                <option value="wall5">Other</option>
-              </select>
-            </form>
-            <div id="wallOther"></div>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">How much loft insulation?</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-              <select name="loft">
-                <option value="loftDefault"></option>
-                <option value="loft1">100ml or less</option>
-                <option value="loft2">150ml</option>
-                <option value="loft3">270ml (up to standard)</option>
-              </select>
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">What is property glazing type? <br>(%)</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-              <select name="glazing">
-                <option value="glazingDefault"></option>
-                <option value="glazing1">Double post 2003</option>
-                <option value="glazing2">Double pre 2003</option>
-                <option value="glazing3">Single</option>
-              </select>
-            </form>
-            <p contenteditable="true" spellcheck="true">To be added</p>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">Year windows were last updated? If known</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-              <select name="mainFuel" id="mainFuel" onchange="showFuel(this.options[this.selectedIndex].value)" required>
-                <option value="mainFuelDefault"></option>
-                <option value="mainFuel1">Electrical storage heating</option>
-                <option value="mainFuel2">Gas central heating</option>
-                <option value="mainFuel3">None</option>
-                <option value="mainFuel4">Other</option>
-              </select>
-            </form>
-            <div id="mainFuelOther"></div>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">How old is your boiler?</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Make and model of boiler</th>
-          <td><span class="font-italic" contenteditable="true" spellcheck="true">To be added</span><br>
-            <u><a href="https://www.ncm-pcdb.org.uk/sap/searchpod.jsp?id=17" target="_blank"class="text-info">Helpful website</a></u>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">What is property glazing type? (%)</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Do you use low energy light bulbs? (%)</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">What is the main heating fuel used to heat the property?</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">How old is your boiler?</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Make and model of boiler</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">How is your water heated?</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">What is the size of the hot water cylinder?</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">What type of insulaion does it have?</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
-          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left mb-0">
+        <thead>
+          <th colspan="2" class="bg-primary">Heating & Energy Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">What is the main wall type?</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+                <select name="wall" id="wall" onchange="showWall(this.options[this.selectedIndex].value)" required>
+                  <option value="wallDefault"></option>
+                  <option value="wall1">Cavity wall</option>
+                  <option value="wall2">Cavity wall - filled</option>
+                  <option value="wall3">Solid wall</option>
+                  <option value="wall4">System built</option>
+                  <option value="wall5">Other</option>
+                </select>
+              </form>
+              <div id="wallOther"></div>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">How much loft insulation?</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+                <select name="loft">
+                  <option value="loftDefault"></option>
+                  <option value="loft1">100ml or less</option>
+                  <option value="loft2">150ml</option>
+                  <option value="loft3">270ml (up to standard)</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">What is property glazing type? <br>(%)</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+                <select name="glazing">
+                  <option value="glazingDefault"></option>
+                  <option value="glazing1">Double post 2003</option>
+                  <option value="glazing2">Double pre 2003</option>
+                  <option value="glazing3">Single</option>
+                </select>
+              </form>
+              <p contenteditable="true" spellcheck="true">To be added</p>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Year windows were last updated? If known</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+                <select name="mainFuel" id="mainFuel" onchange="showFuel(this.options[this.selectedIndex].value)" required>
+                  <option value="mainFuelDefault"></option>
+                  <option value="mainFuel1">Electrical storage heating</option>
+                  <option value="mainFuel2">Gas central heating</option>
+                  <option value="mainFuel3">None</option>
+                  <option value="mainFuel4">Other</option>
+                </select>
+              </form>
+              <div id="mainFuelOther"></div>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">How old is your boiler?</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Make and model of boiler</th>
+            <td><span class="font-italic" contenteditable="true" spellcheck="true">To be added</span><br>
+              <u><a href="https://www.ncm-pcdb.org.uk/sap/searchpod.jsp?id=17" target="_blank"class="text-info">Helpful website</a></u>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">What is property glazing type? (%)</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Do you use low energy light bulbs? (%)</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">What is the main heating fuel used to heat the property?</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">How old is your boiler?</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Make and model of boiler</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">How is your water heated?</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">What is the size of the hot water cylinder?</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">What type of insulaion does it have?</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Is there a thermostat on the hot water cylinder?</th>
+            <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
@@ -755,129 +761,133 @@
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSafety" aria-expanded="false" aria-controls="collapseSafety">Safety</a></h5>
   <div class="collapse col-12 p-0" id="collapseSafety" aria-labelledby="headingSafety">
-    <table class="table table-bordered table-sm text-left mb-0">
-      <thead>
-        <th colspan="2" class="bg-primary">Safety Information</th>
-      </thead>
-      <tbody>
-        <tr>
-          <th class="text-primary">Do you have working smoke alarms?</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-              <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
-                <option value="smokeDefault"></option>
-                <option value="smoke1">No</option>
-                <option value="smoke2">Yes</option>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left mb-0">
+        <thead>
+          <th colspan="2" class="bg-primary">Safety Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">Do you have working smoke alarms?</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+                <select name="smokeAlarm" id="smokeAlarm" onchange="showSmoke(this.options[this.selectedIndex].value)" required>
+                  <option value="smokeDefault"></option>
+                  <option value="smoke1">No</option>
+                  <option value="smoke2">Yes</option>
+                </select>
+              </form>
+              <div id="smokeAlarmYes"></div>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Are carbon monoxide monitors fitted?</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+               <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
+                <option value="carbonDefault"></option>
+                <option value="carbon1">No</option>
+                <option value="carbon2">Yes</option>
               </select>
             </form>
-            <div id="smokeAlarmYes"></div>
+            <div id="carbonAlarmYes"></div>
           </td>
         </tr>
-        <tr>
-          <th class="text-primary">Are carbon monoxide monitors fitted?</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-             <select name="carbon" id="smokeAlarm" onchange="showCarbon(this.options[this.selectedIndex].value)" required>
-              <option value="carbonDefault"></option>
-              <option value="carbon1">No</option>
-              <option value="carbon2">Yes</option>
-            </select>
-          </form>
-          <div id="carbonAlarmYes"></div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseHousehold" aria-expanded="false" aria-controls="collapseHousehold">Household</a></h5>
   <div class="collapse col-12 p-0" id="collapseHousehold" aria-labelledby="headingHousehold">
-    <table class="table table-bordered table-sm text-left mb-0">
-      <thead>
-        <th colspan="2" class="bg-primary">Household Information</th>
-      </thead>
-      <tbody>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left mb-0">
+        <thead>
+          <th colspan="2" class="bg-primary">Household Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">Is a member of the house in receipt of any benefits?</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+               <select name="benefits">
+                <option value="benefitsDefault"></option>
+                <option value="benefits1">Yes</option>
+                <option value="benefits2">No</option>
+              </select>
+            </form>
+          </td>
+        </tr>
         <tr>
-          <th class="text-primary">Is a member of the house in receipt of any benefits?</th>
+          <th class="text-primary">Benefit type/s</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">Would you like a benefit check?</th>
           <td class="font-italic">
             <form action="#" class="m-0">
-             <select name="benefits">
-              <option value="benefitsDefault"></option>
-              <option value="benefits1">Yes</option>
-              <option value="benefits2">No</option>
+             <select name="check">
+              <option value="checkDefault"></option>
+              <option value="check1">Yes</option>
+              <option value="check2">No</option>
             </select>
           </form>
         </td>
       </tr>
       <tr>
-        <th class="text-primary">Benefit type/s</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Would you like a benefit check?</th>
+        <th class="text-primary">How many people live in the house?
+          <br>
+          <ul class="m-0">Adults</ul>
+          <ul class="m-0">Children</ul>
+        </th>
         <td class="font-italic">
-          <form action="#" class="m-0">
-           <select name="check">
-            <option value="checkDefault"></option>
-            <option value="check1">Yes</option>
-            <option value="check2">No</option>
-          </select>
-        </form>
-      </td>
-    </tr>
-    <tr>
-      <th class="text-primary">How many people live in the house?
-        <br>
-        <ul class="m-0">Adults</ul>
-        <ul class="m-0">Children</ul>
-      </th>
-      <td class="font-italic">
-        <br>
+          <br>
+          <div>
+           <form action="#" class="m-0">
+            <select name="adultOne">
+              <option value="adultDefault"></option>
+              <option value="adult1">1</option>
+              <option value="adult2">2</option>
+              <option value="adult3">3</option>
+              <option value="adult4">4</option>
+            </select>
+          </form>
+        </div>
         <div>
          <form action="#" class="m-0">
-          <select name="adultOne">
-            <option value="adultDefault"></option>
-            <option value="adult1">1</option>
-            <option value="adult2">2</option>
-            <option value="adult3">3</option>
-            <option value="adult4">4</option>
+          <select name="childrenOne">
+            <option value="childrenDeault"></option>
+            <option value="children0">0</option>
+            <option value="children1">1</option>
+            <option value="children2">2</option>
+            <option value="children3">3</option>
+            <option value="children4">4</option>
           </select>
         </form>
       </div>
-      <div>
-       <form action="#" class="m-0">
-        <select name="childrenOne">
-          <option value="childrenDeault"></option>
-          <option value="children0">0</option>
-          <option value="children1">1</option>
-          <option value="children2">2</option>
-          <option value="children3">3</option>
-          <option value="children4">4</option>
-        </select>
-      </form>
-    </div>
-  </td>
-</tr>
-<tr>
-  <th class="text-primary">Date of births for all children</th>
-  <td class="font-italic">
-    <input type="date" name="dob1" class="mb-2">
-    <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
-    <div id="content"></div>
-  </td>
-</tr>
-<tr>
- <th class="text-primary">Warm Home Discount: Core group</th>
- <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
-<tr>
- <th class="text-primary">Warm Home Discount: Broader group</th>
- <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-</tr>
+    </td>
+  </tr>
+  <tr>
+    <th class="text-primary">Date of births for all children</th>
+    <td class="font-italic">
+      <input type="date" name="dob1" class="mb-2">
+      <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
+      <div id="content"></div>
+    </td>
+  </tr>
+  <tr>
+   <th class="text-primary">Warm Home Discount: Core group</th>
+   <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+ </tr>
+ <tr>
+   <th class="text-primary">Warm Home Discount: Broader group</th>
+   <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+ </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 
@@ -885,234 +895,140 @@
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseElectricity" aria-expanded="false" aria-controls="collapseElectricity">Electricity</a></h5>
   <div class="collapse col-12 p-0" id="collapseElectricity" aria-labelledby="headingElectricity">
-    <table class="table table-bordered table-sm text-left mb-0">
-      <thead>
-        <th colspan="3" class="bg-primary">Electricity Information</th>
-      </thead>
-      <tbody>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left mb-0">
+        <thead>
+          <th colspan="3" class="bg-primary">Electricity Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">How does the householder pay fuel bills?</th>
+            <td class="font-italic" colspan="2">
+              <form action="#" class="m-0">
+               <select name="elecPay" id="elecPay" onchange="showElecPay(this.options[this.selectedIndex].value)" required>
+                <option value="elecDefault"></option>
+                <option value="elecPay1">Credit</option>
+                <option value="elecPay2">Prepaid</option>
+                <option value="elecPay3">Other</option>
+              </select>
+            </form>
+            <div id="elecPayOther"></div>
+          </td>
+        </tr>
         <tr>
-          <th class="text-primary">How does the householder pay fuel bills?</th>
-          <td class="font-italic" colspan="2">
-            <form action="#" class="m-0">
-             <select name="elecPay" id="elecPay" onchange="showElecPay(this.options[this.selectedIndex].value)" required>
-              <option value="elecDefault"></option>
-              <option value="elecPay1">Credit</option>
-              <option value="elecPay2">Prepaid</option>
-              <option value="elecPay3">Other</option>
-            </select>
-          </form>
-          <div id="elecPayOther"></div>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary" colspan="2">MPAN</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary" colspan="2">Supplier</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary" colspan="2">Account Reference</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary" colspan="2">Tariff</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary" colspan="2">Meter Serial Number</th>
-        <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr class="table-primary">
-        <th>Date</th>
-        <th>Reading</th>
-        <th>Time taken</th>
-      </tr>
-      <tr>
-        <td><input type="date" name="" class="m-1"></td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="time" name="" class="m-1"></td>
-      </tr>
-      <tr>
-        <td><input type="date" name="" class="m-1"></td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="time" name="" class="m-1"></td>
-      </tr>
-      <tr>
-        <td><input type="date" name="" class="m-1"></td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="time" name="" class="m-1"></td>
-      </tr>
-      <tr>
-        <td><input type="date" name="" class="m-1"></td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="time" name="" class="m-1"></td>
-      </tr>
-      <tr>
-        <td><input type="date" name="" class="m-1"></td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="time" name="" class="m-1"></td>
-      </tr>
-      <tr>
-        <td><input type="date" name="" class="m-1"></td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td><input type="time" name="" class="m-1"></td>
-      </tr>
-      <tr>
-        <th class="table-primary" colspan="3">Notes</th>
-      </tr>
-      <tr>
-        <th>Date</th>
-        <th colspan="2">Comments</th>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-    </tbody>
-  </table>
+          <th class="text-primary" colspan="2">MPAN</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary" colspan="2">Supplier</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary" colspan="2">Account Reference</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary" colspan="2">Tariff</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary" colspan="2">Meter Serial Number</th>
+          <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr class="table-primary">
+          <th>Date</th>
+          <th>Reading</th>
+          <th>Time taken</th>
+        </tr>
+        <tr>
+          <td><input type="date" name="" class="m-1"></td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td><input type="time" name="" class="m-1"></td>
+        </tr>
+        <tr>
+          <td><input type="date" name="" class="m-1"></td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td><input type="time" name="" class="m-1"></td>
+        </tr>
+        <tr>
+          <td><input type="date" name="" class="m-1"></td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td><input type="time" name="" class="m-1"></td>
+        </tr>
+        <tr>
+          <td><input type="date" name="" class="m-1"></td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td><input type="time" name="" class="m-1"></td>
+        </tr>
+        <tr>
+          <td><input type="date" name="" class="m-1"></td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td><input type="time" name="" class="m-1"></td>
+        </tr>
+        <tr>
+          <td><input type="date" name="" class="m-1"></td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td><input type="time" name="" class="m-1"></td>
+        </tr>
+        <tr>
+          <th class="table-primary" colspan="3">Notes</th>
+        </tr>
+        <tr>
+          <th>Date</th>
+          <th colspan="2">Comments</th>
+        </tr>
+        <tr>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseGas" aria-expanded="false" aria-controls="collapseGas">Gas</a></h5>
   <div class="collapse col-12 p-0" id="collapseGas" aria-labelledby="headingGas">
-    <table class="table table-bordered table-sm text-left mb-0">
-      <thead>
-        <th colspan="3" class="bg-primary">Gas Information</th>
-      </thead>
-      <tbody>
-        <tr>
-          <th class="text-primary">How does the householder pay fuel bills?</th>
-          <td class="font-italic" colspan="2">
-            <form action="#" class="m-0">
-             <select name="gasPay" id="gasPay" onchange="showGasPay(this.options[this.selectedIndex].value)" required>
-              <option value="gasDefault"></option>
-              <option value="gasPay1">Credit</option>
-              <option value="gasPay2">Prepaid</option>
-              <option value="gasPay3">Other</option>
-            </select>
-          </form>
-          <div id="gasPayOther"></div>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Meter point number</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Supplier</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Account Reference</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Tariff</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Meter Serial Number</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr class="table-primary">
-        <th>Date</th>
-        <th>Present reading</th>
-        <th>Previous reading</th>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-
-
-
-<div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseOil" aria-expanded="false" aria-controls="collapseOil">Oil</a></h5>
-  <div class="collapse col-12 p-0" id="collapseOil" aria-labelledby="headingOil">
-    <table class="table table-bordered table-sm text-left mb-0">
-      <thead>
-        <th colspan="3" class="bg-primary">Oil Information</th>
-      </thead>
-      <tbody>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left mb-0">
+        <thead>
+          <th colspan="3" class="bg-primary">Gas Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">How does the householder pay fuel bills?</th>
+            <td class="font-italic" colspan="2">
+              <form action="#" class="m-0">
+               <select name="gasPay" id="gasPay" onchange="showGasPay(this.options[this.selectedIndex].value)" required>
+                <option value="gasDefault"></option>
+                <option value="gasPay1">Credit</option>
+                <option value="gasPay2">Prepaid</option>
+                <option value="gasPay3">Other</option>
+              </select>
+            </form>
+            <div id="gasPayOther"></div>
+          </td>
+        </tr>
         <tr>
           <th class="text-primary">Meter point number</th>
           <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
         </tr>
         <tr>
           <th class="text-primary">Supplier</th>
-          <td colspan="2" class="m-0">
-            <div class="form-check form-check-inline">
-              <label class="form-check-label">
-                <input class="form-check-label" type="radio" value="2"> Same as Gas
-              </label>
-            </div>
-            <div>
-              <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
-            </div>
-          </td>
+          <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
         </tr>
         <tr>
           <th class="text-primary">Account Reference</th>
-          <td colspan="2" class="m-0">
-            <div class="form-check form-check-inline">
-              <label class="form-check-label">
-                <input class="form-check-label" type="radio" value="2"> Same as Gas
-              </label>
-            </div>
-            <div>
-              <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
-            </div>
-          </td>
+          <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
         </tr>
         <tr>
           <th class="text-primary">Tariff</th>
-          <td colspan="2" class="m-0">
-            <div class="form-check form-check-inline">
-              <label class="form-check-label">
-                <input class="form-check-label" type="radio" value="2"> Same as Gas
-              </label>
-            </div>
-            <div>
-              <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
-            </div>
-          </td>
+          <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
         </tr>
         <tr>
           <th class="text-primary">Meter Serial Number</th>
-          <td class="font-italic" colspan="2">To be added</td>
+          <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
         </tr>
         <tr class="table-primary">
           <th>Date</th>
@@ -1153,60 +1069,162 @@
     </table>
   </div>
 </div>
+</div>
+
+
+
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseOil" aria-expanded="false" aria-controls="collapseOil">Oil</a></h5>
+  <div class="collapse col-12 p-0" id="collapseOil" aria-labelledby="headingOil">
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left mb-0">
+        <thead>
+          <th colspan="3" class="bg-primary">Oil Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">Meter point number</th>
+            <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Supplier</th>
+            <td colspan="2" class="m-0">
+              <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-label" type="radio" value="2"> Same as Gas
+                </label>
+              </div>
+              <div>
+                <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Account Reference</th>
+            <td colspan="2" class="m-0">
+              <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-label" type="radio" value="2"> Same as Gas
+                </label>
+              </div>
+              <div>
+                <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Tariff</th>
+            <td colspan="2" class="m-0">
+              <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-label" type="radio" value="2"> Same as Gas
+                </label>
+              </div>
+              <div>
+                <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Meter Serial Number</th>
+            <td class="font-italic" colspan="2">To be added</td>
+          </tr>
+          <tr class="table-primary">
+            <th>Date</th>
+            <th>Present reading</th>
+            <th>Previous reading</th>
+          </tr>
+          <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          </tr>
+          <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          </tr>
+          <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          </tr>
+          <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          </tr>
+          <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          </tr>
+          <tr>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+            <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 
 <div id="module" class="container row mt-3">
   <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseService" aria-expanded="false" aria-controls="collapseService">Service</a></h5>
   <div class="collapse col-12 p-0" id="collapseService" aria-labelledby="headingService">
-    <table class="table table-bordered table-sm text-left">
-      <thead>
-        <th colspan="2" class="bg-primary">Service Information</th>
-      </thead>
-      <tbody>
-        <tr>
-          <th class="text-primary">Reference</th>
-          <td contenteditable="true" spellcheck="true">abd123</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Referred by</th>
-          <td>
-            <form action="#" class="m-0">
-              <select name="referral">
-                <option value="referralDefault"></option>
-                <option value="referral1">Advice works</option>
-                <option value="referral2">C4R</option>
-                <option value="referral3">Council</option>
-                <option value="referral4">Family First</option>
-                <option value="referral5">Food bank</option>
-                <option value="referral6">RAMH</option>
-              </select>
-            </form>
-            <p class="m-0" contenteditable="true" spellcheck="true">Name of individual</p>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">Reason for visit</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-              <select name="reasonType">
-                <option value="reasonDefault"></option>
-                <option value="reason1">Billing Issues</option>
-                <option value="reason2">Fuel Debt</option>
-                <option value="reason3">Meter Issues</option>
-              </select>
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">Visit Date</th>
-          <td contenteditable="true" spellcheck="true">01/01/2001</td>
-        </tr>
-        <tr>
-          <th class="text-primary">Advisor</th>
-          <td contenteditable="true" spellcheck="true">Energy Advocate 1</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm text-left">
+        <thead>
+          <th colspan="2" class="bg-primary">Service Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-primary">Reference</th>
+            <td contenteditable="true" spellcheck="true">abd123</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Referred by</th>
+            <td>
+              <form action="#" class="m-0">
+                <select name="referral">
+                  <option value="referralDefault"></option>
+                  <option value="referral1">Advice works</option>
+                  <option value="referral2">C4R</option>
+                  <option value="referral3">Council</option>
+                  <option value="referral4">Family First</option>
+                  <option value="referral5">Food bank</option>
+                  <option value="referral6">RAMH</option>
+                </select>
+              </form>
+              <p class="m-0" contenteditable="true" spellcheck="true">Name of individual</p>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Reason for visit</th>
+            <td class="font-italic">
+              <form action="#" class="m-0">
+                <select name="reasonType">
+                  <option value="reasonDefault"></option>
+                  <option value="reason1">Billing Issues</option>
+                  <option value="reason2">Fuel Debt</option>
+                  <option value="reason3">Meter Issues</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-primary">Visit Date</th>
+            <td contenteditable="true" spellcheck="true">01/01/2001</td>
+          </tr>
+          <tr>
+            <th class="text-primary">Advisor</th>
+            <td contenteditable="true" spellcheck="true">Energy Advocate 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
