@@ -57,14 +57,14 @@
       <div class="table-responsive mt-4">
         <table class="order-table table table-bordered table-sm text-left sortable" id="clientTable">
           <thead class="table-info">
-            <tr class="header">
+            <tr>
               <th data-sort="name">Forename <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10">
               </th>
               <th data-sort="name">Surname <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10">
               </th>
               <th data-sort="name">Address <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10">
               </th>
-              <th data-sort="date">Date joined <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th data-sort="date">Date referred <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
               <th data-sort="name">Status <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></i></th>
               <th data-sort="name">Referrer <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></i></th>
               <th>Notes</th>
@@ -89,200 +89,175 @@
               </td>
               <td>C4R : Name Thirty-seven</td>
               <td>
-
-                <button type="button" class="btn btn-outline-primary p-1 pr-2 pl-2" data-toggle="modal" data-target="#modalHistory1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-                  Add
-                </button>
-                <div class="modal fade " id="modalHistory1" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-                  <div class="modal-dialog" role="document" style="margin-top: 35%;">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="mt-2">Risk</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <p class="form-control" contenteditable="true" spellcheck="true">Add any important notes here...<br><br><br></p>
-                      </div>
-                      <div>
-                        <button onclick="dataAdded()" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Save</button>
-                      </div>
-                    </div>
+                <div id="notes">
+                  <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes1" aria-expanded="false" aria-controls="collapseNotes1" onclick="checkData('notes1', 'button1');" id="button1" data-text="Add"></button>
+                  <div class="collapse" id="collapseNotes1" aria-labelledby="headingNotes1">
+                    <div rows="3" id="notes1" contenteditable="true" spellcheck="true">Notes on Citizen 1</div>
                   </div>
                 </div>
-
-                <div style="max-width: 100%; visibility: hidden;" id="popoverButton1">
-                  <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a></p>
-                  <div id="popoverTaskList1Title" style="display: none">Notes</div>
-                  <div id="popoverTaskList1Content" style="display: none">
-                   <p class="font-italic" contenteditable="true" spellcheck="true" id="popovertaskList1Data">Can add details here</p>
-                 </div>
-               </div>
-
-             </td>
-           </tr>
-           <tr>
-            <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 6</a></u></td>
-            <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Six</a></u></td>
+              </td>
+            </tr>
+            <tr>
+              <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 6</a></u></td>
+              <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Six</a></u></td>
+              <td>12 Fake Street<br>FakeTown</td>
+              <td>03/03/2018</td>
+              <td>
+                <form action="#">
+                  <select name="refType">
+                    <option value="ref1">Active</option>
+                    <option value="ref2" selected="selected">Re-activated</option>
+                    <option value="ref3">Referral</option>
+                    <option value="ref4">Re-referral</option>
+                    <option value="ref5">Not active</option>
+                  </select>
+                </form>
+              </td>
+              <td>Family First : Name Three</td>
+              <td>
+               <div style="max-width: 100%;">
+                 <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
+                 <div id="popoverTaskList2Title" style="display: none">Notes</div>
+                 <div id="popoverTaskList2Content" style="display: none">
+                  <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 29</a></u></td>
+            <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Twenty-Nine</a></u></td>
             <td>12 Fake Street<br>FakeTown</td>
-            <td>03/03/2018</td>
+            <td>08/08/2018</td>
             <td>
               <form action="#">
                 <select name="refType">
                   <option value="ref1">Active</option>
-                  <option value="ref2" selected="selected">Re-activated</option>
+                  <option value="ref2">Re-activated</option>
                   <option value="ref3">Referral</option>
                   <option value="ref4">Re-referral</option>
-                  <option value="ref5">Not active</option>
+                  <option value="ref5" selected="selected">Not active</option>
                 </select>
               </form>
             </td>
-            <td>Family First : Name Three</td>
+            <td>Council : Name Fourteen</td>
             <td>
              <div style="max-width: 100%;">
-               <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
-               <div id="popoverTaskList2Title" style="display: none">Notes</div>
-               <div id="popoverTaskList2Content" style="display: none">
+               <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
+               <div id="popoverTaskList3Title" style="display: none">Notes</div>
+               <div id="popoverTaskList3Content" style="display: none">
                 <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
               </div>
             </div>
           </td>
         </tr>
         <tr>
-          <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 29</a></u></td>
-          <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Twenty-Nine</a></u></td>
+          <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 18</a></u></td>
+          <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Eighteen</a></u></td>
           <td>12 Fake Street<br>FakeTown</td>
-          <td>08/08/2018</td>
+          <td>01/01/2018</td>
           <td>
             <form action="#">
               <select name="refType">
                 <option value="ref1">Active</option>
-                <option value="ref2">Re-activated</option>
+                <option value="ref2" selected="selected">Re-activated</option>
                 <option value="ref3">Referral</option>
                 <option value="ref4">Re-referral</option>
-                <option value="ref5" selected="selected">Not active</option>
+                <option value="ref5">Not active</option>
               </select>
             </form>
           </td>
-          <td>Council : Name Fourteen</td>
+          <td>RAMH : Name Three</td>
           <td>
            <div style="max-width: 100%;">
-             <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
-             <div id="popoverTaskList3Title" style="display: none">Notes</div>
-             <div id="popoverTaskList3Content" style="display: none">
+             <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
+             <div id="popoverTaskList4Title" style="display: none">Notes</div>
+             <div id="popoverTaskList4Content" style="display: none">
               <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
             </div>
           </div>
         </td>
       </tr>
       <tr>
-        <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 18</a></u></td>
-        <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Eighteen</a></u></td>
+        <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 31</a></u></td>
+        <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Thirty-One</a></u></td>
         <td>12 Fake Street<br>FakeTown</td>
-        <td>01/01/2018</td>
+        <td>09/09/2018</td>
         <td>
           <form action="#">
             <select name="refType">
-              <option value="ref1">Active</option>
-              <option value="ref2" selected="selected">Re-activated</option>
+              <option value="ref1" selected="selected">Active</option>
+              <option value="ref2">Re-activated</option>
               <option value="ref3">Referral</option>
               <option value="ref4">Re-referral</option>
               <option value="ref5">Not active</option>
             </select>
           </form>
         </td>
-        <td>RAMH : Name Three</td>
+        <td>RAMH : Name Twenty-six</td>
         <td>
          <div style="max-width: 100%;">
-           <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
-           <div id="popoverTaskList4Title" style="display: none">Notes</div>
-           <div id="popoverTaskList4Content" style="display: none">
+           <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
+           <div id="popoverTaskList5Title" style="display: none">Notes</div>
+           <div id="popoverTaskList5Content" style="display: none">
             <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
           </div>
         </div>
       </td>
     </tr>
     <tr>
-      <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 31</a></u></td>
-      <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Thirty-One</a></u></td>
+      <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 3</a></u></td>
+      <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Three</a></u></td>
       <td>12 Fake Street<br>FakeTown</td>
-      <td>09/09/2018</td>
+      <td>07/07/2018</td>
       <td>
         <form action="#">
           <select name="refType">
-            <option value="ref1" selected="selected">Active</option>
-            <option value="ref2">Re-activated</option>
+            <option value="ref1">Active</option>
+            <option value="ref2" selected="selected">Re-activated</option>
             <option value="ref3">Referral</option>
             <option value="ref4">Re-referral</option>
             <option value="ref5">Not active</option>
           </select>
         </form>
       </td>
-      <td>RAMH : Name Twenty-six</td>
+      <td>Family First : Name Sixty-five</td>
       <td>
        <div style="max-width: 100%;">
-         <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
-         <div id="popoverTaskList5Title" style="display: none">Notes</div>
-         <div id="popoverTaskList5Content" style="display: none">
+         <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
+         <div id="popoverTaskList6Title" style="display: none">Notes</div>
+         <div id="popoverTaskList6Content" style="display: none">
           <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
         </div>
       </div>
     </td>
   </tr>
   <tr>
-    <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 3</a></u></td>
-    <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Three</a></u></td>
+    <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 13</a></u></td>
+    <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Thirteen</a></u></td>
     <td>12 Fake Street<br>FakeTown</td>
-    <td>07/07/2018</td>
+    <td>02/02/2018</td>
     <td>
       <form action="#">
         <select name="refType">
           <option value="ref1">Active</option>
-          <option value="ref2" selected="selected">Re-activated</option>
+          <option value="ref2">Re-activated</option>
           <option value="ref3">Referral</option>
-          <option value="ref4">Re-referral</option>
+          <option value="ref4" selected="selected">Re-referral</option>
           <option value="ref5">Not active</option>
         </select>
       </form>
     </td>
-    <td>Family First : Name Sixty-five</td>
+    <td>Family First : Name Fifty-nine</td>
     <td>
      <div style="max-width: 100%;">
-       <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList6" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
-       <div id="popoverTaskList6Title" style="display: none">Notes</div>
-       <div id="popoverTaskList6Content" style="display: none">
+       <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
+       <div id="popoverTaskList7Title" style="display: none">Notes</div>
+       <div id="popoverTaskList7Content" style="display: none">
         <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
       </div>
     </div>
   </td>
-</tr>
-<tr>
-  <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 13</a></u></td>
-  <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Thirteen</a></u></td>
-  <td>12 Fake Street<br>FakeTown</td>
-  <td>02/02/2018</td>
-  <td>
-    <form action="#">
-      <select name="refType">
-        <option value="ref1">Active</option>
-        <option value="ref2">Re-activated</option>
-        <option value="ref3">Referral</option>
-        <option value="ref4" selected="selected">Re-referral</option>
-        <option value="ref5">Not active</option>
-      </select>
-    </form>
-  </td>
-  <td>Family First : Name Fifty-nine</td>
-  <td>
-   <div style="max-width: 100%;">
-     <p class="m-0 p-0"><a tabindex="0" role="button" class="btn btn-outline-primary" data-placement="left" data-trigger="click" id="popoverTaskList7" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a></p>
-     <div id="popoverTaskList7Title" style="display: none">Notes</div>
-     <div id="popoverTaskList7Content" style="display: none">
-      <p class="font-italic" contenteditable="true" spellcheck="true">Can add details here</p>
-    </div>
-  </div>
-</td>
 </tr>
 <tr>
   <td><u><a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="text-info">Citizen 22</a></u></td>
