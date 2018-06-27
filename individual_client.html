@@ -1036,14 +1036,9 @@
 </div>
 </div>
 
-
-<div id="information-nav-content" class="tab-content">
-
-
-
-
-
-  <div role="tadpanel" class="tab-pane fade" id="gas" aria-labelledby="gas-tab">
+<div id="module" class="container row mt-3">
+  <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseElectricity" aria-expanded="false" aria-controls="collapseElectricity">Electricity</a></h5>
+  <div class="collapse col-12" id="collapseElectricity" aria-labelledby="headingElectricity">
     <table class="table table-bordered table-sm text-left mb-0">
       <thead>
         <th colspan="3" class="bg-primary">Gas Information</th>
@@ -1121,192 +1116,202 @@
     </tbody>
   </table>
 </div>
-
-
-<div role="tadpanel" class="tab-pane fade" id="oil" aria-labelledby="oil-tab">
-  <table class="table table-bordered table-sm text-left mb-0">
-    <thead>
-      <th colspan="3" class="bg-primary">Oil Information</th>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="text-primary">Meter point number</th>
-        <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Supplier</th>
-        <td colspan="2" class="m-0">
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-label" type="radio" value="2"> Same as Gas
-            </label>
-          </div>
-          <div>
-            <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Account Reference</th>
-        <td colspan="2" class="m-0">
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-label" type="radio" value="2"> Same as Gas
-            </label>
-          </div>
-          <div>
-            <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Tariff</th>
-        <td colspan="2" class="m-0">
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-label" type="radio" value="2"> Same as Gas
-            </label>
-          </div>
-          <div>
-            <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Meter Serial Number</th>
-        <td class="font-italic" colspan="2">To be added</td>
-      </tr>
-      <tr class="table-primary">
-        <th>Date</th>
-        <th>Present reading</th>
-        <th>Previous reading</th>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-      <tr>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-        <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
-      </tr>
-    </tbody>
-  </table>
 </div>
 
 
-<div role="tadpanel" class="tab-pane fade" id="service" aria-labelledby="service-tab">
-  <table class="table table-bordered table-sm text-left">
-    <thead>
-      <th colspan="2" class="bg-primary">Service Information</th>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="text-primary">Reference</th>
-        <td contenteditable="true" spellcheck="true">abd123</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Referred by</th>
-        <td>
-          <form action="#" class="m-0">
-            <select name="referral">
-              <option value="referralDefault"></option>
-              <option value="referral1">Advice works</option>
-              <option value="referral2">C4R</option>
-              <option value="referral3">Council</option>
-              <option value="referral4">Family First</option>
-              <option value="referral5">Food bank</option>
-              <option value="referral6">RAMH</option>
-            </select>
-          </form>
-          <p class="m-0" contenteditable="true" spellcheck="true">Name of individual</p>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Reason for visit</th>
-        <td class="font-italic">
-          <form action="#" class="m-0">
-            <select name="reasonType">
-              <option value="reasonDefault"></option>
-              <option value="reason1">Billing Issues</option>
-              <option value="reason2">Fuel Debt</option>
-              <option value="reason3">Meter Issues</option>
-            </select>
-          </form>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Visit Date</th>
-        <td contenteditable="true" spellcheck="true">01/01/2001</td>
-      </tr>
-      <tr>
-        <th class="text-primary">Advisor</th>
-        <td contenteditable="true" spellcheck="true">Energy Advocate 1</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<div id="information-nav-content" class="tab-content">
 
 
-<div role="tadpanel" class="tab-pane fade" id="data" aria-labelledby="data-tab">
-  <table class="table table-bordered table-sm text-left mb-0">
-    <thead>
-      <th colspan="2" class="bg-primary">Data Protection & Mandate</th>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="text-primary">Data Proection Act 1998</th>
-      </tr>
-      <tr>
-        <td>
-          In order to help you we need to maintain a record of your case, which may contain sensitive personal data. The law says that we must get your consent to do this. Everything you tell us will be treated confidentially.<br>
-          For the purposes of the Data Protection Act the controller is Renfrewshite Council<br>
-          Renfrewshire Council is not allowed under the Data Protection Act to discuss anything about your enquiry with a third party without you giving authority to do that.
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Mandate</th>
-      </tr>
-      <tr>
-        <td>
-          I <strong contenteditable="true" spellcheck="true">"name"</strong> authorise Renfrewshire Council to act on my behalf and discuss my electricity and or gas account with my energy supplier.<br>
-          Signature Date<br>
-          In order to ensure you are receiving the most up to date grants and offers through the Scottish Government, we are able to apss your details on to the local Home Energy Scotland Advice Line for a tailored assessment. By signing below, we accept that this is authorisation for us to share the necessary personal data for you to be assessed for measures that we are available from Home Energy Scotland.<br>
-          Signature Date
-          <div class="row m-2">
-            <p class="col-6">
-              Print report <br><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
-            </p>
-            <p class="col-6">         
-              Download report as a PDF <br><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Download</a>
-            </p>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+
+
+ 
+
+
+  <div role="tadpanel" class="tab-pane fade" id="oil" aria-labelledby="oil-tab">
+    <table class="table table-bordered table-sm text-left mb-0">
+      <thead>
+        <th colspan="3" class="bg-primary">Oil Information</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="text-primary">Meter point number</th>
+          <td class="font-italic" colspan="2" contenteditable="true" spellcheck="true">To be added</td>
+        </tr>
+        <tr>
+          <th class="text-primary">Supplier</th>
+          <td colspan="2" class="m-0">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-label" type="radio" value="2"> Same as Gas
+              </label>
+            </div>
+            <div>
+              <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Account Reference</th>
+          <td colspan="2" class="m-0">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-label" type="radio" value="2"> Same as Gas
+              </label>
+            </div>
+            <div>
+              <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Tariff</th>
+          <td colspan="2" class="m-0">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-label" type="radio" value="2"> Same as Gas
+              </label>
+            </div>
+            <div>
+              <label class="form-check-label font-italic" contenteditable="true" spellcheck="true">To be added</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Meter Serial Number</th>
+          <td class="font-italic" colspan="2">To be added</td>
+        </tr>
+        <tr class="table-primary">
+          <th>Date</th>
+          <th>Present reading</th>
+          <th>Previous reading</th>
+        </tr>
+        <tr>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+        <tr>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+          <td class="font-italic" contenteditable="true" spellcheck="true">No data</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div role="tadpanel" class="tab-pane fade" id="service" aria-labelledby="service-tab">
+    <table class="table table-bordered table-sm text-left">
+      <thead>
+        <th colspan="2" class="bg-primary">Service Information</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="text-primary">Reference</th>
+          <td contenteditable="true" spellcheck="true">abd123</td>
+        </tr>
+        <tr>
+          <th class="text-primary">Referred by</th>
+          <td>
+            <form action="#" class="m-0">
+              <select name="referral">
+                <option value="referralDefault"></option>
+                <option value="referral1">Advice works</option>
+                <option value="referral2">C4R</option>
+                <option value="referral3">Council</option>
+                <option value="referral4">Family First</option>
+                <option value="referral5">Food bank</option>
+                <option value="referral6">RAMH</option>
+              </select>
+            </form>
+            <p class="m-0" contenteditable="true" spellcheck="true">Name of individual</p>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Reason for visit</th>
+          <td class="font-italic">
+            <form action="#" class="m-0">
+              <select name="reasonType">
+                <option value="reasonDefault"></option>
+                <option value="reason1">Billing Issues</option>
+                <option value="reason2">Fuel Debt</option>
+                <option value="reason3">Meter Issues</option>
+              </select>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Visit Date</th>
+          <td contenteditable="true" spellcheck="true">01/01/2001</td>
+        </tr>
+        <tr>
+          <th class="text-primary">Advisor</th>
+          <td contenteditable="true" spellcheck="true">Energy Advocate 1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div role="tadpanel" class="tab-pane fade" id="data" aria-labelledby="data-tab">
+    <table class="table table-bordered table-sm text-left mb-0">
+      <thead>
+        <th colspan="2" class="bg-primary">Data Protection & Mandate</th>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="text-primary">Data Proection Act 1998</th>
+        </tr>
+        <tr>
+          <td>
+            In order to help you we need to maintain a record of your case, which may contain sensitive personal data. The law says that we must get your consent to do this. Everything you tell us will be treated confidentially.<br>
+            For the purposes of the Data Protection Act the controller is Renfrewshite Council<br>
+            Renfrewshire Council is not allowed under the Data Protection Act to discuss anything about your enquiry with a third party without you giving authority to do that.
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Mandate</th>
+        </tr>
+        <tr>
+          <td>
+            I <strong contenteditable="true" spellcheck="true">"name"</strong> authorise Renfrewshire Council to act on my behalf and discuss my electricity and or gas account with my energy supplier.<br>
+            Signature Date<br>
+            In order to ensure you are receiving the most up to date grants and offers through the Scottish Government, we are able to apss your details on to the local Home Energy Scotland Advice Line for a tailored assessment. By signing below, we accept that this is authorisation for us to share the necessary personal data for you to be assessed for measures that we are available from Home Energy Scotland.<br>
+            Signature Date
+            <div class="row m-2">
+              <p class="col-6">
+                Print report <br><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+              </p>
+              <p class="col-6">         
+                Download report as a PDF <br><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Download</a>
+              </p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 </div>
