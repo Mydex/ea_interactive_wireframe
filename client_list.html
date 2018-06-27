@@ -478,7 +478,35 @@
 </div>
 </div>
 
+</main>
+
 <script>
+
+  function checkData(text, buttonName) {
+    var textContent = document.getElementById(text).innerHTML;
+    console.log(textContent);
+    if (textContent === "Add any important notes here...") {
+      document.getElementById(buttonName).dataset.text = 'Add';
+    } else {
+      document.getElementById(buttonName).dataset.text = 'View';
+    }
+    console.log(document.getElementById(buttonName).dataset.text);
+  }
+
+  function start(){
+    checkData('notes1', 'button1');
+    checkData('notes2', 'button2');
+    checkData('notes3', 'button3');
+    checkData('notes4', 'button4');
+    checkData('notes5', 'button5');
+    checkData('notes6', 'button6');
+    checkData('notes7', 'button7');
+    checkData('notes8', 'button8');
+    checkData('notes9', 'button9');
+  }
+
+  window.onload = start();
+
   (function(document) {
     'use strict';
     var TableFilter = (function(Arr) {
@@ -519,274 +547,6 @@
 </script>
 
 <script>
-
-  $(function(){
-    $("#popoverTaskList1").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverTaskList1Content').html();
-      },
-      title: function() {
-        return $('#popoverTaskList1Title').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverTaskList1').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverTaskList2").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverTaskList2Content').html();
-     },
-     title: function() {
-       return $('#popoverTaskList2Title').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverTaskList2').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverTaskList3").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverTaskList3Content').html();
-      },
-      title: function() {
-        return $('#popoverTaskList3Title').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverTaskList3').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverTaskList4").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverTaskList4Content').html();
-     },
-     title: function() {
-       return $('#popoverTaskList4Title').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverTaskList4').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverTaskList5").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverTaskList5Content').html();
-      },
-      title: function() {
-        return $('#popoverTaskList5Title').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverTaskList5').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverTaskList6").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverTaskList6Content').html();
-     },
-     title: function() {
-       return $('#popoverTaskList6Title').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverTaskList6').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverTaskList7").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverTaskList7Content').html();
-      },
-      title: function() {
-        return $('#popoverTaskList7Title').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverTaskList7').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverTaskList8").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverTaskList8Content').html();
-     },
-     title: function() {
-       return $('#popoverTaskList8Title').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverTaskList8').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverTaskList9").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverTaskList9Content').html();
-      },
-      title: function() {
-        return $('#popoverTaskList9Title').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverTaskList9').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverTaskList10").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverTaskList10Content').html();
-     },
-     title: function() {
-       return $('#popoverTaskList10Title').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverTaskList10').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverTaskList11").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverTaskList11Content').html();
-      },
-      title: function() {
-        return $('#popoverTaskList11Title').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverTaskList11').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverTaskList12").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverTaskList12Content').html();
-     },
-     title: function() {
-       return $('#popoverTaskList12Title').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverTaskList12').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-  $(function(){
-    $("#popoverTaskList13").popover({
-      html : true, 
-      content: function() {
-        return $('#popoverTaskList13Content').html();
-      },
-      title: function() {
-        return $('#popoverTaskList13Title').html();
-      }
-    });
-  })
-  $('body').on('click', function (e) {
-   $('#popoverTaskList13').each(function () {
-     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-       $(this).popover('hide');
-     }
-   });
- });
-
-  $(function(){
-   $("#popoverTaskList14").popover({
-     html : true, 
-     content: function() {
-       return $('#popoverTaskList14Content').html();
-     },
-     title: function() {
-       return $('#popoverTaskList14Title').html();
-     }
-   });
- })
-  $('body').on('click', function (e) {
-    $('#popoverTaskList14').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-        $(this).popover('hide');
-      }
-    });
-  });
-
-
     // For sorting tables
     var compare = {
       name: function(a, b) {
@@ -841,28 +601,15 @@
         }
       });
     });
-
-    //change name on button
-    function dataAdded()
-    {
-      // var elem = document.getElementById("popoverTaskList1");
-      document.getElementById("popoverButton1").style.visibility = "visible";
-      document.getElementById("popoverTaskList1").style.visibility = "hidden";
-      // var data =  document.getElementById("popovertaskList1Data");
-      // if (data.value=="Can add details here") elem.value = "Add";
-      // else elem.value = "View";
-    }
   </script>
 
-</main>
-
-<footer class="mt-2" style="height:30px; margin-top:-30px;">
-  <nav class="navbar navbar-expand-sm">  
-    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-  </nav>
-</footer>
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
 </body>
 
 <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
