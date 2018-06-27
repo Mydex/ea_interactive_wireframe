@@ -455,6 +455,16 @@
 
 </main>
 
+<style id="moduleStyleCheck">
+#notes button.collapsed:after  {
+  content: attr(data-text);
+}
+
+#notes button:not(.collapsed):after {
+  content: attr(data-text);
+}
+</style>
+
 <script>
 
   function checkData(text, buttonName) {
