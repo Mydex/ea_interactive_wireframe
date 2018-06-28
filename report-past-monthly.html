@@ -47,95 +47,62 @@
   <main style=" min-height:72%;">
     <div class="container">
       <h3 class="mt-4 mb-4"> Past Monthly Activity</h3>
-      <div class="row">
-        <div class="col-lg-6 col-md-6">
-          <h4 class="mt-4 mb-2">Pick Month below</h4>
-          <div class="row container">
-            <form action="#" class="m-0">
-             <select name="month" onchange="showData(this.options[this.selectedIndex].value)" required>
-              <option value="default"></option>
-              <option value="Jan">Jan</option>
-              <option value="Feb">Feb</option>
-              <option value="Mar">Mar</option>
-              <option value="Apr">Apr</option>
-            </select>
-          </form>
-        </div>
-        <script type="text/javascript">
-         function showData(month){
-          document.getElementById('dataMonthJan').style.display = "none";
-          document.getElementById('dataMonthFeb').style.display = "none";
-          document.getElementById('dataMonthMar').style.display = "none";
-          document.getElementById('dataMonthApr').style.display = "none";
 
-          if(month == 'Jan') {
-            document.getElementById('dataMonthJan').style.display = "block";
-          } else if (month == 'Feb') {
-            document.getElementById('dataMonthFeb').style.display = "block";
-          } else if (month == 'Mar') {
-            document.getElementById('dataMonthMar').style.display = "block";
-          } else if (month == 'Apr') {
-            document.getElementById('dataMonthApr').style.display = "block";
-          } 
-        }
-      </script>
-    </div>
-  </div>
-  <div id="dataMonthJan" style="display: none;">
-    <div class="row">
-      <div class="px-3 col-md-6 col-lg-6">
-        <h5 class="mt-4">January Stats</h5>
-        <table class="table table-bordered text-left">
-          <tbody>
-            <tr>
-              <th>Number of active clients</th>
-              <td class="text-right">13</td>
-            </tr>
-            <tr>
-             <th>Number of home visits<br>Number of no-shows
-             </th>
-             <td class="text-right">21<br>3
-             </td>
-           </tr>
-           <tr>
-             <th>Number of applications
-              <li>Active</li>
-              <li>Finished</li>
-            </th>
-            <td class="text-right"><br>7<br>16
-            </td>
-          </tr>
-          <tr>
-           <th>Number of services progressed</th>
-           <td class="text-right">15</td>
-         </tr>
+      <div id="dataMonthJan" style="display: none;">
+        <div class="row">
+          <div class="px-3 col-md-6 col-lg-6">
+            <h5 class="mt-4">January Stats</h5>
+            <table class="table table-bordered text-left">
+              <tbody>
+                <tr>
+                  <th>Number of active clients</th>
+                  <td class="text-right">13</td>
+                </tr>
+                <tr>
+                 <th>Number of home visits<br>Number of no-shows
+                 </th>
+                 <td class="text-right">21<br>3
+                 </td>
+               </tr>
+               <tr>
+                 <th>Number of applications
+                  <li>Active</li>
+                  <li>Finished</li>
+                </th>
+                <td class="text-right"><br>7<br>16
+                </td>
+              </tr>
+              <tr>
+               <th>Number of services progressed</th>
+               <td class="text-right">15</td>
+             </tr>
+             <tr>
+               <th>Number of referrals</th>
+               <td class="text-right">5</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+     <div class="px-3 col-md-6 col-lg-6">
+      <h5 class="mt-4">January Savings</h5>
+      <table class="table table-bordered text-left">
+       <tbody>
          <tr>
-           <th>Number of referrals</th>
-           <td class="text-right">5</td>
-         </tr>
-       </tbody>
-     </table>
-   </div>
- </div>
- <div class="px-3 col-md-6 col-lg-6">
-  <h5 class="mt-4">January Savings</h5>
-  <table class="table table-bordered text-left">
-   <tbody>
-     <tr>
-      <th>Total savings made</th>
-      <td class="text-right">£5550</td>
-    </tr>
-    <tr>
-      <th>Totaly capital savings</th>
-      <td class="text-right"></td>
-    </tr>
-    <tr>
-      <th>Totaly ongoing savings</th>
-      <td class="text-right"></td>
-    </tr>
-  </tbody>  
-</table>
-</div>
+          <th>Total savings made</th>
+          <td class="text-right">£5550</td>
+        </tr>
+        <tr>
+          <th>Totaly capital savings</th>
+          <td class="text-right"></td>
+        </tr>
+        <tr>
+          <th>Totaly ongoing savings</th>
+          <td class="text-right"></td>
+        </tr>
+      </tbody>  
+    </table>
+  </div>
 </div>
 
 <div id="dataMonthFeb" style="display: none;">
