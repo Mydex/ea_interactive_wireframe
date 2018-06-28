@@ -181,7 +181,7 @@
           <option value="phoneVisit">Phone call - Arrange Visit</option>
           <option value="phoneOngoing">Phone call - Ongoing case</option>
           <option value="visitFirst">Visit - First Visit</option>
-          <option value="visitFollpw">Visit - Follow up visit</option>
+          <option value="visitFollow">Visit - Follow up visit</option>
           <option value="admin">Admin</option>
           <option value="emailOngoing">Email - Ongoing case</option>
           <option value="event">Events</option>
@@ -249,8 +249,8 @@
 
 <script>
   function showForm(name){
-    console.log('started');
-    if(name == 'homeVisit') {
+    console.log(name);
+    if( name == 'visitFirst' ) {
       document.getElementById('formGenerated').innerHTML =
       '<form action="/#">\
       <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
@@ -283,7 +283,7 @@
       </div>\
       </div>\
       </form>';
-    } else if ( name == 'phoneCitizen'){
+    } else if ( name == 'phoneOngoing' ) {
       document.getElementById('formGenerated').innerHTML =
       '<div>\
       <label>Task Details</label>\
@@ -307,7 +307,7 @@
       <option>Citizen Thirty-six</option>\
       </select>\
       </div>';
-    } else if ( name == 'phoneHomeVisit'){
+    } else if ( name == 'phoneVisit' ) {
       document.getElementById('formGenerated').innerHTML =
       '<div>\
       <label>Task Details</label>\
@@ -331,7 +331,112 @@
       <option>Citizen Thirty-six</option>\
       </select>\
       </div>';
-    } else if ( name == 'contactUpdate'){
+    } else if ( name == 'emailOngoing' ) {
+      document.getElementById('formGenerated').innerHTML =
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if ( name == 'visitFollow' ) {
+      document.getElementById('formGenerated').innerHTML =
+      '<form action="/#">\
+      <label for="clientName" class="mt-1 mb-1">Assign to a client</label>\
+      <select id="clientName" id="clientName" class="form-control mb-1" onchange="showClientInfo(this.options[this.selectedIndex].value)" required>\
+      <option value="noClient">No client</option>\
+      <option value="client">Citizen Four</option>\
+      <option value="client">Citizen Seven</option>\
+      <option value="client">Citizen Nine</option>\
+      <option value="client">Citizen Thirteen</option>\
+      <option value="client">Citizen Fifteen</option>\
+      <option value="client">Citizen Ninenteen</option>\
+      <option value="client">Citizen Twenty</option>\
+      <option value="client">Citizen Twenty-four</option>\
+      <option value="client">Citizen Twenty-eight</option>\
+      <option value="client">Citizen Twenty-nine</option>\
+      <option value="client">Citizen Thirty-two</option>\
+      <option value="client">Citizen Thirty-six</option>\
+      </select>\
+      <div id="clientInfo"></div>\
+      <div class="mt-1 mb-1"><label placeholder="01/01/2018" class="mt-0 mb-0">Date</label></div>\
+      <input class=" mt-0 p-1 form-control" type="date">\
+      <div class="row mt-1 mb-1">\
+      <div class="col-lg-6 col-md-6">\
+      <div class="mt-0 mb-0"><label class="mt-0 mb-0">Start time</label></div>\
+      <input class="mt-0 p-1 form-control" type="time">\
+      </div>\
+      <div class="col-lg-6 col-md-6">\
+      <div class="mt-0 mb-0"><label class="mt-0 mb-0">End time</label></div>\
+      <input class="mt-0 p-1 form-control" type="time">\
+      </div>\
+      </div>\
+      </form>';
+    } else if ( name == 'admin' ) {
+      document.getElementById('formGenerated').innerHTML =
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if ( name == 'event' ) {
+      document.getElementById('formGenerated').innerHTML =
+      '<div>\
+      <label>Task Details</label>\
+      <textarea class="form-control form-control-sm mb-0" rows="4" spellcheck="true"></textarea>\
+      </div>\
+      <div>\
+      <label for="taskType" class="mt-1 mb-1">Assign to a client</label>\
+      <select class="form-control form-control-sm" id="taskType">\
+      <option>N/a</option>\
+      <option>Citizen Four</option>\
+      <option>Citizen Seven</option>\
+      <option>Citizen Nine</option>\
+      <option>Citizen Thirteen</option>\
+      <option>Citizen Fifteen</option>\
+      <option>Citizen Ninenteen</option>\
+      <option>Citizen Twenty</option>\
+      <option>Citizen Twenty-four</option>\
+      <option>Citizen Twenty-eight</option>\
+      <option>Citizen Twenty-nine</option>\
+      <option>Citizen Thirty-two</option>\
+      <option>Citizen Thirty-six</option>\
+      </select>\
+      </div>';
+    } else if ( name == 'trainingWork' ) {
       document.getElementById('formGenerated').innerHTML =
       '<div>\
       <label>Task Details</label>\
@@ -359,6 +464,7 @@
       document.getElementById('formGenerated').innerHTML='';
     } 
   }
+
 
   function showClientInfo(name){
     if(name == 'client') {
