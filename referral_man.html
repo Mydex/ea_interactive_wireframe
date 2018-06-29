@@ -291,6 +291,35 @@
 </div>
 </main>
 
+<script type="text/javascript">
+  function showField(name){
+    if(name == 'cit1') {
+      document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+    } else if (name == 'cit2') {
+      document.getElementById('input1').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    } else if (name == 'cit3') {
+      document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    } else {
+      document.getElementById('input1').innerHTML='';
+    } 
+  }
+
+  function showRefField(name){
+    if (name =='ref1') {
+      document.getElementById('input2').innerHTML = 'No contact information will be saved for referrer';
+    } else if(name == 'ref2') {
+      document.getElementById('input2').innerHTML = 'Referrer mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+    } else if (name == 'ref3') {
+      document.getElementById('input2').innerHTML = 'Referrer email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    } else if (name == 'ref4') {
+      document.getElementById('input2').innerHTML = 'Referrer mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Referrer email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    } else {
+      document.getElementById('input2').innerHTML='';
+    } 
+  }
+
+</script>
+
 <script>
 
   (function(document) {
