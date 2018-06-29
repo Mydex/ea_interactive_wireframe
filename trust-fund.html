@@ -58,150 +58,15 @@
       </div>
 
 
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlFile1">Upload scan of document here</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
-      </form>
-      <h4 class="mt-4 mb-2">Information required for application</h4>
-      <p>Click below for quick view missing mandatory and non-monadatory data from the application.</p>
-      <div class="row mb-2">
-        <div class="accordion col-md-5 col-lg-5">
-          <div class="card">
-            <div class="card-header" id="headingOneCit" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-danger" data-toggle="collapse" data-target="#collapseOneCit" aria-expanded="false" aria-controls="collapseOneCit">
-                  Mandatory
-                </button>
-              </h5>
-            </div>
-            <div id="collapseOneCit" class="collapse" aria-labelledby="headingOneCit" data-parent="#accordion">
-              <table class="table table-bordered table-sm text-left">
-                <thead>
-                  <tr>
-                    <th>Tab</th>
-                    <th>Heading</th>
-                    <th>Missing data</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Benefits</td>
-                    <td>Universal Credit</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Benefits</td>
-                    <td>Employment and Support Allowance</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Benefits</td>
-                    <td>Child Benefit</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Electricity MPAN</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Electricity Supplier</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Electricity Account Reference</td>
-                    <td class=" text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Electricity Tariff</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Electricity Meter Serial Number</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Electricity Date</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Electricity Present Reading</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">Required</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      <h4 class="mt-4">Information required for application</h4>
+      <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+      <div id="module" class="container row mt-4">
+        <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton'); showSubmit();" data-text="Check">Contact Details</a></h5>
 
-        <div class="accordion col-md-5 col-lg-5">
-          <div class="card">
-            <div class="card-header" id="headingTwoCit" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-warning" data-toggle="collapse" data-target="#collapseTwoCit" aria-expanded="false" aria-controls="collapseTwoCit">
-                  Non-Mandatory
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwoCit" class="collapse" aria-labelledby="headingTwoCit" data-parent="#accordion">
-              <table class="table table-bordered table-sm text-left">
-                <thead>
-                  <tr>
-                    <th>Tab</th>
-                    <th>Heading</th>
-                    <th>Missing data</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Gas Meter point number</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">May be required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Gas Supplier</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">May be required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Gas Account Reference</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">May be required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Gas Tariff</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">May be required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Gas Meter Serial Number</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">May be required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Gas Date</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">May be required</td>
-                  </tr>
-                  <tr>
-                    <td>Suppliers</td>
-                    <td>Gas Present reading</td>
-                    <td class="text-danger" contenteditable="true" spellcheck="true">May be required</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+
       </div>
+
+
 
       <div class="row">
         <div class="container">
@@ -454,7 +319,7 @@
 </main>
 
 <script>
-  
+
   var dobCounter = 2;
   function addDOB(){
     var newDiv = document.createElement('div');
