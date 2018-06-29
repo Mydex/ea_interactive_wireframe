@@ -408,6 +408,31 @@
       document.getElementById('submitToEA').style.display = 'none'; 
     }
   }
+
+  function checkData(tableName, buttonName) {
+    var table = document.getElementById(tableName);
+    var counter = 0;
+    for (var r = 0, n = table.rows.length; r < n; r++) {
+      for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+        if (table.rows[r].cells[c].innerHTML === "No data") {
+          counter ++;
+          table.rows[r].cells[c].style.color = "red";
+        } else if (table.rows[r].cells[c].innerHTML != "No data") {
+          counter --;
+          table.rows[r].cells[c].style.color = "black";
+        }
+      }
+    }
+    var check = 0 - table.rows.length*2;
+    if (counter === check) {
+      document.getElementById(buttonName).dataset.text = 'Complete';
+      counter = 0;
+    } else {
+      document.getElementById(buttonName).dataset.text = 'Check';
+      counter = 0;
+    }
+  }
+
 </script>
 
 
