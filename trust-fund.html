@@ -60,262 +60,214 @@
 
       <h4 class="mt-4">Information required for application</h4>
       <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+
       <div id="module" class="container row mt-4">
         <h5 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton'); showSubmit();" data-text="Check">Contact Details</a></h5>
-
-
+        <div class="collapse col-12" id="collapsePersonal" aria-labelledby="headingPersonal">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm text-left" id="personal">
+              <thead>
+                <th class="bg-primary"></th>
+                <th class="bg-primary">Data</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Title</th>
+                  <td contenteditable="true" spellcheck="true">Mrs</td>
+                </tr>
+                <tr>
+                  <th>Forename</th>
+                  <td contenteditable="true" spellcheck="true">Citizen</td>
+                </tr>
+                <tr>
+                  <th>Surame</th>
+                  <td contenteditable="true" spellcheck="true">Twenty</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+                </tr>
+                <tr>
+                  <th>Postcode</th>
+                  <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+                </tr>
+                <tr>
+                  <th>Telephone</th>
+                  <td contenteditable="true" spellcheck="true">012345 678901</td>
+                </tr>
+                <tr>
+                  <th>Mobile</th>
+                  <td contenteditable="true" spellcheck="true">077123456789</td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+                </tr>
+                <tr>
+                  <th>Date of birth</th>
+                  <td><input type="date" name="dob" value="1980-01-01"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
 
 
       <div class="row">
         <div class="container">
-          <nav class="nav nav-tabs active" id="nav-tab" role="tablist">
-            <div class="dropdown">
-              <button class="nav-item nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Choose here</button>
-              <div class="dropdown-menu">
-                <!-- page 1 -->
-                <a class="dropdown-item" id="pageone-tab" href="#pageone" role="tab" data-toggle="tab" aria-controls="pageone">Personal & household</a>
-                <!-- page 2 -->
-                <a class="dropdown-item" id="pagetwo-tab" href="#pagetwo" role="tab" data-toggle="tab" aria-controls="pagetwo">Income</a>
-                <!-- page 3 -->
-                <a class="dropdown-item" id="pagethree-tab" href="#pagethree" role="tab" data-toggle="tab" aria-controls="pagethree">Fuel Spend</a>
-                <!-- page 4 -->
-                <a class="dropdown-item" id="pagefour-tab" href="#pagefour" role="tab" data-toggle="tab" aria-controls="pagefour">Benefits</a>
-                <!-- pafe 5 -->
-                <a class="dropdown-item" id="pagefive-tab" href="#pagefive" role="tab" data-toggle="tab" aria-controls="pagefive">Suppliers</a>
-              </div>   
-            </div>
-          </nav>
+
 
           <!-- table content -->
           <div id="information-nav-content" class="tab-content">
-            <!-- page one informaiton table -->
-            <div role="tadpanel" class="tab-pane fade show active" id="pageone" aria-labelledby="pageone-tab">
+
+            <!-- page two information table-->
+            <div role="tadpanel" class="tab-pane fade" id="pagetwo" aria-labelledby="pagetwo-tab">
               <table class="table table-bordered table-sm text-left">
                 <thead>
                   <tr>
-                    <th colspan="2" class="bg-primary">Personal and Household</th>
+                    <th colspan="2" class="bg-primary">Income</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <th>Citzen's yearly income</th>
+                    <td class="text-right" contenteditable="true" spellcheck="true">£15000</td>
+                  </tr>
+                  <tr>
+                    <th>Citzen partners's yearly income</th>
+                    <td class="text-right" contenteditable="true" spellcheck="true">£10000</td>
+                  </tr>
+                  <tr>
+                    <th>Citzen's total weekly income</th>
+                    <td class="text-right" contenteditable="true" spellcheck="true">£480</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- page 3 information table -->
+            <div role="tadpanel" class="tab-pane fade" id="pagethree" aria-labelledby="pagethree-tab">
+              <table class="table table-bordered table-sm text-left">
+                <thead>
+                  <tr>
+                    <th colspan="2" class="bg-primary">Fuel Spend</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Citizen's weekly spend on fuel</th>
+                    <td class="text-right" contenteditable="true" spellcheck="true">£60</td>
+                  </tr>
+                  <tr>
+                    <th>% on fuel</th>
+                    <td class="text-right" contenteditable="true" spellcheck="true">12.5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- page four information table -->
+            <div role="tadpanel" class="tab-pane fade" id="pagefour" aria-labelledby="pagefour-tab">
+              <table class="table table-bordered table-sm text-left">
+                <thead>
+                  <tr>
+                    <th colspan="2" class="bg-primary">Benefits</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Universal Credit</th>
+                    <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+                  </tr>
+                  <tr>
+                    <th>Employment and Support Allowance</th>
+                    <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+                  </tr>
+                  <tr>
+                    <th>Child Benefit</th>
+                    <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- page five information table -->
+            <div role="tadpanel" class="tab-pane fade" id="pagefive" aria-labelledby="pagefive-tab">
+             <table class="table table-bordered table-sm text-left">
+               <thead>
+                 <th colspan="2" class="table-primary">Electricity</th>
+               </thead>
+               <tbody>
                  <tr>
-                   <th>Title</th>
-                   <td contenteditable="true" spellcheck="true">Ms</td>
+                   <th>MPAN</th>
+                   <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
                  </tr>
                  <tr>
-                   <th>Forename</th>
-                   <td contenteditable="true" spellcheck="true">Citizen</td>
+                   <th>Supplier</th>
+                   <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
                  </tr>
                  <tr>
-                   <th>Surame</th>
-                   <td contenteditable="true" spellcheck="true">Twenty</td>
+                   <th>Account Reference</th>
+                   <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
                  </tr>
                  <tr>
-                   <th>Address</th>
-                   <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
+                   <th>Tariff</th>
+                   <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
                  </tr>
                  <tr>
-                   <th>Postcode</th>
-                   <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+                   <th>Meter Serial Number</th>
+                   <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
                  </tr>
                  <tr>
-                   <th>Telephone</th>
-                   <td contenteditable="true" spellcheck="true">012345 678901</td>
+                   <th>Date</th>
+                   <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
                  </tr>
                  <tr>
-                   <th>Mobile</th>
-                   <td contenteditable="true" spellcheck="true">077123456789</td>
+                   <th>Present reading</th>
+                   <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
                  </tr>
-                 <tr>
-                   <th>How many people live in the house?
-                     <br>
-                     <ul class="m-0">Adults</ul>
-                     <ul class="m-0">Chilrden</ul>
-                   </th>
-                   <td class="font-italic">
-                     <br>
-                     <div>
-                      <form action="#" class="m-0">
-                       <select name="adultOne">
-                         <option value="adultZero">0</option>
-                         <option value="adultOne">1</option>
-                         <option value="adultTwo">2</option>
-                         <option value="adultThree">3</option>
-                         <option value="adultFour">4</option>
-                       </select>
-                     </form>
-                   </div>
-                   <div>
-                    <form action="#" class="m-0">
-                     <select name="childrenOne">
-                       <option value="childrenZero">0</option>
-                       <option value="childrenOne">1</option>
-                       <option value="childrenTwo">2</option>
-                       <option value="childrenThree">3</option>
-                       <option value="childrenFour">4</option>
-                     </select>
-                   </form>
-                 </div>
-               </td>
-             </tr>
-             <tr>
-               <th>Date of births for all children</th>
-               <td>
-                <input type="date" name="dob1" class="mb-2">
-                <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
-                <div id="content"></div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- page two information table-->
-      <div role="tadpanel" class="tab-pane fade" id="pagetwo" aria-labelledby="pagetwo-tab">
-        <table class="table table-bordered table-sm text-left">
-          <thead>
-            <tr>
-              <th colspan="2" class="bg-primary">Income</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Citzen's yearly income</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£15000</td>
-            </tr>
-            <tr>
-              <th>Citzen partners's yearly income</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£10000</td>
-            </tr>
-            <tr>
-              <th>Citzen's total weekly income</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£480</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- page 3 information table -->
-      <div role="tadpanel" class="tab-pane fade" id="pagethree" aria-labelledby="pagethree-tab">
-        <table class="table table-bordered table-sm text-left">
-          <thead>
-            <tr>
-              <th colspan="2" class="bg-primary">Fuel Spend</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Citizen's weekly spend on fuel</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">£60</td>
-            </tr>
-            <tr>
-              <th>% on fuel</th>
-              <td class="text-right" contenteditable="true" spellcheck="true">12.5</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- page four information table -->
-      <div role="tadpanel" class="tab-pane fade" id="pagefour" aria-labelledby="pagefour-tab">
-        <table class="table table-bordered table-sm text-left">
-          <thead>
-            <tr>
-              <th colspan="2" class="bg-primary">Benefits</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Universal Credit</th>
-              <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-            </tr>
-            <tr>
-              <th>Employment and Support Allowance</th>
-              <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-            </tr>
-            <tr>
-              <th>Child Benefit</th>
-              <td class="text-right font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- page five information table -->
-      <div role="tadpanel" class="tab-pane fade" id="pagefive" aria-labelledby="pagefive-tab">
-       <table class="table table-bordered table-sm text-left">
-         <thead>
-           <th colspan="2" class="table-primary">Electricity</th>
-         </thead>
-         <tbody>
-           <tr>
-             <th>MPAN</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Supplier</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Account Reference</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Tariff</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Meter Serial Number</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Date</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-           <tr>
-             <th>Present reading</th>
-             <td class="font-italic text-danger" contenteditable="true" spellcheck="true">Required</td>
-           </tr>
-         </tbody>
-       </table>
-       <table class="table table-bordered table-sm text-left">
-        <thead>
-          <th colspan="2" class="table-primary">Gas</th>
-        </thead>
-        <tbody>
-         <tr>
-           <th>Meter point number</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Supplier</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Account Reference</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Tariff</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Meter Serial Number</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Date</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>
-         <tr>
-           <th>Present reading</th>
-           <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
-         </tr>        
-       </tbody>
-     </table>
+               </tbody>
+             </table>
+             <table class="table table-bordered table-sm text-left">
+              <thead>
+                <th colspan="2" class="table-primary">Gas</th>
+              </thead>
+              <tbody>
+               <tr>
+                 <th>Meter point number</th>
+                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+               </tr>
+               <tr>
+                 <th>Supplier</th>
+                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+               </tr>
+               <tr>
+                 <th>Account Reference</th>
+                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+               </tr>
+               <tr>
+                 <th>Tariff</th>
+                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+               </tr>
+               <tr>
+                 <th>Meter Serial Number</th>
+                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+               </tr>
+               <tr>
+                 <th>Date</th>
+                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+               </tr>
+               <tr>
+                 <th>Present reading</th>
+                 <td class="font-italic text-danger" contenteditable="true" spellcheck="true">May be required</td>
+               </tr>        
+             </tbody>
+           </table>
 
+         </div>
+       </div>
+     </div>
    </div>
  </div>
-</div>
-</div>
-</div>
 </main>
 
 <script>
