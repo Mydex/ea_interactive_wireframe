@@ -47,34 +47,459 @@
   <main style=" min-height:72%;">
     <div class="container">
 
+      <h3 class="mb-4">Statistics by Location</h3>
+      <div class="row">
+        <p class="col-12 col-md-3 col-lg-3">
+          Return to reports <a href="https://mydex.github.io/ea_interactive_wireframe/reports.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/double-arrow.png" alt="logo" width="20"></a>
+        </p>
+      </div>
+
+
+      <div id="module" class="row mx-1">
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePostcodes" aria-expanded="false" aria-controls="collapsePostcodes">Postcodes</a></h4>
+        <div class="collapse col-12 p-0" id="collapsePostcodes" aria-labelledby="headingPostcodes">
+          <div class="input-group date mt-2 mb-1" data-provide="datepicker">
+            <form action="#">
+              <table>
+                <tr>
+                  <td>Start date:</td>
+                  <td>End date:</td>
+                </tr>
+                <tr>
+                  <td><input type="date" name="start" value="2018-01-01"></td>
+                  <td><input type="date" name="end"value="2019-01-01"></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <input type="search" class="tableFilter form-control col-4" spellcheck="true" data-table="order-table1" placeholder="Filter table here...">
+          <div class="col-12">
+            <div class="table-responsive">
+              <table class="order-table1 table table-sm table-bordered text-left">
+                <thead class="bg-success">
+                  <tr>
+                    <td rowspan="2">Postcode</td>
+                    <td rowspan="2">All Clients</td>
+                    <td rowspan="2">New Clients</td>
+                    <td colspan="5">Stats from client status</td>
+                  </tr>
+                  <tr>
+                    <td>Active</td>
+                    <td>Reactivated</td>
+                    <td>Referral</td>
+                    <td>Rereferral</td>
+                    <td>Closed</td>
+                  </tr>
+                </thead>
+                <tbody class="text-right">
+                  <tr>
+                    <td class="text-left">PA1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">PA2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">PA3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">PA4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="table-responsive">
+              <table class="order-table1 table table-sm table-bordered text-left">
+                <thead class="bg-success">
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="3">Savings</td>
+                    <td colspan="2">Visits</td>
+                  </tr>
+                  <tr>
+                    <td>Postcode</td>
+                    <td>Carbon savings (kg CO2)</td>
+                    <td>Ongoing</td>
+                    <td>Capital</td>
+                    <td><b>Total</b></td>
+                    <td>1st visits</td>
+                    <td>Further visits</td>
+                  </tr>
+                </thead>
+                <tbody class="text-right">
+                  <tr>
+                    <td class="text-left">PA1</td>
+                    <td></td>
+                    <td>£</td>
+                    <td>£</td>
+                    <td style="background-color: #F5F5F5;"><b>£</b></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">PA2</td>
+                    <td></td>
+                    <td>£</td>
+                    <td>£</td>
+                    <td style="background-color: #F5F5F5;"><b>£</b></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">PA3</td>
+                    <td></td>
+                    <td>£</td>
+                    <td>£</td>
+                    <td style="background-color: #F5F5F5;"><b>£</b></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">PA4</td>
+                    <td></td>
+                    <td>£</td>
+                    <td>£</td>
+                    <td style="background-color: #F5F5F5;"><b>£</b></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="col-12 col-md-4 col-lg-4">Print postcode report 
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+          </p>
+          <p class="col-12 col-md-7 col-lg-7">Download postcode report
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+          </p>
+        </div>
+      </div>
 
 
 
+      <div id="module" class="row mx-1">
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseWards" aria-expanded="false" aria-controls="collapseWards">Wards</a></h4>
+        <div class="collapse col-12 p-0" id="collapseWards" aria-labelledby="headingWards">
+         <div class="input-group date mt-2 mb-1" data-provide="datepicker">
+           <form action="#">
+             <table>
+               <tr>
+                 <td>Start date:</td>
+                 <td>End date:</td>
+               </tr>
+               <tr>
+                 <td><input type="date" name="start" value="2018-01-01"></td>
+                 <td><input type="date" name="end"value="2019-01-01"></td>
+               </tr>
+             </table>
+           </form>
+         </div>
+         <input type="search" class="tableFilter form-control col-4" spellcheck="true" data-table="order-table2" placeholder="Filter table here...">
+         <div class="col-12">
+          <div class="table-responsive">
+            <table class="order-table2 table table-sm table-bordered text-left" id="countit1">
+              <thead class="bg-success">
+                <tr>
+                  <td rowspan="2">Ward No</td>
+                  <td rowspan="2">All Clients</td>
+                  <td rowspan="2">New Clients</td>
+                  <td colspan="5">Stats from client status</td>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>Reactivated</td>
+                  <td>Referral</td>
+                  <td>Rereferral</td>
+                  <td>Closed</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1: Renfrew North and Braehead</td>
+                  <td class="count1">49</td>
+                  <td class="count2">11</td>
+                  <td class="count3">14</td>
+                  <td class="count4">4</td>
+                  <td class="count5">11</td>
+                  <td class="count6">1</td>
+                  <td class="count7">19</td>
+                </tr>
+                <tr>
+                  <td>2: Renfrew South and Gallowhill</td>
+                  <td class="count1">58</td>
+                  <td class="count2">9</td>
+                  <td class="count3">14</td>
+                  <td class="count4">16</td>
+                  <td class="count5">9</td>
+                  <td class="count6">2</td>
+                  <td class="count7">17</td>
+                </tr>
+                <tr>
+                  <td>3: Paisley Northeast and Ralston</td>
+                  <td class="count1">33</td>
+                  <td class="count2">8</td>
+                  <td class="count3">9</td>
+                  <td class="count4">8</td>
+                  <td class="count5">2</td>
+                  <td class="count6">1</td>
+                  <td class="count7">13</td>
+                </tr>
+                <tr>
+                  <td>4: Paisley Northwest</td>
+                  <td class="count1">37</td>
+                  <td class="count2">4</td>
+                  <td class="count3">16</td>
+                  <td class="count4">4</td>
+                  <td class="count5">4</td>
+                  <td class="count6">3</td>
+                  <td class="count7">10</td>
+                </tr>
+                <tr>
+                  <td>5: Paisley East and Central</td>
+                  <td class="count1">44</td>
+                  <td class="count2">8</td>
+                  <td class="count3">6</td>
+                  <td class="count4">6</td>
+                  <td class="count5">8</td>
+                  <td class="count6">3</td>
+                  <td class="count7">21</td>
+                </tr>
+                <tr>
+                  <td>6: Paisley Southeast</td>
+                  <td class="count1">29</td>
+                  <td class="count2">4</td>
+                  <td class="count3">15</td>
+                  <td class="count4">3</td>
+                  <td class="count5">4</td>
+                  <td class="count6">1</td>
+                  <td class="count7">6</td>
+                </tr>
+                <tr>
+                  <td>7: Paisley Southwest</td>
+                  <td class="count1">41</td>
+                  <td class="count2">3</td>
+                  <td class="count3">32</td>
+                  <td class="count4">2</td>
+                  <td class="count5">3</td>
+                  <td class="count6">0</td>
+                  <td class="count7">4</td>
+                </tr>
+                <tr>
+                  <td>8: Johnstone South and Elderslie</td>
+                  <td class="count1">46</td>
+                  <td class="count2">14</td>
+                  <td class="count3">15</td>
+                  <td class="count4">4</td>
+                  <td class="count5">14</td>
+                  <td class="count6">2</td>
+                  <td class="count7">11</td>
+                </tr>
+                <tr>
+                  <td>9: Johnstone North, Kilbarchan, Howwood and Lochwinnoch</td>
+                  <td class="count1">39</td>
+                  <td class="count2">7</td>
+                  <td class="count3">22</td>
+                  <td class="count4">1</td>
+                  <td class="count5">7</td>
+                  <td class="count6">0</td>
+                  <td class="count7">9</td>
+                </tr>
+                <tr>
+                  <td>10: Houston, Crosslee and Linwood</td>
+                  <td class="count1">59</td>
+                  <td class="count2">18</td>
+                  <td class="count3">15</td>
+                  <td class="count4">12</td>
+                  <td class="count5">18</td>
+                  <td class="count6">3</td>
+                  <td class="count7">11</td>
+                </tr>
+              </tbody>
+              <tfoot id="countitfooter1">
+              </tfoot>
+            </table>
+          </div>
+        </div>
 
-
-
-
-
-
+        <div class="col-12">
+          <div class="table-responsive">
+            <table class="order-table2 table table-sm table-bordered text-left" id="countit2">
+              <thead class="bg-success">
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="3">Savings</td>
+                  <td colspan="2">Visits</td>
+                </tr>
+                <tr>
+                  <td>Ward</td>
+                  <td>Carbon savings (kg CO2)</td>
+                  <td>Ongoing</td>
+                  <td>Capital</td>
+                  <td><b>Total</b></td>
+                  <td>1st visits</td>
+                  <td>Further visits</td>
+                </tr>
+              </thead>
+              <tbody class="text-right">
+                <tr>
+                  <td class="text-left">1: Renfrew North and Braehead</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">11</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">2: Renfrew South and Gallowhill</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">9</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">3: Paisley Northeast and Ralston</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">8</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">4: Paisley Northwest</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">4</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">5: Paisley East and Central</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">8</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">6: Paisley Southeast</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">4</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">7: Paisley Southwest</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">3</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">8: Johnstone South and Elderslie</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">14</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">9: Johnstone North, Kilbarchan, Howwood and Lochwinnoch</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">7</td>
+                  <td class="count6"></td>
+                </tr>
+                <tr>
+                  <td class="text-left">10: Houston, Crosslee and Linwood</td>
+                  <td class="count1"></td>
+                  <td class="count2">£</td>
+                  <td class="count3">£</td>
+                  <td class="count4" style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td class="count5">18</td>
+                  <td class="count6"></td>
+                </tr>
+              </tbody>
+              <tfoot id="countitfooter2">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <p class="col-12 col-md-4 col-lg-4">Print ward report 
+          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+        </p>
+        <p class="col-12 col-md-7 col-lg-7">Download ward report
+          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+        </p>
+      </div>
     </div>
-  </main>
 
-  <style>
-  #line {
-    border-bottom: 2px solid #1F5F8D;
-  }
+  </div>
 
-  #module #accordionHeading.collapsed:after  {
-    content: '+';
-    float: right;
-    color: black;
-  }
 
-  #module #accordionHeading:not(.collapsed):after {
-    content: '-';
-    float: right;
-    color: black;
-  }
+</div>
+</main>
+
+<style>
+#line {
+  border-bottom: 2px solid #1F5F8D;
+}
+
+#module #accordionHeading.collapsed:after  {
+  content: '+';
+  float: right;
+  color: black;
+}
+
+#module #accordionHeading:not(.collapsed):after {
+  content: '-';
+  float: right;
+  color: black;
+}
 </style>
 
 
