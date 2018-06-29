@@ -51,55 +51,88 @@
       <p>Information here</p>
       <h4 class="mb-2">Invite new client to service</h4>
       <div class="row">
-        <div class="col-md-6 col-lg-6">
+        <div class="col-12 col-md-8 col-lg-8">
           <p class="m-0">
             <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseNewClient" aria-expanded="false" aria-controls="collapseNewClient" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Invite</button>
           </p>
           <div class="collapse" id="collapseNewClient" aria-labelledby="headingNewClient">
-            <div class="card card-body">
-              <form action="/#">
-                <label for="forename" class="col-12 mb-1">Forename</label>
-                <div class="col-12 mb-1">
-                  <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
-                </div>
-                <label for="surname" class="col-12 mb-1">Surname</label>
-                <div class="col-12 mb-1">
-                  <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
-                </div>
-                <div class="col-12 mb-1">
-                  <select name="select_opt" id="select_opt" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)" required>
-                    <option value="default">Contact method</option>
-                    <option value="ea1">Mobile</option>
-                    <option value="ea2">Email</option>
-                    <option value="ea3">Mobile & Email</option>
-                  </select>
-                  <div id="input"></div>
-                </div>
-                <label for="referral" class="col-12 mb-1">Referral from</label>
-                <div class="col-12 mb-1">
-                  <select name="referral">
-                    <option value="referral1">Advice works</option>
-                    <option value="referral2">C4R</option>
-                    <option value="referral3">Council</option>
-                    <option value="referral4">Family First</option>
-                    <option value="referral5">Food bank</option>
-                    <option value="referral6">RAMH</option>
-                  </select>
-                </div>
-                <label for="referee" class="col-12 mb-1">Person referring citizen</label>
-                <div class="col-12 mb-1">
-                  <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
-                </div>
-              </form>
-              <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>  
-            </div>
-          </div>
-        </div>
-      </div>
+           <div class="card card-body">
+             <form action="/#">
+               <div class="form-group">
+                 <label>Forename</label>
+                 <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
+               </div>
+               <div class="form-group">
+                 <label>Surname</label>
+                 <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
+               </div>
+               <div class="form-group">
+                 <label>Contact method</label>
+                 <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
+                   <option value="default"></option>
+                   <option value="cit1">Mobile</option>
+                   <option value="cit2">Email</option>
+                   <option value="cit3">Mobile & Email</option>
+                 </select>
+                 <div id="input1"></div>
+               </div>
+               <div class="form-group">
+                 <label>Referral from</label>
+                 <div>
+                   <select name="referral">
+                     <option value="referral1">Advice works</option>
+                     <option value="referral2">C4R</option>
+                     <option value="referral3">Council</option>
+                     <option value="referral4">Family First</option>
+                     <option value="referral5">Food bank</option>
+                     <option value="referral6">RAMH</option>
+                   </select>
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label>Person referring citizen</label>
+                 <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+               </div>
+               <div class="form-group">
+                 <label>Contact method</label>
+                 <div>
+                   <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
+                     <option value="default"></option>
+                     <option value="ref1">None</option>
+                     <option value="ref2">Mobile</option>
+                     <option value="ref3">Email</option>
+                     <option value="ref4">Mobile & Email</option>
+                   </select>
+                 </div>
+                 <div id="input2"></div>
+                 <label class="form-check-label"><input type="checkbox" class="form-check-input"> Requested an update</label>
+               </div>
+               <div class="form-group">
+                 <label>Assign to Energy Advocate</label>
+                 <div>
+                   <select name="message">
+                     <option value="messageDefault"></option>
+                     <option value="message2">Energy Advocate One</option>
+                     <option value="message3">Energy Advocate  Two</option>
+                     <option value="message4">Energy Advocate  Three</option>
+                     <option value="message5">Energy Advocate  Four</option>
+                   </select>
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label>Add notes</label>
+                 <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
+               </div>
+             </form>
+             <p><a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a></p>
+           </div>
+         </div>
+       </div>
+     </div>
 
-      <h4 class="mt-4 mb-2">Status of previously invited citizens</h4>
-      <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
-      <div class="table-responsive">
+     <h4 class="mt-4 mb-2">Status of previously invited citizens</h4>
+     <input type="search" class="tableFilter form-control col-11 col-md-6 col-lg-6 mb-2" spellcheck="true" data-table="status-table" placeholder="Filter table here...">
+     <div class="table-responsive">
        <table class="status-table table table-bordered table-sm text-left">
         <thead class="table-info">
           <tr>
