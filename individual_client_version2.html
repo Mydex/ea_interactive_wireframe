@@ -1650,6 +1650,17 @@ ul.breadcrumb li a {
     }
   }
 
+  function addMiniSection(name) {
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    '<div class="collapse col-12" id="collapseNewSection" aria-labelledby="headingNewSection">\
+    <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
+    <h6>Heading One</h6>\
+    <p contenteditable="true" spellcheck="true">Information here</p>\
+    </div>'
+    document.getElementById(name).appendChild(newDiv);
+  }
+
   function addAccordion(name) {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
@@ -1711,7 +1722,10 @@ ul.breadcrumb li a {
     </div>\
     <input class="mt-4 mb-5 col-12" type="file" name="pic" accept="image/*">\
     </div>\
-    </div>'
+    </div>\
+    <div id="newAccordionThree"></div>\
+    <h5 class="mt-2">Add topic to Top Energy Saving Tips</h5>\
+    <button onclick="addAccordion("newAccordionThree")" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</button>'
     document.getElementById('newSection').appendChild(newDiv);
   }
 
