@@ -1574,8 +1574,8 @@
     </div>
 
     <h3 class="mt-5 mb-2">Add another section</h3>
-    <a href="">Add</a>
-
+    <a href="addSection()">Add</a>
+    <div id="newSection"></div>
 
   </section>
 
@@ -1637,6 +1637,10 @@ ul.breadcrumb li a {
     if (item) {
       item.className=(item.className=='hidden')?'unhidden':'hidden';
     }
+  }
+
+  function addSection() {
+    document.getElementById('newSection').innerHTML = 'Hello.'
   }
 
   function showWall(name){
