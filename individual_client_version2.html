@@ -1655,11 +1655,9 @@ ul.breadcrumb li a {
   function addMiniSection(name) {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
-    '<div class="collapse col-12" id="collapseNewSection" aria-labelledby="headingNewSection">\
-    <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
+    '<h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
     <h6>Heading One</h6>\
-    <p contenteditable="true" spellcheck="true">Information here</p>\
-    </div>'
+    <p contenteditable="true" spellcheck="true">Information here</p>'
     document.getElementById(name).appendChild(newDiv);
   }
 
