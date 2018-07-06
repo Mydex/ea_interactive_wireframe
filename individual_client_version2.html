@@ -1717,6 +1717,19 @@ ul.breadcrumb li a {
     document.getElementById('newSection').appendChild(newDiv);
   }
 
+  var dobCounter = 2;
+  function addDOB(){
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    "<input type='date' name='dob"+ dobCounter + "' class='mb-2'>\
+    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
+    document.getElementById('content').appendChild(newDiv);
+    dobCounter ++;
+  }
+  function removeRow(input) {
+    document.getElementById('content').removeChild(input.parentNode);
+  }
+
   function addAccordion(name) {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
@@ -1778,19 +1791,6 @@ ul.breadcrumb li a {
     } else {
       document.getElementById('carbonAlarmYes').innerHTML='';
     } 
-  }
-
-  var dobCounter = 2;
-  function addDOB(){
-    var newDiv = document.createElement('div');
-    newDiv.innerHTML = 
-    "<input type='date' name='dob"+ dobCounter + "' class='mb-2'>\
-    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
-    document.getElementById('content').appendChild(newDiv);
-    dobCounter ++;
-  }
-  function removeRow(input) {
-    document.getElementById('content').removeChild(input.parentNode);
   }
 
 
