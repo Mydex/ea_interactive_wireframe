@@ -1661,6 +1661,7 @@ ul.breadcrumb li a {
     }
   }
 
+var counter = 0;
   function addSection() {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
@@ -1671,8 +1672,9 @@ ul.breadcrumb li a {
     <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
     <h6>Heading One</h6>\
     <p contenteditable="true" spellcheck="true">Information here</p>\
+    <div id="newMini'+ counter+'"></div>\
     <input class="mt-4 mb-5 col-12" type="file" name="pic" accept="image/*"">\
-    <div id="newMini"></div>\<button onclick="addMiniSection('+ "'newMini'" + ')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>\
+    <button onclick="addMiniSection('+ "'newMini"+counter+"'" + ')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>\
     </div>\
     </div>\
     <div id="newAccordion"></div>\
