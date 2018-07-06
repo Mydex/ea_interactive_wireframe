@@ -1661,7 +1661,7 @@ ul.breadcrumb li a {
     }
   }
 
-var counter = 0;
+  var counter = 0;
   function addSection() {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
@@ -1670,15 +1670,17 @@ var counter = 0;
     <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseNewSection" aria-expanded="false" aria-controls="collapseNewSection" contenteditable="true" spellcheck="true">New Topic</a></h5>\
     <div class="collapse col-12" id="collapseNewSection" aria-labelledby="headingNewSection">\
     <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
-    <h6>Heading One</h6>\
+    <h6>New Heading</h6>\
     <p contenteditable="true" spellcheck="true">Information here</p>\
     <div id="newMini'+ counter+'"></div>\
     <input class="mt-4 mb-5 col-12" type="file" name="pic" accept="image/*"">\
-    <button onclick="addMiniSection('+ "'newMini"+counter+"'" + ')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>\
+    <button onclick="addMiniSectionHeading('+ "'newMini"+counter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add section</button>\
+    <button onclick="addMiniSection('+ "'newMini"+counter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>\
+    <br>\
     </div>\
     </div>\
-    <div id="newAccordion"></div>\
-    <button onclick="addAccordion(' +"'newAccordion'"+ ')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>'
+    <div id="newAccordion'+ counter+'"></div>\
+    <button onclick="addAccordion(' +"'newAccordion"+counter+"'"+ ')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>'
     document.getElementById('newSection').appendChild(newDiv);
   }
 
