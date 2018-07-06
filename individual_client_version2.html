@@ -1660,23 +1660,6 @@ ul.breadcrumb li a {
     }
   }
 
-  function addMiniSectionHeading(name) {
-    var newDiv = document.createElement('div');
-    newDiv.innerHTML = 
-    '<h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
-    <h6>Heading One</h6>\
-    <p contenteditable="true" spellcheck="true">Information here</p>'
-    document.getElementById(name).appendChild(newDiv);
-  }
-
-  function addMiniSection(name) {
-    var newDiv = document.createElement('div');
-    newDiv.innerHTML = 
-    '<h6>Heading One</h6>\
-    <p contenteditable="true" spellcheck="true">Information here</p>'
-    document.getElementById(name).appendChild(newDiv);
-  }
-
   function addSection() {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
@@ -1745,6 +1728,23 @@ ul.breadcrumb li a {
     <p contenteditable="true" spellcheck="true">Information here</p>\
     </div>\
     </div>'
+    document.getElementById(name).appendChild(newDiv);
+  }
+
+  function addMiniSectionHeading(name) {
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    '<h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
+    <h6>Heading One</h6>\
+    <p contenteditable="true" spellcheck="true">Information here</p>'
+    document.getElementById(name).appendChild(newDiv);
+  }
+
+  function addMiniSection(name) {
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    '<h6>Heading One</h6>\
+    <p contenteditable="true" spellcheck="true">Information here</p>'
     document.getElementById(name).appendChild(newDiv);
   }
 
