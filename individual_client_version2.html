@@ -1427,7 +1427,8 @@
         <h6>Two rate single display meter <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></h6>
         <p contenteditable="true" spellcheck="true">Information here</p>
         <div id="newMiniOne"></div>
-        <button onclick="addMiniSection('newMiniOne')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add section</button>
+        <button onclick="addMiniSectionHeading('newMiniOne')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add section</button>
+        <button onclick="addMiniSection('newMiniOne')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>
         <br>
         <div id="carouselOne" class="carousel slide col-12 col-md-6 col-lg-6 mt-4" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -1652,11 +1653,19 @@ ul.breadcrumb li a {
     }
   }
 
-  function addMiniSection(name) {
+  function addMiniSectionHeading(name) {
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
     '<h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
     <h6>Heading One</h6>\
+    <p contenteditable="true" spellcheck="true">Information here</p>'
+    document.getElementById(name).appendChild(newDiv);
+  }
+
+  function addMiniSection(name) {
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    '<h6>Heading One</h6>\
     <p contenteditable="true" spellcheck="true">Information here</p>'
     document.getElementById(name).appendChild(newDiv);
   }
