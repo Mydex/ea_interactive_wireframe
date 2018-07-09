@@ -70,191 +70,78 @@
       </div>
 
       <div id="module" class="container row mt-3">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseHomeVisits" aria-expanded="false" aria-controls="collapseHomeVisits">Home Visits</a></h4>
-        <div class="collapse col-12 p-0" id="collapseHomeVisits" aria-labelledby="headingHomeVisits">
-
-          <div class="col-md-5 col-lg-5">
-            <h5 class=" mt-4 mb-2">Next Home Visit</h5>
-            <div>Date: 03/03/2018<br>Time: 09:00</div>
-
-
-            <h5 for="#" class="mt-4 mb-2">Add Home Visit</h5>
-            <div>
-              <form action="#/">
-                <div class="form-group">
-                  <label class="col-form-label">Date</label>
-                  <input class="form-control pt-0 pb-0" type="date" value="2018-01-01">
-                  <label class="col-form-label">Start time</label>
-                  <input class="form-control pt-0 pb-0" type="time" value="09:30">
-                  <label class="col-form-label">End time</label>
-                  <input class="form-control pt-0 pb-0" type="time"value="11:30">
-                </div>
-              </form>
-              <a href="#" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-6">
-            <div id="module" class="container row mt-3 p-0">
-              <h5 id="line" class="col-12 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePastVisits" aria-expanded="false" aria-controls="collapsePastVisits">Past Home Visits</a></h5>
-              <div class="collapse" id="collapsePastVisits" aria-labelledby="headingPastVisits">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-sm text-left">
-                   <thead class="table-info">
-                     <tr>
-                      <th>Date</th>
-                      <th>Time</th>
-                      <th>Outcome</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                   <tr>
-                     <td>01/01/2018</td>
-                     <td>09:00</td>
-                     <td>
-                      <form action="#" class="m-0">
-                        <select name="visitType">
-                          <option value="visitDefault"></option>
-                          <option value="visit1">No show</option>
-                          <option value="visit2">Successful</option> -->
-                          <option value="visit3">Rearranged</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>02/02/2018</td>
-                    <td>15:00</td>
-                    <td>
-                      <form action="#" class="m-0">
-                        <select name="visitType">
-                          <option value="visitDefault"></option>
-                          <option value="visit1">No show</option>
-                          <option value="visit2">Successful</option>
-                          <option value="visit3">Rearranged</option>
-                        </select>
-                      </form>
-                    </td>
-                  </tr>
-                </tbody>
-              </table> 
-            </div>
-          </div>
-        </div>
-      </div>
-
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Interactions with Client</a></h4>
+        <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">
+          <h4 class="mt-4 mb-2">Interactions with Client</h4>
+          <div class="table-responsive mt-4">
+            <table class="table table-bordered table-sm text-left">
+             <thead class="table-info">
+               <tr>
+                <th>Interaction</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Notes</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Home Visit</td>
+                <td>01/09/2018</td>
+                <td>09:30</td>
+                <td>First home visit</td>
+                <td>
+                 <div>
+                   <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverInteraction1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                   <div id="popoverInteraction1Content" class="row" style="display: none">
+                     <p>EA notes & comment are here</p>
+                   </div>
+                 </div></td>
+               </tr>
+               <tr>
+                <td>Message from Citizen Twenty</td>
+                <td>03/03/2018</td>
+                <td>10:23</td>
+                <td>Message details here</td>
+                <td>
+                 <div>
+                  <p>
+                   <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseInteraction1" aria-expanded="false" aria-controls="collapseInteraction1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</button>
+                 </p>
+                 <div class="collapse" id="collapseInteraction1" aria-labelledby="headingInteraction1">
+                   <div class="card card-body">
+                     <p contenteditable="true" spellcheck="true">EA notes & comment are here</p>
+                   </div>
+                 </div>
+               </div>
+             </td>
+           </tr>
+           <tr>
+            <td>Message to Citizen Twenty</td>
+            <td>03/03/2018</td>
+            <td>14:47</td>
+            <td>Message details here</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Message from Citizen Twenty</td>
+            <td>02/02/2018</td>
+            <td>15:26</td>
+            <td>Message details here</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Message to Citizen Twenty</td>
+            <td>01/02/2018</td>
+            <td>09:12</td>
+            <td>Message details here</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table> 
     </div>
   </div>
-
-
-  <div id="module" class="container row mt-3">
-    <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseMessages" aria-expanded="false" aria-controls="collapseMessages">Messages</a></h4>
-    <div class="collapse col-12 p-0" id="collapseMessages" aria-labelledby="headingMessages">
-      <div class="table-responsive">
-        <table class="table table-bordered table-sm text-left">
-          <thead class="bg-primary">
-            <tr>
-              <th>From</th>
-              <th>Message</th>
-              <th>Date Created</th>
-              <th>Set Due Date</th>
-              <th>Importance</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Energy Advocate</td>
-              <td></td>
-              <td>01/01/2018</td>
-              <td><input type="date" name="" class="form-control pt-0 pb-0" value="2019-01-01"></td>
-              <td>
-                <div class="form-check form-check-inline">
-                  <label class="form-check-label"><input class="form-check-label" type="radio" value="3" checked> <img src="https://mydex.github.io/ea_interactive_wireframe/images/green.png" width="15px"></label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <label class="form-check-label"><input class="form-check-label" type="radio" value="2"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/orange.png" width="15px"></label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <label class="form-check-label"><input class="form-check-label" type="radio" value="1"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/red.png" width="15px"></label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Client Name</td>
-              <td></td>
-              <td>01/01/2018</td>
-              <td><input type="date" name="" class="form-control pt-0 pb-0" value="2019-01-01"></td>
-              <td>
-                <div class="form-check form-check-inline">
-                 <label class="form-check-label"><input class="form-check-label" type="radio" value="3"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/green.png" width="15px"></label>
-               </div>
-               <div class="form-check form-check-inline">
-                 <label class="form-check-label"><input class="form-check-label" type="radio" value="2"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/orange.png" width="15px"></label>
-               </div>
-               <div class="form-check form-check-inline">
-                <label class="form-check-label"><input class="form-check-label" type="radio" value="1" checked> <img src="https://mydex.github.io/ea_interactive_wireframe/images/red.png" width="15px"></label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Client Name</td>
-            <td></td>
-            <td>01/01/2018</td>
-            <td><input type="date" name="" class="form-control pt-0 pb-0" value="2019-01-01"></td>
-            <td>
-              <div class="form-check form-check-inline">
-                <label class="form-check-label"><input class="form-check-label" type="radio" value="3"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/green.png" width="15px"></label>
-              </div>
-              <div class="form-check form-check-inline">
-                <label class="form-check-label"><input class="form-check-label" type="radio" value="2" checked> <img src="https://mydex.github.io/ea_interactive_wireframe/images/orange.png" width="15px"></label>
-              </div>
-              <div class="form-check form-check-inline">
-                <label class="form-check-label"><input class="form-check-label" type="radio" value="1"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/red.png" width="15px"></label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Energy Advocate</td>
-            <td></td>
-            <td>01/01/2018</td>
-            <td><input type="date" name="" class="form-control pt-0 pb-0" value="2019-01-01"></td>
-            <td>
-              <div class="form-check form-check-inline">
-               <label class="form-check-label"><input class="form-check-label" type="radio" value="3" checked> <img src="https://mydex.github.io/ea_interactive_wireframe/images/green.png" width="15px"></label>
-             </div>
-             <div class="form-check form-check-inline">
-               <label class="form-check-label"><input class="form-check-label" type="radio" value="2"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/orange.png" width="15px"></label>
-             </div>
-             <div class="form-check form-check-inline">
-               <label class="form-check-label"><input class="form-check-label" type="radio" value="1"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/red.png" width="15px"></label>
-             </div>
-           </td>
-         </tr>
-         <tr>
-          <td>Client Name</td>
-          <td></td>
-          <td>01/01/2018</td>
-          <td>
-            <div><input type="date" name="" class="form-control pt-0 pb-0" value="2019-01-01"></div>
-          </td>
-          <td>
-            <div class="form-check form-check-inline">
-              <label class="form-check-label"><input class="form-check-label" type="radio" value="3"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/green.png" width="15px"></label>
-            </div>
-            <div class="form-check form-check-inline">
-              <label class="form-check-label"><input class="form-check-label" type="radio" value="2"> <img src="https://mydex.github.io/ea_interactive_wireframe/images/orange.png" width="15px"></label>
-            </div>
-            <div class="form-check form-check-inline">
-              <label class="form-check-label"><input class="form-check-label" type="radio" value="1" checked> <img src="https://mydex.github.io/ea_interactive_wireframe/images/red.png" width="15px"></label>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </div>
-</div>
-
 
 <div class="row">
   <div class="col-12">
