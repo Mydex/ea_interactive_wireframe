@@ -1120,59 +1120,62 @@
 </div>
 </div>
 
-<div class="row">
-  <div class="col-lg-4 col-md-4">
-    <h4 class="mt-4 mb-2">Clients overall progress</h4>
-    <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial contact and first home visit</p>
-    <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Action Plan created with client</p>
-    <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Implementing Action Plan</p>
-    <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Action Plan Completed</p>
-    <p><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) No more tasks / Completed for this year</p>
-    <p class="mt-2 mb-0">Progress: 1/5</p>
-    <div class="progress bg-dark">
-      <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+<div id="module" class="container row mt-3">
+  <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseTasks" aria-expanded="false" aria-controls="collapseTasks">Progress & Tasks</a></h4>
+  <div class="collapse col-12 p-0" id="collapseTasks" aria-labelledby="headingTasks">
+    <div class="col-lg-4 col-md-4">
+      <h4 class="mt-4 mb-2">Clients overall progress</h4>
+      <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial contact and first home visit</p>
+      <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Action Plan created with client</p>
+      <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 3) Implementing Action Plan</p>
+      <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 4) Action Plan Completed</p>
+      <p><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" disabled></label> 5) No more tasks / Completed for this year</p>
+      <p class="mt-2 mb-0">Progress: 1/5</p>
+      <div class="progress bg-dark">
+        <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
     </div>
-  </div>
-  <div class="col-lg-7 col-md-7">
-    <h4 class="mt-4">Client task list</h4>
-    <div class="table-responsive">
-     <table class="table table-bordered table-sm text-left sortable" id="table">
-      <thead class="table-info">
+    <div class="col-lg-7 col-md-7">
+      <h4 class="mt-4">Client task list</h4>
+      <div class="table-responsive">
+       <table class="table table-bordered table-sm text-left sortable" id="table">
+        <thead class="table-info">
+          <tr>
+           <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+           <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+           <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+           <th>Complete</th>
+         </tr>
+       </thead>
+       <tbody>
         <tr>
-         <th data-sort="name">Task<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-         <th data-sort="date">Generated <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-         <th data-sort="name">Type <i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-         <th>Complete</th>
-       </tr>
-     </thead>
-     <tbody>
-      <tr>
-        <td>Citizen has requested a phone call</td>
-        <td>03/04/2005</td>
-        <td>Phone call - citizen</td>
-        <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
-      </tr>
-    </tbody>
-  </table>
+          <td>Citizen has requested a phone call</td>
+          <td>03/04/2005</td>
+          <td>Phone call - citizen</td>
+          <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h5 class="mt-2">Add task to task list</h5>
+  <form action="/#">
+    <label for="mydexid" class="mb-1">Task Details</label>
+    <textarea class="form-control form-control-sm mb-0" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="taskType" class="mt-0 mb-0">Type</label>
+    <select class="form-control form-control-sm" id="taskType">
+      <option value="default"></option>
+      <option value="phoneVisit">Phone call - Arrange Visit</option>
+      <option value="phoneOngoing">Phone call - Ongoing case</option>
+      <option value="visitFirst">Visit - First Visit</option>
+      <option value="visitFollpw">Visit - Follow up visit</option>
+      <option value="admin">Admin</option>
+      <option value="emailOngoing">Email - Ongoing case</option>
+      <option value="event">Events</option>
+      <option value="trainingWork">Training/work meetings</option>
+    </select>
+  </form>
+  <a href="#" class="btn btn-outline-primary mt-0" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
 </div>
-<h5 class="mt-2">Add task to task list</h5>
-<form action="/#">
-  <label for="mydexid" class="mb-1">Task Details</label>
-  <textarea class="form-control form-control-sm mb-0" id="exampleFormControlTextarea1" rows="3"></textarea>
-  <label for="taskType" class="mt-0 mb-0">Type</label>
-  <select class="form-control form-control-sm" id="taskType">
-    <option value="default"></option>
-    <option value="phoneVisit">Phone call - Arrange Visit</option>
-    <option value="phoneOngoing">Phone call - Ongoing case</option>
-    <option value="visitFirst">Visit - First Visit</option>
-    <option value="visitFollpw">Visit - Follow up visit</option>
-    <option value="admin">Admin</option>
-    <option value="emailOngoing">Email - Ongoing case</option>
-    <option value="event">Events</option>
-    <option value="trainingWork">Training/work meetings</option>
-  </select>
-</form>
-<a href="#" class="btn btn-outline-primary mt-0" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</a>
 </div>
 </div>
 
