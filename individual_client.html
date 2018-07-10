@@ -1905,8 +1905,14 @@
   function addMoreLetters(){
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
-    "<input type='date' name='dob"+ letterCounter + "' class='mb-2'>\
-    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
+    "<div>\
+    <label for='name'>Display name:</label>\
+    <input type='text' id='name"+ letterCounter + "' name='name'/>\
+    </div>\
+    <div>\
+    <label for='avatar'>Letter:</label>\
+    <input type='file' id='pic' name='pic"+ letterCounter + "' accept='image/*' />\
+    </div>"
     document.getElementById('moreLetters').appendChild(newDiv);
     letterCounter ++;
   }
