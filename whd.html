@@ -192,30 +192,26 @@
          <thead>
           <th class="bg-primary text-white"></th>
           <th class="bg-primary text-white">Data</th>
-         </thead>
-         <tbody>
-           <tr>
-             <th>Your weekly spend on electricity</th>
-             <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
-           </tr>
-           <tr>
-            <th>Your weekly spend on gas</th>
-            <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
-          </tr>
-          <tr>
-            <th>Percentage of income spent on fuel</th>
-            <td class="text-right"">13%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        </thead>
+        <tbody>
+         <tr>
+           <th>Your weekly spend on electricity</th>
+           <td class="text-right" contenteditable="true" spellcheck="true">£20</td>
+         </tr>
+         <tr>
+          <th>Your weekly spend on gas</th>
+          <td class="text-right" contenteditable="true" spellcheck="true">£10</td>
+        </tr>
+        <tr>
+          <th>Percentage of income spent on fuel</th>
+          <td class="text-right"">13%</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
-<div id="submitToEASP" style="display: none;">
- <div class="col-12 mt-2">Send to Energy Advocate to check & send application<br>
-   <button class="btn btn-outline-primary mt-2" onclick="askEvidence('spEvidence')" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
- </div>
- <div id="spEvidence" style="display: none;">
+</div>
+<div id="spEvidence" style="display: none;">
   <h4 class="mt-4">Evidence required:</h4>
   <div class="col-12 col-md-6 col-lg-6 m-0 p-0">
     <h5>Benefit letter 2018</h5>
@@ -223,11 +219,15 @@
       <input type="text" class="form-control col-6 mb-2" id="name0" name="name" value="Display name:" />
       <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*" />
     </div>
-    <div>Use image below <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
-    <img src="https://via.placeholder.com/400X500">
+    <div>Or use image below <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
+    <div>Image name : 'BenefitLetter2018'</div>
+    <img src="https://via.placeholder.com/400X500"><br>
     <button class='btn btn-outline-primary mt-2 mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
   </div>
-</div>
+  <div class="col-12 col-md-6 col-lg-6 m-0 p-0">
+    <label >Reference number for application</label>
+    <input type="text" class="form-control col-6 mb-2" id="name0" name="name"/>
+  </div>
 </div>
 
 
@@ -770,16 +770,12 @@
 
 <script type="text/javascript">
 
- function showSubmitSP() {
+ function showSPEvidence() {
   if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEASP').style.display = 'block';
+    document.getElementById('spEvidence').style.display = 'block';
   } else {
-    document.getElementById('submitToEASP').style.display = 'none'; 
+    document.getElementById('spEvidence').style.display = 'none'; 
   }
-}
-
-function askEvidence(name) {
-  document.getElementById(name).style.display = 'block';
 }
 
 function showSubmitBG() {
