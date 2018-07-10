@@ -714,78 +714,82 @@
         <tr>
           <th class="text-primary">Scan of benefit letter(s)</th>
           <td>
-            <div>
-                   <label for="name">Display name:</label>
-                   <input type="text" id="name0" name="name"/>
-               </div>
-
-               <div>
-                   <label for="avatar">Letter:</label>
-                   <input type="file" id="pic" name="pic0" accept="image/*" />
-               </div>
-          </td>
-        </tr>
-        <tr>
-          <th class="text-primary">Would you like a benefit check?</th>
-          <td class="font-italic">
-            <form action="#" class="m-0">
-             <select name="check">
-              <option value="checkDefault"></option>
-              <option value="check1">Yes</option>
-              <option value="check2">No</option>
-            </select>
+            <form method="post">
+              <div>
+               <label for="name">Display name:</label>
+               <input type="text" id="name0" name="name"/>
+             </div>
+             <div>
+               <label for="avatar">Letter:</label>
+               <input type="file" id="pic" name="pic0" accept="image/*" />
+             </div>
+             <div>
+              <button class="btn btn-outline-primary">Submit</button>
+            </div>
           </form>
         </td>
       </tr>
       <tr>
-        <th class="text-primary">How many people live in the house?
-          <br>
-          <ul class="m-0">Adults</ul>
-          <ul class="m-0">Children</ul>
-        </th>
+        <th class="text-primary">Would you like a benefit check?</th>
         <td class="font-italic">
-          <br>
-          <div>
-           <form action="#" class="m-0">
-            <select name="adultOne">
-              <option value="adultDefault"></option>
-              <option value="adult1">1</option>
-              <option value="adult2">2</option>
-              <option value="adult3">3</option>
-              <option value="adult4">4</option>
-            </select>
-          </form>
-        </div>
+          <form action="#" class="m-0">
+           <select name="check">
+            <option value="checkDefault"></option>
+            <option value="check1">Yes</option>
+            <option value="check2">No</option>
+          </select>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-primary">How many people live in the house?
+        <br>
+        <ul class="m-0">Adults</ul>
+        <ul class="m-0">Children</ul>
+      </th>
+      <td class="font-italic">
+        <br>
         <div>
          <form action="#" class="m-0">
-          <select name="childrenOne">
-            <option value="childrenDeault"></option>
-            <option value="children0">0</option>
-            <option value="children1">1</option>
-            <option value="children2">2</option>
-            <option value="children3">3</option>
-            <option value="children4">4</option>
+          <select name="adultOne">
+            <option value="adultDefault"></option>
+            <option value="adult1">1</option>
+            <option value="adult2">2</option>
+            <option value="adult3">3</option>
+            <option value="adult4">4</option>
           </select>
         </form>
       </div>
-    </td>
-  </tr>
-  <tr>
-    <th class="text-primary">Date of births for all children</th>
-    <td class="font-italic">
-      <input type="date" name="dob1" class="mb-2">
-      <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
-      <div id="content"></div>
-    </td>
-  </tr>
-  <tr>
-   <th class="text-primary">Warm Home Discount: Core group</th>
-   <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
- </tr>
- <tr>
-   <th class="text-primary">Warm Home Discount: Broader group</th>
-   <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
- </tr>
+      <div>
+       <form action="#" class="m-0">
+        <select name="childrenOne">
+          <option value="childrenDeault"></option>
+          <option value="children0">0</option>
+          <option value="children1">1</option>
+          <option value="children2">2</option>
+          <option value="children3">3</option>
+          <option value="children4">4</option>
+        </select>
+      </form>
+    </div>
+  </td>
+</tr>
+<tr>
+  <th class="text-primary">Date of births for all children</th>
+  <td class="font-italic">
+    <input type="date" name="dob1" class="mb-2">
+    <button onclick="addDOB()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+</button>
+    <div id="content"></div>
+  </td>
+</tr>
+<tr>
+ <th class="text-primary">Warm Home Discount: Core group</th>
+ <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+</tr>
+<tr>
+ <th class="text-primary">Warm Home Discount: Broader group</th>
+ <td class="font-italic" contenteditable="true" spellcheck="true">To be added</td>
+</tr>
 </tbody>
 </table>
 </div>
