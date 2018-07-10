@@ -1903,6 +1903,18 @@
     document.getElementById('content').removeChild(input.parentNode);
   }
 
+  var letterCounter = 1;
+  function addMoreLetters(){
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    "<input type='date' name='dob"+ letterCounter + "' class='mb-2'>\
+    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
+    document.getElementById('moreLetters').appendChild(newDiv);
+    letterCounter ++;
+  }
+  function removeRow(input) {
+    document.getElementById('moreLetters').removeChild(input.parentNode);
+  }
 
   function showElecPay(name){
     if(name == 'elecPay3') {
