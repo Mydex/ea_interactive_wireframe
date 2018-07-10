@@ -714,8 +714,8 @@
         <tr>
           <th class="text-primary">Scan of benefit letter(s)</th>
           <td>
-           <input type="text" class="form-control col-6" id="name0" name="name" value="Display name:" />
-           <input type="file" class='mb-1' id="pic" name="pic0" accept="image/*" />
+           <input type="text" class="form-control col-6 mb-2" id="name0" name="name" value="Display name:" />
+           <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*" />
            <div id="moreLetters"></div>
            <button class="btn btn-outline-primary mt-1" onclick="addMoreLetters()" required style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add more letters</button><br>
            <button class="btn btn-outline-primary mt-2">Submit</button>
@@ -1897,8 +1897,8 @@
   function addMoreLetters(){
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
-    "<input type='text' class='form-control col-6' id='name"+ letterCounter + "' name='name' value='Display name:'/>\
-    <input type='file' class='mb-1' id='pic' name='pic"+ letterCounter + "' accept='image/*' />"
+    "<input type='text' class='form-control col-6 mb-2' id='name"+ letterCounter + "' name='name' value='Display name:'/>\
+    <input type='file' class='mb-2' id='pic' name='pic"+ letterCounter + "' accept='image/*' />"
     document.getElementById('moreLetters').appendChild(newDiv);
     letterCounter ++;
   }
