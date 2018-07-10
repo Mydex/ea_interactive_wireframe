@@ -212,15 +212,15 @@
   </div>
 </div>
 <div class="row" id="submitToEASP" style="display: none;">
- <div class="col-12 mt-2">
+ <div class="col-12 mt-2 mb-2">
    Send to Energy Advocate to check & send application<br>
-   <button class="btn btn-outline-primary" onclick="askEvidence()" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+   <button class="btn btn-outline-primary" onclick="askEvidence('spEvidence')" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
  </div>
 </div>
 
 <div class="row" id="spEvidence" style="display: none;">
   <div class="col-12 mt-2">
-    <p>Evidence required:</p>
+    <div class="mt-4">Evidence required:</div>
   </div>
 </div>
 </div>
@@ -773,8 +773,8 @@
   }
 }
 
-function askEvidence() {
-  document.getElementById('spEvidence').style.display = 'block';
+function askEvidence(name) {
+  document.getElementById(name).style.display = 'block';
 }
 
 function showSubmitBG() {
