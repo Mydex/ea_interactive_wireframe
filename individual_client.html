@@ -1628,6 +1628,31 @@
   float: right;
   color: black;
 }
+
+#module {
+  width: 400px;
+}
+
+#module p.collapse[aria-expanded="false"] {
+  height: 21px !important;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+
+#module p.collapsing[aria-expanded="false"] {
+  height: 21px !important;
+}
+
+#module a.collapsed:after  {
+  content: '+';
+}
+
+#module a:not(.collapsed):after {
+  content: '-';
+}
 </style>
 
 <script>
