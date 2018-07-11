@@ -95,7 +95,7 @@
                 <td>03/03/2018</td>
                 <td>10:23</td>
                 <td>
-                  <div id="module" class="row">
+                  <div id="moduleMessages" class="row">
                     <p class="collapse col-10" id="collapseExample1" aria-expanded="false">
                       <i>Message details here</i>
                       <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
@@ -1629,11 +1629,11 @@
   color: black;
 }
 
-#module {
+#moduleMessages {
   width: 400px;
 }
 
-#module p.collapse[aria-expanded="false"] {
+#moduleMessages p.collapse[aria-expanded="false"] {
   height: 21px !important;
   overflow: hidden;
 
@@ -1642,15 +1642,15 @@
   -webkit-box-orient: vertical;  
 }
 
-#module p.collapsing[aria-expanded="false"] {
+#moduleMessages p.collapsing[aria-expanded="false"] {
   height: 21px !important;
 }
 
-#module a.collapsed:after  {
+#moduleMessages a.collapsed:after  {
   content: '+';
 }
 
-#module a:not(.collapsed):after {
+#moduleMessages a:not(.collapsed):after {
   content: '-';
 }
 </style>
