@@ -221,9 +221,39 @@
     </div>
     <div class="mt-3">Or use image below <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
     <div class="mt-2 mb-3">Image name : 'BenefitLetter2018'</div>
-    <img src="https://via.placeholder.com/200X250"><br>
+    <img src="https://via.placeholder.com/200X250" onclick="openModal();currentSlide(1)" class="hover-shadow"><br>
     <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
   </div>
+
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 1</div>
+        <img src="https://via.placeholder.com/200X250" style="width:100%">
+      </div>
+
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+      </div>
+
+    </div>
+  </div>
+
+
   <div class="col-12 col-md-6 col-lg-6 m-0 p-0">
     <h6 class="mt-4 mb-2">Reference number for application</h6>
     <input type="text" class="form-control mb-2" id="name0" name="name"/>
