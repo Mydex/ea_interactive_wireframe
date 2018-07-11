@@ -97,7 +97,7 @@
                 <td>
                   <div id="moduleMessages" class="row">
                     <p class="collapse" id="messageOne" aria-expanded="false">
-                      <i>Message details here</i>
+                      <i>All message details can be read here and replied to.</i>
                       <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
                       <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
                     </p>
@@ -1649,10 +1649,12 @@
 
 #moduleMessages a.collapsed:after  {
   content: '+';
+  float: right;
 }
 
 #moduleMessages a:not(.collapsed):after {
   content: '-';
+  float: right;
 }
 </style>
 
