@@ -244,9 +244,12 @@
           <td>
             <input type="file" class='mb-2' id="benefitPic" name="benefitPic0" accept="image/*"/>
             <div id="benefitLetters"></div>
-            <button onclick="addImage('benefitLetters')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
           </td>
-          <td><input type="text" class="form-control" id="benefitName0" name="benefitName" value="Display name:"/></td>
+          <td>
+            <input type="text" class="form-control" id="benefitName0" name="benefitName" value="Display name:"/>
+            <div id="benefitLettersNames"></div>
+          </td>
         </tr>
         <tr>
           <td>Home Address</td>
@@ -926,11 +929,15 @@ function showAudit() {
 }
 
 var imageCounter = 1;
-function addImage(divName){
-  var newDiv = document.createElement('div');
-  newDiv.innerHTML = 
+function addImage(divFile, divName){
+  var newDivFile = document.createElement('div');
+  newDivFile.innerHTML = 
   "<input type='file' class='mb-2' id='benefitPic' name='benefitPic"+ imageCounter + "' accept='image/*'/>";
-  document.getElementById(divName).appendChild(newDiv);
+  document.getElementById(divFile).appendChild(newDivFile);
+  var newDivName = document.createElement('div');
+  newDivName.innerHTML = 
+  "<input type='text' class='form-control' id='benefitName"+ imageCounter + "' name='benefitName' value='Display name:'/>";
+  document.getElementById(divName).appendChild(newDivName);
   imageCounter ++;
 }
 
