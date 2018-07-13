@@ -243,20 +243,20 @@
     <table class="table table-bordered table-sm">
       <thead class="bg-primary">
         <tr>
-          <th>Document required</th>
-          <th>File</th>
-          <th>File Name</th>
+          <th class="col-2">Document required</th>
+          <th class="col-5">File</th>
+          <th class="col-4">File Name</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="col-3">Benefit letters</td>
-          <td class="col-5">
+          <td>Benefit letters</td>
+          <td>
             <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
             <div id="benefitLetters"></div>
             <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
           </td>
-          <td class="col-4">
+          <td>
             <input type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
             <div id="benefitLettersNames"></div>
           </td>
