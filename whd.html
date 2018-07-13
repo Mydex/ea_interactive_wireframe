@@ -929,13 +929,9 @@ var imageCounter = 1;
 function addImage(divName){
   var newDiv = document.createElement('div');
   newDiv.innerHTML = 
-  "<input type='file' class='mb-2' id='benefitPic' name='benefitPic"+ imageCounter + "' accept='image/*'/>\
-  <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow("+divName+", this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
+  "<input type='file' class='mb-2' id='benefitPic' name='benefitPic"+ imageCounter + "' accept='image/*'/>";
   document.getElementById(divName).appendChild(newDiv);
   imageCounter ++;
-}
-function removeRow(divName, input) {
-  document.getElementById(divName).removeChild(input.parentNode);
 }
 
 </script>
