@@ -241,8 +241,12 @@
       <tbody>
         <tr>
           <td>Benefit letters</td>
-          <td><input type="file" class='mb-2' id="pic" name="pic0" accept="image/*" /></td>
-          <td><input type="text" class="form-control" id="name0" name="name" value="Display name:" /></td>
+          <td>
+            <input type="file" class='mb-2' id="benefitPic" name="benefitPic0" accept="image/*"/>
+            <div id="benefitLetters"></div>
+            <button onclick="addImage('benefitLetters')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+          </td>
+          <td><input type="text" class="form-control" id="benefitName0" name="benefitName" value="Display name:"/></td>
         </tr>
         <tr>
           <td>Home Address</td>
@@ -919,6 +923,19 @@ function checkData(tableName, buttonName) {
 
 function showAudit() {
   document.getElementById('audit').style.display = 'block';
+}
+
+var imageCounter = 2;
+function addImage(divName){
+  var newDiv = document.createElement('div');
+  newDiv.innerHTML = 
+  "<input type='date' name='image"+ imageCounter + "' class='mb-2'>\
+  <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(divName, this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>";
+  document.getElementById(divName).appendChild(newDiv);
+  imageCounter ++;
+}
+function removeRow(divName, input) {
+  document.getElementById(divName).removeChild(input.parentNode);
 }
 
 </script>
