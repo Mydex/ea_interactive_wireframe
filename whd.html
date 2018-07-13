@@ -242,19 +242,26 @@
         <tr>
           <td>Benefit letters</td>
           <td>
-            <input type="file" class='mb-2' id="benefitPic" name="benefitPic0" accept="image/*"/>
+            <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/>
             <div id="benefitLetters"></div>
             <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
           </td>
           <td>
-            <input type="text" class="form-control" id="benefitName0" name="benefitName" value="Display name:"/>
+            <input type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
             <div id="benefitLettersNames"></div>
           </td>
         </tr>
         <tr>
           <td>Home Address</td>
-          <td></td>
-          <td></td>
+          <td>
+                <input type="file" class='mb-2' id="pic" name="pic1" accept="image/*"/>
+                <div id="homeLetters"></div>
+                <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+              </td>
+              <td>
+                <input type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+                <div id="homeLettersNames"></div>
+              </td>
         </tr>
         <tr>
           <td>Birth certificate</td>
@@ -928,15 +935,15 @@ function showAudit() {
   document.getElementById('audit').style.display = 'block';
 }
 
-var imageCounter = 1;
+var imageCounter = 4;
 function addImage(divFile, divName){
   var newDivFile = document.createElement('div');
   newDivFile.innerHTML = 
-  "<input type='file' class='mb-2' id='benefitPic' name='benefitPic"+ imageCounter + "' accept='image/*'/>";
+  "<input type='file' class='mb-2' id='pic' name='pic"+ imageCounter + "' accept='image/*'/>";
   document.getElementById(divFile).appendChild(newDivFile);
   var newDivName = document.createElement('div');
   newDivName.innerHTML = 
-  "<input type='text' class='form-control' id='benefitName"+ imageCounter + "' name='benefitName' value='Display name:'/>";
+  "<input type='text' class='form-control' id='picName"+ imageCounter + "' name='picName' value='Display name:'/>";
   document.getElementById(divName).appendChild(newDivName);
   imageCounter ++;
 }
