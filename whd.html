@@ -219,7 +219,7 @@
   <div>Yes <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Yes">   No <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="No"></div>
   <h6 class="mt-4 mb-2">Notes</h6>
   <textarea class="form-control mb-2" rows="3"></textarea>
-  <button class="btn btn-outline-primary" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
+  <button class="btn btn-outline-primary" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
 </div>
 
 <div id="audit" style="display: none;">
@@ -882,6 +882,10 @@ function checkData(tableName, buttonName) {
     document.getElementById(buttonName).dataset.text = 'Check';
     counter = 0;
   }
+}
+
+function showAudit() {
+  document.getElementById('audit').style.display = 'block';
 }
 
 </script>
