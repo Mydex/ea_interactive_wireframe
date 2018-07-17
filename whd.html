@@ -266,7 +266,11 @@
         <tr>
           <td>Benefit letters</td>
           <td>
-            <label class="btn btn-outline-primary mb-2">Choose file<input type="file"  name="pic0" accept="image/*" style="display: none;"></label>
+            <label class="btn btn-primary" for="my-file-selector">
+                <input id="my-file-selector" type="file" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Button Text Here
+            </label>
+            <span class='label label-info' id="upload-file-info"></span>
+            <!-- <label class="btn btn-outline-primary mb-2">Choose file<input type="file"  name="pic0" accept="image/*" style="display: none;"></label> -->
             <!-- <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/> -->
             <div id="benefitLetters"></div>
             <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
