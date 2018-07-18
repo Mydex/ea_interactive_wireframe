@@ -84,10 +84,35 @@
       <section class="container col-12" id="page1">
 
         <h4 class="mt-4 mb-2">Interactions with Client</h4>
-        <div>Client prefers contact via:<br></div>
-        <div class="ml-5">Text <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Text"></div>
-        <div class="ml-5">Message <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Message" checked></div>
-        <div class="ml-5">Phonecall <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Phonecall"></div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div>Client prefers contact via:<br></div>
+            <div class="ml-5">Text <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Text"></div>
+            <div class="ml-5">Message <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Message" checked></div>
+            <div class="ml-5">Phonecall <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Phonecall"></div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
+            <div class="homeVisit-selector">
+              <input type="checkbox" id="mon" />
+              <label for="mon" checked>M</label>
+              <input type="checkbox" id="tue"/>
+              <label for="tue">T</label>
+              <input type="checkbox" id="wed"/>
+              <label for="wed">W</label>
+              <input type="checkbox" id="thu"/>
+              <label for="thu">T</label>
+              <input type="checkbox" id="fri"/>
+              <label for="fri" checked>F</label>
+            </div>
+            <div class="homeVisit-selector mt-2">
+              <input type="checkbox" id="am" />
+              <label for="am" checked>AM</label>
+              <input type="checkbox" id="pm"/>
+              <label for="pm">PM</label>
+            </div>
+          </div>
+        </div>
         <div class="table-responsive mt-4">
          <table class="table table-bordered table-sm text-left">
           <thead class="table-info">
@@ -1664,6 +1689,28 @@ ul.breadcrumb li a {
 
 .unhidden{
   display:block;
+}
+
+.homeVisit-selector input {
+  display: none!important;
+}
+
+.homeVisit-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 32px;
+  margin-right: 3px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.homeVisit-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
 }
 </style>
 
