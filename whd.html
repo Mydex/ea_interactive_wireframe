@@ -71,7 +71,7 @@
      <h4 class="mt-2">Scottish Power Warm Home Discount Application</h4>
      <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
      <div id="module" class="container row mt-4">
-       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton'); showSPEvidence();" data-text="Check">Contact Details</a></h5>
+       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalSP" aria-expanded="false" aria-controls="collapsePersonalSP" id="personalSPButton" onclick="checkData('personalSP', 'personalSPButton'); submitSP();" data-text="Check">Contact Details</a></h5>
        <div class="collapse col-12" id="collapsePersonalSP" aria-labelledby="headingPersonalSP">
          <div class="table-responsive">
            <table class="table table-bordered table-sm text-left" id="personalSP">
@@ -123,7 +123,7 @@
      </div>
 
      <div id="module" class="container row mt-3">
-       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); showSPEvidence();" data-text="Check">Electricity Account</a></h5>
+       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierSP" aria-expanded="false" aria-controls="collapseSupplierSP" id="supplierSPButton" onclick="checkData('supplierSP', 'supplierSPButton'); submitSP();" data-text="Check">Electricity Account</a></h5>
        <div class="collapse col-12" id="collapseSupplierSP" aria-labelledby="headingSupplierSP">
          <div class="table-responsive">
            <table class="table table-bordered table-sm text-left" id="supplierSP">
@@ -165,7 +165,7 @@
     </div>
 
     <div id="module" class="container row mt-3">
-     <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); showSPEvidence();" data-text="Check">Household Income</a></h5>
+     <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeSP" aria-expanded="false" aria-controls="collapseIncomeSP" id="incomeSPButton" onclick="checkData('incomeSP', 'incomeSPButton'); submitSP();" data-text="Check">Household Income</a></h5>
      <div class="collapse col-12" id="collapseIncomeSP" aria-labelledby="headingIncomeSP">
        <div class="table-responsive">
          <table class="table table-bordered table-sm text-left"id="incomeSP">
@@ -185,7 +185,7 @@
  </div>
 
  <div id="module" class="container row mt-3 mb-4">
-   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); showSPEvidence();" data-text="Check">Fuel Spend</a></h5>
+   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelSP" aria-expanded="false" aria-controls="collapseFuelSP" id="fuelSPButton" onclick="checkData('fuelSP', 'fuelSPButton'); submitSP();" data-text="Check">Fuel Spend</a></h5>
    <div class="collapse col-12" id="collapseFuelSP" aria-labelledby="headingFuelSP">
      <div class="table-responsive">
        <table class="table table-bordered table-sm text-left" id="fuelSP">
@@ -219,7 +219,7 @@
  <h4 class="mt-4 mb-2">New application</h4>
  <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
  <div id="module" class="container row mt-4">
-   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalBG" aria-expanded="false" aria-controls="collapsePersonalBG" id="personalBGButton" onclick="checkData('personalBG', 'personalBGButton'); showBGEvidence();" data-text="Check">Contact Details</a></h5>
+   <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalBG" aria-expanded="false" aria-controls="collapsePersonalBG" id="personalBGButton" onclick="checkData('personalBG', 'personalBGButton'); submitBG();" data-text="Check">Contact Details</a></h5>
    <div class="collapse col-12" id="collapsePersonalBG" aria-labelledby="headingPersonalBG">
      <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="personalBG">
@@ -263,7 +263,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
- <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierBG" aria-expanded="false" aria-controls="collapseSupplierBG" id="supplierBGButton" onclick="checkData('supplierBG', 'supplierBGButton'); showBGEvidence();" data-text="Check">Electricity Account</a></h5>
+ <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierBG" aria-expanded="false" aria-controls="collapseSupplierBG" id="supplierBGButton" onclick="checkData('supplierBG', 'supplierBGButton'); submitBG();" data-text="Check">Electricity Account</a></h5>
  <div class="collapse col-12" id="collapseSupplierBG" aria-labelledby="headingSupplierBG">
    <div class="table-responsive">
     <table class="table table-bordered table-sm text-left" id="supplierBG">
@@ -305,7 +305,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
- <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeBG" aria-expanded="false" aria-controls="collapseIncomeBG" id="incomeBGButton" onclick="checkData('incomeBG', 'incomeBGButton'); showBGEvidence();" data-text="Check">Household Income</a></h5>
+ <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeBG" aria-expanded="false" aria-controls="collapseIncomeBG" id="incomeBGButton" onclick="checkData('incomeBG', 'incomeBGButton'); submitBG();" data-text="Check">Household Income</a></h5>
  <div class="collapse col-12" id="collapseIncomeBG" aria-labelledby="headingIncomeBG">
    <div class="table-responsive">
     <table class="table table-bordered table-sm text-left" id="incomeBG">
@@ -325,7 +325,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
- <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelBG" aria-expanded="false" aria-controls="collapseFuelBG" id="fuelBGButton" onclick="checkData('fuelBG', 'fuelBGButton'); showBGEvidence();" data-text="Check">Fuel Spend</a></h5>
+ <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelBG" aria-expanded="false" aria-controls="collapseFuelBG" id="fuelBGButton" onclick="checkData('fuelBG', 'fuelBGButton'); submitBG();" data-text="Check">Fuel Spend</a></h5>
  <div class="collapse col-12" id="collapseFuelBG" aria-labelledby="headingFuelBG">
    <div class="table-responsive">
     <table class="table table-bordered table-sm text-left" id="fuelBG">
@@ -353,7 +353,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
- <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBenefitsBG" aria-expanded="false" aria-controls="collapseBenefitsBG" id="benefitsBGButton" onclick="checkData('benefitsBG', 'benefitsBGButton'); showBGEvidence();" data-text="Check">Benefits</a></h5>
+ <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBenefitsBG" aria-expanded="false" aria-controls="collapseBenefitsBG" id="benefitsBGButton" onclick="checkData('benefitsBG', 'benefitsBGButton'); submitBG();" data-text="Check">Benefits</a></h5>
  <div class="collapse col-12" id="collapseBenefitsBG" aria-labelledby="headingBenefitsBG">
    <div class="table-responsive">
      <table class="table table-bordered table-sm text-left" id="benefitsBG">
@@ -388,7 +388,7 @@
  <h4 class="mt-2">EDF Energy Warm Home Discount</h4>
  <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
  <div id="module" class="container row mt-4">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEDF" aria-expanded="false" aria-controls="collapsePersonalEDF" id="personalEDFButton" onclick="checkData('personalEDF', 'personalEDFButton'); showEDFEvidence();" data-text="Check">Contact Details</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEDF" aria-expanded="false" aria-controls="collapsePersonalEDF" id="personalEDFButton" onclick="checkData('personalEDF', 'personalEDFButton'); submitEDF();" data-text="Check">Contact Details</a></h5>
   <div class="collapse col-12" id="collapsePersonalEDF" aria-labelledby="headingPersonalEDF">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="personalEDF">
@@ -440,7 +440,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEDF" aria-expanded="false" aria-controls="collapseSupplierEDF" id="supplierEDFButton" onclick="checkData('supplierEDF', 'supplierEDFButton'); showEDFEvidence();" data-text="Check">Electricity Account</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEDF" aria-expanded="false" aria-controls="collapseSupplierEDF" id="supplierEDFButton" onclick="checkData('supplierEDF', 'supplierEDFButton'); submitEDF();" data-text="Check">Electricity Account</a></h5>
   <div class="collapse col-12" id="collapseSupplierEDF" aria-labelledby="headingSupplierEDF">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="supplierEDF">
@@ -482,7 +482,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEDF" aria-expanded="false" aria-controls="collapseIncomeEDF" id="incomeEDFButton" onclick="checkData('incomeEDF', 'incomeEDFButton'); showEDFEvidence();" data-text="Check">Household Income</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEDF" aria-expanded="false" aria-controls="collapseIncomeEDF" id="incomeEDFButton" onclick="checkData('incomeEDF', 'incomeEDFButton'); submitEDF();" data-text="Check">Household Income</a></h5>
   <div class="collapse col-12" id="collapseIncomeEDF" aria-labelledby="headingIncomeEDF">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left"id="incomeEDF">
@@ -502,7 +502,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEDF" aria-expanded="false" aria-controls="collapseFuelEDF" id="fuelEDFButton" onclick="checkData('fuelEDF', 'fuelEDFButton'); showEDFEvidence();" data-text="Check">Fuel Spend</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEDF" aria-expanded="false" aria-controls="collapseFuelEDF" id="fuelEDFButton" onclick="checkData('fuelEDF', 'fuelEDFButton'); submitEDF();" data-text="Check">Fuel Spend</a></h5>
   <div class="collapse col-12" id="collapseFuelEDF" aria-labelledby="headingFuelEDF">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="fuelEDF">
@@ -541,7 +541,7 @@
  <h4 class="mt-2">E.ON Warm Home Discount Application</h4>
  <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
  <div id="module" class="container row mt-4">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEON" aria-expanded="false" aria-controls="collapsePersonalEON" id="personalEONButton" onclick="checkData('personalEON', 'personalEONButton'); showEONEvidence();" data-text="Check">Contact Details</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonalEON" aria-expanded="false" aria-controls="collapsePersonalEON" id="personalEONButton" onclick="checkData('personalEON', 'personalEONButton'); submitEON();" data-text="Check">Contact Details</a></h5>
   <div class="collapse col-12" id="collapsePersonalEON" aria-labelledby="headingPersonalEON">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="personalEON">
@@ -593,7 +593,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEON" aria-expanded="false" aria-controls="collapseSupplierEON" id="supplierEONButton" onclick="checkData('supplierEON', 'supplierEONButton'); showEONEvidence();" data-text="Check">Electricity Account</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSupplierEON" aria-expanded="false" aria-controls="collapseSupplierEON" id="supplierEONButton" onclick="checkData('supplierEON', 'supplierEONButton'); submitEON();" data-text="Check">Electricity Account</a></h5>
   <div class="collapse col-12" id="collapseSupplierEON" aria-labelledby="headingSupplierEON">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="supplierEON">
@@ -635,7 +635,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEON" aria-expanded="false" aria-controls="collapseIncomeEON" id="incomeEONButton" onclick="checkData('incomeEON', 'incomeEONButton'); showEONEvidence();" data-text="Check">Household Income</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseIncomeEON" aria-expanded="false" aria-controls="collapseIncomeEON" id="incomeEONButton" onclick="checkData('incomeEON', 'incomeEONButton'); submitEON();" data-text="Check">Household Income</a></h5>
   <div class="collapse col-12" id="collapseIncomeEON" aria-labelledby="headingIncomeEON">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left"id="incomeEON">
@@ -655,7 +655,7 @@
 </div>
 
 <div id="module" class="container row mt-3">
-  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEON" aria-expanded="false" aria-controls="collapseFuelEON" id="fuelEONButton" onclick="checkData('fuelEON', 'fuelEONButton'); showEONEvidence();" data-text="Check">Fuel Spend</a></h5>
+  <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFuelEON" aria-expanded="false" aria-controls="collapseFuelEON" id="fuelEONButton" onclick="checkData('fuelEON', 'fuelEONButton'); submitEON();" data-text="Check">Fuel Spend</a></h5>
   <div class="collapse col-12" id="collapseFuelEON" aria-labelledby="headingFuelEON">
     <div class="table-responsive">
       <table class="table table-bordered table-sm text-left" id="fuelEON">
@@ -691,7 +691,7 @@
 </div>
 </div>
 
-<div id="evidence" style="display: none;">
+<div id="afterSubmit" style="display: none;">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-6">
       <h6 class="mt-4 mb-2">Reference number for application</h6>
@@ -716,7 +716,7 @@
       <textarea class="form-control mb-2" rows="3"></textarea>
     </div>
   </div>
-  <button class="mt-5 mb-4 btn btn-outline-primary" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
+  <button class="mt-5 mb-4 btn btn-outline-primary" onclick="submitAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
 </div>
 
 <div id="audit" style="display: none;">
@@ -1013,35 +1013,35 @@
 
 <script type="text/javascript">
 
- function showSPEvidence() {
+ function submitSP() {
   if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-    document.getElementById('evidence').style.display = 'block';
+    document.getElementById('afterSubmit').style.display = 'block';
   } else {
-    document.getElementById('evidence').style.display = 'none'; 
+    document.getElementById('afterSubmit').style.display = 'none'; 
   }
 }
 
-function showBGEvidence() {
+function submitBG() {
   if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
-    document.getElementById('evidence').style.display = 'block';
+    document.getElementById('afterSubmit').style.display = 'block';
   } else {
-   document.getElementById('evidence').style.display = 'none'; 
+   document.getElementById('afterSubmit').style.display = 'none'; 
  }
 }
 
-function showEDFEvidence() {
+function submitEDF() {
   if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete'){
-    document.getElementById('evidence').style.display = 'block';
+    document.getElementById('afterSubmit').style.display = 'block';
   } else {
-   document.getElementById('evidence').style.display = 'none'; 
+   document.getElementById('afterSubmit').style.display = 'none'; 
  }
 }
 
-function showEONEvidence() {
+function submitEON() {
   if (document.getElementById('personalEONButton').dataset.text === 'Complete' && document.getElementById('supplierEONButton').dataset.text === 'Complete' && document.getElementById('incomeEONButton').dataset.text === 'Complete' && document.getElementById('fuelEONButton').dataset.text === 'Complete'){
-    document.getElementById('evidence').style.display = 'block';
+    document.getElementById('afterSubmit').style.display = 'block';
   } else {
-   document.getElementById('evidence').style.display = 'none'; 
+   document.getElementById('afterSubmit').style.display = 'none'; 
  }
 }
 
@@ -1051,35 +1051,35 @@ function showApplciation(name){
     document.getElementById('britishGasContent').style.display = 'none';
     document.getElementById('edfEnergyContent').style.display = 'none';
     document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('evidence').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
     document.getElementById('audit').style.display = 'none';
   } else if (name == 'britishGas'){
     document.getElementById('britishGasContent').style.display = 'block';
     document.getElementById('scottishPowerContent').style.display = 'none';
     document.getElementById('edfEnergyContent').style.display = 'none';
     document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('evidence').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
     document.getElementById('audit').style.display = 'none';
   } else if (name == 'edfEnergy'){
     document.getElementById('edfEnergyContent').style.display = 'block';
     document.getElementById('scottishPowerContent').style.display = 'none';
     document.getElementById('britishGasContent').style.display = 'none';
     document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('evidence').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
     document.getElementById('audit').style.display = 'none';
   } else if (name == 'eon'){
     document.getElementById('eonContent').style.display = 'block';
     document.getElementById('scottishPowerContent').style.display = 'none';
     document.getElementById('britishGasContent').style.display = 'none';
     document.getElementById('edfEnergyContent').style.display = 'none';
-    document.getElementById('evidence').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
     document.getElementById('audit').style.display = 'none';
   } else {
     document.getElementById('scottishPowerContent').style.display = 'none';
     document.getElementById('britishGasContent').style.display = 'none';
     document.getElementById('edfEnergyContent').style.display = 'none';
     document.getElementById('eonContent').style.display = 'none';
-    document.getElementById('evidence').style.display = 'none';
+    document.getElementById('afterSubmit').style.display = 'none';
     document.getElementById('audit').style.display = 'none';
   };
 }
