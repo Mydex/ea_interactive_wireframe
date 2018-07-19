@@ -733,7 +733,7 @@
     <div class="col-12 col-md-6 col-lg-6">
       <h4 class="mt-4">Evidence required:</h4>
       <div class="evidence-selector mt-2">
-        <input type="checkbox" id="benefit" checked/>
+        <input type="checkbox" id="benefit" onclick="showRow('benefitLetters')" checked/>
         <label for="benefit">Benefit letters</label>
         <input type="checkbox" id="address"/>
         <label for="address">Home address</label>
@@ -755,7 +755,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="benefitLetters" style="display: none;">
           <td>Benefit letters
             <div id="moduleButton" class="row">
               <p class="collapse col-10" id="collapseExample1" aria-expanded="false">
@@ -1110,6 +1110,10 @@ function checkData(tableName, buttonName) {
 
 function showAudit() {
   document.getElementById('audit').style.display = 'block';
+}
+
+function showRow(name) {
+  document.getElementById(name).style.display = 'block';
 }
 
 var imageCounter = 4;
