@@ -253,7 +253,7 @@
     </div>
     <div class="col-12 col-md-6 col-lg-6">
       <h4 class="mt-4">Evidence required:</h4>
-      <div class="success-selector mt-2">
+      <div class="evidence-selector mt-2">
         <input type="checkbox" id="benefit" checked/>
         <label for="benefit">Benefit letters</label>
         <input type="checkbox" id="address"/>
@@ -982,6 +982,28 @@
 }
 
 .success-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
+.evidence-selector input {
+  display: none!important;
+}
+
+.evidence-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 130px;
+  margin-right: 3px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.evidence-selector input[type=checkbox]:checked + label {
   background: #2AD705;
   color: #ffffff;
 }
