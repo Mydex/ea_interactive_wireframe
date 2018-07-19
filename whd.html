@@ -733,7 +733,7 @@
     <div class="col-12 col-md-6 col-lg-6">
       <h4 class="mt-4">Evidence required:</h4>
       <div class="evidence-selector mt-2">
-        <input type="checkbox" id="benefit" onclick="showRow('benefitLetters')"/>
+        <input type="checkbox" id="benefit" onclick="showRow('benefitLetters1', 'benefitLetters2', 'benefitLetters3')"/>
         <label for="benefit">Benefit letters</label>
         <input type="checkbox" id="address" onclick="showRow('homeAddress')"/>
         <label for="address">Home address</label>
@@ -756,7 +756,7 @@
       </thead>
       <tbody>
         <tr>
-          <td id="benefitLetters" style="display: none;">Benefit letters
+          <td id="benefitLetters1" style="display: none;">Benefit letters
             <div id="moduleButton" class="row">
               <p class="collapse col-10" id="collapseExample1" aria-expanded="false">
                 <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'>Please include all of your benefit letters; JSA, disability etc </textarea>
@@ -764,12 +764,12 @@
               <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"></a>
             </div>
           </td>
-          <td id="benefitLetters" style="display: none;">
+          <td id="benefitLetters2" style="display: none;">
             <label class="btn btn-outline-primary mb-2" for="image1">
               <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
             <!-- <label class="btn btn-outline-primary mb-2">Choose file<input type="file"  name="pic0" accept="image/*" style="display: none;"></label> -->
             <!-- <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/> -->
-            <div id="benefitLetters"></div>
+            <div id="benefitLetters3"></div>
             <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
           </td>
           <td id="benefitLetters" style="display: none;">
@@ -1110,8 +1110,10 @@ function showAudit() {
   document.getElementById('audit').style.display = 'block';
 }
 
-function showRow(name) {
-  document.getElementById(name).style.display = 'block';
+function showRow(name1, name2, name3) {
+  document.getElementById(name1).style.display = 'block';
+  document.getElementById(name2).style.display = 'block';
+  document.getElementById(name3).style.display = 'block';
 }
 
 var imageCounter = 4;
