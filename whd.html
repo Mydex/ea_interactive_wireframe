@@ -700,7 +700,7 @@
       <input type="date" name="refSend" value="2018-01-01">
       <h6 class="mt-4 mb-2">Successful?</h6>
       <div class="success-selector mt-2">
-        <input type="checkbox" id="yes" checked/>
+        <input type="checkbox" id="yes" onclick="showAuditButton()" checked/>
         <label for="yes">Yes</label>
         <input type="checkbox" id="no"/>
         <label for="no">No</label>
@@ -716,7 +716,7 @@
       <textarea class="form-control mb-2" rows="3"></textarea>
     </div>
   </div>
-  <button class="mt-5 mb-4 btn btn-outline-primary" onclick="showAudit('yes')" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
+  <button class="mt-5 mb-4 btn btn-outline-primary" id="auditButton" onclick="showAudit()" style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Audit</button>
 </div>
 
 <div id="audit" style="display: none;">
@@ -767,86 +767,86 @@
           <td>
             <label class="btn btn-outline-primary mb-2" for="image1">
               <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-            <!-- <label class="btn btn-outline-primary mb-2">Choose file<input type="file"  name="pic0" accept="image/*" style="display: none;"></label> -->
-            <!-- <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/> -->
-            <div id="benefitLetters3"></div>
-            <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          </td>
-          <td>
-            <input style="width: auto;" type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
-            <div id="benefitLettersNames"></div>
-          </td>
-        </tr>
-        <tr id="homeAddress" style="display: none;">
-          <td>Home Address
-            <div id="moduleButton" class="row">
-              <p class="collapse col-10" id="collapseExample2" aria-expanded="false">
-                <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-              </p>
-              <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"></a>
-            </div>
-          </td>
-          <td>
-            <input type="file" class='mb-2' id="pic" name="pic1" accept="image/*"/>
-            <div id="homeLetters"></div>
-            <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          </td>
-          <td>
-            <input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-            <div id="homeLettersNames"></div>
-          </td>
-        </tr>
-        <tr id="birthCertificate" style="display: none;">
-          <td>Birth certificate
-            <div id="moduleButton" class="row">
-              <p class="collapse col-10" id="collapseExample3" aria-expanded="false">
-                <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-              </p>
-              <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"></a>
-            </div>
-          </td>
-          <td>
-            <input type="file" class='mb-2' id="pic" name="pic2" accept="image/*"/>
-            <div id="birthCert"></div>
-            <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          </td>
-          <td>
-            <input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
-            <div id="birthCertNames"></div>
-          </td>
-        </tr>
-        <tr id="paySlips" style="display: none;">
-          <td>Pay slips
-            <div id="moduleButton" class="row">
-              <p class="collapse col-10" id="collapseExample4" aria-expanded="false">
-                <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-              </p>
-              <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></a>
-            </div>
-          </td>
-          <td>
-            <input type="file" class='mb-2' id="pic" name="pic3" accept="image/*"/>
-            <div id="pay"></div>
-            <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          </td>
-          <td>
-            <input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
-            <div id="paySlipsNames"></div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-6">
-      <h6 class="mt-4 mb-2">Date evidence sent</h6>
-      <input type="date" name="refEviSend" value="2018-01-01">
-      <h6 class="mt-4 mb-2">Notes</h6>
-      <textarea class="form-control mb-2" rows="3"></textarea>
+              <!-- <label class="btn btn-outline-primary mb-2">Choose file<input type="file"  name="pic0" accept="image/*" style="display: none;"></label> -->
+              <!-- <input type="file" class='mb-2' id="pic" name="pic0" accept="image/*"/> -->
+              <div id="benefitLetters3"></div>
+              <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input style="width: auto;" type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
+              <div id="benefitLettersNames"></div>
+            </td>
+          </tr>
+          <tr id="homeAddress" style="display: none;">
+            <td>Home Address
+              <div id="moduleButton" class="row">
+                <p class="collapse col-10" id="collapseExample2" aria-expanded="false">
+                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                </p>
+                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"></a>
+              </div>
+            </td>
+            <td>
+              <input type="file" class='mb-2' id="pic" name="pic1" accept="image/*"/>
+              <div id="homeLetters"></div>
+              <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+              <div id="homeLettersNames"></div>
+            </td>
+          </tr>
+          <tr id="birthCertificate" style="display: none;">
+            <td>Birth certificate
+              <div id="moduleButton" class="row">
+                <p class="collapse col-10" id="collapseExample3" aria-expanded="false">
+                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                </p>
+                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"></a>
+              </div>
+            </td>
+            <td>
+              <input type="file" class='mb-2' id="pic" name="pic2" accept="image/*"/>
+              <div id="birthCert"></div>
+              <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
+              <div id="birthCertNames"></div>
+            </td>
+          </tr>
+          <tr id="paySlips" style="display: none;">
+            <td>Pay slips
+              <div id="moduleButton" class="row">
+                <p class="collapse col-10" id="collapseExample4" aria-expanded="false">
+                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                </p>
+                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></a>
+              </div>
+            </td>
+            <td>
+              <input type="file" class='mb-2' id="pic" name="pic3" accept="image/*"/>
+              <div id="pay"></div>
+              <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            </td>
+            <td>
+              <input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
+              <div id="paySlipsNames"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">
+        <h6 class="mt-4 mb-2">Date evidence sent</h6>
+        <input type="date" name="refEviSend" value="2018-01-01">
+        <h6 class="mt-4 mb-2">Notes</h6>
+        <textarea class="form-control mb-2" rows="3"></textarea>
+      </div>
+    </div>
+    <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
   </div>
-  <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
-</div>
 
 
 
@@ -1106,22 +1106,26 @@ function checkData(tableName, buttonName) {
   }
 }
 
-function showAudit(cb) {
+function showAudit() {
+  document.getElementById('audit').style.display = "block";
+}
+
+function showAuditButton(cb) {
   var checkBox = document.getElementById(cb);
-    if (checkBox.checked == true){
-      document.getElementById('audit').style.display = "block";
-    } else {
-      document.getElementById('audit').style.display = "none";
-    }
+  if (checkBox.checked == true){
+    document.getElementById('auditButton').style.display = "block";
+  } else {
+    document.getElementById('auditButton').style.display = "none";
+  }
 }
 
 function showRow(cb, name) {
   var checkBox = document.getElementById(cb);
-    if (checkBox.checked == true){
-      document.getElementById(name).style.display = "table-row";
-    } else {
-      document.getElementById(name).style.display = "none";
-    }
+  if (checkBox.checked == true){
+    document.getElementById(name).style.display = "table-row";
+  } else {
+    document.getElementById(name).style.display = "none";
+  }
 }
 
 function start(){
