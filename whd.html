@@ -733,13 +733,13 @@
     <div class="col-12 col-md-6 col-lg-6">
       <h4 class="mt-4">Evidence required:</h4>
       <div class="evidence-selector mt-2">
-        <input type="checkbox" id="benefit" onclick="showRow('benefitLetters')"/>
+        <input type="checkbox" id="benefit" onclick="showRow('benefit','benefitLetters')"/>
         <label for="benefit">Benefit letters</label>
-        <input type="checkbox" id="address" onclick="showRow('homeAddress')"/>
+        <input type="checkbox" id="address" onclick="showRow('address', 'homeAddress')"/>
         <label for="address">Home address</label>
-        <input type="checkbox" id="cert" onclick="showRow('birthCertificate')"/>
+        <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/>
         <label for="cert">Birth certificate</label>
-        <input type="checkbox" id="pay"  onclick="showRow('paySlips')"/>
+        <input type="checkbox" id="pay"  onclick="showRow('pat, 'paySlips')"/>
         <label for="pay">Pay slips</label>
       </div>
     </div>
@@ -1110,8 +1110,13 @@ function showAudit() {
   document.getElementById('audit').style.display = 'block';
 }
 
-function showRow(name) {
-  document.getElementById(name).style.display = 'table-row';
+function showRow(cb, name) {
+  var checkBox = document.getElementById(cb);
+    if (checkBox.checked == true){
+      document.getElementById(name).style.display = "table-row";
+    } else {
+      document.getElementById(name).style.display = "none";
+    }
 }
 
 var imageCounter = 4;
