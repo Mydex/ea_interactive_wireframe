@@ -212,7 +212,7 @@
 </div>
 </div>
 
-<div id="spEvidence" style="display: none;">
+<div id="evidence" style="display: none;">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-6">
       <h6 class="mt-4 mb-2">Reference number for application</h6>
@@ -1015,25 +1015,25 @@
 
  function showSPEvidence() {
   if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-    document.getElementById('spEvidence').style.display = 'block';
+    document.getElementById('evidence').style.display = 'block';
   } else {
-    document.getElementById('spEvidence').style.display = 'none'; 
+    document.getElementById('evidence').style.display = 'none'; 
   }
 }
 
 function showSubmitBG() {
   if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEABG').style.display = 'block';
+    document.getElementById('evidence').style.display = 'block';
   } else {
-   document.getElementById('submitToEABG').style.display = 'none'; 
+   document.getElementById('evidence').style.display = 'none'; 
  }
 }
 
 function showSubmitEDF() {
   if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete'){
-    document.getElementById('submitToEAEDF').style.display = 'block';
+    document.getElementById('evidence').style.display = 'block';
   } else {
-   document.getElementById('submitToEAEDF').style.display = 'none'; 
+   document.getElementById('evidence').style.display = 'none'; 
  }
 }
 
