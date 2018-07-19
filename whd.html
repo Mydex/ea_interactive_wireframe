@@ -735,11 +735,11 @@
       <div class="evidence-selector mt-2">
         <input type="checkbox" id="benefit" onclick="showRow('benefitLetters')"/>
         <label for="benefit">Benefit letters</label>
-        <input type="checkbox" id="address"/>
+        <input type="checkbox" id="address" onclick="showRow('homeAddress')"/>
         <label for="address">Home address</label>
-        <input type="checkbox" id="cert"/>
+        <input type="checkbox" id="cert" onclick="showRow('birthCertificate')"/>
         <label for="cert">Birth certificate</label>
-        <input type="checkbox" id="pay"/>
+        <input type="checkbox" id="pay"  onclick="showRow('paySlips')"/>
         <label for="pay">Pay slips</label>
       </div>
     </div>
@@ -779,7 +779,7 @@
             <div id="benefitLettersNames"></div>
           </td>
         </tr>
-        <tr>
+        <tr id="homeAddress" style="display: none;">
           <td>Home Address
             <div id="moduleButton" class="row">
               <p class="collapse col-10" id="collapseExample2" aria-expanded="false">
@@ -798,7 +798,7 @@
             <div id="homeLettersNames"></div>
           </td>
         </tr>
-        <tr>
+        <tr id="birthCertificate" style="display: none;">
           <td>Birth certificate
             <div id="moduleButton" class="row">
               <p class="collapse col-10" id="collapseExample3" aria-expanded="false">
@@ -817,7 +817,7 @@
             <div id="birthCertNames"></div>
           </td>
         </tr>
-        <tr>
+        <tr id="paySlips" style="display: none;">
           <td>Pay slips
             <div id="moduleButton" class="row">
               <p class="collapse col-10" id="collapseExample4" aria-expanded="false">
@@ -828,8 +828,8 @@
           </td>
           <td>
             <input type="file" class='mb-2' id="pic" name="pic3" accept="image/*"/>
-            <div id="paySlips"></div>
-            <button onclick="addImage('paySlips', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="pay"></div>
+            <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
           </td>
           <td>
             <input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
