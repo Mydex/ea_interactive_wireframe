@@ -220,7 +220,7 @@
       <h6 class="mt-4 mb-2">Date sent</h6>
       <input type="date" name="refSend" value="2018-01-01">
       <h6 class="mt-4 mb-2">Successful?</h6>
-      <div class="contact-selector mt-2">
+      <div class="success-selector mt-2">
         <input type="checkbox" id="yes" checked/>
         <label for="yes">Yes</label>
         <input type="checkbox" id="no"/>
@@ -253,10 +253,16 @@
     </div>
     <div class="col-12 col-md-6 col-lg-6">
       <h4 class="mt-4">Evidence required:</h4>
-      <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="benefit"> Benefit letters</div>
-      <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="home"> Proof of home address</div>
-      <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="birth"> Birth certificate</div>
-      <div> <input class="form-check-label ml-2 mr-3" type="checkbox" id="inlineCheckbox" value="pay"> Pay slips</div>
+      <div class="success-selector mt-2">
+        <input type="checkbox" id="benefit" checked/>
+        <label for="benefit">Benefit letters</label>
+        <input type="checkbox" id="address"/>
+        <label for="address">Home address</label>
+        <input type="checkbox" id="cert"/>
+        <label for="cert">Birth certificate</label>
+        <input type="checkbox" id="pay"/>
+        <label for="pay">Pay slips</label>
+      </div>
     </div>
   </div>
   <h4 class="mt-4 mb-2">Gathered evidence</h4>
@@ -958,11 +964,11 @@
   content: '-';
 }
 
-.contact-selector input {
+.success-selector input {
   display: none!important;
 }
 
-.contact-selector input[type=checkbox] + label {
+.success-selector input[type=checkbox] + label {
   display: inline-block;
   border-radius: 6px;
   background: #dddddd;
@@ -975,7 +981,7 @@
   font-weight: bold;
 }
 
-.contact-selector input[type=checkbox]:checked + label {
+.success-selector input[type=checkbox]:checked + label {
   background: #2AD705;
   color: #ffffff;
 }
