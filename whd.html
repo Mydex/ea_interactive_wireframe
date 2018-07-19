@@ -755,8 +755,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr id="benefitLetters" style="display: none;">
-          <td>Benefit letters
+        <tr>
+          <td id="benefitLetters" style="display: none;">Benefit letters
             <div id="moduleButton" class="row">
               <p class="collapse col-10" id="collapseExample1" aria-expanded="false">
                 <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'>Please include all of your benefit letters; JSA, disability etc </textarea>
@@ -764,7 +764,7 @@
               <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1"></a>
             </div>
           </td>
-          <td>
+          <td id="benefitLetters" style="display: none;">
             <label class="btn btn-outline-primary mb-2" for="image1">
               <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
             <!-- <label class="btn btn-outline-primary mb-2">Choose file<input type="file"  name="pic0" accept="image/*" style="display: none;"></label> -->
@@ -772,7 +772,7 @@
             <div id="benefitLetters"></div>
             <button onclick="addImage('benefitLetters', 'benefitLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
           </td>
-          <td>
+          <td id="benefitLetters" style="display: none;">
             <input style="width: auto;" type="text" class="form-control" id="picName0" name="picName" value="Display name:"/>
             <div id="benefitLettersNames"></div>
           </td>
