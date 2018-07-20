@@ -1144,7 +1144,7 @@ function addImage(divFile, divName){
   document.getElementById(divFile).appendChild(newDivFile);
   var newDivName = document.createElement('div');
   newDivName.innerHTML = 
-  "<input type='text' class='form-control' id='picName"+ imageCounter + "' name='picName' value='Display name:'/>";
+  "<input style='width: auto;' type='text' class='form-control' id='picName"+ imageCounter + "' name='picName' value='Display name:'/>";
   document.getElementById(divName).appendChild(newDivName);
   imageCounter ++;
 }
