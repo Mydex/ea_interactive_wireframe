@@ -755,9 +755,9 @@
         <tr>
           <th class="text-primary">Scan of benefit letter(s)</th>
           <td>
-            <input type="text" class="form-control col-12 mb-2" id="name0" name="name" value="Display name:" />
+            <input type="text" class="form-control col-6 mb-2" id="name0" name="name" value="Display name:" />
             <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-              <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)">Choose file</label><span class='font-italic mb-2' id="upload-file-info">  No file chosen</span><br>
+              <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)">Choose file</label><span class='font-italic mb-2' id="upload-file-info">  No file chosen</span>
               <button class='btn btn-outline-primary mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button><br>
               <div id="moreLetters"></div>
               <button class="btn btn-outline-primary mt-1" onclick="addMoreLetters()" required style="display:inline-block; font-weight:400; text-align:center; white-space:nowrap; vertical-align:middle; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none border:1px solid transparent; padding:.375rem .75rem; font-size:1rem; line-height:1.5; border-radius:.25rem; color:#1F5F8D; background-color:transparent; background-image:none; border-color:#1F5F8D; box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add more letters</button>
@@ -1987,11 +1987,14 @@
     var newDiv = document.createElement('div');
     newDiv.innerHTML = 
     "<input type='text' class='form-control col-6 mb-2' id='name"+ letterCounter + "' name='name' value='Display name:'/>\
+    label class='btn btn-outline-primary mb-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'' for='image0'>\
+    <input id='image"+ letterCounter + "' type='file' accept='image/*' style='display:none' onchange='$('#upload-file-info').html(this.files[0].name)'>Choose file</label><span class='font-italic mb-2' id='upload-file-info'>  No file chosen</span><br>\
     <input type='file' class='mb-2' id='pic' name='pic"+ letterCounter + "' accept='image/*' />\
     <br><button class='btn btn-outline-primary mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>"
     document.getElementById('moreLetters').appendChild(newDiv);
     letterCounter ++;
   }
+
   function removeRow(input) {
     document.getElementById('moreLetters').removeChild(input.parentNode);
   }
