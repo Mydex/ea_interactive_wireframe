@@ -1191,11 +1191,11 @@
         <label for="Phonecall">Phonecall</label>
       </div>
 
-      <p class="mb-1 contact-selector"><input type="checkbox" id="initial1"/><label for="initial1">Text</label> Initial contact and first home visit</p>
-      <p class="mb-1 contact-selector"><input type="checkbox" id="initial2"/><label for="initial2">Text</label> Action Plan created with client</p>
-      <p class="mb-1 contact-selector"><input type="checkbox" id="initial3"/><label for="initial3">Text</label> Implementing Action Plan</p>
-      <p class="mb-1 contact-selector"><input type="checkbox" id="initial4"/><label for="initial4">Text</label> Action Plan Completed</p>
-      <p class="mb-1 contact-selector"><input type="checkbox" id="initial5"/><label for="initial5">Text</label> No more tasks / Completed for this year</p>
+      <p class="mb-1 number-selector"><input type="checkbox" id="initial1"/><label for="initial1">1</label> Initial contact and first home visit</p>
+      <p class="mb-1 contact-selector"><input type="checkbox" id="initial2"/><label for="initial2">2</label> Action Plan created with client</p>
+      <p class="mb-1 contact-selector"><input type="checkbox" id="initial3"/><label for="initial3">3</label> Implementing Action Plan</p>
+      <p class="mb-1 contact-selector"><input type="checkbox" id="initial4"/><label for="initial4">4</label> Action Plan Completed</p>
+      <p class="mb-1 contact-selector"><input type="checkbox" id="initial5"/><label for="initial5">5</label> No more tasks / Completed for this year</p>
 
       <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label> 1) Initial contact and first home visit</p>
       <p class="mb-1"><label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label> 2) Action Plan created with client</p>
@@ -1768,6 +1768,28 @@
 }
 
 .contact-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
+.number-selector input {
+  display: none!important;
+}
+
+.number-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 40px;
+  margin-right: 3px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.number-selector input[type=checkbox]:checked + label {
   background: #2AD705;
   color: #ffffff;
 }
