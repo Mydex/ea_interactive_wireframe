@@ -87,9 +87,14 @@
         <div class="row">
           <div class="col-12 col-md-6 col-lg-6">
             <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
-            <div class="ml-5">Text <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Text"></div>
-            <div class="ml-5">Message <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Message" checked></div>
-            <div class="ml-5">Phonecall <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="Phonecall"></div>
+            <div class="contact-selector mt-2">
+              <input type="checkbox" id="Text"/>
+              <label for="Text">Text</label>
+              <input type="checkbox" id="Message"/>
+              <label for="Message">App Messages</label>
+              <input type="checkbox" id="Phonecall"/>
+              <label for="Phonecall">Phonecall</label>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-6">
             <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
@@ -1709,6 +1714,28 @@ ul.breadcrumb li a {
 }
 
 .homeVisit-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
+.contact-selector input {
+  display: none!important;
+}
+
+.contact-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 130px;
+  margin-right: 3px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-selector input[type=checkbox]:checked + label {
   background: #2AD705;
   color: #ffffff;
 }
