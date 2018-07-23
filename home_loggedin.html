@@ -213,6 +213,10 @@
       <td>03/04/2005</td>
       <td><input type="date" name="" class="input-group-text"></td>
       <td>Phone call - Ongoing case</td>
+      <div class="task-selector">
+        <input type="checkbox" id="done"/>
+        <label for="done">Done</label>
+      </div>
       <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
     </tr>
     <tr>
@@ -245,7 +249,29 @@
 </div>
 </main>
 
+<style>
+.task-selector input {
+  display: none!important;
+}
 
+.task-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 70px;
+  margin-right: 3px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+</style>
 
 <script>
   function showForm(name){
