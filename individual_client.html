@@ -1186,11 +1186,11 @@
         <p class="col-9 col-md-10 col-lg-10"> Initial contact and first home visit</p>
       </div>
       <div class="row m-0 p-0">
-        <div class="number-selector"><input type="checkbox" id="initial2" checked/><label for="initial2">2</label></div>
+        <div class="number-selector"><input type="checkbox" id="initial2" /><label for="initial2">2</label></div>
         <p class="col-9 col-md-10 col-lg-10"> Action Plan created with client</p>
       </div>
       <div class="row m-0 p-0">
-        <div class="number-selector"><input type="checkbox" id="initial3"/><label for="initial3">3</label></div>
+        <div class="number-selector"><input type="checkbox" id="initial3" disabled/><label for="initial3">3</label></div>
         <p class="col-9 col-md-10 col-lg-10"> Implementing Action Plan</p>
       </div>
       <div class="row m-0 p-0">
@@ -1223,7 +1223,7 @@
           <td>Citizen has requested a phone call</td>
           <td>03/04/2005</td>
           <td>Phone call - citizen</td>
-          <td>&nbsp;<input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></td>
+          <td><div class="task-selector"><input type="checkbox" id="done"/><label for="done">Done</label></div></td>
         </tr>
       </tbody>
     </table>
@@ -1810,6 +1810,28 @@
 
 .number-selector input[type=checkbox]:disabled + label {
   background: #90a4ae;
+  color: #ffffff;
+}
+
+.task-selector input {
+  display: none!important;
+}
+
+.task-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 35px;
+  width: 55px;
+  margin-right: 3px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-selector input[type=checkbox]:checked + label {
+  background: #2AD705;
   color: #ffffff;
 }
 </style>
