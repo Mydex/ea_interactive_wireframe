@@ -70,10 +70,11 @@
       </div>
 
       <div id="module" class="container row mt-3">
-        <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Interactions</a></h4>
+        <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Interactions with client</a></h4>
         <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">
           <div class="row">
            <div class="col-12 col-md-6 col-lg-6">
+            <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
             <div class="contact-selector mt-2">
               <input type="checkbox" id="Text"/>
               <label for="Text">Text</label>
@@ -86,20 +87,20 @@
           <div class="col-12 col-md-6 col-lg-6">
            <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
            <div class="homeVisit-selector">
-             <input type="checkbox" id="mon" />
-             <label for="mon" checked>M</label>
+             <input type="checkbox" id="mon" checked/>
+             <label for="mon">M</label>
              <input type="checkbox" id="tue"/>
              <label for="tue">T</label>
              <input type="checkbox" id="wed"/>
              <label for="wed">W</label>
              <input type="checkbox" id="thu"/>
              <label for="thu">T</label>
-             <input type="checkbox" id="fri"/>
-             <label for="fri" checked>F</label>
+             <input type="checkbox" id="fri" checked/>
+             <label for="fri">F</label>
            </div>
            <div class="homeVisit-selector mt-2">
-             <input type="checkbox" id="am" />
-             <label for="am" checked>AM</label>
+             <input type="checkbox" id="am" checked/>
+             <label for="am">AM</label>
              <input type="checkbox" id="pm"/>
              <label for="pm">PM</label>
            </div>
@@ -112,6 +113,7 @@
             <th data-sort="name">Interaction <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
             <th data-sort="date">Date <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
             <th>Time</th>
+            <th>Notes</th>
             <th>Details</th>
           </tr>
         </thead>
@@ -121,6 +123,12 @@
             <td>01/09/2018</td>
             <td>09:30</td>
             <td>First home visit</td>
+            <td>
+              <div><a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverInteraction1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">View</a>
+                <div id="popoverInteraction1Content" class="row" style="display: none">
+                  <p>EA notes & comment are here</p>
+                </div></div>
+            </td>
           </tr>
           <tr>
             <td>Message from Citizen Twenty</td>
@@ -1695,7 +1703,7 @@
         </div>
         <div id="newAccordionTwo"></div>
         <button onclick="addAccordion('newAccordionTwo')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>
-        
+
 
 
         <h3 class="mt-5 mb-2">Top Energy Saving Tips</h3>
