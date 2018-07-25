@@ -73,7 +73,6 @@
         <ul class="breadcrumb">
           <li><a href="javascript:unhide('page2')">Client Information</a></li>
           <li><a href="javascript:unhide('page3')">Progress & Tasks</a></li>
-          <li><a href="javascript:unhide('page4')">Referrals</a></li>
         </ul>
       </div>
 
@@ -1134,118 +1133,6 @@
 </section>
 
 
-
-<section class="row hidden" id="page4">
-
-  <h4 class="mt-4 mb-2">Client Referrals</h4>
-  <div class="table-responsive">
-    <table class="table table-bordered table-sm text-left sortable" id="table">
-     <thead class="table-info">
-      <tr>
-        <th>Service referred to</th>
-        <th>Named person</th>
-        <th>Date referral made</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>HES</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Care & Repair</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>MacMillan</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Money Matters</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>HSCP</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Welfare Rights</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Carers Centre</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Barnardo’s</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Financial Fitness</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Fire Brigade</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Starter Packs</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>SAMH</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Foodbank</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>RAFA</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>SAFA</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-</section>
-
-
 </div>
 
 </main>
@@ -1388,7 +1275,6 @@ ul.breadcrumb li a {
   function unhide(divID) {
     document.getElementById("page2").className = 'hidden';
     document.getElementById("page3").className = 'hidden';
-    document.getElementById("page4").className = 'hidden';
 
     var item = document.getElementById(divID);
     if (item) {
