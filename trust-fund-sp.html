@@ -139,31 +139,31 @@
                   <td>
                     <div class="selector1 selector12">
                       <input type="radio" id="yes2" name="yesno2" />
-                      <label for="yes2">Yes</label>
+                      <label for="yes2" onclick="showMore('noDisplay', 'notHolder')">Yes</label>
                       <input type="radio" id="no2" name="yesno2" />
-                      <label for="no2">No, Power Of Attorney</label>
+                      <label for="no2" onclick="showMore('display', 'notHolder')">No, Power Of Attorney</label>
                       <input type="radio" id="no3" name="yesno2" />
-                      <label for="no3">No, I’m helping with the form</label>
+                      <label for="no3" onclick="showMore('display', 'notHolder')">No, I’m helping with the form</label>
                     </div>
                   </td>
                 </tr>
-                <tr id="notHoulder" style="display: none;">
+                <tr id="notHolder" style="display: none;">
                   <th>What is your full name? <br>Please provide with your title, first name and surname</th>
                   <td contenteditable="true" spellcheck="true"></td>
                 </tr>
-                <tr id="notHoulder" style="display: none;">
+                <tr id="notHolder" style="display: none;">
                   <th>What is your correspondence address if different from the Account Holder? Can you please also provide us with details of your organisation and job title, if applicable?*</th>
                   <td contenteditable="true" spellcheck="true"></td>
                 </tr>
-                <tr id="notHoulder" style="display: none;">
+                <tr id="notHolder" style="display: none;">
                   <th>What is your contact telephone number? (landline) Please state the best days and times to discuss the ScottishPower account</th>
                   <td contenteditable="true" spellcheck="true"></td>
                 </tr>
-                <tr id="notHoulder" style="display: none;">
+                <tr id="notHolder" style="display: none;">
                   <th>What is your contact telephone number? (mobile)</th>
                   <td contenteditable="true" spellcheck="true"></td>
                 </tr>
-                <tr id="notHoulder" style="display: none;">
+                <tr id="notHolder" style="display: none;">
                   <th>What is your e-mail address?</th>
                   <td contenteditable="true" spellcheck="true"></td>
                 </tr>
@@ -687,6 +687,14 @@
 
   function otherDisplay(name, id){
     if(name != 'notname') {
+      document.getElementById(id).style.display = 'block';
+    } else {
+      document.getElementById(id).style.display = 'none';
+    }
+  }
+
+  function showMore(name, id){
+    if(name != 'display') {
       document.getElementById(id).style.display = 'block';
     } else {
       document.getElementById(id).style.display = 'none';
