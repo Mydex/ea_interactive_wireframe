@@ -190,13 +190,13 @@
                 <td>
                   <div class="selector1 selector11">
                     <input type="radio" id="yes3" name="yesno3" />
-                    <label for="yes3">Yes</label>
+                    <label for="yes3" onclick="showMoreTwo('display');">Yes</label>
                     <input type="radio" id="no4" name="yesno3" />
-                    <label for="no4">No</label>
+                    <label for="no4" onclick="showMoreTwo('noDisplay');">No</label>
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr id="currentSP1" style="display: none;">
                 <th>What types of meters do you have?*</th>
                 <td>
                   <div class="selector1 selector13">
@@ -209,7 +209,7 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr id="currentSP2" style="display: none;">
                 <th>Can you please state what services ScottishPower supply to you?</th>
                 <td>
                   <div class="selector1 selector12">
@@ -222,27 +222,27 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr id="currentSP3" style="display: none;">
                 <th>Can you please provide us with your Account Number? Your Account Number can be found in the top right hand corner of your latest statement. It is a ten or eleven digit number.</th>
                 <td contenteditable="true" spellcheck="true"></td>
               </tr>
-              <tr>
+              <tr id="currentSP4" style="display: none;">
                 <th>Can you please provide us with the value of your last bill? Your current balance is in the black box in the middle of the first page of your bill.</th>
                 <td contenteditable="true" spellcheck="true"></td>
               </tr>
-              <tr>
+              <tr id="currentSP5" style="display: none;">
                 <th>If you are currently supplied by ScottishPower, please provide us with your current electricity meter reading?</th>
                 <td contenteditable="true" spellcheck="true"></td>
               </tr>
-              <tr>
+              <tr id="currentSP6" style="display: none;">
                 <th>What date was this current electricity meter reading taken?</th>
                 <td contenteditable="true" spellcheck="true">Date</td>
               </tr>
-              <tr>
+              <tr id="currentSP7" style="display: none;">
                 <th>If you are currently supplied by ScottishPower please provide us with your current gas meter reading?</th>
                 <td contenteditable="true" spellcheck="true"></td>
               </tr>
-              <tr>
+              <tr id="currentSP8" style="display: none;">
                 <th>What date was this current gas meter reading taken?</th>
                 <td contenteditable="true" spellcheck="true">Date</td>
               </tr>
@@ -706,6 +706,28 @@
       document.getElementById("notHolder3").style.display = 'none';
       document.getElementById("notHolder4").style.display = 'none';
       document.getElementById("notHolder5").style.display = 'none';
+    }
+  }
+
+  function showMoreTwo(name){
+    if(name != 'noDisplay') {
+      document.getElementById("currentSP1").style.display = 'table-row';
+      document.getElementById("currentSP2").style.display = 'table-row';
+      document.getElementById("currentSP3").style.display = 'table-row';
+      document.getElementById("currentSP4").style.display = 'table-row';
+      document.getElementById("currentSP5").style.display = 'table-row';
+      document.getElementById("currentSP6").style.display = 'table-row';
+      document.getElementById("currentSP7").style.display = 'table-row';
+      document.getElementById("currentSP8").style.display = 'table-row';
+    } else {
+      document.getElementById("currentSP1").style.display = 'none';
+      document.getElementById("currentSP2").style.display = 'none';
+      document.getElementById("currentSP3").style.display = 'none';
+      document.getElementById("currentSP4").style.display = 'none';
+      document.getElementById("currentSP5").style.display = 'none';
+      document.getElementById("currentSP6").style.display = 'none';
+      document.getElementById("currentSP7").style.display = 'none';
+      document.getElementById("currentSP8").style.display = 'none';
     }
   }
 
