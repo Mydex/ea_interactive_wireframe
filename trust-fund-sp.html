@@ -1,0 +1,312 @@
+<!DOCTYPE>
+<html lang="en">  
+<head>
+  <meta http-equiv="Content-type" content="text/html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" >
+  <title>EA Interactive Wireframe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
+  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+
+<body style="height:100%;">
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand mx-auto" href="https://mydex.github.io/ea_interactive_wireframe/home_loggedin.html">
+      <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
+    </a>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+    <div class="collapse navbar-collapse" id="nav-content">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Home</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/visits.html" class="nav-link text-white font-weight-light">Home Visits</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/client_list.html" class="nav-link text-white font-weight-light">Client List</a></li>
+        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle text-white font-weight-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/reports.html">Report overview</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/report-monthly.html">Current Month Activity</a>
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/report-past-monthly.html">Past Months Activity</a>
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/report-location.html">Location</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/messages.html" class="nav-link text-white font-weight-light">Messages <span class="badge badge-danger">4</span></a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/referral_man.html" class="nav-link text-white font-weight-light">Referral Management</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info btn-sm my-2 my-sm-0" type="submit">Search</button>
+      </form class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/index.html" class="nav-link text-white font-weight-light">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style=" min-height:75%;">
+    <div class="container">
+      <h3 class=" mt-4 mb-4">Client Name Here</h3>
+      <h4 class="mb-2">Trust Fund Application</h4>
+      
+      <div>All of the information required for the Trust Fund application is below.</div>
+      <div class="row">
+        <p class="mt-2 col-12 col-md-6 col-lg-6">
+          Return to citizen's information <a href="https://mydex.github.io/ea_interactive_wireframe/individual_client.html" class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/double-arrow.png" alt="logo" width="15"></a></p>
+        </p>
+      </div>
+
+
+      <h4 class="mt-4">Information required for application</h4>
+      <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
+
+      <div id="module" class="container row mt-4">
+        <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton'); showSubmit();" data-text="Check">About You</a></h5>
+        <div class="collapse col-12" id="collapsePersonal" aria-labelledby="headingPersonal">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm text-left" id="personal">
+              <thead>
+                <th class="bg-primary text-white"></th>
+                <th class="bg-primary text-white">Data</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Title</th>
+                  <td contenteditable="true" spellcheck="true">Mrs</td>
+                </tr>
+                <tr>
+                  <th>Forename</th>
+                  <td contenteditable="true" spellcheck="true">Citizen</td>
+                </tr>
+                <tr>
+                  <th>Surame</th>
+                  <td contenteditable="true" spellcheck="true">Twenty</td>
+                </tr>
+                <tr>
+                  <th>Date of birth</th>
+                  <td><input type="date" name="dob" value="1980-01-01"></td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+                </tr>
+                <tr>
+                  <th>Postcode</th>
+                  <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+                </tr>
+                <tr>
+                  <th>Telephone (landline)</th>
+                  <td contenteditable="true" spellcheck="true">012345 678901</td>
+                </tr>
+                <tr>
+                  <th>Mobile</th>
+                  <td contenteditable="true" spellcheck="true">077123456789</td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td contenteditable="true" spellcheck="true">citizen@twenty.com</td>
+                </tr>
+                <tr>
+                  <th>What is the address that the debt relates to (if it is not the same as the Account Holder’s current
+                  address)?*</th>
+                  <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="module" class="container row mt-3">
+       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBills" aria-expanded="false" aria-controls="collapseBills" id="billsButton" onclick="checkData('bills', 'billsButton'); showSubmit();" data-text="Check">Your Bills</a></h5>
+       <div class="collapse col-12" id="collapseBills" aria-labelledby="headingBills">
+         <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left" id="bills">
+             <thead>
+               <tr>
+                 <th class="bg-primary text-white"></th>
+                 <th class="bg-primary text-white">Data</th>
+               </tr>
+             </thead>
+             <tbody>
+              
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>
+
+     <div id="module" class="container row mt-3">
+      <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEligibility" aria-expanded="false" aria-controls="collapseEligibility" id="eligibilityButton" onclick="checkData('eligibility', 'eligibilityButton'); showSubmit();" data-text="Check">Eligibility</a></h5>
+      <div class="collapse col-12" id="collapseEligibility" aria-labelledby="headingEligibility">
+       <div class="table-responsive">
+         <table class="table table-bordered table-sm text-left"id="eligibility">
+           <thead>
+             <th class="bg-primary text-white"></th>
+             <th class="bg-primary text-white">Data</th>
+           </thead>
+           <tbody>
+
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+
+   <div id="module" class="container row mt-3">
+     <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseOther" aria-expanded="false" aria-controls="collapseOther" id="otherButton" onclick="checkData('other', 'otherButton'); showSubmit();" data-text="Check">Other Relevant Circumstances</a></h5>
+     <div class="collapse col-12" id="collapseOther" aria-labelledby="headingOther">
+       <div class="table-responsive">
+         <table class="table table-bordered table-sm text-left" id="other">
+           <thead>
+             <th class="bg-primary text-white"></th>
+             <th class="bg-primary text-white">Data</th>
+           </thead>
+           <tbody>
+             
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+   <div class="row" id="submitToEA" style="display: none;">
+     <div class="col-12 mt-2">
+       Send to Energy Advocate to check & send application<br>
+       <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+     </div>
+   </div>
+
+
+ </div>
+</main>
+
+<style >
+#line {
+  border-bottom: 2px solid #1F5F8D;
+}
+</style>
+<style id="moduleStyleCheck">
+#module a.collapsed:after  {
+  content: attr(data-text);
+  float: right;
+  display:inline-block;
+  font-weight:400;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  border:1px solid transparent;
+  padding:.3rem .3rem;
+  font-size:1rem;
+  line-height:1.5;
+  border-radius:.25rem;
+  transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  color:#1F5F8D;
+  background-color:transparent;
+  background-image:none;
+  border-color:#1F5F8D;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+#module a:not(.collapsed):after {
+  content: 'Confirm';
+  float: right;
+  display:inline-block;
+  font-weight:400;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  border:1px solid transparent;
+  padding:.375rem .75rem;
+  font-size:1rem;
+  line-height:1.5;
+  border-radius:.25rem;
+  transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  color:#1F5F8D;
+  background-color:transparent;
+  background-image:none;
+  border-color:#1F5F8D;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+</style>
+
+<script>
+
+  var dobCounter = 2;
+  function addDOB(){
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    "<input typ='date' name='dob" + dobCounter + "' class='mb-2' >\
+    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' >";
+    document.getElementById('content').appendChild(newDiv);
+    dobCounter ++;
+  }
+  function removeRow(input){
+    document.getElementById('content').removeChild(input.parentNode);
+  }
+
+  function showSubmit() {
+    if (document.getElementById('personalButton').dataset.text === 'Complete' && document.getElementById('supplierButton').dataset.text === 'Complete' && document.getElementById('incomeButton').dataset.text === 'Complete' && document.getElementById('fuelButton').dataset.text === 'Complete'){
+      document.getElementById('submitToEA').style.display = 'block';
+    } else {
+      document.getElementById('submitToEA').style.display = 'none'; 
+    }
+  }
+
+  function checkData(tableName, buttonName) {
+    var table = document.getElementById(tableName);
+    var counter = 0;
+    for (var r = 0, n = table.rows.length; r < n; r++) {
+      for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+        if (table.rows[r].cells[c].innerHTML === "No data") {
+          counter ++;
+          table.rows[r].cells[c].style.color = "red";
+        } else if (table.rows[r].cells[c].innerHTML != "No data") {
+          counter --;
+          table.rows[r].cells[c].style.color = "black";
+        }
+      }
+    }
+    var check = 0 - table.rows.length*2;
+    if (counter === check) {
+      document.getElementById(buttonName).dataset.text = 'Complete';
+      counter = 0;
+    } else {
+      document.getElementById(buttonName).dataset.text = 'Check';
+      counter = 0;
+    }
+  }
+
+</script>
+
+
+<script>
+  $(document).ready(function () {
+    $("button").click(function(){
+      $("a").removeClass("active");
+    });
+  });
+</script>
+
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
+</body>
+
+
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
