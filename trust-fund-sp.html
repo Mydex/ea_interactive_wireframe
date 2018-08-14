@@ -455,7 +455,28 @@
              </tr>
              <tr>
               <th>Where did you hear about the ScottishPower Hardship Fund?</th>
-              <td contenteditable="true" spellcheck="true">ScottishPower Website ScottishPower Call Citizens’ Advice National Debtline Support Worker Housing Association Other</td>
+              <td>
+                <div class="selector1 selector13">
+                  <input type="radio" id="hear1" name="hearAbout" />
+                  <label for="hear1">ScottishPower Website</label>
+                  <input type="radio" id="hear2" name="hearAbout" />
+                  <label for="hear2">ScottishPower Call</label>
+                  <input type="radio" id="hear3" name="hearAbout" />
+                  <label for="hear3">Citizens’ Advice</label>
+                  <input type="radio" id="hear4" name="hearAbout" />
+                  <label for="hear4">National Debtline</label>
+                  <input type="radio" id="hear5" name="hearAbout" />
+                  <label for="hear5">Support Worker</label>
+                  <input type="radio" id="hear6" name="hearAbout" />
+                  <label for="hear6">Housing Association</label>
+                  <input type="radio" id="hear7" name="hearAbout" />
+                  <label for="hear7"onclick="otherDisplay('name1')">Other</label>
+                </div>
+                <div  class="form-group"id="other1" style="display: none;">
+                  <label>Other</label>
+                  <input type="text" class="form-control" id="otherInput1" name="other1" spellcheck="true">
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -667,8 +688,12 @@
   function otherDisplay(name){
     if(name == 'name') {
       document.getElementById('other').style.display = 'block';
+    } else if (name == 'name1'){
+      document.getElementById('other1').style.display = 'block';
     } else {
       document.getElementById('other').style.display = 'none';
+      document.getElementById('other1').style.display = 'none';
+
     }
   }
 
