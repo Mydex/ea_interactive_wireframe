@@ -303,7 +303,7 @@
                   <input type="radio" id="StepChange" name="agency" />
                   <label for="StepChange">StepChange</label>
                   <input type="radio" id="both" name="agency" />
-                  <label for="both" onclick="addOther()">Other</label>
+                  <label for="both" onclick="otherDisplay('name')">Other</label>
                 </div>
                 <div  class="form-group"id="other" style="display: none;">
                   <label>Other</label>
@@ -655,9 +655,13 @@
     }
   }
 
-  function other(){
-    document.getElementById('other').style.display = 'block';
-  } 
+  function otherDisplay(name){
+    if(name == 'name') {
+      document.getElementById('other').style.display = 'block';
+    } else {
+      document.getElementById('other').style.display = 'none';
+    }
+  }
 
 </script>
 
