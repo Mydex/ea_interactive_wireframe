@@ -57,18 +57,107 @@
       </p>
     </div>
 
+    <div id="module" class="container row mt-4">
+      <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseComplaintOne" aria-expanded="false" aria-controls="collapseComplaintOne">Complaint One</a></h5>
+      <div class="collapse col-12" id="collapseComplaintOne" aria-labelledby="headingComplaintOne">
+        <div class="table-responsive">
+          <table class="table table-bordered table-sm text-left" id="personal">
+            <tbody>
+              <th class="bg-primary text-white" colspan="2">Client Information</th>
+              <tr>
+                <th>Client Name</th>
+                <td contenteditable="true" spellcheck="true">Mrs Citizen Twenty</td>
+              </tr>
+              <tr>
+                <th>Home address</th>
+                <td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td>
+              </tr>
+              <tr>
+                <th>Postcode</th>
+                <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+              </tr>
+              <tr>
+                <th>Telephone number</th>
+                <td contenteditable="true" spellcheck="true">012345 678901</td>
+              </tr>
+              <tr>
+                <th>Mobile</th>
+                <td contenteditable="true" spellcheck="true">077123456789</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
 
 
   </main>
 
+  <style>
+  #line {
+    border-bottom: 2px solid #1F5F8D;
+  }
 
-  <footer class="mt-2" style="height:30px; margin-top:-30px;">
-    <nav class="navbar navbar-expand-sm">  
-      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-    </nav>
-  </footer>
+  #module a.collapsed:after  {
+    content: attr(data-text);
+    float: right;
+    display:inline-block;
+    font-weight:400;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    border:1px solid transparent;
+    padding:.3rem .3rem;
+    font-size:1rem;
+    line-height:1.5;
+    border-radius:.25rem;
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    color:#1F5F8D;
+    background-color:transparent;
+    background-image:none;
+    border-color:#1F5F8D;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  #module a:not(.collapsed):after {
+    content: 'Confirm';
+    float: right;
+    display:inline-block;
+    font-weight:400;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    border:1px solid transparent;
+    padding:.375rem .75rem;
+    font-size:1rem;
+    line-height:1.5;
+    border-radius:.25rem;
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    color:#1F5F8D;
+    background-color:transparent;
+    background-image:none;
+    border-color:#1F5F8D;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  }
+</style>
+
+
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
 </body>
 
 
