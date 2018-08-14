@@ -753,8 +753,10 @@
   function showDebt(name, id){
     if(name == 'yes' ) {
       document.getElementById(id).style.display = 'table-row';
+      document.getElementById('debtNo').style.display = 'none';
     } else if (name == 'no') {
       document.getElementById(id).style.display = 'table-row';
+      document.getElementById('debtYes').style.display = 'none';
     } else {
       document.getElementById(id).style.display = 'none';
     }
