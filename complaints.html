@@ -57,140 +57,124 @@
       </p>
     </div>
 
+    <form action="">
+
+      <h4 class="mt-4 mb-4">Client Information</h4>
+      <div class="form-group">
+        <label>Client Name</label>
+        <input type="text" class="form-control" id="name" name="name" spellcheck="true" value="Mrs Citizen Twenty">
+      </div>
+      <div class="form-group">
+        <label>Home address</label>
+        <textarea class="form-control" id="address" name="address" spellcheck="true" rows="3">12 Fake Street
+FakeTown
+        </textarea>
+      </div>
+      <div class="form-group">
+        <label>Postcode</label>
+        <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true" value="FA12 3KE">
+      </div>
+      <div class="form-group">
+        <label>Telephone number</label>
+        <input type="text" class="form-control" id="landline" name="landline" spellcheck="true" value="012345 678901">
+      </div>
+      <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" class="form-control" id="mobile" name="mobile" spellcheck="true" value="077123456789">
+      </div>
+    </form>
+
     <div id="module" class="container row mt-4">
       <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseComplaintOne" aria-expanded="false" aria-controls="collapseComplaintOne">Complaint One</a></h5>
       <div class="collapse col-12" id="collapseComplaintOne" aria-labelledby="headingComplaintOne">
 
-        <!-- <div class="table-responsive"> -->
-          <!-- <table class="table table-bordered table-sm text-left" id="personal"> -->
-            <!-- <tbody> -->
-<!--               <th class="bg-primary text-white" colspan="2">Client Information</th>
-              <tr><th>Client Name</th></tr>
-              <tr><td contenteditable="true" spellcheck="true">Mrs Citizen Twenty</td></tr>
-              <tr><th>Home address</th></tr>
-              <tr><td contenteditable="true" spellcheck="true">12 Fake Street <br>FakeTown</td></tr>
-              <tr><th>Postcode</th></tr>
-              <tr><td contenteditable="true" spellcheck="true">FA12 3KE</td></tr>
-              <tr><th>Telephone number</th></tr>
-              <tr><td contenteditable="true" spellcheck="true">012345 678901</td></tr>
-              <tr><th>Mobile</th></tr>
-              <tr><td contenteditable="true" spellcheck="true">077123456789</td></tr> -->
-              <!-- </tbody> -->
-              <!-- </table> -->
-              <!-- </div> -->
-              <form action="">
+        <form action="">
+          <h4 class="mt-4 mb-4">Supplier Information</h4>
+          <div class="form-group">
+            <label>Energy Supplier</label>
+            <input type="text" class="form-control" id="supplier" name="supplier" spellcheck="true" value="Scottish Power">
+          </div>
+          <div class="form-group">
+            <label>Complaint Contact Number</label>
+            <input type="text" class="form-control" id="complaintNumber" name="complaintNumber" spellcheck="true" value="0800 027 0072">
+          </div>
+          <div class="form-group">
+            <label>Complaint Email</label>
+            <input type="text" class="form-control" id="complaintEmail" name="complaintEmail" spellcheck="true" value="contactus@scottishpower.com">
+          </div>
+          <div class="form-group">
+            <label>Client Customer Number</label>
+            <input type="text" class="form-control" id="name" name="name" spellcheck="true" value="SP1234567">
+          </div>
 
-                <h4 class="mt-4 mb-4">Client Information</h4>
-                <div class="form-group">
-                  <label>Client Name</label>
-                  <input type="text" class="form-control" id="name" name="name" spellcheck="true" value="Mrs Citizen Twenty">
-                </div>
-                <div class="form-group">
-                  <label>Home address</label>
-                  <textarea class="form-control" id="address" name="address" spellcheck="true" rows="3">12 Fake Street
-FakeTown
-                  </textarea>
-                </div>
-                <div class="form-group">
-                  <label>Postcode</label>
-                  <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true" value="FA12 3KE">
-                </div>
-                <div class="form-group">
-                  <label>Telephone number</label>
-                  <input type="text" class="form-control" id="landline" name="landline" spellcheck="true" value="012345 678901">
-                </div>
-                <div class="form-group">
-                  <label>Mobile</label>
-                  <input type="text" class="form-control" id="mobile" name="mobile" spellcheck="true" value="077123456789">
-                </div>
-
-
-                <h4 class="mt-4 mb-4">Supplier Information</h4>
-                <div class="form-group">
-                  <label>Energy Supplier</label>
-                  <input type="text" class="form-control" id="supplier" name="supplier" spellcheck="true" value="Scottish Power">
-                </div>
-                <div class="form-group">
-                  <label>Complaint Contact Number</label>
-                  <input type="text" class="form-control" id="complaintNumber" name="complaintNumber" spellcheck="true" value="0800 027 0072">
-                </div>
-                <div class="form-group">
-                  <label>Complaint Email</label>
-                  <input type="text" class="form-control" id="complaintEmail" name="complaintEmail" spellcheck="true" value="contactus@scottishpower.com">
-                </div>
-                <div class="form-group">
-                  <label>Client Customer Number</label>
-                  <input type="text" class="form-control" id="name" name="name" spellcheck="true" value="SP1234567">
-                </div>
-
-                <h4 class="mt-4 mb-4">Complaint Information</h4>
-                <div class="form-group">
-                  <label>What is the complaint about? Detail required before calling</label>
-                  <textarea class="form-control" id="complaintDetails" name="complaintDetails" spellcheck="true" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                  <label>Unique Complaint Reference Number</label>
-                  <input type="text" class="form-control" id="qcrn" name="qcrn" spellcheck="true" value="">
-                </div>
-                <div class="form-group">
-                  <label>Customer Service Advisor Name</label>
-                  <input type="text" class="form-control" id="advisorName" name="advisorName" spellcheck="true" value="">
-                </div>
-                <div class="form-group">
-                  <label>What did they say they were going to do?</label>
-                  <textarea class="form-control" id="goingToDo" name="goingToDo" spellcheck="true" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                  <label>Letters and emails sent to client</label>
-                  <br>
-                  <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-                    <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-                  </div>
-
-                  <h4 class="mt-4 mb-4">Outcome</h4>
-                  <div class="form-group">
-                    <label>Notes/outcome</label>
-                    <textarea class="form-control" id="outcome" name="outcome" spellcheck="true" rows="3"></textarea>
-                  </div>
-
-                </form>
-              </div>
+          <h4 class="mt-4 mb-4">Complaint Information</h4>
+          <div class="form-group">
+            <label>What is the complaint about? Detail required before calling</label>
+            <textarea class="form-control" id="complaintDetails" name="complaintDetails" spellcheck="true" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Unique Complaint Reference Number</label>
+            <input type="text" class="form-control" id="qcrn" name="qcrn" spellcheck="true" value="">
+          </div>
+          <div class="form-group">
+            <label>Customer Service Advisor Name</label>
+            <input type="text" class="form-control" id="advisorName" name="advisorName" spellcheck="true" value="">
+          </div>
+          <div class="form-group">
+            <label>What did they say they were going to do?</label>
+            <textarea class="form-control" id="goingToDo" name="goingToDo" spellcheck="true" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Letters and emails sent to client</label>
+            <br>
+            <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+              <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
             </div>
 
+            <h4 class="mt-4 mb-4">Outcome</h4>
+            <div class="form-group">
+              <label>Notes/outcome</label>
+              <textarea class="form-control" id="outcome" name="outcome" spellcheck="true" rows="3"></textarea>
+            </div>
+
+          </form>
+        </div>
+      </div>
 
 
-          </main>
 
-          <style>
-          #line {
-            border-bottom: 2px solid #1F5F8D;
-          }
+    </main>
 
-          #module #accordionHeading.collapsed:after  {
-            content: '+';
-            float: right;
-            color: black;
-          }
+    <style>
+    #line {
+      border-bottom: 2px solid #1F5F8D;
+    }
 
-          #module #accordionHeading:not(.collapsed):after {
-            content: '-';
-            float: right;
-            color: black;
-          }
-        </style>
+    #module #accordionHeading.collapsed:after  {
+      content: '+';
+      float: right;
+      color: black;
+    }
 
-
-        <footer class="mt-2" style="height:30px; margin-top:-30px;">
-          <nav class="navbar navbar-expand-sm">  
-            <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-            <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-            <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-          </nav>
-        </footer>
-      </body>
+    #module #accordionHeading:not(.collapsed):after {
+      content: '-';
+      float: right;
+      color: black;
+    }
+  </style>
 
 
-      <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-      <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
-    </body>
-    </html>
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
+</body>
+
+
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
