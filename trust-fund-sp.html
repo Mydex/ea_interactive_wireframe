@@ -294,7 +294,22 @@
             </tr>
             <tr>
               <th>If YES, please provide us details of the agency you obtained advice from:</th>
-              <td contenteditable="true" spellcheck="true">National Debtline Citizens Advice Bureau StepChange Other</td>
+              <td>
+                <div class="selector1 selector12">
+                  <input type="radio" id="gas" name="agency" />
+                  <label for="gas">National Debtline</label>
+                  <input type="radio" id="electricity" name="agency" />
+                  <label for="electricity">Citizens Advice Bureau</label>
+                  <input type="radio" id="StepChange" name="agency" />
+                  <label for="StepChange">StepChange</label>
+                  <input type="radio" id="both" name="agency" />
+                  <label for="both" onclick="addOther()">Other</label>
+                </div>
+                <div  class="form-group"id="other" style="display: none;">
+                  <label>Other</label>
+                  <input type="text" class="form-control" id="otherInput" name="other" spellcheck="true">
+                </div>
+              </td>
             </tr>
             <tr>
               <td colspan="2">If NO, please contact one of the following before submitting this application
@@ -639,6 +654,10 @@
       counter = 0;
     }
   }
+
+  function other(){
+    document.getElementById('other').style.display = 'block';
+  } 
 
 </script>
 
