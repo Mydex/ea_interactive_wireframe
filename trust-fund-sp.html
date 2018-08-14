@@ -126,7 +126,7 @@
                 <tr>
                   <th>Has the Account Holder applied to the ScottishPower Hardship Fund before?</th>
                   <td>
-                    <div class="yesno-selector">
+                    <div class="selector1 selector11">
                       <input type="radio" id="yes1" name="yesno1" />
                       <label for="yes1">Yes</label>
                       <input type="radio" id="no1" name="yesno1" />
@@ -137,7 +137,7 @@
                 <tr>
                   <th>Are you the Account Holder?</th>
                   <td>
-                    <div class="yesno2-selector">
+                    <div class="selector1 selector12">
                       <input type="radio" id="yes2" name="yesno2" />
                       <label for="yes2">Yes</label>
                       <input type="radio" id="no2" name="yesno2" />
@@ -543,11 +543,11 @@
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
-.yesno-selector input {
+.selector1 input {
   display: none!important;
 }
 
-.yesno-selector input[type=radio] + label {
+.selector11 input[type=radio] + label {
   display: inline-block;
   border-radius: 6px;
   background: #dddddd;
@@ -560,16 +560,16 @@
   font-weight: bold;
 }
 
-.yesno-selector input[type=radio]:checked + label {
+.selector1 input[type=radio]:checked + label {
   background: #2AD705;
   color: #ffffff;
 }
 
-.yesno2-selector input {
+/*.selector2 input {
   display: none!important;
-}
+}*/
 
-.yesno2-selector input[type=radio] + label {
+.selector12 input[type=radio] + label {
   display: inline-block;
   border-radius: 6px;
   background: #dddddd;
@@ -582,9 +582,9 @@
   font-weight: bold;
 }
 
-.yesno2-selector input[type=radio]:checked + label {
+/*.selector2 input[type=radio]:checked + label {
   background: #2AD705;
-  color: #ffffff;
+  color: #ffffff;*/
 }
 </style>
 
