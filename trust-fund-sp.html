@@ -296,14 +296,14 @@
               <th>If YES, please provide us details of the agency you obtained advice from:</th>
               <td>
                 <div class="selector1 selector12">
-                  <input type="radio" id="gas" name="agency" />
-                  <label for="gas">National Debtline</label>
-                  <input type="radio" id="electricity" name="agency" />
-                  <label for="electricity">Citizens Advice Bureau</label>
+                  <input type="radio" id="debtline" name="agency" />
+                  <label for="debtline" onclick="otherDisplay('notname')">National Debtline</label>
+                  <input type="radio" id="cab" name="agency" />
+                  <label for="cab" onclick="otherDisplay('notname')">Citizens Advice Bureau</label>
                   <input type="radio" id="StepChange" name="agency" />
-                  <label for="StepChange">StepChange</label>
-                  <input type="radio" id="both" name="agency" />
-                  <label for="both" onclick="otherDisplay('name')">Other</label>
+                  <label for="StepChange" onclick="otherDisplay('notname')">StepChange</label>
+                  <input type="radio" id="other1" name="agency" />
+                  <label for="other1" onclick="otherDisplay('name')">Other</label>
                 </div>
                 <div  class="form-group"id="other" style="display: none;">
                   <label>Other</label>
@@ -458,17 +458,17 @@
               <td>
                 <div class="selector1 selector13">
                   <input type="radio" id="hear1" name="hearAbout" />
-                  <label for="hear1">ScottishPower Website</label>
+                  <label for="hear1" onclick="otherDisplay('notname')">ScottishPower Website</label>
                   <input type="radio" id="hear2" name="hearAbout" />
-                  <label for="hear2">ScottishPower Call</label>
+                  <label for="hear2" onclick="otherDisplay('notname')">ScottishPower Call</label>
                   <input type="radio" id="hear3" name="hearAbout" />
-                  <label for="hear3">Citizens’ Advice</label>
+                  <label for="hear3" onclick="otherDisplay('notname')">Citizens’ Advice</label>
                   <input type="radio" id="hear4" name="hearAbout" />
-                  <label for="hear4">National Debtline</label>
+                  <label for="hear4" onclick="otherDisplay('notname')">National Debtline</label>
                   <input type="radio" id="hear5" name="hearAbout" />
-                  <label for="hear5">Support Worker</label>
+                  <label for="hear5" onclick="otherDisplay('notname')">Support Worker</label>
                   <input type="radio" id="hear6" name="hearAbout" />
-                  <label for="hear6">Housing Association</label>
+                  <label for="hear6" onclick="otherDisplay('notname')">Housing Association</label>
                   <input type="radio" id="hear7" name="hearAbout" />
                   <label for="hear7"onclick="otherDisplay('name1')">Other</label>
                 </div>
@@ -693,7 +693,6 @@
     } else {
       document.getElementById('other').style.display = 'none';
       document.getElementById('other1').style.display = 'none';
-
     }
   }
 
