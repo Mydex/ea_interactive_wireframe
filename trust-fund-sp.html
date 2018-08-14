@@ -198,7 +198,16 @@
               </tr>
               <tr>
                 <th>What types of meters do you have?*</th>
-                <td contenteditable="true" spellcheck="true">Standard Meters Prepayment Meters Combination of Standard and Prepayment Meters</td>
+                <td>
+                  <div class="yesno2-selector">
+                    <input type="radio" id="standard" name="meters" />
+                    <label for="standard">Standard Meters</label>
+                    <input type="radio" id="prepayment" name="meters" />
+                    <label for="prepayment">Prepayment Meters</label>
+                    <input type="radio" id="combination" name="meters" />
+                    <label for="combination">Combination of Standard and Prepayment Meter</label>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <th>Can you please state what services ScottishPower supply to you?</th>
