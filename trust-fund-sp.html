@@ -190,9 +190,9 @@
                 <td>
                   <div class="selector1 selector11">
                     <input type="radio" id="yes3" name="yesno3" />
-                    <label for="yes3" onclick="showMoreTwo('display');">Yes</label>
+                    <label for="yes3" onclick="showMoreTwo('displayOne');">Yes</label>
                     <input type="radio" id="no4" name="yesno3" />
-                    <label for="no4" onclick="showMoreTwo('noDisplay');">No</label>
+                    <label for="no4" onclick="showMoreTwo('displayTwo');">No</label>
                   </div>
                 </td>
               </tr>
@@ -246,7 +246,7 @@
                 <th>What date was this current gas meter reading taken?</th>
                 <td contenteditable="true" spellcheck="true">Date</td>
               </tr>
-              <tr>
+              <tr id="notCurrentSP1" style="display: none;">
                 <th>Were you previously supplied by ScottishPower and you were unable to pay some of your final bill?</th>
                 <td>
                   <div class="selector1 selector11">
@@ -257,11 +257,11 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr id="notCurrentSP2" style="display: none;">
                 <th>Can you please provide us with the Account Number of your final bill with Scottish Power? Your Account Number can be found in the top right hand corner of your final statement. It is a ten or eleven digit number.</th>
                 <td contenteditable="true" spellcheck="true"></td>
               </tr>
-              <tr>
+              <tr id="notCurrentSP3" style="display: none;">
                 <th>Can you please provide us with the value of your final bill with ScottishPower? Your final balance is in the black box in the middle of the first page of your bill.</th>
                 <td contenteditable="true" spellcheck="true"></td>
               </tr>
@@ -710,7 +710,7 @@
   }
 
   function showMoreTwo(name){
-    if(name != 'noDisplay') {
+    if(name == 'displayOne') {
       document.getElementById("currentSP1").style.display = 'table-row';
       document.getElementById("currentSP2").style.display = 'table-row';
       document.getElementById("currentSP3").style.display = 'table-row';
@@ -719,7 +719,12 @@
       document.getElementById("currentSP6").style.display = 'table-row';
       document.getElementById("currentSP7").style.display = 'table-row';
       document.getElementById("currentSP8").style.display = 'table-row';
-    } else {
+    } else if (name == 'displayTwo') {
+      document.getElementById("notCurrentSP1").style.display = 'table-row';
+      document.getElementById("notCurrentSP2").style.display = 'table-row';
+      document.getElementById("notCurrentSP3").style.display = 'table-row';
+    }
+    else {
       document.getElementById("currentSP1").style.display = 'none';
       document.getElementById("currentSP2").style.display = 'none';
       document.getElementById("currentSP3").style.display = 'none';
@@ -728,6 +733,9 @@
       document.getElementById("currentSP6").style.display = 'none';
       document.getElementById("currentSP7").style.display = 'none';
       document.getElementById("currentSP8").style.display = 'none';
+      document.getElementById("notCurrentSP1").style.display = 'none';
+      document.getElementById("notCurrentSP2").style.display = 'none';
+      document.getElementById("notCurrentSP3").style.display = 'none';
     }
   }
 
