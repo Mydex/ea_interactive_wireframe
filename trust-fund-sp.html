@@ -127,16 +127,25 @@
                   <th>Has the Account Holder applied to the ScottishPower Hardship Fund before?</th>
                   <td>
                     <div class="yesno-selector">
-                      <input type="radio" id="yes1" name="appliedChoice"/>
+                      <input type="radio" id="yes1"/>
                       <label for="yes1">Yes</label>
-                      <input type="radio" id="no1" name="appliedChoice"/>
+                      <input type="radio" id="no1"/>
                       <label for="no1">No</label>
                     </div>
                   </td>
                 </tr>
                 <tr>
                   <th>Are you the Account Holder?</th>
-                  <td contenteditable="true" spellcheck="true">y/n/n</td>
+                  <td>
+                    <div class="yesno2-selector">
+                      <input type="radio" id="yes1"/>
+                      <label for="yes1">Yes</label>
+                      <input type="radio" id="no1"/>
+                      <label for="no1">No, Power Of Attorney</label>
+                      <input type="radio" id="no2"/>
+                      <label for="no2">No I’m assisting the account Holder to complete the form</label>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <th>What is your full name? <br>Please provide with your title, first name and surname</th>
@@ -436,6 +445,28 @@
 }
 
 .yesno-selector input[type=radio]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
+.yesno2-selector input {
+  display: none!important;
+}
+
+.yesno2-selector input[type=radio] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 40px;
+  width: 100px;
+  margin-right: 3px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.yesno2-selector input[type=radio]:checked + label {
   background: #2AD705;
   color: #ffffff;
 }
