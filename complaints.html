@@ -89,54 +89,16 @@
     border-bottom: 2px solid #1F5F8D;
   }
 
-  #module a.collapsed:after  {
-    content: '-';
-    float: right;
-    display:inline-block;
-    font-weight:400;
-    text-align:center;
-    white-space:nowrap;
-    vertical-align:middle;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    border:1px solid transparent;
-    padding:.375rem .375rem;
-    font-size:1rem;
-    line-height:1.5;
-    border-radius:.25rem;
-    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
-    color:#1F5F8D;
-    background-color:transparent;
-    background-image:none;
-    border-color:#1F5F8D;
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  }
-
-  #module a:not(.collapsed):after {
+  #module #accordionHeading.collapsed:after  {
     content: '+';
     float: right;
-    display:inline-block;
-    font-weight:400;
-    text-align:center;
-    white-space:nowrap;
-    vertical-align:middle;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    border:1px solid transparent;
-    padding:.375rem .75rem;
-    font-size:1rem;
-    line-height:1.5;
-    border-radius:.25rem;
-    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
-    color:#1F5F8D;
-    background-color:transparent;
-    background-image:none;
-    border-color:#1F5F8D;
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+    color: black;
+  }
+
+  #module #accordionHeading:not(.collapsed):after {
+    content: '-';
+    float: right;
+    color: black;
   }
 </style>
 
