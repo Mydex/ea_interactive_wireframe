@@ -126,7 +126,7 @@
                 <tr>
                   <th>Has the Account Holder applied to the ScottishPower Hardship Fund before?</th>
                   <td>
-                    <div class="name-selector">
+                    <div class="yesno-selector">
                       <input type="radio" id="yes1" name="appliedChoice"/>
                       <label for="yes1">Yes</label>
                       <input type="radio" id="no1" name="appliedChoice"/>
@@ -418,16 +418,16 @@
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
-.name-selector input {
+.yesno-selector input {
   display: none!important;
 }
 
-.name-selector input[type=radio] + label {
+.yesno-selector input[type=radio] + label {
   display: inline-block;
   border-radius: 6px;
   background: #dddddd;
   height: 45px;
-  width: 130px;
+  width: 70px;
   margin-right: 3px;
   line-height: 45px;
   text-align: center;
@@ -435,7 +435,7 @@
   font-weight: bold;
 }
 
-.name-selector input[type=radio]:checked + label {
+.yesno-selector input[type=radio]:checked + label {
   background: #2AD705;
   color: #ffffff;
 }
