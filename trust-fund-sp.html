@@ -774,6 +774,28 @@
       cursor: pointer;
       font-weight: bold;
     }
+
+    .evidence-selector input {
+      display: none!important;
+    }
+
+    .evidence-selector input[type=checkbox] + label {
+      display: inline-block;
+      border-radius: 6px;
+      background: #dddddd;
+      height: 45px;
+      width: 140px;
+      margin-right: 3px;
+      line-height: 45px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .evidence-selector input[type=checkbox]:checked + label {
+      background: #2AD705;
+      color: #ffffff;
+    }
   </style>
 
   <script>
