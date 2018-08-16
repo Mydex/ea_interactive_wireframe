@@ -921,6 +921,39 @@
       }
     }
 
+    function showAudit() {
+      document.getElementById('audit').style.display = "block";
+    }
+
+    function showAuditButton(cb) {
+      var checkBox = document.getElementById(cb);
+      if (checkBox.checked == true){
+        document.getElementById('auditButton').style.display = "block";
+      } else {
+        document.getElementById('auditButton').style.display = "none";
+      }
+    }
+
+    function showRow(cb, name) {
+      var checkBox = document.getElementById(cb);
+      if (checkBox.checked == true){
+        document.getElementById(name).style.display = "table-row";
+      } else {
+        document.getElementById(name).style.display = "none";
+      }
+    }
+
+    function start(){
+      showRow('benefit','benefitLetters'),
+      showRow('address', 'homeAddress'),
+      showRow('cert', 'birthCertificate'),
+      showRow('pay', 'paySlips')
+    }
+
+    window.onload = start();
+
+    
+
   </script>
 
 
