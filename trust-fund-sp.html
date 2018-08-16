@@ -552,7 +552,7 @@
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6">
     <h4 class="mt-4">Evidence required:</h4>
-    <div class="evidence-selector mt-2">
+    <div class="selector1 selector14 mt-2">
       <input type="checkbox" id="benefit" onclick="showRow('benefit','benefitLetters')"/>
       <label for="benefit">Benefit letters</label>
       <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/>
@@ -751,11 +751,8 @@
       font-weight: bold;
     }
 
-    .evidence-selector input {
-      display: none!important;
-    }
 
-    .evidence-selector input[type=checkbox] + label {
+    .selector14 input[type=checkbox] + label {
       display: inline-block;
       border-radius: 6px;
       background: #dddddd;
@@ -768,7 +765,7 @@
       font-weight: bold;
     }
 
-    .evidence-selector input[type=checkbox]:checked + label {
+    .selector14 input[type=checkbox]:checked + label {
       background: #2AD705;
       color: #ffffff;
     }
