@@ -558,7 +558,7 @@
         <label for="address">Home address</label>
         <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/>
         <label for="cert">Birth certificate</label>
-        <input type="checkbox" id="paySlips"  onclick="showRow('pay', 'paySlipsLetter')"/>
+        <input type="checkbox" id="paySlips"  onclick="showRow('paySlips', 'paySlipsLetter')"/>
         <label for="paySlips">Pay slips</label>
         <input type="checkbox" id="workPen" onclick="showRow('workPen','workPenLetter')"/>
         <label for="workPen">Works Pension</label>
@@ -968,7 +968,7 @@
             showRow('workPen','workPenLetter'),
             showRow('address', 'homeAddress'),
             showRow('cert', 'birthCertificate'),
-            showRow('pay', 'paySlipsLetter')
+            showRow('paySlips', 'paySlipsLetter')
           }
 
           window.onload = start();
