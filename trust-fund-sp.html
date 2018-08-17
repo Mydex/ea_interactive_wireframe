@@ -525,124 +525,125 @@
 <div class="row">
  <div class="col-12 mt-4">
    Send to Energy Advocate to check & send application<br>
-   <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button">Send</button>   
+   <button class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" onclick="showRef">Send</button>   
  </div>
 </div>
 
-<div class="row">
-  <div class="col-12 col-md-6 col-lg-6">
-    <h6 class="mt-4 mb-2">Reference number for application</h6>
-    <input type="text" class="form-control" id="refNum" name="refNum"/>
-    <h6 class="mt-4 mb-2">Date sent</h6>
-    <input type="date" name="refSend" value="2018-01-01">
-    <h6 class="mt-4 mb-2">Successful?</h6>
-    <div class="success-selector mt-2">
-      <input type="checkbox" id="yes" checked/>
-      <label for="yes">Yes</label>
-      <input type="checkbox" id="no"/>
-      <label for="no">No</label>
+<div id="refInfo" style="display: none;">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+      <h6 class="mt-4 mb-2">Reference number for application</h6>
+      <input type="text" class="form-control" id="refNum" name="refNum"/>
+      <h6 class="mt-4 mb-2">Date sent</h6>
+      <input type="date" name="refSend" value="2018-01-01">
+      <h6 class="mt-4 mb-2">Successful?</h6>
+      <div class="success-selector mt-2">
+        <input type="checkbox" id="yes" checked/>
+        <label for="yes">Yes</label>
+        <input type="checkbox" id="no"/>
+        <label for="no">No</label>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+      <h6 class="mt-4 mb-2">Notes</h6>
+      <textarea class="form-control mb-2" rows="3"></textarea>
     </div>
   </div>
-  <div class="col-12 col-md-6 col-lg-6">
-    <h6 class="mt-4 mb-2">Notes</h6>
-    <textarea class="form-control mb-2" rows="3"></textarea>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-12 col-md-6 col-lg-6">
-    <h4 class="mt-4">Evidence required:</h4>
-    <div class="selector1 selector14 mt-2">
-      <input type="checkbox" id="benefit" onclick="showRow('benefit','benefitLetters')"/>
-      <label for="benefit">Benefit letters</label>
-      <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/>
-      <label for="address">Home address</label>
-      <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/>
-      <label for="cert">Birth certificate</label>
-      <input type="checkbox" id="pay"  onclick="showRow('pay', 'paySlips')"/>
-      <label for="pay">Pay slips</label>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+      <h4 class="mt-4">Evidence required:</h4>
+      <div class="selector1 selector14 mt-2">
+        <input type="checkbox" id="benefit" onclick="showRow('benefit','benefitLetters')"/>
+        <label for="benefit">Benefit letters</label>
+        <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/>
+        <label for="address">Home address</label>
+        <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/>
+        <label for="cert">Birth certificate</label>
+        <input type="checkbox" id="pay"  onclick="showRow('pay', 'paySlips')"/>
+        <label for="pay">Pay slips</label>
+      </div>
     </div>
   </div>
-</div>
-<h4 class="mt-4 mb-2">Gathered evidence</h4>
-<div class="table-responsive">
-  <table class="table table-bordered table-sm">
-    <thead class="bg-primary">
-      <tr>
-        <th>Documents required</th>
-        <th>File</th>
-        <th>File Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr id="benefitLetters" style="display: none;">
-        <td>Benefit letters
-        </td>
-        <td>
-          <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-            <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-            <div id="benLetters"></div>
-            <button onclick="addImage('benLetters', 'benLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          </td>
-          <td>
-            <input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-            <div id="benLettersNames"></div>
-          </td>
+  <h4 class="mt-4 mb-2">Gathered evidence</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-sm">
+      <thead class="bg-primary">
+        <tr>
+          <th>Documents required</th>
+          <th>File</th>
+          <th>File Name</th>
         </tr>
-        <tr id="homeAddress" style="display: none;">
-          <td>Home Address
+      </thead>
+      <tbody>
+        <tr id="benefitLetters" style="display: none;">
+          <td>Benefit letters
           </td>
           <td>
-            <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
-              <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-              <div id="homeLetters"></div>
-              <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+              <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+              <div id="benLetters"></div>
+              <button onclick="addImage('benLetters', 'benLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
             </td>
             <td>
               <input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-              <div id="homeLettersNames"></div>
+              <div id="benLettersNames"></div>
             </td>
           </tr>
-          <tr id="birthCertificate" style="display: none;">
-            <td>Birth certificate
+          <tr id="homeAddress" style="display: none;">
+            <td>Home Address
             </td>
             <td>
-              <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
-                <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>              <div id="birthCert"></div>
-                <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+              <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
+                <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+                <div id="homeLetters"></div>
+                <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
               </td>
               <td>
-                <input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
-                <div id="birthCertNames"></div>
+                <input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+                <div id="homeLettersNames"></div>
               </td>
             </tr>
-            <tr id="paySlips" style="display: none;">
-              <td>Pay slips
+            <tr id="birthCertificate" style="display: none;">
+              <td>Birth certificate
               </td>
               <td>
-                <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image3">
-                  <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-                  <div id="pay"></div>
-                  <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+                <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
+                  <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>              <div id="birthCert"></div>
+                  <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
                 </td>
                 <td>
-                  <input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
-                  <div id="paySlipsNames"></div>
+                  <input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
+                  <div id="birthCertNames"></div>
                 </td>
               </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-6">
-            <h6 class="mt-4 mb-2">Date evidence sent</h6>
-            <input type="date" name="refEviSend" value="2018-01-01">
-            <h6 class="mt-4 mb-2">Notes</h6>
-            <textarea class="form-control mb-2" rows="3"></textarea>
+              <tr id="paySlips" style="display: none;">
+                <td>Pay slips
+                </td>
+                <td>
+                  <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image3">
+                    <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+                    <div id="pay"></div>
+                    <button onclick="addImage('pay', 'paySlipsNames')" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+                  </td>
+                  <td>
+                    <input style="width: auto;" type="text" class="form-control" id="picName3" name="picName" value="Display name:"/>
+                    <div id="paySlipsNames"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+              <h6 class="mt-4 mb-2">Date evidence sent</h6>
+              <input type="date" name="refEviSend" value="2018-01-01">
+              <h6 class="mt-4 mb-2">Notes</h6>
+              <textarea class="form-control mb-2" rows="3"></textarea>
+            </div>
+          </div>
+          <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
         </div>
-        <button class='btn btn-outline-primary mt-2 mb-4' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Submit</button>
-
 
       </div>
     </main>
