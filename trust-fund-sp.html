@@ -582,7 +582,7 @@
         </tr>
       </thead>
       <tbody>
-
+        
         <tr id="homeAddress" style="display: none;">
           <td>Home Address</td>
           <td>
@@ -966,10 +966,13 @@
           }
 
           function start(){
-            showRow('workPen','workPenLetter'),
-            showRow('address', 'homeAddress'),
-            showRow('cert', 'birthCertificate'),
+            showRow('address', 'homeAddress')
+            showRow('cert', 'birthCertificate')
             showRow('paySlips', 'paySlipsLetter')
+            showRow('workPen','workPenLetter')
+            showRow('statePen','statePenLetter')
+            showRow('disability','disabilityLetter')
+            showRow('childBen','childBenLetter')
           }
 
           window.onload = start();
