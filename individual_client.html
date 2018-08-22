@@ -1248,226 +1248,227 @@
       <div id="module" class="container row mt-4 m-0 p-0">
         <h4 id="line" class="col-12 pl-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left font-italic" role="button" data-toggle="collapse" data-target="#collapseReferralForm" aria-expanded="false" aria-controls="collapseReferralForm">Referral Form</a></h4>
         <div class="collapse" id="collapseReferralForm" aria-labelledby="headingReferralForm">   
+          <div class="card">
+            <div class="card-body">
+              <form action="/#" class="m-3">
+                <h4>Referrer details</h4>
+                <div class="form-group">
+                  <label>Referral to</label>
+                  <div>
+                    <select name="referral">
+                      <option value="referral1">Advice works</option>
+                      <option value="referral2">C4R</option>
+                      <option value="referral3">Council</option>
+                      <option value="referral4">Family First</option>
+                      <option value="referral5">Food bank</option>
+                      <option value="referral6">RAMH</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Person referring citizen</label>
+                  <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+                </div>
+                <div class="form-group">
+                  <label>Referrer contact</label>
+                  <div>
+                    <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
+                      <option value="default"></option>
+                      <option value="ref1">None</option>
+                      <option value="ref2">Mobile</option>
+                      <option value="ref3">Email</option>
+                      <option value="ref4">Mobile & Email</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                 <div id="input2"></div>
 
-          <div class="card-body">
-            <form action="/#" class="m-3">
-              <h4>Referrer details</h4>
+                 <div class="update-selector">
+                  <label class="form-check-label"> Would you like to be kept updated re this citizen? </label>
+                  <input type="radio" id="yes" name="update" /><label for="yes">Yes</label>
+                  <input type="radio" id="no" name="update" /><label for="no">No</label>
+                </div>
+              </div>
+
               <div class="form-group">
-                <label>Referral to</label>
+                <label>Add notes for energy advocates</label>
+                <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
+              </div>
+              <h4>Citizen details</h4>
+              <div class="form-group">
+                <label>Citizen's Title</label>
                 <div>
-                  <select name="referral">
-                    <option value="referral1">Advice works</option>
-                    <option value="referral2">C4R</option>
-                    <option value="referral3">Council</option>
-                    <option value="referral4">Family First</option>
-                    <option value="referral5">Food bank</option>
-                    <option value="referral6">RAMH</option>
+                  <select name="title">
+                    <option value="title0"></option>
+                    <option value="title1">Ms</option>
+                    <option value="title2">Mr</option>
+                    <option value="title3">Mrs</option>
+                    <option value="title4">Dr</option>
                   </select>
                 </div>
               </div>
               <div class="form-group">
-                <label>Person referring citizen</label>
-                <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+                <label>Citizen's Forename</label>
+                <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
               </div>
               <div class="form-group">
-                <label>Referrer contact</label>
-                <div>
-                  <select id="select_opt" class="form-control" onchange="showRefField(this.options[this.selectedIndex].value)" required>
-                    <option value="default"></option>
-                    <option value="ref1">None</option>
-                    <option value="ref2">Mobile</option>
-                    <option value="ref3">Email</option>
-                    <option value="ref4">Mobile & Email</option>
-                  </select>
-                </div>
+                <label>Citizen's Surname</label>
+                <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
               </div>
               <div class="form-group">
-               <div id="input2"></div>
-
-               <div class="update-selector">
-                <label class="form-check-label"> Would you like to be kept updated re this citizen? </label>
-                <input type="radio" id="yes" name="update" /><label for="yes">Yes</label>
-                <input type="radio" id="no" name="update" /><label for="no">No</label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Add notes for energy advocates</label>
-              <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
-            </div>
-            <h4>Citizen details</h4>
-            <div class="form-group">
-              <label>Citizen's Title</label>
-              <div>
-                <select name="title">
-                  <option value="title0"></option>
-                  <option value="title1">Ms</option>
-                  <option value="title2">Mr</option>
-                  <option value="title3">Mrs</option>
-                  <option value="title4">Dr</option>
+                <label>Citizen's preferred contact method</label>
+                <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
+                  <option value="default"></option>
+                  <option value="cit1">Mobile</option>
+                  <option value="cit2">Email</option>
+                  <option value="cit3">Mobile & Email</option>
                 </select>
+                <div id="input1"></div>
               </div>
-            </div>
-            <div class="form-group">
-              <label>Citizen's Forename</label>
-              <input type="text" class="form-control" id="forename" name="forename" spellcheck="true">
-            </div>
-            <div class="form-group">
-              <label>Citizen's Surname</label>
-              <input type="text" class="form-control" id="surname" name="surname" spellcheck="true">
-            </div>
-            <div class="form-group">
-              <label>Citizen's preferred contact method</label>
-              <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
-                <option value="default"></option>
-                <option value="cit1">Mobile</option>
-                <option value="cit2">Email</option>
-                <option value="cit3">Mobile & Email</option>
-              </select>
-              <div id="input1"></div>
-            </div>
-            <div class="form-group">
-              <label>Citizen's Address</label>
-              <input type="text" class="form-control" id="address" name="address" spellcheck="true">
-            </div>
-            <div class="form-group">
-              <label>Citizen's Postcode</label>
-              <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true">
-            </div>
-            <div class="form-group">
-              <label class="mt-2 mb-2">Citizen's preferred name</label>
-              <div class="name-selector">
-                <input type="radio" id="name1" name="nameChoice"/>
-                <label for="name1" onclick="addNickname('name1')">Title Surname<br><small>E.g. Mrs Smith</small></label>
-                <input type="radio" id="name2" name="nameChoice"/>
-                <label for="name2" onclick="addNickname('name2')">Forename<br><small>E.g. Margaret</small></label>
-                <input type="radio" id="name3" name="nameChoice"/>
-                <label for="name3" onclick="addNickname('name3')">Nickname<br><small>E.g. Maggie</small></label>
+              <div class="form-group">
+                <label>Citizen's Address</label>
+                <input type="text" class="form-control" id="address" name="address" spellcheck="true">
               </div>
-              <div  class="form-group"id="nickname" style="display: none;">
-                <label>Nickname</label>
-                <input type="text" class="form-control" id="nicknameInput" name="nickname" spellcheck="true">
+              <div class="form-group">
+                <label>Citizen's Postcode</label>
+                <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true">
               </div>
-              <label class="mt-4 mb-2">Citizen's contact preferences</label>
-              <div class="contact-selector">
-                <input type="checkbox" id="Text"/>
-                <label for="Text">Text</label>
-                <input type="checkbox" id="Message"/>
-                <label for="Message">App Messages</label>
-                <input type="checkbox" id="Phonecall"/>
-                <label for="Phonecall">Phonecall</label>
+              <div class="form-group">
+                <label class="mt-2 mb-2">Citizen's preferred name</label>
+                <div class="name-selector">
+                  <input type="radio" id="name1" name="nameChoice"/>
+                  <label for="name1" onclick="addNickname('name1')">Title Surname<br><small>E.g. Mrs Smith</small></label>
+                  <input type="radio" id="name2" name="nameChoice"/>
+                  <label for="name2" onclick="addNickname('name2')">Forename<br><small>E.g. Margaret</small></label>
+                  <input type="radio" id="name3" name="nameChoice"/>
+                  <label for="name3" onclick="addNickname('name3')">Nickname<br><small>E.g. Maggie</small></label>
+                </div>
+                <div  class="form-group"id="nickname" style="display: none;">
+                  <label>Nickname</label>
+                  <input type="text" class="form-control" id="nicknameInput" name="nickname" spellcheck="true">
+                </div>
+                <label class="mt-4 mb-2">Citizen's contact preferences</label>
+                <div class="contact-selector">
+                  <input type="checkbox" id="Text"/>
+                  <label for="Text">Text</label>
+                  <input type="checkbox" id="Message"/>
+                  <label for="Message">App Messages</label>
+                  <input type="checkbox" id="Phonecall"/>
+                  <label for="Phonecall">Phonecall</label>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
 
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-      <table class="table table-bordered table-sm sortable" id="table">
-       <thead class="table-info">
-         <tr>
-          <th>Service referred to</th>
-          <th>Named person</th>
-          <th>Date referral made</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>HES</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Care & Repair</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>MacMillan</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Money Matters</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>HSCP</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Welfare Rights</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Carers Centre</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Barnardo’s</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Financial Fitness</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Fire Brigade</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Starter Packs</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>SAMH</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>Foodbank</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>RAFA</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-        <tr>
-          <th>SAFA</th>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-          <td><input type="date" name="" value="2018-01-01"></td>
-          <td contenteditable="true" spellcheck="true">To be added</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="table table-bordered table-sm sortable" id="table">
+   <thead class="table-info">
+     <tr>
+      <th>Service referred to</th>
+      <th>Named person</th>
+      <th>Date referral made</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>HES</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Care & Repair</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>MacMillan</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Money Matters</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>HSCP</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Welfare Rights</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Carers Centre</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Barnardo’s</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Financial Fitness</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Fire Brigade</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Starter Packs</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>SAMH</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Foodbank</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>RAFA</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>SAFA</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 
