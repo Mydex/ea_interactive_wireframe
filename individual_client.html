@@ -1306,138 +1306,124 @@
               <label>Citizen's Postcode</label>
               <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true">
             </div>
-            <div class="form-group">
-              <label class="mt-2 mb-2">Citizen's preferred name</label>
-              <div class="name-selector">
-                <input type="radio" id="name1" name="nameChoice"/>
-                <label for="name1" onclick="addNickname('name1')">Title Surname<br><small>E.g. Mrs Smith</small></label>
-                <input type="radio" id="name2" name="nameChoice"/>
-                <label for="name2" onclick="addNickname('name2')">Forename<br><small>E.g. Margaret</small></label>
-                <input type="radio" id="name3" name="nameChoice"/>
-                <label for="name3" onclick="addNickname('name3')">Nickname<br><small>E.g. Maggie</small></label>
-              </div>
-              <div  class="form-group"id="nickname" style="display: none;">
-                <label>Nickname</label>
-                <input type="text" class="form-control" id="nicknameInput" name="nickname" spellcheck="true">
-              </div>
-              <label class="mt-4 mb-2">Citizen's contact preferences</label>
-              <div class="contact-selector">
-                <input type="checkbox" id="Text"/>
-                <label for="Text">Text</label>
-                <input type="checkbox" id="Message"/>
-                <label for="Message">App Messages</label>
-                <input type="checkbox" id="Phonecall"/>
-                <label for="Phonecall">Phonecall</label>
-              </div>
+            <label class="mt-4 mb-2">Citizen's contact preferences</label>
+            <div class="contact-selector">
+              <input type="checkbox" id="Text"/>
+              <label for="Text">Text</label>
+              <input type="checkbox" id="Message"/>
+              <label for="Message">App Messages</label>
+              <input type="checkbox" id="Phonecall"/>
+              <label for="Phonecall">Phonecall</label>
             </div>
-          </form>
+          </div>
+        </form>
 
-        </div>
       </div>
     </div>
+  </div>
 
-    <table class="table table-bordered table-sm sortable" id="table">
-     <thead class="table-info">
-       <tr>
-        <th>Service referred to</th>
-        <th>Named person</th>
-        <th>Date referral made</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>HES</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Care & Repair</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>MacMillan</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Money Matters</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>HSCP</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Welfare Rights</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Carers Centre</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Barnardo’s</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Financial Fitness</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Fire Brigade</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Starter Packs</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>SAMH</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>Foodbank</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>RAFA</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-      <tr>
-        <th>SAFA</th>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-        <td><input type="date" name="" value="2018-01-01"></td>
-        <td contenteditable="true" spellcheck="true">To be added</td>
-      </tr>
-    </tbody>
-  </table>
+  <table class="table table-bordered table-sm sortable" id="table">
+   <thead class="table-info">
+     <tr>
+      <th>Service referred to</th>
+      <th>Named person</th>
+      <th>Date referral made</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>HES</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Care & Repair</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>MacMillan</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Money Matters</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>HSCP</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Welfare Rights</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Carers Centre</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Barnardo’s</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Financial Fitness</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Fire Brigade</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Starter Packs</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>SAMH</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>Foodbank</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>RAFA</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+    <tr>
+      <th>SAFA</th>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+      <td><input type="date" name="" value="2018-01-01"></td>
+      <td contenteditable="true" spellcheck="true">To be added</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 </div>
 
