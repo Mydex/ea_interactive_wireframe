@@ -2090,6 +2090,28 @@
   background: #2AD705;
   color: #ffffff;
 }
+
+.update-selector input {
+  display: none!important;
+}
+
+.update-selector input[type=radio] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 30px;
+  width: 65px;
+  margin-right: 1px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.update-selector input[type=radio]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
 </style>
 
 <script>
