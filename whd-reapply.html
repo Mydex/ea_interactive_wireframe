@@ -883,158 +883,156 @@
         outline: none;
         display: block;
       }
+
+      #module a.collapsed:after  {
+        content: attr(data-text);
+        float: right;
+        display:inline-block;
+        font-weight:400;
+        text-align:center;
+        white-space:nowrap;
+        vertical-align:middle;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        border:1px solid transparent;
+        padding:.3rem .3rem;
+        font-size:1rem;
+        line-height:1.5;
+        border-radius:.25rem;
+        transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+        color:#1F5F8D;
+        background-color:transparent;
+        background-image:none;
+        border-color:#1F5F8D;
+        box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+      }
+
+      #module a:not(.collapsed):after {
+        content: 'Confirm';
+        float: right;
+        display:inline-block;
+        font-weight:400;
+        text-align:center;
+        white-space:nowrap;
+        vertical-align:middle;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        border:1px solid transparent;
+        padding:.375rem .75rem;
+        font-size:1rem;
+        line-height:1.5;
+        border-radius:.25rem;
+        transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+        color:#1F5F8D;
+        background-color:transparent;
+        background-image:none;
+        border-color:#1F5F8D;
+        box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+      }
+
+      #moduleButton {
+        width: 350px;
+      }
+
+      #moduleButton p.collapse[aria-expanded="false"] {
+        height: 21px !important;
+        overflow: hidden;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+      }
+
+      #moduleButton p.collapsing[aria-expanded="false"] {
+        height: 21px !important;
+      }
+
+      #moduleButton a.collapsed:after  {
+        content: '+';
+      }
+
+      #moduleButton a:not(.collapsed):after {
+        content: '-';
+      }
+
+      .success-selector input {
+        display: none!important;
+      }
+
+      .success-selector input[type=checkbox] + label {
+        display: inline-block;
+        border-radius: 6px;
+        background: #dddddd;
+        height: 45px;
+        width: 70px;
+        margin-right: 3px;
+        line-height: 45px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .success-selector input[type=checkbox]:checked + label {
+        background: #2AD705;
+        color: #ffffff;
+      }
+
+      .evidence-selector input {
+        display: none!important;
+      }
+
+      .evidence-selector input[type=checkbox] + label {
+        display: inline-block;
+        border-radius: 6px;
+        background: #dddddd;
+        height: 45px;
+        width: 140px;
+        margin-right: 3px;
+        line-height: 45px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .evidence-selector input[type=checkbox]:checked + label {
+        background: #2AD705;
+        color: #ffffff;
+      }
     </style>
 
-    <style id="moduleStyleCheck">
-    #module a.collapsed:after  {
-      content: attr(data-text);
-      float: right;
-      display:inline-block;
-      font-weight:400;
-      text-align:center;
-      white-space:nowrap;
-      vertical-align:middle;
-      -webkit-user-select:none;
-      -moz-user-select:none;
-      -ms-user-select:none;
-      user-select:none;
-      border:1px solid transparent;
-      padding:.3rem .3rem;
-      font-size:1rem;
-      line-height:1.5;
-      border-radius:.25rem;
-      transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
-      color:#1F5F8D;
-      background-color:transparent;
-      background-image:none;
-      border-color:#1F5F8D;
-      box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+
+
+    <script type="text/javascript">
+
+     function submitSP() {
+      if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
+        document.getElementById('afterSubmit').style.display = 'block';
+      } else {
+        document.getElementById('afterSubmit').style.display = 'none'; 
+      }
     }
 
-    #module a:not(.collapsed):after {
-      content: 'Confirm';
-      float: right;
-      display:inline-block;
-      font-weight:400;
-      text-align:center;
-      white-space:nowrap;
-      vertical-align:middle;
-      -webkit-user-select:none;
-      -moz-user-select:none;
-      -ms-user-select:none;
-      user-select:none;
-      border:1px solid transparent;
-      padding:.375rem .75rem;
-      font-size:1rem;
-      line-height:1.5;
-      border-radius:.25rem;
-      transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
-      color:#1F5F8D;
-      background-color:transparent;
-      background-image:none;
-      border-color:#1F5F8D;
-      box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-    }
+    function submitBG() {
+      if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
+        document.getElementById('afterSubmit').style.display = 'block';
+      } else {
+       document.getElementById('afterSubmit').style.display = 'none'; 
+     }
+   }
 
-    #moduleButton {
-      width: 350px;
-    }
-
-    #moduleButton p.collapse[aria-expanded="false"] {
-      height: 21px !important;
-      overflow: hidden;
-
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;  
-    }
-
-    #moduleButton p.collapsing[aria-expanded="false"] {
-      height: 21px !important;
-    }
-
-    #moduleButton a.collapsed:after  {
-      content: '+';
-    }
-
-    #moduleButton a:not(.collapsed):after {
-      content: '-';
-    }
-
-    .success-selector input {
-      display: none!important;
-    }
-
-    .success-selector input[type=checkbox] + label {
-      display: inline-block;
-      border-radius: 6px;
-      background: #dddddd;
-      height: 45px;
-      width: 70px;
-      margin-right: 3px;
-      line-height: 45px;
-      text-align: center;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .success-selector input[type=checkbox]:checked + label {
-      background: #2AD705;
-      color: #ffffff;
-    }
-
-    .evidence-selector input {
-      display: none!important;
-    }
-
-    .evidence-selector input[type=checkbox] + label {
-      display: inline-block;
-      border-radius: 6px;
-      background: #dddddd;
-      height: 45px;
-      width: 140px;
-      margin-right: 3px;
-      line-height: 45px;
-      text-align: center;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .evidence-selector input[type=checkbox]:checked + label {
-      background: #2AD705;
-      color: #ffffff;
-    }
-  </style>
-
-
-
-  <script type="text/javascript">
-
-   function submitSP() {
-    if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
-      document.getElementById('afterSubmit').style.display = 'block';
-    } else {
-      document.getElementById('afterSubmit').style.display = 'none'; 
-    }
-  }
-
-  function submitBG() {
-    if (document.getElementById('personalBGButton').dataset.text === 'Complete' && document.getElementById('supplierBGButton').dataset.text === 'Complete' && document.getElementById('incomeBGButton').dataset.text === 'Complete' && document.getElementById('fuelBGButton').dataset.text === 'Complete' && document.getElementById('benefitsBGButton').dataset.text === 'Complete'){
+   function submitEDF() {
+    if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete'){
       document.getElementById('afterSubmit').style.display = 'block';
     } else {
      document.getElementById('afterSubmit').style.display = 'none'; 
    }
  }
 
- function submitEDF() {
-  if (document.getElementById('personalEDFButton').dataset.text === 'Complete' && document.getElementById('supplierEDFButton').dataset.text === 'Complete' && document.getElementById('incomeEDFButton').dataset.text === 'Complete' && document.getElementById('fuelEDFButton').dataset.text === 'Complete'){
-    document.getElementById('afterSubmit').style.display = 'block';
-  } else {
-   document.getElementById('afterSubmit').style.display = 'none'; 
- }
-}
-
-function submitEON() {
+ function submitEON() {
   if (document.getElementById('personalEONButton').dataset.text === 'Complete' && document.getElementById('supplierEONButton').dataset.text === 'Complete' && document.getElementById('incomeEONButton').dataset.text === 'Complete' && document.getElementById('fuelEONButton').dataset.text === 'Complete'){
     document.getElementById('afterSubmit').style.display = 'block';
   } else {
