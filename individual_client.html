@@ -2132,6 +2132,18 @@
     document.getElementById(name).appendChild(newDiv);
   }
 
+  function showField(name){
+    if(name == 'cit1') {
+      document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
+    } else if (name == 'cit2') {
+      document.getElementById('input1').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    } else if (name == 'cit3') {
+      document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
+    } else {
+      document.getElementById('input1').innerHTML='';
+    } 
+  }
+
 </script>
 
 <script>
