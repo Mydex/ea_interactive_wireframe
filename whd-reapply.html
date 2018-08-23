@@ -58,7 +58,7 @@
     </div>
     <p class="mt-2 mb-2">Who is their current electricity supplier?</p>
     <form action="#/">
-     <select name="energySupplier" onchange="showApplciation(this.options[this.selectedIndex].value)" required>
+     <select name="energySupplier" onchange="showAppliciation(this.options[this.selectedIndex].value)" required>
        <option value="default"></option>
        <option value="scottishPower" selected>Scottish Power</option>
        <option value="britishGas">British Gas</option>
@@ -998,7 +998,7 @@
 
 
 
-    <script type="text/javascript">
+    <script>
 
      function submitSP() {
       if (document.getElementById('personalSPButton').dataset.text === 'Complete' && document.getElementById('supplierSPButton').dataset.text === 'Complete' && document.getElementById('incomeSPButton').dataset.text === 'Complete' && document.getElementById('fuelSPButton').dataset.text === 'Complete'){
@@ -1032,7 +1032,7 @@
  }
 }
 
-function showApplciation(name){
+function showAppliciation(name){
   if(name == 'scottishPower'){
     document.getElementById('scottishPowerContent').style.display = 'block';
     document.getElementById('britishGasContent').style.display = 'none';
