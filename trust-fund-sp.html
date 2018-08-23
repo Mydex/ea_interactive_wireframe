@@ -582,7 +582,7 @@
         </tr>
       </thead>
       <tbody>
-        
+
         <tr id="homeAddress" style="display: none;">
           <td>Home Address</td>
           <td>
@@ -684,6 +684,7 @@
                     </tbody>
                   </table>
                 </div>
+                
                 <div class="row">
                   <div class="col-12 col-md-6 col-lg-6">
                     <h6 class="mt-4 mb-2">Date evidence sent</h6>
@@ -825,19 +826,6 @@
 
         <script>
 
-          var dobCounter = 2;
-          function addDOB(){
-            var newDiv = document.createElement('div');
-            newDiv.innerHTML = 
-            "<input typ='date' name='dob" + dobCounter + "' class='mb-2' >\
-            <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' >";
-            document.getElementById('content').appendChild(newDiv);
-            dobCounter ++;
-          }
-          function removeRow(input){
-            document.getElementById('content').removeChild(input.parentNode);
-          }
-
           function showRef() {
             document.getElementById('refInfo').style.display = "block";
           }
@@ -940,19 +928,6 @@
               document.getElementById('debtYes').style.display = 'none';
             } else {
               document.getElementById(id).style.display = 'none';
-            }
-          }
-
-          function showAudit() {
-            document.getElementById('audit').style.display = "block";
-          }
-
-          function showAuditButton(cb) {
-            var checkBox = document.getElementById(cb);
-            if (checkBox.checked == true){
-              document.getElementById('auditButton').style.display = "block";
-            } else {
-              document.getElementById('auditButton').style.display = "none";
             }
           }
 
