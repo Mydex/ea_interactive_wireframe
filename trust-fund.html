@@ -271,19 +271,6 @@
 
 <script>
 
-  var dobCounter = 2;
-  function addDOB(){
-    var newDiv = document.createElement('div');
-    newDiv.innerHTML = 
-    "<input typ='date' name='dob" + dobCounter + "' class='mb-2' >\
-    <input type='button' class='btn btn-outline-primary' value='-' onclick='removeRow(this)' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);' >";
-    document.getElementById('content').appendChild(newDiv);
-    dobCounter ++;
-  }
-  function removeRow(input){
-    document.getElementById('content').removeChild(input.parentNode);
-  }
-
   function showSubmit() {
     if (document.getElementById('personalButton').dataset.text === 'Complete' && document.getElementById('supplierButton').dataset.text === 'Complete' && document.getElementById('incomeButton').dataset.text === 'Complete' && document.getElementById('fuelButton').dataset.text === 'Complete'){
       document.getElementById('submitToEA').style.display = 'block';
@@ -316,15 +303,6 @@
     }
   }
 
-</script>
-
-
-<script>
-  $(document).ready(function () {
-    $("button").click(function(){
-      $("a").removeClass("active");
-    });
-  });
 </script>
 
 <footer class="mt-2" style="height:30px; margin-top:-30px;">
