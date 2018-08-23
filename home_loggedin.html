@@ -493,189 +493,179 @@
       document.getElementById('clientInfo').innerHTML='';
     } 
   }
-</script>
 
-
-<script>
-
-//popover for client tasks 1 
-$(function(){
-  $("#popoverTaskList1").popover({
-    html : true, 
-    content: function() {
-      return $('#popoverTaskList1Content').html();
-    },
-    title: function() {
-      return $('#popoverTaskList1Title').html();
-    }
-  });
-})
-$('body').on('click', function (e) {
- $('#popoverTaskList1').each(function () {
-   if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-     $(this).popover('hide');
-   }
+  $(function(){
+    $("#popoverTaskList1").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverTaskList1Content').html();
+      },
+      title: function() {
+        return $('#popoverTaskList1Title').html();
+      }
+    });
+  })
+  $('body').on('click', function (e) {
+   $('#popoverTaskList1').each(function () {
+     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+       $(this).popover('hide');
+     }
+   });
  });
-});
-   //popover for client tasks 2
-   $(function(){
-     $("#popoverTaskList2").popover({
-       html : true, 
-       content: function() {
-         return $('#popoverTaskList2Content').html();
-       },
-       title: function() {
-         return $('#popoverTaskList2Title').html();
-       }
-     });
-   })
-   $('body').on('click', function (e) {
+
+  $(function(){
+   $("#popoverTaskList2").popover({
+     html : true, 
+     content: function() {
+       return $('#popoverTaskList2Content').html();
+     },
+     title: function() {
+       return $('#popoverTaskList2Title').html();
+     }
+   });
+ })
+  $('body').on('click', function (e) {
     $('#popoverTaskList2').each(function () {
       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
         $(this).popover('hide');
       }
     });
   });
-    //popover for client tasks 3
-    $(function(){
-      $("#popoverTaskList3").popover({
-        html : true, 
-        content: function() {
-          return $('#popoverTaskList3Content').html();
-        },
-        title: function() {
-          return $('#popoverTaskList3Title').html();
-        }
-      });
-    })
-    $('body').on('click', function (e) {
-     $('#popoverTaskList3').each(function () {
-       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-         $(this).popover('hide');
-       }
-     });
-   });
 
-     //popover for client notes 1
-     $(function(){
-       $("#popoverNote1").popover({
-         html : true, 
-         content: function() {
-          return $('#popoverNote1Content').html();
-        }
-      });
-     })
-     $('body').on('click', function (e) {
-      $('#popoverNote1').each(function () {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-          $(this).popover('hide');
-        }
-      });
+  $(function(){
+    $("#popoverTaskList3").popover({
+      html : true, 
+      content: function() {
+        return $('#popoverTaskList3Content').html();
+      },
+      title: function() {
+        return $('#popoverTaskList3Title').html();
+      }
     });
+  })
+  $('body').on('click', function (e) {
+   $('#popoverTaskList3').each(function () {
+     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+       $(this).popover('hide');
+     }
+   });
+ });
 
-      //popover for client notes 2
-      $(function(){
-        $("#popoverNote2").popover({
-          html : true, 
-          content: function() {
-           return $('#popoverNote2Content').html();
-         }
-       });
-      })
-      $('body').on('click', function (e) {
-       $('#popoverNote2').each(function () {
-         if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-           $(this).popover('hide');
-         }
-       });
-     });
+  $(function(){
+   $("#popoverNote1").popover({
+     html : true, 
+     content: function() {
+      return $('#popoverNote1Content').html();
+    }
+  });
+ })
+  $('body').on('click', function (e) {
+    $('#popoverNote1').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
 
-       //popover for client notes 3
-       $(function(){
-         $("#popoverNote3").popover({
-           html : true, 
-           content: function() {
-            return $('#popoverNote3Content').html();
-          }
-        });
-       })
-       $('body').on('click', function (e) {
-        $('#popoverNote3').each(function () {
-          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
-          }
-        });
-      });
+  $(function(){
+    $("#popoverNote2").popover({
+      html : true, 
+      content: function() {
+       return $('#popoverNote2Content').html();
+     }
+   });
+  })
+  $('body').on('click', function (e) {
+   $('#popoverNote2').each(function () {
+     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+       $(this).popover('hide');
+     }
+   });
+ });
+
+  $(function(){
+   $("#popoverNote3").popover({
+     html : true, 
+     content: function() {
+      return $('#popoverNote3Content').html();
+    }
+  });
+ })
+  $('body').on('click', function (e) {
+    $('#popoverNote3').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
+  });
 
 
+  var compare = {
+    name: function(a, b) {
+      a = a.replace(/^the /i, '');
+      b = b.replace(/^the /i, '');
+      if (a < b) {
+        return -1;
+      } else {
+        return a > b ? 1 : 0;
+      }
+    },
+    duration: function(a, b) {
+      a = a.split(':');
+      b = b.split(':');
+      a = Number(a[0]) * 60 + Number(a[1]);
+      b = Number(b[0]) * 60 + Number(b[1]);
+      return a - b;
+    },
+    date: function(a, b) {
+      a = new Date(a);
+      b = new Date(b);
+      return a - b;
+    }
+  };
 
+  $('.sortable').each(function(){
+    var $table = $(this);
+    var $tbody = $table.find('tbody');
+    var $controls = $table.find('th');
+    var rows = $tbody.find('tr').toArray();
 
-       var compare = {
-        name: function(a, b) {
-          a = a.replace(/^the /i, '');
-          b = b.replace(/^the /i, '');
-          if (a < b) {
-            return -1;
-          } else {
-            return a > b ? 1 : 0;
-          }
-        },
-        duration: function(a, b) {
-          a = a.split(':');
-          b = b.split(':');
-          a = Number(a[0]) * 60 + Number(a[1]);
-          b = Number(b[0]) * 60 + Number(b[1]);
-          return a - b;
-        },
-        date: function(a, b) {
-          a = new Date(a);
-          b = new Date(b);
-          return a - b;
+    $controls.on('click', function() {
+      var $header = $(this);
+      var order = $header.data('sort');
+      var column;
+
+      if ($header.is('.ascending') || $header.is('.descending')) {
+        $header.toggleClass('ascending descending');
+        $tbody.append(rows.reverse());
+      } else {
+        $header.addClass('ascending');
+        $header.siblings().removeClass('ascending descending');
+        if (compare.hasOwnProperty(order)) {
+          column = $controls.index(this);
+          rows.sort(function(a, b){
+            a = $(a).find('td').eq(column).text();
+            b = $(b).find('td').eq(column).text();
+            return compare[order](a, b);
+          });
+          $tbody.append(rows);
         }
-      };
+      }
+    });
+  });
+</script>
 
-      $('.sortable').each(function(){
-        var $table = $(this);
-        var $tbody = $table.find('tbody');
-        var $controls = $table.find('th');
-        var rows = $tbody.find('tr').toArray();
+<footer class="mt-4">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
+</body>
 
-        $controls.on('click', function() {
-          var $header = $(this);
-          var order = $header.data('sort');
-          var column;
-
-          if ($header.is('.ascending') || $header.is('.descending')) {
-            $header.toggleClass('ascending descending');
-            $tbody.append(rows.reverse());
-          } else {
-            $header.addClass('ascending');
-            $header.siblings().removeClass('ascending descending');
-            if (compare.hasOwnProperty(order)) {
-              column = $controls.index(this);
-              rows.sort(function(a, b){
-                a = $(a).find('td').eq(column).text();
-                b = $(b).find('td').eq(column).text();
-                return compare[order](a, b);
-              });
-              $tbody.append(rows);
-            }
-          }
-        });
-      });
-    </script>
-
-    <footer class="mt-4">
-      <nav class="navbar navbar-expand-sm">  
-        <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-        <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-        <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-      </nav>
-    </footer>
-  </body>
-
-  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-  <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
