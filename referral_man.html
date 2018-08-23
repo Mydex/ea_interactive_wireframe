@@ -107,18 +107,6 @@
                  <div><div class="update-selector mt-2"><label class="form-check-label"> Requested an <input type="checkbox" id="update"/><label for="update">update</label></label></div></div>
                </div>
                <div class="form-group">
-                 <label>Assign to Energy Advocate</label>
-                 <div>
-                   <select name="message">
-                     <option value="messageDefault"></option>
-                     <option value="message2">Energy Advocate One</option>
-                     <option value="message3">Energy Advocate  Two</option>
-                     <option value="message4">Energy Advocate  Three</option>
-                     <option value="message5">Energy Advocate  Four</option>
-                   </select>
-                 </div>
-               </div>
-               <div class="form-group">
                  <label>Add notes</label>
                  <textarea type="text" class="form-control" spellcheck="true" rows="3"></textarea>
                </div>
@@ -314,7 +302,7 @@
 }
 </style>
 
-<script type="text/javascript">
+<script>
   function showField(name){
     if(name == 'cit1') {
       document.getElementById('input1').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
@@ -341,9 +329,6 @@
     } 
   }
 
-</script>
-
-<script>
 
   (function(document) {
     'use strict';
@@ -382,8 +367,8 @@
     });
 
   })(document);
-</script>
-<script>
+
+
   (function(document) {
     'use strict';
     var StatusFilter = (function(Arr) {
@@ -421,21 +406,7 @@
     });
 
   })(document);
-</script>
 
-<script type="text/javascript">
-  function showfield(name){
-    if(name == 'ea1') {
-      document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/>';
-    } else if (name == 'ea2') {
-      document.getElementById('input').innerHTML = 'Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-    } else if (name == 'ea3') {
-      document.getElementById('input').innerHTML = 'Mobile:<br> <input type="text" class="form-control" id="mobile" name="mobile"/> Email:<br> <input type="text" class="form-control" id="email" name="email"/>';
-    }
-    else {
-      document.getElementById('input').innerHTML='';
-    } 
-  }
 </script>
 
 
