@@ -192,8 +192,6 @@
         <div id="newAccordionTwo"></div>
         <button onclick="addAccordion('newAccordionTwo')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>
 
-
-
         <h3 class="mt-5 mb-2">Top Energy Saving Tips</h3>
         <div id="module" class="container row mt-3">
           <div class="col-12 p-0 m-0">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
@@ -252,97 +250,97 @@
 
         <h3 class="mt-5 mb-2">Add another section</h3>
         <button onclick="addSection()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</button>
+      </div>
+
+    </main>
+
+    <style>
+    #line {
+      border-bottom: 2px solid #1F5F8D;
+    }
+
+    #module #accordionHeading.collapsed:after  {
+      content: '+';
+      float: right;
+      color: black;
+    }
+
+    #module #accordionHeading:not(.collapsed):after {
+      content: '-';
+      float: right;
+      color: black;
+    }
+  </style>
+
+  <script>
+    var counter = 0;
+    function addSection() {
+      var newDiv = document.createElement('div');
+      newDiv.innerHTML = 
+      '<h3 class="mt-5 mb-2" contenteditable="true" spellcheck="true">New Section</h3>\
+      <div id="module" class="container row mt-3">\
+      <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseNewSection" aria-expanded="false" aria-controls="collapseNewSection" contenteditable="true" spellcheck="true">New Topic</a></h5>\
+      <div class="collapse col-12 p-0 m-0" id="collapseNewSection" aria-labelledby="headingNewSection">\
+      <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
+      <h6>New Heading</h6>\
+      <p contenteditable="true" spellcheck="true">Information here</p>\
+      <div id="newMini'+ counter+'"></div>\
+      <input class="mt-4 mb-5 col-12" type="file" name="pic" accept="image/*"">\
+      <button onclick="addMiniSectionHeading('+ "'newMini"+counter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add section</button>\
+      <button onclick="addMiniSection('+ "'newMini"+counter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>\
+      <br>\
+      </div>\
+      </div>\
+      <div id="newAccordion'+ counter+'"></div>\
+      <button onclick="addAccordion(' +"'newAccordion"+counter+"'"+ ')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>'
+      document.getElementById('newSection').appendChild(newDiv);
+    }
+
+    function addAccordion(name) {
+      var newDiv = document.createElement('div');
+      newDiv.innerHTML = 
+      '<div id="module" class="container row mt-3">\
+      <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseNewSection'+ counter+'" aria-expanded="false" aria-controls="collapseNewSection'+ counter+'" contenteditable="true" spellcheck="true">New Topic</a></h5>\
+      <div class="collapse col-12" id="collapseNewSection'+ counter+'" aria-labelledby="headingNewSection'+ counter+'">\
+      <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
+      <h6>Heading</h6>\
+      <p contenteditable="true" spellcheck="true">Information here</p>\
+      </div>\
+      </div>'
+      document.getElementById(name).appendChild(newDiv);
+    }
+
+    function addMiniSectionHeading(name) {
+      var newDiv = document.createElement('div');
+      newDiv.innerHTML = 
+      '<h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
+      <h6>Heading</h6>\
+      <p contenteditable="true" spellcheck="true">Information here</p>'
+      document.getElementById(name).appendChild(newDiv);
+    }
+
+    function addMiniSection(name) {
+      var newDiv = document.createElement('div');
+      newDiv.innerHTML = 
+      '<h6>Heading One</h6>\
+      <p contenteditable="true" spellcheck="true">Information here</p>'
+      document.getElementById(name).appendChild(newDiv);
+    }
+
+  </script>
 
 
-      </main>
-
-      <style>
-      #line {
-        border-bottom: 2px solid #1F5F8D;
-      }
-
-      #module #accordionHeading.collapsed:after  {
-        content: '+';
-        float: right;
-        color: black;
-      }
-
-      #module #accordionHeading:not(.collapsed):after {
-        content: '-';
-        float: right;
-        color: black;
-      }
-    </style>
-
-    <script>
-      var counter = 0;
-      function addSection() {
-        var newDiv = document.createElement('div');
-        newDiv.innerHTML = 
-        '<h3 class="mt-5 mb-2" contenteditable="true" spellcheck="true">New Section</h3>\
-        <div id="module" class="container row mt-3">\
-        <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseNewSection" aria-expanded="false" aria-controls="collapseNewSection" contenteditable="true" spellcheck="true">New Topic</a></h5>\
-        <div class="collapse col-12 p-0 m-0" id="collapseNewSection" aria-labelledby="headingNewSection">\
-        <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
-        <h6>New Heading</h6>\
-        <p contenteditable="true" spellcheck="true">Information here</p>\
-        <div id="newMini'+ counter+'"></div>\
-        <input class="mt-4 mb-5 col-12" type="file" name="pic" accept="image/*"">\
-        <button onclick="addMiniSectionHeading('+ "'newMini"+counter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add section</button>\
-        <button onclick="addMiniSection('+ "'newMini"+counter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>\
-        <br>\
-        </div>\
-        </div>\
-        <div id="newAccordion'+ counter+'"></div>\
-        <button onclick="addAccordion(' +"'newAccordion"+counter+"'"+ ')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>'
-        document.getElementById('newSection').appendChild(newDiv);
-      }
-
-      function addAccordion(name) {
-        var newDiv = document.createElement('div');
-        newDiv.innerHTML = 
-        '<div id="module" class="container row mt-3">\
-        <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseNewSection'+ counter+'" aria-expanded="false" aria-controls="collapseNewSection'+ counter+'" contenteditable="true" spellcheck="true">New Topic</a></h5>\
-        <div class="collapse col-12" id="collapseNewSection'+ counter+'" aria-labelledby="headingNewSection'+ counter+'">\
-        <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
-        <h6>Heading</h6>\
-        <p contenteditable="true" spellcheck="true">Information here</p>\
-        </div>\
-        </div>'
-        document.getElementById(name).appendChild(newDiv);
-      }
-
-      function addMiniSectionHeading(name) {
-        var newDiv = document.createElement('div');
-        newDiv.innerHTML = 
-        '<h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
-        <h6>Heading</h6>\
-        <p contenteditable="true" spellcheck="true">Information here</p>'
-        document.getElementById(name).appendChild(newDiv);
-      }
-
-      function addMiniSection(name) {
-        var newDiv = document.createElement('div');
-        newDiv.innerHTML = 
-        '<h6>Heading One</h6>\
-        <p contenteditable="true" spellcheck="true">Information here</p>'
-        document.getElementById(name).appendChild(newDiv);
-      }
-
-    </script>
+  <footer class="mt-2" style="height:30px; margin-top:-30px;">
+    <nav class="navbar navbar-expand-sm">  
+      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+    </nav>
+  </footer>
+</body>
 
 
-    <footer class="mt-2" style="height:30px; margin-top:-30px;">
-      <nav class="navbar navbar-expand-sm">  
-        <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-        <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-        <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-      </nav>
-    </footer>
-  </body>
-
-
-  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
