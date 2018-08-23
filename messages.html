@@ -330,43 +330,43 @@
 </style>
 
 <script>
-(function(document) {
-  'use strict';
-  var TableFilter = (function(Arr) {
-    var input;
+  (function(document) {
+    'use strict';
+    var TableFilter = (function(Arr) {
+      var input;
 
-    function onInputEvent(e) {
-      input = e.target;
-      var tables = document.getElementsByClassName(input.getAttribute('data-table'));
-      Arr.forEach.call(tables, function(table) {
-        Arr.forEach.call(table.tBodies, function(tbody) {
-          Arr.forEach.call(tbody.rows, filterRow);
-        });
-      });
-    }
-
-    function filterRow(row) {
-      var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
-      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-    }
-
-    return {
-      init: function() {
-        var inputs = document.getElementsByClassName('tableFilter');
-        Arr.forEach.call(inputs, function(input) {
-          input.oninput = onInputEvent;
+      function onInputEvent(e) {
+        input = e.target;
+        var tables = document.getElementsByClassName(input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+          Arr.forEach.call(table.tBodies, function(tbody) {
+            Arr.forEach.call(tbody.rows, filterRow);
+          });
         });
       }
-    };
-  })(Array.prototype);
 
-  document.addEventListener('readystatechange', function() {
-    if (document.readyState === 'complete') {
-      TableFilter.init();
-    }
-  });
+      function filterRow(row) {
+        var text = row.textContent.toLowerCase(), val = input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
 
-})(document);
+      return {
+        init: function() {
+          var inputs = document.getElementsByClassName('tableFilter');
+          Arr.forEach.call(inputs, function(input) {
+            input.oninput = onInputEvent;
+          });
+        }
+      };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        TableFilter.init();
+      }
+    });
+
+  })(document);
 
 //sort tables
 var compare = {
