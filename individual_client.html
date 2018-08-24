@@ -1152,187 +1152,178 @@
 <div id="module" class="container row mt-3">
   <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseReferrals" aria-expanded="false" aria-controls="collapseReferrals">Referrals</a></h4>
   <div class="collapse col-12 p-0" id="collapseReferrals" aria-labelledby="headingReferrals">
-    <div id="module" class="container row mt-3">
-      <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseReferralForm" aria-expanded="false" aria-controls="collapseReferralForm">Referral Form</a></h4>
-      <div class="collapse col-12 p-0" id="collapseReferralForm" aria-labelledby="headingReferralForm">
-
-    <div class="row">
-     <div class="col-12 col-md-6 col-lg-6">
+    <button onclick="showReferralform()">Referral Form</button>
+    <div class="row" id="referralForm" style="display: none;">
       <h4>Service referral</h4>
-      <div class="form-group">
-        <label>Service referred to</label>
-        <div><select name="referral">
-          <option value="referral0"></option>
-          <option value="referral1">Advice works</option>
-          <option value="referral2">C4R</option>
-          <option value="referral3">Council</option>
-          <option value="referral4">Family First</option>
-          <option value="referral5">Food bank</option>
-          <option value="referral6">RAMH</option>
-        </select></div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  <div id="module" class="container row mt-4 m-0 p-0">
-    <h4 id="line" class="col-12 pl-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left font-italic" role="button" data-toggle="collapse" data-target="#collapseReferralForm" aria-expanded="false" aria-controls="collapseReferralForm">Referral Form</a></h4>
-    <div class="collapse col-12" id="collapseReferralForm" aria-labelledby="headingReferralForm">   
-      <form action="/#" class="container">
-
+      <div class="col-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <label>Named person for service</label>
-          <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
-        </div>
-        <h4>Citizen details</h4>
-        <div class="form-group" value="Mrs">
-          <label>Citizen's Title</label>
-          <div><select name="title">
-            <option value="title0"></option>
-            <option value="title1">Ms</option>
-            <option value="title2">Mr</option>
-            <option value="title3" selected>Mrs</option>
-            <option value="title4">Dr</option>
+          <label>Service referred to</label>
+          <div><select name="referral">
+            <option value="referral0"></option>
+            <option value="referral1">Advice works</option>
+            <option value="referral2">C4R</option>
+            <option value="referral3">Council</option>
+            <option value="referral4">Family First</option>
+            <option value="referral5">Food bank</option>
+            <option value="referral6">RAMH</option>
           </select></div>
+          <div class="form-group">
+            <label>Named person for service</label>
+            <input type="text" class="form-control" id="referee" name="referee" spellcheck="true">
+          </div>
         </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
         <div class="form-group">
-          <label>Citizen's Forename</label>
-          <input type="text" class="form-control" id="forename" name="forename" spellcheck="true" value="Citizen">
-        </div>
-        <div class="form-group">
-          <label>Citizen's Surname</label>
-          <input type="text" class="form-control" id="surname" name="surname" spellcheck="true" value="Twenty">
-        </div>
-        <div class="form-group">
-          <label>Citizen's preferred contact method</label>
-          <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
-            <option value="default"></option>
-            <option value="cit1">Mobile</option>
-            <option value="cit2" selected>Email</option>
-            <option value="cit3">Mobile & Email</option>
-          </select>
-          <div id="input1"></div>
-        </div>
-        <div class="form-group">
-          <label>Citizen's Address</label>
-          <input type="text" class="form-control" id="address" name="address" spellcheck="true" value="12 Fake Street">
-        </div>
-        <div class="form-group">
-          <label>Citizen's Postcode</label>
-          <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true" value="FA12 KE34">
-        </div>
-        <div class="form-group">
-          <div class="mainSelector contact-selector">
-            <input type="checkbox" id="Text" checked/><label for="Text">Text</label>
-            <input type="checkbox" id="Phonecall"/><label for="Phonecall">Phonecall</label>
+          <h4>Citizen details</h4>
+          <div class="form-group" value="Mrs">
+            <label>Citizen's Title</label>
+            <div><select name="title">
+              <option value="title0"></option>
+              <option value="title1">Ms</option>
+              <option value="title2">Mr</option>
+              <option value="title3" selected>Mrs</option>
+              <option value="title4">Dr</option>
+            </select></div>
+          </div>
+          <div class="form-group">
+            <label>Citizen's Forename</label>
+            <input type="text" class="form-control" id="forename" name="forename" spellcheck="true" value="Citizen">
+          </div>
+          <div class="form-group">
+            <label>Citizen's Surname</label>
+            <input type="text" class="form-control" id="surname" name="surname" spellcheck="true" value="Twenty">
+          </div>
+          <div class="form-group">
+            <label>Citizen's preferred contact method</label>
+            <select name="select_opt" id="select_opt" class="form-control" onchange="showField(this.options[this.selectedIndex].value)" required>
+              <option value="default"></option>
+              <option value="cit1">Mobile</option>
+              <option value="cit2" selected>Email</option>
+              <option value="cit3">Mobile & Email</option>
+            </select>
+            <div id="input1"></div>
+          </div>
+          <div class="form-group">
+            <label>Citizen's Address</label>
+            <input type="text" class="form-control" id="address" name="address" spellcheck="true" value="12 Fake Street">
+          </div>
+          <div class="form-group">
+            <label>Citizen's Postcode</label>
+            <input type="text" class="form-control" id="postcode" name="postcode" spellcheck="true" value="FA12 KE34">
+          </div>
+          <div class="form-group">
+            <div class="mainSelector contact-selector">
+              <input type="checkbox" id="Text" checked/><label for="Text">Text</label>
+              <input type="checkbox" id="Phonecall"/><label for="Phonecall">Phonecall</label>
+            </div>
           </div>
         </div>
         <div><button class='btn btn-outline-primary' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>Export as PDF</button></div>
-      </form>
+      </div>
     </div>
-  </div>
-  <table class="table table-bordered table-sm sortable mt-3" id="table">
-   <thead class="table-info">
-     <tr>
-      <th>Service referred to</th>
-      <th>Named person</th>
-      <th>Date referral made</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>HES</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Care & Repair</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>MacMillan</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Money Matters</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>HSCP</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Welfare Rights</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Carers Centre</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Barnardo’s</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Financial Fitness</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Fire Brigade</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Starter Packs</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>SAMH</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>Foodbank</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>RAFA</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-    <tr>
-      <th>SAFA</th>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-      <td><input type="date" name="" value="2018-01-01"></td>
-      <td contenteditable="true" spellcheck="true">To be added</td>
-    </tr>
-  </tbody>
-</table>
+    <table class="table table-bordered table-sm sortable mt-3" id="table">
+     <thead class="table-info">
+       <tr>
+        <th>Service referred to</th>
+        <th>Named person</th>
+        <th>Date referral made</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>HES</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Care & Repair</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>MacMillan</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Money Matters</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>HSCP</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Welfare Rights</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Carers Centre</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Barnardo’s</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Financial Fitness</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Fire Brigade</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Starter Packs</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>SAMH</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>Foodbank</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>RAFA</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+      <tr>
+        <th>SAFA</th>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+        <td><input type="date" name="" value="2018-01-01"></td>
+        <td contenteditable="true" spellcheck="true">To be added</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 </div>
 <div id="module" class="container row mt-3">
@@ -1955,6 +1946,17 @@
     } else {
       document.getElementById('carbonAlarmYes').innerHTML='';
     } 
+  }
+
+  function showReferralform() {
+    var form = document.getElementById('referralForm');
+    var displaySetting = form.style.display;
+    if (displaySetting == 'block') {
+      myClock.style.display = 'none';
+    } else {
+      myClock.style.display = 'block';
+      clockButton.innerHTML = 'Hide clock';
+    }
   }
 
   var dobCounter = 2;
