@@ -74,7 +74,7 @@
         <button onclick="addMiniSection('newMiniOne')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>
         <br>
         <div class="row">
-          <div id="carouselOne" class="carousel slide col-12 col-md-6 col-lg-6 mt-4" data-ride="carousel">
+          <div id="carouselOne" class="carousel slide col-12 col-md-8 col-lg-8 mt-4" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselOne" data-slide-to="0" class="active"></li>
               <li data-target="#carouselOne" data-slide-to="1"></li>
@@ -110,10 +110,10 @@
         </div>
       </div>
 
-      <div id="module" class="container row mt-3">
-        <div class="col-12 p-0 m-0">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
-        <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseGasRead" aria-expanded="false" aria-controls="collapseGasRead">Gas meter reading </a></h5>
-        <div class="collapse col-12 p-0 m-0" id="collapseGasRead" aria-labelledby="headingGasRead">
+      <div id="module" class="row mt-3">
+        <div class="col-12">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
+        <h5 id="line" class="col-12 col-md-6 col-lg-6 ml-3 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseGasRead" aria-expanded="false" aria-controls="collapseGasRead">Gas meter reading </a></h5>
+        <div class="collapse col-12" id="collapseGasRead" aria-labelledby="headingGasRead">
           <h5 class="mt-4 mb-4">How to take your gas meter reading</h5>
           <h6>Digital metric meter <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value=""></label></h6>
           <p contenteditable="true" spellcheck="true">Information here</p>
@@ -126,7 +126,7 @@
           <button onclick="addMiniSection('newMiniTwo')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>
           <br>
           <div class="row">
-            <div id="carouselTwo" class="carousel slide col-12 col-md-6 col-lg-6 mt-4" data-ride="carousel">
+            <div id="carouselTwo" class="carousel slide col-12 col-md-8 col-lg-8 mt-4" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselTwo" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselTwo" data-slide-to="1"></li>
@@ -164,11 +164,11 @@
         <div id="newAccordionOne" class="m-0 p-0"></div>
         <button onclick="addAccordion('newAccordionOne')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>
 
-        <h3 class="mt-5">Advice</h3>
-        <div id="module" class="container row mt-3">
-          <div class="col-12 p-0 m-0">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
-          <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseAdvice" aria-expanded="false" aria-controls="collapseAdvice">Before calling supplier</a></h5>
-          <div class="collapse col-12 p-0 m-0" id="collapseAdvice" aria-labelledby="headingAdvice">
+        <h3 class="mt-4">Advice</h3>
+        <div id="module" class="row mt-3">
+          <div class="col-12">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
+          <h5 id="line" class="col-12 col-md-6 col-lg-6 ml-3 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseAdvice" aria-expanded="false" aria-controls="collapseAdvice">Before calling supplier</a></h5>
+          <div class="collapse col-12" id="collapseAdvice" aria-labelledby="headingAdvice">
             <h5 class="mt-4 mb-4">What information you will need BEFORE calling your energy supplier <label class="form-check-label"><input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></label></h5>
             <p contenteditable="true" spellcheck="true">Electricity Account Number: 000000000000<br>Address: 12 Fake Street, FakeTown, FA12 3KE</p>
             <div id="newMiniThree"></div>
@@ -179,12 +179,11 @@
         </div>
         <div id="newAccordionTwo"></div>
         <button onclick="addAccordion('newAccordionTwo')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>
-
-        <h3 class="mt-5 mb-2">Top Energy Saving Tips</h3>
-        <div id="module" class="container row mt-3">
-          <div class="col-12 p-0 m-0">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
-          <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProofing" aria-expanded="false" aria-controls="collapseProofing">Proofing</a></h5>
-          <div class="collapse col-12 p-0 m-0" id="collapseProofing" aria-labelledby="headingProofing">
+        <h3 class="mt-4 mb-2">Top Energy Saving Tips</h3>
+        <div id="module" class="row mt-3">
+          <div class="col-12">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
+          <h5 id="line" class="col-12 col-md-6 col-lg-6 ml-3 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseProofing" aria-expanded="false" aria-controls="collapseProofing">Proofing</a></h5>
+          <div class="collapse col-12" id="collapseProofing" aria-labelledby="headingProofing">
             <h5 class="mt-4 mb-4">Insulation & Draught Proofing</h5>
             <ol>
               <li contenteditable="true" spellcheck="true">Insulate your Cylinder.  Fit a new jacket with a new 80mm one. Payback < 6 months.</li>
@@ -194,11 +193,10 @@
             </ol>
           </div>
         </div>
-
-        <div id="module" class="container row mt-3">
-          <div class="col-12 p-0 m-0">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
-          <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBehavioural" aria-expanded="false" aria-controls="collapseProofing">Behavioural Change</a></h5>
-          <div class="collapse col-12 p-0 m-0" id="collapseBehavioural" aria-labelledby="headingBehavioural">
+        <div id="module" class="row mt-3">
+          <div class="col-12">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
+          <h5 id="line" class="col-12 col-md-6 col-lg-6 ml-3 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBehavioural" aria-expanded="false" aria-controls="collapseProofing">Behavioural Change</a></h5>
+          <div class="collapse col-12" id="collapseBehavioural" aria-labelledby="headingBehavioural">
             <h5 class="mt-4 mb-4">Behavioural Change</h5>
             <ol>
               <li contenteditable="true" spellcheck="true">Close curtains at dusk.</li>
@@ -216,11 +214,10 @@
             </ol> 
           </div>
         </div>
-
-        <div id="module" class="container row mt-3">
-          <div class="col-12 p-0 m-0">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
-          <h5 id="line" class="col-12 col-md-5 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseAppliances" aria-expanded="false" aria-controls="collapseAppliances">Appliances/Controls</a></h5>
-          <div class="collapse col-12 p-0 m-0" id="collapseAppliances" aria-labelledby="headingAppliances">
+        <div id="module" class="row mt-3">
+          <div class="col-12">Include in client's profile <input class="form-check-label" type="checkbox" id="inlineCheckbox" value="" checked></div>
+          <h5 id="line" class="col-12 col-md-6 col-lg-6 ml-3 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseAppliances" aria-expanded="false" aria-controls="collapseAppliances">Appliances/Controls</a></h5>
+          <div class="collapse col-12" id="collapseAppliances" aria-labelledby="headingAppliances">
             <h5 class="mt-4 mb-4">Appliances/Controls </h5>
             <ol>
               <li contenteditable="true" spellcheck="true">Replace inefficient fridge/freezer with a band ‘A’ rated model and save up to £45 per year.</li>
@@ -230,14 +227,12 @@
             </ol>
           </div>
         </div>
-
         <div id="newAccordionThree"></div>
         <button onclick="addAccordion('newAccordionThree')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>
         <div id="newSection"></div>
         <h3 class="mt-5 mb-2">Add another section</h3>
         <button onclick="addSection()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</button>
       </div>
-
     </main>
 
     <style>
