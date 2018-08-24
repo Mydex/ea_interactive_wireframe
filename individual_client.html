@@ -1952,10 +1952,9 @@
     var form = document.getElementById('referralForm');
     var displaySetting = form.style.display;
     if (displaySetting == 'block') {
-      myClock.style.display = 'none';
+      form.style.display = 'none';
     } else {
-      myClock.style.display = 'block';
-      clockButton.innerHTML = 'Hide clock';
+      form.style.display = 'block';
     }
   }
 
