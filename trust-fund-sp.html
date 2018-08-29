@@ -911,7 +911,7 @@
     newDivFile.innerHTML = 
     "<input type='checkbox' id='new"+ evidenceCounter + "' checked onclick='showRow('newRow"+ evidenceCounter + "','newLetter"+ evidenceCounter + "')'/><label for='newRow"+ evidenceCounter + "'>New Evidence</label>";
     document.getElementById(divEvid).appendChild(newDivFile);
-    var evidenceRow = document.createElement('div');
+    var evidenceRow = document.createElement('tr');
     evidenceRow.innerHTML = 
     "<tr id='newLetter"+ evidenceCounter + "' style='display: none;'>\
     <td>New Evidence</td>\
