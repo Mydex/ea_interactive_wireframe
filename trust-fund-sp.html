@@ -910,14 +910,18 @@
     newDivFile.innerHTML = 
     "<input type='checkbox' id='new"+ evidenceCounter + "' onclick='showRow('newRow"+ evidenceCounter + "','newLetter"+ evidenceCounter + "')'/><label for='newRow"+ evidenceCounter + "'>New Evidence</label>";
     document.getElementById(divEvid).appendChild(newDivFile);
+    addNewRow(divEvidRow);
+    evidenceCounter ++;
+  }
+
+  function addNewRow (divEvidRow) {
     var evidenceRow = document.createElement('tr');
     evidenceRow.innerHTML = 
     "<tr id='newLetter"+ evidenceCounter + "' style='display: none;'>\
     <td contenteditable='true' spellcheck='true'>New Evidence</td>\
-  \
+    \
     </tr>";
     document.getElementById(divEvidRow).appendChild(evidenceRow);
-    evidenceCounter ++;
   }
 </script>
 
