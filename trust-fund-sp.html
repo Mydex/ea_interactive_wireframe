@@ -456,7 +456,14 @@
  <div class="collapse col-12 p-0 m-0" id="collapseEvidence" aria-labelledby="headingEvidence">
   <div class="row">
     <div class="col-12 col-md-8 col-lg-8">
-      <h4 class="mt-4">Evidence required:</h4>
+      <h4 class="mt-4">Evidence</h4>
+      <p>Is the evidence required as part of the application or after application has been received?</p>
+      <div class="selector1 selector11 mt-2">
+        <input type="checkbox" id="before"/><label for="before">Before</label>
+        <input type="checkbox" id="after"/><label for="after">After</label>
+      </div>
+
+      <p>You can pick from the list below to add a requirement to the citizen's table for evidence that will be required as part of the application</p>
       <div class="selector1 selector14 mt-2">
         <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/><label for="address">Home address</label>
         <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/><label for="cert">Birth certificate</label>
@@ -468,7 +475,7 @@
       </div>
     </div>
   </div>
-  <h4 class="mt-4 mb-2">Gathered evidence</h4>
+  <h4 class="mt-4 mb-2">Required evidence</h4>
   <div class="table-responsive">
     <table class="table table-bordered table-sm">
       <thead class="bg-primary">
