@@ -475,7 +475,7 @@
           <div id="newEvidence"></div>
         </div>
       </div>
-      <button onclick="addEvidence('newEvidence')" required class="btn btn-outline-primary mt-4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add more evidence</button>
+      <button onclick="addEvidence('newEvidence', 'newEvidenceRow')" required class="btn btn-outline-primary mt-4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add more evidence</button>
     </div>
   </div>
   <h4 class="mt-4 mb-2">Required evidence</h4>
@@ -566,6 +566,7 @@
             <div id="childBenLettersNames"></div>
           </td>
         </tr>
+        <div id="newEvidenceRow"></div>
       </tbody>
     </table>
   </div>
@@ -907,11 +908,24 @@
   }
 
   evidenceCounter = 1;
-  function addEvidence(divEvid){
+  function addEvidence(divEvid, divEdidRow){
     var newDivFile = document.createElement('div');
     newDivFile.innerHTML = 
     "<input type='checkbox' id='new"+ evidenceCounter + "' checked onclick='showRow('newRow"+ evidenceCounter + "','newLetter"+ evidenceCounter + "')'/><label for='newRow"+ evidenceCounter + "'>New Evidence</label>";
     document.getElementById(divEvid).appendChild(newDivFile);
+    var evidenceRow = document.createElement('tr');
+    evidenceRow = 
+    "<tr id='newLetter' style='display: none;'>\
+    <td>New Evidence</td>\
+    <td><label class='btn btn-outline-primary mb-2 mr-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'' for='image0'>\
+    <input id='image0' type='file' accept='image/*'' style='display:none' onchange='$('#upload-file-info').html(this.files[0].name)'> Choose file</label><span class='font-italic' id='upload-file-info'> No file chosen</span>\
+    <button onclick='addImage('childBenLetters', 'childBenLettersNames')' required class='btn btn-outline-primary float-right mr-1' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'>+ more</button>\
+    <div id='childBenLetters'></div>\
+    </td>\
+    <td><input style='width: auto;' type='text' class='form-control' id='picName1' name='picName' value='Display name:'/>\
+    <div id='childBenLettersNames'></div>\
+    </td>'"
+    document.getElementById(divEdidRow).appendChild(evidenceRow);
     evidenceCounter ++;
   }
 </script>
