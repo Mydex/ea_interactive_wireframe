@@ -463,15 +463,17 @@
         <input type="radio" id="after" name="evidence"/><label for="after">After</label>
       </div>
       <p>You can pick from the list below to add a requirement to the citizen's table for evidence that will be required as part of the application</p>
-      <div class="row selector1 selector14 mt-2">
-        <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/><label for="address">Home address</label>
-        <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/><label for="cert">Birth certificate</label>
-        <input type="checkbox" id="paySlips"  onclick="showRow('paySlips', 'paySlipsLetter')"/><label for="paySlips">Pay slips</label>
-        <input type="checkbox" id="workPen" onclick="showRow('workPen','workPenLetter')"/><label for="workPen">Works Pension</label>
-        <input type="checkbox" id="statePen" onclick="showRow('statePen','statePenLetter')"/><label for="statePen">State Pension</label>
-        <input type="checkbox" id="disability" checked onclick="showRow('disability','disabilityLetter')"/><label for="disability">Disability Living Allowance</label>
-        <input type="checkbox" id="childBen" checked onclick="showRow('childBen','childBenLetter')"/><label for="childBen">Child Benefits</label>
-        <div id="newEvidence"></div>
+      <div class="selector1 selector14 mt-2">
+        <div class="row">
+          <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/><label for="address">Home address</label>
+          <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/><label for="cert">Birth certificate</label>
+          <input type="checkbox" id="paySlips"  onclick="showRow('paySlips', 'paySlipsLetter')"/><label for="paySlips">Pay slips</label>
+          <input type="checkbox" id="workPen" onclick="showRow('workPen','workPenLetter')"/><label for="workPen">Works Pension</label>
+          <input type="checkbox" id="statePen" onclick="showRow('statePen','statePenLetter')"/><label for="statePen">State Pension</label>
+          <input type="checkbox" id="disability" checked onclick="showRow('disability','disabilityLetter')"/><label for="disability">Disability Living Allowance</label>
+          <input type="checkbox" id="childBen" checked onclick="showRow('childBen','childBenLetter')"/><label for="childBen">Child Benefits</label>
+          <div id="newEvidence"></div>
+        </div>
       </div>
       <button onclick="addEvidence('newEvidence')" required class="btn btn-outline-primary mt-4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add more evidence</button>
     </div>
