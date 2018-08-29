@@ -912,7 +912,7 @@
     "<input type='checkbox' id='new"+ evidenceCounter + "' checked onclick='showRow('newRow"+ evidenceCounter + "','newLetter"+ evidenceCounter + "')'/><label for='newRow"+ evidenceCounter + "'>New Evidence</label>";
     document.getElementById(divEvid).appendChild(newDivFile);
     var evidenceRow = document.createElement('div');
-    evidenceRow = 
+    evidenceRow.innerHTML = 
     "<tr id='newLetter' style='display: none;'>\
     <td>New Evidence</td>\
     <td><label class='btn btn-outline-primary mb-2 mr-2' style='box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);'' for='image0'>\
