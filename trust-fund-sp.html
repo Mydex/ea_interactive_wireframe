@@ -449,110 +449,117 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-12 col-md-8 col-lg-8">
-    <h4 class="mt-4">Evidence required:</h4>
-    <div class="selector1 selector14 mt-2">
-      <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/><label for="address">Home address</label>
-      <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/><label for="cert">Birth certificate</label>
-      <input type="checkbox" id="paySlips"  onclick="showRow('paySlips', 'paySlipsLetter')"/><label for="paySlips">Pay slips</label>
-      <input type="checkbox" id="workPen" onclick="showRow('workPen','workPenLetter')"/><label for="workPen">Works Pension</label>
-      <input type="checkbox" id="statePen" onclick="showRow('statePen','statePenLetter')"/><label for="statePen">State Pension</label>
-      <input type="checkbox" id="disability" checked onclick="showRow('disability','disabilityLetter')"/><label for="disability">Disability Living Allowance</label>
-      <input type="checkbox" id="childBen" checked onclick="showRow('childBen','childBenLetter')"/><label for="childBen">Child Benefits</label>
+
+
+<div id="module" class="container row mt-3">
+ <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEvidence" aria-expanded="false" aria-controls="collapseEvidence" id="evidenceButton" onclick="checkData('other', 'evidenceButton'); showSubmit();" data-text="Complete">Evidence</a></h5>
+ <div class="collapse col-12" id="collapseEvidence" aria-labelledby="headingEvidence">
+  <div class="row">
+    <div class="col-12 col-md-8 col-lg-8">
+      <h4 class="mt-4">Evidence required:</h4>
+      <div class="selector1 selector14 mt-2">
+        <input type="checkbox" id="address" checked onclick="showRow('address', 'homeAddress')"/><label for="address">Home address</label>
+        <input type="checkbox" id="cert" onclick="showRow('cert', 'birthCertificate')"/><label for="cert">Birth certificate</label>
+        <input type="checkbox" id="paySlips"  onclick="showRow('paySlips', 'paySlipsLetter')"/><label for="paySlips">Pay slips</label>
+        <input type="checkbox" id="workPen" onclick="showRow('workPen','workPenLetter')"/><label for="workPen">Works Pension</label>
+        <input type="checkbox" id="statePen" onclick="showRow('statePen','statePenLetter')"/><label for="statePen">State Pension</label>
+        <input type="checkbox" id="disability" checked onclick="showRow('disability','disabilityLetter')"/><label for="disability">Disability Living Allowance</label>
+        <input type="checkbox" id="childBen" checked onclick="showRow('childBen','childBenLetter')"/><label for="childBen">Child Benefits</label>
+      </div>
     </div>
   </div>
+  <h4 class="mt-4 mb-2">Gathered evidence</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-sm">
+      <thead class="bg-primary">
+        <tr>
+          <th>Documents required</th>
+          <th>File</th>
+          <th>File Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="homeAddress" style="display: none;">
+          <td>Home Address</td>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
+            <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+            <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="homeLetters"></div>
+          </td>
+          <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="homeLettersNames"></div>
+          </td>
+        </tr>
+        <tr id="birthCertificate" style="display: none;">
+          <td>Birth certificate</td>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
+            <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>              
+            <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="birthCert"></div>
+          </td>
+          <td><input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
+            <div id="birthCertNames"></div>
+          </td>
+        </tr>
+        <tr id="paySlipsLetter" style="display: none;">
+          <td>Pay Slips</td>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+            <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+            <button onclick="addImage('paySlipsLetters', 'paySlipsLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="paySlipsLetters"></div>
+          </td>
+          <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="paySlipsLettersNames"></div>
+          </td>
+        </tr>
+        <tr id="workPenLetter" style="display: none;">
+          <td>Work Pension letter</td>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+            <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+            <button onclick="addImage('workPenLetters', 'workPenLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="workPenLetters"></div>
+          </td>
+          <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="workPenLettersNames"></div>
+          </td>
+        </tr>
+        <tr id="statePenLetter" style="display: none;">
+          <td>State Pension letter</td>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+            <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+            <button onclick="addImage('statePenLetters', 'statePenLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="statePenLetters"></div>
+          </td>
+          <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="statePenLettersNames"></div>
+          </td>
+        </tr>
+        <tr id="disabilityLetter" style="display: none;">
+          <td>Disability Living Allowance</td>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+            <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+            <button onclick="addImage('disabilityLetters', 'disabilityLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="disabilityLetters"></div>
+          </td>
+          <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="disabilityLettersNames"></div>
+          </td>
+        </tr>
+        <tr id="childBenLetter" style="display: none;">
+          <td>Child Benefit</td>
+          <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
+            <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
+            <button onclick="addImage('childBenLetters', 'childBenLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
+            <div id="childBenLetters"></div>
+          </td>
+          <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
+            <div id="childBenLettersNames"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-<h4 class="mt-4 mb-2">Gathered evidence</h4>
-<div class="table-responsive">
-  <table class="table table-bordered table-sm">
-    <thead class="bg-primary">
-      <tr>
-        <th>Documents required</th>
-        <th>File</th>
-        <th>File Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr id="homeAddress" style="display: none;">
-        <td>Home Address</td>
-        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image1">
-          <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-          <button onclick="addImage('homeLetters', 'homeLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          <div id="homeLetters"></div>
-        </td>
-        <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-          <div id="homeLettersNames"></div>
-        </td>
-      </tr>
-      <tr id="birthCertificate" style="display: none;">
-        <td>Birth certificate</td>
-        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image2">
-          <input id="image1" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>              
-          <button onclick="addImage('birthCert', 'birthCertNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          <div id="birthCert"></div>
-        </td>
-        <td><input style="width: auto;" type="text" class="form-control" id="picName2" name="picName" value="Display name:"/>
-          <div id="birthCertNames"></div>
-        </td>
-      </tr>
-      <tr id="paySlipsLetter" style="display: none;">
-        <td>Pay Slips</td>
-        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-          <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-          <button onclick="addImage('paySlipsLetters', 'paySlipsLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          <div id="paySlipsLetters"></div>
-        </td>
-        <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-          <div id="paySlipsLettersNames"></div>
-        </td>
-      </tr>
-      <tr id="workPenLetter" style="display: none;">
-        <td>Work Pension letter</td>
-        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-          <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-          <button onclick="addImage('workPenLetters', 'workPenLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          <div id="workPenLetters"></div>
-        </td>
-        <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-          <div id="workPenLettersNames"></div>
-        </td>
-      </tr>
-      <tr id="statePenLetter" style="display: none;">
-        <td>State Pension letter</td>
-        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-          <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-          <button onclick="addImage('statePenLetters', 'statePenLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          <div id="statePenLetters"></div>
-        </td>
-        <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-          <div id="statePenLettersNames"></div>
-        </td>
-      </tr>
-      <tr id="disabilityLetter" style="display: none;">
-        <td>Disability Living Allowance</td>
-        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-          <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-          <button onclick="addImage('disabilityLetters', 'disabilityLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          <div id="disabilityLetters"></div>
-        </td>
-        <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-          <div id="disabilityLettersNames"></div>
-        </td>
-      </tr>
-      <tr id="childBenLetter" style="display: none;">
-        <td>Child Benefit</td>
-        <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">
-          <input id="image0" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
-          <button onclick="addImage('childBenLetters', 'childBenLettersNames')" required class="btn btn-outline-primary float-right mr-1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">+ more</button>
-          <div id="childBenLetters"></div>
-        </td>
-        <td><input style="width: auto;" type="text" class="form-control" id="picName1" name="picName" value="Display name:"/>
-          <div id="childBenLettersNames"></div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </div>
 
 
