@@ -908,12 +908,12 @@
   }
 
   evidenceCounter = 1;
-  function addEvidence(divEvid, divEdidRow){
+  function addEvidence(divEvid, divEvidRow){
     var newDivFile = document.createElement('div');
     newDivFile.innerHTML = 
     "<input type='checkbox' id='new"+ evidenceCounter + "' checked onclick='showRow('newRow"+ evidenceCounter + "','newLetter"+ evidenceCounter + "')'/><label for='newRow"+ evidenceCounter + "'>New Evidence</label>";
     document.getElementById(divEvid).appendChild(newDivFile);
-    var evidenceRow = document.createElement('tr');
+    var evidenceRow = document.createElement('div');
     evidenceRow = 
     "<tr id='newLetter' style='display: none;'>\
     <td>New Evidence</td>\
@@ -924,8 +924,9 @@
     </td>\
     <td><input style='width: auto;' type='text' class='form-control' id='picName1' name='picName' value='Display name:'/>\
     <div id='childBenLettersNames'></div>\
-    </td>'"
-    document.getElementById(divEdidRow).appendChild(evidenceRow);
+    </td>\
+    </tr>";
+    document.getElementById(divEvidRow).appendChild(evidenceRow);
     evidenceCounter ++;
   }
 </script>
