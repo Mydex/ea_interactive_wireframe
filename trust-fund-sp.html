@@ -935,7 +935,7 @@
   function addEvidence(divEvid, divEvidRow){
     var newDivFile = document.createElement('div');
     newDivFile.innerHTML = 
-    "<input type='checkbox' id='new"+ evidenceCounter + "' onclick='showRow('newRow"+ evidenceCounter + "','newLetter"+ evidenceCounter + "')'/><label for='newRow"+ evidenceCounter + "'>New Evidence</label>";
+    "<input type='checkbox' id='new"+ evidenceCounter + "' onclick='showRow('newRow"+ evidenceCounter + "','newLetter"+ evidenceCounter + "')' checked/><label for='newRow"+ evidenceCounter + "' contenteditable='true' spellcheck='true'>New Evidence</label>";
     document.getElementById(divEvid).appendChild(newDivFile);
     addNewRow(divEvidRow);
     evidenceCounter ++;
