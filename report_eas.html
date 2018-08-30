@@ -1,0 +1,454 @@
+<!DOCTYPE>
+<html lang="en">  
+<head>
+  <meta http-equiv="Content-type" content="text/html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" >
+  <title>EA Interactive Wireframe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="master">
+  <link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="master">
+  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+
+<body style="height:100%;">
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand mx-auto" href="https://mydex.github.io/ea_interactive_wireframe/home_loggedin.html">
+      <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-square.jpg" alt="logo" width="40">
+    </a>
+    <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>   
+    <div class="collapse navbar-collapse" id="nav-content">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/home_loggedin.html" class="nav-link text-white font-weight-light">Home</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/visits.html" class="nav-link text-white font-weight-light">Home Visits</a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/client_list.html" class="nav-link text-white font-weight-light">Client List</a></li>
+        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle text-white font-weight-bold font-italic" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/reports.html">Report overview</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/report-monthly.html">Current Month Activity</a>
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/report-past-monthly.html">Past Months Activity</a>
+            <a class="dropdown-item" href="https://mydex.github.io/ea_interactive_wireframe/report-location.html">Location</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/messages.html" class="nav-link text-white font-weight-light">Messages <span class="badge badge-danger">4</span></a></li>
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/referral_man.html" class="nav-link text-white font-weight-light">Referral Management</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info btn-sm my-2 my-sm-0" type="submit">Search</button>
+      </form class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item"><a href="https://mydex.github.io/ea_interactive_wireframe/index.html" class="nav-link text-white font-weight-light">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style=" min-height:73%;">
+    <div class="container mt-4">
+      <h3 class="mb-4">Energy Advocate Statistics</h3>
+      <div class="row">
+        <p class="col-12">
+          Return to reports <a href="https://mydex.github.io/ea_interactive_wireframe/reports.html" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);"><img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/double-arrow.png" alt="logo" width="20"></a>
+        </p>
+      </div>
+      <div id="module" class="container row mt-3">
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEA1" aria-expanded="false" aria-controls="collapseEA1" onclick="showPrintButton();">Energy Advocate One</a></h4>
+        <div class="collapse col-12" id="collapseEA1" aria-labelledby="headingEA1">
+          <div class="input-group date mt-2 mb-1" data-provide="datepicker">
+            <form action="#">
+              <table>
+                <tr>
+                  <td>Start date:</td>
+                  <td>End date:</td>
+                </tr>
+                <tr>
+                  <td><input type="date" name="start" value="2018-01-01"></td>
+                  <td><input type="date" name="end"value="2019-01-01"></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead class="bg-success">
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="5">Stats from client status</td>
+                </tr>
+                <tr>
+                  <td>All Clients</td>
+                  <td>New Clients</td>
+                  <td>Active</td>
+                  <td>Referral</td>
+                  <td>Rereferral</td>
+                  <td>Reactivated</td>
+                  <td>Closed</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                  <td>72</td>
+                  <td>23</td>
+                  <td>10</td>
+                  <td>25</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered">
+              <thead class="bg-success">
+                <tr>
+                  <td></td>
+                  <td colspan="3">Savings</td>
+                  <td colspan="2">Visits</td>
+                </tr>
+                <tr>
+                  <td>Carbon savings (kg CO2)</td>
+                  <td>Ongoing</td>
+                  <td>Capital</td>
+                  <td><b>Total</b></td>
+                  <td>1st visits</td>
+                  <td>Further visits</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                  <td></td>
+                  <td>£</td>
+                  <td>£</td>
+                  <td style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row mt-4">
+            <p class="col-12 col-md-4 col-lg-4">Print EA1 report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+            </p>
+            <p class="col-12 col-md-7 col-lg-7">Download EA1 report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="module" class="container row mt-3">
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEA2" aria-expanded="false" aria-controls="collapseEA2" onclick="showPrintButton();">Energy Advocate Two</a></h4>
+        <div class="collapse col-12" id="collapseEA2" aria-labelledby="headingEA2">
+          <div class="input-group date mt-2 mb-1" data-provide="datepicker">
+            <form action="#">
+              <table>
+                <tr>
+                  <td>Start date:</td>
+                  <td>End date:</td>
+                </tr>
+                <tr>
+                  <td><input type="date" name="start" value="2018-01-01"></td>
+                  <td><input type="date" name="end"value="2019-01-01"></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm text-left">
+              <thead class="bg-success">
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="5">Stats from client status</td>
+                </tr>
+                <tr>
+                  <td>All Clients</td>
+                  <td>New Clients</td>
+                  <td>Active</td>
+                  <td>Referral</td>
+                  <td>Rereferral</td>
+                  <td>Reactivated</td>
+                  <td>Closed</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                  <td>72</td>
+                  <td>23</td>
+                  <td>10</td>
+                  <td>25</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered">
+              <thead class="bg-success">
+                <tr>
+                  <td></td>
+                  <td colspan="3">Savings</td>
+                  <td colspan="2">Visits</td>
+                </tr>
+                <tr>
+                  <td>Carbon savings (kg CO2)</td>
+                  <td>Ongoing</td>
+                  <td>Capital</td>
+                  <td><b>Total</b></td>
+                  <td>1st visits</td>
+                  <td>Further visits</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                  <td></td>
+                  <td>£</td>
+                  <td>£</td>
+                  <td style="background-color: #F5F5F5;"><b>£</b></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row mt-4">
+            <p class="col-12 col-md-4 col-lg-4">Print EA2 report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+            </p>
+            <p class="col-12 col-md-7 col-lg-7">Download EA2 report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="module" class="container row mt-3">
+        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEA3" aria-expanded="false" aria-controls="collapseEA3" onclick="showPrintButton();">Energy Advocate Three</a></h4>
+        <div class="collapse col-12" id="collapseEA3" aria-labelledby="headingEA3">
+          <div class="input-group date mt-2 mb-1" data-provide="datepicker">
+            <form action="#">
+              <table>
+                <tr>
+                  <td>Start date:</td>
+                  <td>End date:</td>
+                </tr>
+                <tr>
+                  <td><input type="date" name="start" value="2018-01-01"></td>
+                  <td><input type="date" name="end"value="2019-01-01"></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+              <thead class="bg-success">
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="5">Stats from client status</td>
+                </tr>
+                <tr>
+                  <td>All Clients</td>
+                  <td>New Clients</td>
+                  <td>Active</td>
+                  <td>Referral</td>
+                  <td>Rereferral</td>
+                  <td>Reactivated</td>
+                  <td>Closed</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                 <td>72</td>
+                 <td>23</td>
+                 <td>10</td>
+                 <td>25</td>
+                 <td>2</td>
+                 <td>4</td>
+                 <td>10</td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+         <div class="table-responsive">
+           <table class="table table-sm table-bordered">
+             <thead class="bg-success">
+               <tr>
+                 <td></td>
+                 <td colspan="3">Savings</td>
+                 <td colspan="2">Visits</td>
+               </tr>
+               <tr>
+                 <td>Carbon savings (kg CO2)</td>
+                 <td>Ongoing</td>
+                 <td>Capital</td>
+                 <td><b>Total</b></td>
+                 <td>1st visits</td>
+                 <td>Further visits</td>
+               </tr>
+             </thead>
+             <tbody>
+               <tr class="text-right">
+                 <td></td>
+                 <td>£</td>
+                 <td>£</td>
+                 <td style="background-color: #F5F5F5;"><b>£</b></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+         <div class="row mt-4">
+          <p class="col-12 col-md-4 col-lg-4">Print EA3 report
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+          </p>
+          <p class="col-12 col-md-7 col-lg-7">Download EA3 report
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="module" class="container row mt-3">
+      <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEA4" aria-expanded="false" aria-controls="collapseEA4" onclick="showPrintButton();">Energy Advocate Four</a></h4>
+      <div class="collapse col-12" id="collapseEA4" aria-labelledby="headingEA4">
+        <div class="input-group date mt-2 mb-1" data-provide="datepicker">
+          <form action="#">
+            <table>
+              <tr>
+                <td>Start date:</td>
+                <td>End date:</td>
+              </tr>
+              <tr>
+                <td><input type="date" name="start" value="2018-01-01"></td>
+                <td><input type="date" name="end"value="2019-01-01"></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-sm">
+            <thead class="bg-success">
+              <tr>
+                <td colspan="2"></td>
+                <td colspan="5">Stats from client status</td>
+              </tr>
+              <tr>
+                <td>All Clients</td>
+                <td>New Clients</td>
+                <td>Active</td>
+                <td>Referral</td>
+                <td>Rereferral</td>
+                <td>Reactivated</td>
+                <td>Closed</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-right">
+                <td>72</td>
+                <td>23</td>
+                <td>10</td>
+                <td>25</td>
+                <td>2</td>
+                <td>4</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered">
+            <thead class="bg-success">
+              <tr>
+                <td></td>
+                <td colspan="3">Savings</td>
+                <td colspan="2">Visits</td>
+              </tr>
+              <tr>
+                <td>Carbon savings (kg CO2)</td>
+                <td>Ongoing</td>
+                <td>Capital</td>
+                <td><b>Total</b></td>
+                <td>1st visits</td>
+                <td>Further visits</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-right">
+                <td></td>
+                <td>£</td>
+                <td>£</td>
+                <td style="background-color: #F5F5F5;"><b>£</b></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row mt-4">
+          <p class="col-12 col-md-4 col-lg-4">Print EA4 report
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+          </p>
+          <p class="col-12 col-md-7 col-lg-7">Download EA4 report
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5"  id="printButtons" style="display: none">
+      <p class="col-12 col-md-4 col-lg-4">Print all reports
+        <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+      </p>
+      <p class="col-12 col-md-7 col-lg-7">Download all reports
+        <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+        <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+
+<style>
+#line {
+  border-bottom: 2px solid #2E8B57;
+}
+
+#module #accordionHeading.collapsed:after  {
+  content: '+';
+  float: right;
+  color: black;
+}
+
+#module #accordionHeading:not(.collapsed):after {
+  content: '-';
+  float: right;
+  color: black;
+}
+</style>
+
+<script>  
+ function showPrintButton() {
+  document.getElementById('printButtons').style.display = 'block';
+}
+</script>
+
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
+</body>
+
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+</body>
+</html>
