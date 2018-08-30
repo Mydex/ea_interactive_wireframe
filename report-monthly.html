@@ -161,7 +161,7 @@
           </div>
           <div class="table-responsive">
             <table class="table table-bordered table-sm">
-              <thead class="bg-success">
+              <thead class="bg-primary">
                 <tr>
                   <td colspan="2"></td>
                   <td colspan="3">Savings</td>
@@ -212,6 +212,24 @@
 
     </div>
   </main>
+
+  <style>
+  #line {
+    border-bottom: 2px solid #1F5F8D;
+  }
+
+  #module #accordionHeading.collapsed:after {
+    content: '+';
+    float: right;
+    color: black;
+  }
+
+  #module #accordionHeading:not(.collapsed):after {
+    content: '-';
+    float: right;
+    color: black;
+  }
+  </style>
 
   <footer class="mt-2">
     <nav class="navbar navbar-expand-sm">  
