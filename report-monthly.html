@@ -143,104 +143,301 @@
       </div>
 
       <div id="module" class="container row mt-3">
-        <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSpecified" aria-expanded="false" aria-controls="collapseSpecified" onclick="showPrintButton();">Specified time savings</a></h4>
-        <div class="collapse col-12" id="collapseSpecified" aria-labelledby="headingSpecified">
-          <div class="input-group date" data-provide="datepicker">
-            <form action="#">
-              <table>
-                <tr>
-                  <td>Start date:</td>
-                  <td>End date:</td>
-                </tr>
-                <tr>
-                  <td><input type="date" name="start" value="2018-01-01"></td>
-                  <td><input type="date" name="end"value="2019-01-01"></td>
-                </tr>
-              </table>
-            </form>
-          </div>
+        <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseJan18" aria-expanded="false" aria-controls="collapseJan18">Janurary 2018</a></h4>
+        <div class="collapse col-12" id="collapseJan18" aria-labelledby="headingJan18">
           <div class="table-responsive">
-            <table class="table table-bordered table-sm">
+            <table class="table table-sm table-bordered text-left">
               <thead class="bg-primary">
                 <tr>
                   <td colspan="2"></td>
-                  <td colspan="3">Savings</td>
-                  <td colspan="2">Visits</td>
+                  <td colspan="5">Stats from client status</td>
                 </tr>
                 <tr>
-                  <td>Year</td>
-                  <td>Carbon savings (kg CO2)</td>
-                  <td>Ongoing</td>
-                  <td>Capital</td>
-                  <td><b>Total</b></td>
-                  <td>1st visits</td>
-                  <td>Further visits</td>
+                  <td>All Clients</td>
+                  <td>New Clients</td>
+                  <td>Active</td>
+                  <td>Referral</td>
+                  <td>Rereferral</td>
+                  <td>Reactivated</td>
+                  <td>Closed</td>
                 </tr>
               </thead>
-              <tbody class="text-right">
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>£</td>
-                  <td>£</td>
-                  <td style="background-color: #F5F5F5;"><b>£</b></td>
-                  <td></td>
-                  <td></td>
+              <tbody>
+                <tr class="text-right">
+                  <td>1</td>
+                  <td>1</td>
+                  <td>13</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="col-12 col-md-4 col-lg-4">Print report 
-            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
-          </p>
-          <p class="col-12 col-md-7 col-lg-7">Download report
-            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
-            <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
-          </p>
+
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead class="bg-primary">
+                <tr>
+                  <td></td>
+                  <td colspan="3">Savings</td>
+                  <td colspan="3">Visits</td>
+                </tr>
+                <tr>
+                  <td>Carbon savings (kg CO2)</td>
+                  <td>General</td>
+                  <td>Capital</td>
+                  <td><b>Total</b></td>
+                  <td>1st visits</td>
+                  <td>Further visits</td>
+                  <td>No shows</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                  <td></td>
+                  <td>£</td>
+                  <td>£</td>
+                  <td style="background-color: #F5F5F5;">£5550</td>
+                  <td></td>
+                  <td>21</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead class="bg-primary">
+                <tr>
+                  <td colspan="2">Number of applications</td>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>Finished</td>
+                  <td>Number of services progressed</td>
+                  <td>Number of referrals</td>
+                </tr>
+              </thead>
+              <tr>
+                <td>7</td>
+                <td>16</td>
+                <td>15</td>
+                <td>5</td>
+              </tr>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="row mt-4">
+            <p class="col-12 col-md-4 col-lg-4">Print monthly report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+            </p>
+            <p class="col-12 col-md-7 col-lg-7">Download monthly report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+            </p>
+          </div>
+
         </div>
       </div>
 
-      <div class="row mt-4">
-        <p class="col-12 col-md-4 col-lg-4">Print monthly report
-          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
-        </p>
-        <p class="col-12 col-md-7 col-lg-7">Download monthly report
-          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
-          <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
-        </p>
-      </div>
 
-    </div>
-  </main>
+      <div id="module" class="container row mt-3">
+        <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseFeb18" aria-expanded="false" aria-controls="collapseFeb18">February 2018</a></h4>
+        <div class="collapse col-12" id="collapseFeb18" aria-labelledby="headingFeb18">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead class="bg-primary">
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="5">Stats from client status</td>
+                </tr>
+                <tr>
+                  <td>All Clients</td>
+                  <td>New Clients</td>
+                  <td>Active</td>
+                  <td>Referral</td>
+                  <td>Rereferral</td>
+                  <td>Reactivated</td>
+                  <td>Closed</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                  <td>1</td>
+                  <td>1</td>
+                  <td>13</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-  <style>
-  #line {
-    border-bottom: 2px solid #1F5F8D;
-  }
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead class="bg-primary">
+                <tr>
+                  <td></td>
+                  <td colspan="3">Savings</td>
+                  <td colspan="3">Visits</td>
+                </tr>
+                <tr>
+                  <td>Carbon savings (kg CO2)</td>
+                  <td>General</td>
+                  <td>Capital</td>
+                  <td><b>Total</b></td>
+                  <td>1st visits</td>
+                  <td>Further visits</td>
+                  <td>No shows</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-right">
+                  <td></td>
+                  <td>£</td>
+                  <td>£</td>
+                  <td style="background-color: #F5F5F5;">£5550</td>
+                  <td></td>
+                  <td>21</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-  #module #accordionHeading.collapsed:after {
-    content: '+';
-    float: right;
-    color: black;
-  }
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered text-left">
+              <thead class="bg-primary">
+                <tr>
+                  <td colspan="2">Number of applications</td>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td>Finished</td>
+                  <td>Number of services progressed</td>
+                  <td>Number of referrals</td>
+                </tr>
+              </thead>
+              <tr>
+                <td>7</td>
+                <td>16</td>
+                <td>15</td>
+                <td>5</td>
+              </tr>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
 
-  #module #accordionHeading:not(.collapsed):after {
-    content: '-';
-    float: right;
-    color: black;
-  }
-  </style>
 
-  <footer class="mt-2">
-    <nav class="navbar navbar-expand-sm">  
-      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-    </nav>
-  </footer>
-</body>
+          <div id="module" class="container row mt-3">
+            <h4 id="line" class="col-12 col-md-4 col-lg-4 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseSpecified" aria-expanded="false" aria-controls="collapseSpecified" onclick="showPrintButton();">Specified time savings</a></h4>
+            <div class="collapse col-12" id="collapseSpecified" aria-labelledby="headingSpecified">
+              <div class="input-group date" data-provide="datepicker">
+                <form action="#">
+                  <table>
+                    <tr>
+                      <td>Start date:</td>
+                      <td>End date:</td>
+                    </tr>
+                    <tr>
+                      <td><input type="date" name="start" value="2018-01-01"></td>
+                      <td><input type="date" name="end"value="2019-01-01"></td>
+                    </tr>
+                  </table>
+                </form>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered table-sm">
+                  <thead class="bg-primary">
+                    <tr>
+                      <td colspan="2"></td>
+                      <td colspan="3">Savings</td>
+                      <td colspan="2">Visits</td>
+                    </tr>
+                    <tr>
+                      <td>Year</td>
+                      <td>Carbon savings (kg CO2)</td>
+                      <td>Ongoing</td>
+                      <td>Capital</td>
+                      <td><b>Total</b></td>
+                      <td>1st visits</td>
+                      <td>Further visits</td>
+                    </tr>
+                  </thead>
+                  <tbody class="text-right">
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>£</td>
+                      <td>£</td>
+                      <td style="background-color: #F5F5F5;"><b>£</b></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="col-12 col-md-4 col-lg-4">Print report 
+                <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+              </p>
+              <p class="col-12 col-md-7 col-lg-7">Download report
+                <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+                <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+              </p>
+            </div>
+          </div>
 
-<script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
-<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+          <div class="row mt-4">
+            <p class="col-12 col-md-4 col-lg-4">Print monthly report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Print</a>
+            </p>
+            <p class="col-12 col-md-7 col-lg-7">Download monthly report
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">PDF</a>
+              <a href="#/" class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Excel</a>
+            </p>
+          </div>
+
+        </div>
+      </main>
+
+      <style>
+      #line {
+        border-bottom: 2px solid #1F5F8D;
+      }
+
+      #module #accordionHeading.collapsed:after {
+        content: '+';
+        float: right;
+        color: black;
+      }
+
+      #module #accordionHeading:not(.collapsed):after {
+        content: '-';
+        float: right;
+        color: black;
+      }
+    </style>
+
+    <footer class="mt-2">
+      <nav class="navbar navbar-expand-sm">  
+        <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+        <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+        <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+      </nav>
+    </footer>
+  </body>
+
+  <script src="js/vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
