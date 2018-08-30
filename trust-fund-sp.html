@@ -132,9 +132,9 @@
                   <th>Are you the Account Holder?</th>
                   <td>
                     <div class="selector1 selector12">
-                      <input type="radio" id="yes2" name="yesno2" /><label for="yes2" onclick="showMore('noDisplay')">Yes</label>
-                      <input type="radio" id="no2" name="yesno2" /><label for="no2" onclick="showMore('display')">No, Power Of Attorney</label>
-                      <input type="radio" id="no3" name="yesno2" /><label for="no3" onclick="showMore('display')">No, I’m helping with the form</label>
+                      <input type="radio" id="yes2" name="yesno2" /><label for="yes2" onclick="showMore('noDisplay'); show3rdParty('noDisplay');">Yes</label>
+                      <input type="radio" id="no2" name="yesno2" /><label for="no2" onclick="showMore('display'); show3rdParty('noDisplay');">No, Power Of Attorney</label>
+                      <input type="radio" id="no3" name="yesno2" /><label for="no3" onclick="showMore('display'); show3rdParty('display');">No, I’m helping with the form</label>
                     </div>
                   </td>
                 </tr>
@@ -168,28 +168,28 @@
                 <tr id="consent1" style="display: none;">
                   <th colspan="2" class="bg-primary text-white">3rd Party consent</th>
                 </tr>
-                <tr id="consent1" style="display: none;">
+                <tr id="consent2" style="display: none;">
                   <th colspan="2">Confirm that you are happy for the following details to be passed on to Scottish Power. This will allow Scottish Power to contact you instead of the homeowner regarding this application.</th>
                 </tr>
-                <tr id="consent1" style="display: none;">
+                <tr id="consent3" style="display: none;">
                   <th>Your name</th>
                   <td><div class="selector1 selector14">
                     <input type="checkbox" id="constent1" name="contact" /><label for="constent1">Give consent</label>
                   </div></td>
                 </tr>
-                <tr id="consent1" style="display: none;">
+                <tr id="consent4" style="display: none;">
                   <th>Your email address</th>
                   <td><div class="selector1 selector14">
                     <input type="checkbox" id="constent2" name="contact" /><label for="constent2">Give consent</label>
                   </div></td>
                 </tr>
-                <tr id="consent1" style="display: none;">
+                <tr id="consent5" style="display: none;">
                   <th>Your contact number</th>
                   <td><div class="selector1 selector14">
                     <input type="checkbox" id="constent3" name="contact" /><label for="constent3">Give consent</label>
                   </div></td>
                 </tr>
-                <tr id="consent1" style="display: none;">
+                <tr id="consent6" style="display: none;">
                   <th>Evidence of consent, eg Power of Attorney letter or mandate (?)</th>
                   <td><label class="btn btn-outline-primary mb-2 mr-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="imageConsent">
                     <input id="imageConsent" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)"> Choose file</label><span class='font-italic' id="upload-file-info"> No file chosen</span>
@@ -877,6 +877,24 @@
       document.getElementById("notCurrentSP1").style.display = 'none';
       document.getElementById("notCurrentSP2").style.display = 'none';
       document.getElementById("notCurrentSP3").style.display = 'none';
+    }
+  }
+
+  function show3rdParty(name){
+    if(name != 'noDisplay') {
+      document.getElementById("consent1").style.display = 'table-row';
+      document.getElementById("consent2").style.display = 'table-row';
+      document.getElementById("consent3").style.display = 'table-row';
+      document.getElementById("consent4").style.display = 'table-row';
+      document.getElementById("consent5").style.display = 'table-row';
+      document.getElementById("consent6").style.display = 'table-row';
+    } else {
+      document.getElementById("consent1").style.display = 'none';
+      document.getElementById("consent2").style.display = 'none';
+      document.getElementById("consent3").style.display = 'none';
+      document.getElementById("consent4").style.display = 'none';
+      document.getElementById("consent5").style.display = 'none';
+      document.getElementById("consent6").style.display = 'none';
     }
   }
 
