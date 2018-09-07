@@ -228,10 +228,10 @@
       </div>
     </div>
     <div id="newAccordionThree"></div>
-    <button onclick="addAccordion('newAccordionThree');" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>
+    <button onclick="addAccordion('newAccordionThree')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add topic</button>
     <div id="newSection"></div>
     <h3 class="mt-5 mb-2">Add another section</h3>
-    <button onclick="addSection();" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</button>
+    <button onclick="addSection()" required class="btn btn-outline-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add</button>
   </div>
 </main>
 
@@ -291,6 +291,7 @@
     <h5 class="mt-4 mb-4" contenteditable="true" spellcheck="true">New Topic</h5>\
     <h6>Heading</h6>\
     <p contenteditable="true" spellcheck="true">Information here</p>\
+    <div id="newMini'+accCounter+'"></div>\
     <button onclick="addMiniSectionHeading('+ "'newMini"+accCounter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add section</button>\
     <button onclick="addMiniSection('+ "'newMini"+accCounter+"'" +')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add sub section</button>\
     </div>\
