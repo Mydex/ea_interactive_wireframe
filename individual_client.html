@@ -64,167 +64,253 @@
         <div id="module" class="container row mt-3">
           <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Client Interactions</a></h4>
           <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">
-               <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
-                 <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
-                 <div class="mainSelector contact-selector mt-2">
-                   <input type="checkbox" id="Text"/><label for="Text">Text</label>
-                   <input type="checkbox" id="Message"/><label for="Message">App Messages</label>
-                   <input type="checkbox" id="Phone"/><label for="Phone">Phone</label>
-                 </div>
-               </div>
-               <div class="col-12 col-md-6 col-lg-6">
-                <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
-                <div class="mainSelector homeVisit-selector">
-                  <input type="checkbox" id="mon" checked/><label for="mon">M</label>
-                  <input type="checkbox" id="tue"/><label for="tue">T</label>
-                  <input type="checkbox" id="wed"/><label for="wed">W</label>
-                  <input type="checkbox" id="thu"/><label for="thu">T</label>
-                  <input type="checkbox" id="fri" checked/><label for="fri">F</label>
-                </div>
-                <div class="mainSelector homeVisit-selector mt-2">
-                  <input type="checkbox" id="am" checked/><label for="am">AM</label>
-                  <input type="checkbox" id="pm"/><label for="pm">PM</label>
-                </div>
-              </div>
+           <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+             <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
+             <div class="mainSelector contact-selector mt-2">
+               <input type="checkbox" id="Text"/><label for="Text">Text</label>
+               <input type="checkbox" id="Message"/><label for="Message">App Messages</label>
+               <input type="checkbox" id="Phone"/><label for="Phone">Phone</label>
+             </div>
+           </div>
+           <div class="col-12 col-md-6 col-lg-6">
+            <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
+            <div class="mainSelector homeVisit-selector">
+              <input type="checkbox" id="mon" checked/><label for="mon">M</label>
+              <input type="checkbox" id="tue"/><label for="tue">T</label>
+              <input type="checkbox" id="wed"/><label for="wed">W</label>
+              <input type="checkbox" id="thu"/><label for="thu">T</label>
+              <input type="checkbox" id="fri" checked/><label for="fri">F</label>
+            </div>
+            <div class="mainSelector homeVisit-selector mt-2">
+              <input type="checkbox" id="am" checked/><label for="am">AM</label>
+              <input type="checkbox" id="pm"/><label for="pm">PM</label>
             </div>
           </div>
         </div>
-
-        <div id="module" class="container row mt-3">
-          <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">Client information</a></h4>
-          <div class="collapse col-12 p-0" id="collapseInfo" aria-labelledby="headingInfo">
-
-          </div>
-        </div>
-
-        <div id="module" class="container row mt-3">
-          <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseTasks" aria-expanded="false" aria-controls="collapseTasks">Progress & Tasks</a></h4>
-          <div class="collapse col-12 m-0 p-0" id="collapseTasks" aria-labelledby="headingTasks">
-
-          </div>
-        </div>
-
-        <div id="module" class="container row mt-3">
-          <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseReferrals" aria-expanded="false" aria-controls="collapseReferrals">Referrals</a></h4>
-          <div class="collapse col-12 p-0" id="collapseReferrals" aria-labelledby="headingReferrals">
-
-          </div>
-        </div>
-
-        <div id="module" class="container row mt-3">
-          <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseActionPlan" aria-expanded="false" aria-controls="collapseActionPlan">Action Plan</a></h4>
-          <div class="collapse col-12 p-0" id="collapseActionPlan" aria-labelledby="headingActionPlan">
-
-          </div>
-        </div>
-
+        <div class="table-responsive mt-4">
+          <table class="order-table table table-bordered table-sm text-left sortable" id="messageTable">
+           <thead class="table-info">
+             <tr>
+              <th data-sort="name">Interaction <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th data-sort="date">Date <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th>Time</th>
+              <th>Notes</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Home Visit</td>
+              <td>01/09/2018</td>
+              <td>09:30</td>
+              <td>First home visit</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Message from Citizen Twenty</td>
+              <td>03/03/2018</td>
+              <td>10:23</td>
+              <td>Message from client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageOne" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageOne" aria-expanded="false" aria-controls="messageOne"></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Message to Citizen Twenty</td>
+              <td>03/03/2018</td>
+              <td>14:47</td>
+              <td>Message to client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageTwo" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageTwo" aria-expanded="false" aria-controls="messageTwo"></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Message from Citizen Twenty</td>
+              <td>02/02/2018</td>
+              <td>15:26</td>
+              <td>Message from client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageThree" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageThree" aria-expanded="false" aria-controls="messageThree"></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Message to Citizen Twenty</td>
+              <td>01/02/2018</td>
+              <td>09:12</td>
+              <td>Message to client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageFour" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageFour" aria-expanded="false" aria-controls="messageFour"></a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
       </div>
     </div>
-  </main>
+  </div>
 
-  <style>
-  #line {
-    border-bottom: 2px solid #1F5F8D;
-  }
+  <div id="module" class="container row mt-3">
+    <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">Client information</a></h4>
+    <div class="collapse col-12 p-0" id="collapseInfo" aria-labelledby="headingInfo">
 
-  #module #accordionHeading.collapsed:after  {
-    content: '+';
-    float: right;
-    color: black;
-  }
+    </div>
+  </div>
 
-  #module #accordionHeading:not(.collapsed):after {
-    content: '-';
-    float: right;
-    color: black;
-  }
+  <div id="module" class="container row mt-3">
+    <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseTasks" aria-expanded="false" aria-controls="collapseTasks">Progress & Tasks</a></h4>
+    <div class="collapse col-12 m-0 p-0" id="collapseTasks" aria-labelledby="headingTasks">
 
-  #moduleMessages {
-    width: 400px;
-  }
+    </div>
+  </div>
 
-  #moduleMessages p.collapse[aria-expanded="false"] {
-    height: 21px !important;
-    overflow: hidden;
+  <div id="module" class="container row mt-3">
+    <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseReferrals" aria-expanded="false" aria-controls="collapseReferrals">Referrals</a></h4>
+    <div class="collapse col-12 p-0" id="collapseReferrals" aria-labelledby="headingReferrals">
 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;  
-  }
+    </div>
+  </div>
 
-  #moduleMessages p.collapsing[aria-expanded="false"] {
-    height: 21px !important;
-  }
+  <div id="module" class="container row mt-3">
+    <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseActionPlan" aria-expanded="false" aria-controls="collapseActionPlan">Action Plan</a></h4>
+    <div class="collapse col-12 p-0" id="collapseActionPlan" aria-labelledby="headingActionPlan">
 
-  #moduleMessages a.collapsed:after  {
-    content: '+';
-  }
+    </div>
+  </div>
 
-  #moduleMessages a:not(.collapsed):after {
-    content: '-';
-  }
+</div>
+</div>
+</main>
 
-  .mainSelector input {
-    display: none!important;
-  }
+<style>
+#line {
+  border-bottom: 2px solid #1F5F8D;
+}
 
-  .mainSelector input[type=checkbox]:checked + label {
-    background: #2AD705;
-    color: #ffffff;
-  }
+#module #accordionHeading.collapsed:after  {
+  content: '+';
+  float: right;
+  color: black;
+}
 
-  .homeVisit-selector input[type=checkbox] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 45px;
-    width: 32px;
-    margin-right: 3px;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
-  }
+#module #accordionHeading:not(.collapsed):after {
+  content: '-';
+  float: right;
+  color: black;
+}
 
-  .contact-selector input[type=checkbox] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 45px;
-    width: 122px;
-    margin-right: 3px;
-    line-height: 45px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
-  }
+#moduleMessages {
+  width: 400px;
+}
 
-  .number-selector input[type=checkbox] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 40px;
-    width: 40px;
-    margin-right: 3px;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
-  }
+#moduleMessages p.collapse[aria-expanded="false"] {
+  height: 21px !important;
+  overflow: hidden;
 
-  .task-selector input[type=checkbox] + label {
-    display: inline-block;
-    border-radius: 6px;
-    background: #dddddd;
-    height: 35px;
-    width: 55px;
-    margin-right: 3px;
-    line-height: 35px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
-  }
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+
+#moduleMessages p.collapsing[aria-expanded="false"] {
+  height: 21px !important;
+}
+
+#moduleMessages a.collapsed:after  {
+  content: '+';
+}
+
+#moduleMessages a:not(.collapsed):after {
+  content: '-';
+}
+
+.mainSelector input {
+  display: none!important;
+}
+
+.mainSelector input[type=checkbox]:checked + label {
+  background: #2AD705;
+  color: #ffffff;
+}
+
+.homeVisit-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 32px;
+  margin-right: 3px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 45px;
+  width: 122px;
+  margin-right: 3px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.number-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 40px;
+  width: 40px;
+  margin-right: 3px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-selector input[type=checkbox] + label {
+  display: inline-block;
+  border-radius: 6px;
+  background: #dddddd;
+  height: 35px;
+  width: 55px;
+  margin-right: 3px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
 </style>
 
 <script>
