@@ -48,302 +48,293 @@
     <div class="container mt-4">
       <div class="container row">
         <h2 class="font-italic mt-0 mb-0 mr-2"><b>Client Name </b></h2>
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalManager" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">!</button>
-        <div class="modal fade" id="modalManager" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true" >
-          <div class="modal-dialog" role="document" style="margin-top: 15%;">
-            <div class="modal-content">
-              <div class="modal-header"><h5>Pass client on to manager</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <div class="modal-body">
-                <p>If you are unable to take on client, hit send below and they will be returned to EA Manager who will reassign to another energy advocate. You can include message below.</p>
-                <form action="/#">
-                  <textarea class="form-control form-control-sm" id="textarea2" rows="3" spellcheck="true" type="text"></textarea>
-                </form>
-                <a href="#" class="btn btn-outline-primary mt-0 mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
-              </div>
-            </div>
-          </div>
+        <button class="btn btn-primary" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" type="button" data-toggle="collapse" data-target="#collapseNotes1" aria-expanded="false" aria-controls="collapseNotes1" onclick="checkData('notes1', 'button1');" id="button1" data-text="!"></button>
+        <div class="collapse"id="collapseNotes1" aria-labelledby="headingNotes1">
+          <h5>Pass client on to manager</h5>
+          <p>If you are unable to take on client, hit send below and they will be returned to EA Manager who will reassign to another energy advocate. You can include message below.</p>
+          <form action="/#">
+            <textarea class="form-control form-control-sm" id="textarea2" rows="3" spellcheck="true" type="text"></textarea>
+          </form>
+          <a href="#" class="btn btn-outline-primary mt-0 mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Send</a>
         </div>
-      </div>
-      <div id="module" class="container row mt-3">
-        <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Client Interactions</a></h4>
-        <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">
-          <div class="row">
-           <div class="col-12 col-md-6 col-lg-6">
-            <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
-            <div class="mainSelector contact-selector mt-2">
-              <input type="checkbox" id="Text"/><label for="Text">Text</label>
-              <input type="checkbox" id="Message"/><label for="Message">App Messages</label>
-              <input type="checkbox" id="Phone"/><label for="Phone">Phone</label>
+        <div id="module" class="container row mt-3">
+          <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Client Interactions</a></h4>
+          <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">
+            <div class="row">
+             <div class="col-12 col-md-6 col-lg-6">
+              <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
+              <div class="mainSelector contact-selector mt-2">
+                <input type="checkbox" id="Text"/><label for="Text">Text</label>
+                <input type="checkbox" id="Message"/><label for="Message">App Messages</label>
+                <input type="checkbox" id="Phone"/><label for="Phone">Phone</label>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-6">
-           <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
-           <div class="mainSelector homeVisit-selector">
-             <input type="checkbox" id="mon" checked/><label for="mon">M</label>
-             <input type="checkbox" id="tue"/><label for="tue">T</label>
-             <input type="checkbox" id="wed"/><label for="wed">W</label>
-             <input type="checkbox" id="thu"/><label for="thu">T</label>
-             <input type="checkbox" id="fri" checked/><label for="fri">F</label>
-           </div>
-           <div class="mainSelector homeVisit-selector mt-2">
-             <input type="checkbox" id="am" checked/><label for="am">AM</label>
-             <input type="checkbox" id="pm"/><label for="pm">PM</label>
+            <div class="col-12 col-md-6 col-lg-6">
+             <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
+             <div class="mainSelector homeVisit-selector">
+               <input type="checkbox" id="mon" checked/><label for="mon">M</label>
+               <input type="checkbox" id="tue"/><label for="tue">T</label>
+               <input type="checkbox" id="wed"/><label for="wed">W</label>
+               <input type="checkbox" id="thu"/><label for="thu">T</label>
+               <input type="checkbox" id="fri" checked/><label for="fri">F</label>
+             </div>
+             <div class="mainSelector homeVisit-selector mt-2">
+               <input type="checkbox" id="am" checked/><label for="am">AM</label>
+               <input type="checkbox" id="pm"/><label for="pm">PM</label>
+             </div>
            </div>
          </div>
-       </div>
-       <div class="table-responsive mt-4">
-        <table class="order-table table table-bordered table-sm text-left sortable" id="messageTable">
-         <thead class="table-info">
-           <tr>
-            <th data-sort="name">Interaction <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-            <th data-sort="date">Date <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
-            <th>Time</th>
-            <th>Notes</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Home Visit</td>
-            <td>01/09/2018</td>
-            <td>09:30</td>
-            <td>First home visit</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Message from Citizen Twenty</td>
-            <td>03/03/2018</td>
-            <td>10:23</td>
-            <td>Message from client</td>
-            <td>
-              <div id="moduleMessages" class="row">
-                <p class="collapse col-10" id="messageOne" aria-expanded="false">
-                  <i>All message details can be read here and replied to.</i>
-                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-                  <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
-                </p>
-                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageOne" aria-expanded="false" aria-controls="messageOne"></a>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Message to Citizen Twenty</td>
-            <td>03/03/2018</td>
-            <td>14:47</td>
-            <td>Message to client</td>
-            <td>
-              <div id="moduleMessages" class="row">
-                <p class="collapse col-10" id="messageTwo" aria-expanded="false">
-                  <i>All message details can be read here and replied to.</i>
-                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-                  <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
-                </p>
-                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageTwo" aria-expanded="false" aria-controls="messageTwo"></a>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Message from Citizen Twenty</td>
-            <td>02/02/2018</td>
-            <td>15:26</td>
-            <td>Message from client</td>
-            <td>
-              <div id="moduleMessages" class="row">
-                <p class="collapse col-10" id="messageThree" aria-expanded="false">
-                  <i>All message details can be read here and replied to.</i>
-                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-                  <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
-                </p>
-                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageThree" aria-expanded="false" aria-controls="messageThree"></a>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Message to Citizen Twenty</td>
-            <td>01/02/2018</td>
-            <td>09:12</td>
-            <td>Message to client</td>
-            <td>
-              <div id="moduleMessages" class="row">
-                <p class="collapse col-10" id="messageFour" aria-expanded="false">
-                  <i>All message details can be read here and replied to.</i>
-                  <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
-                  <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
-                </p>
-                <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageFour" aria-expanded="false" aria-controls="messageFour"></a>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table> 
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12">
-    <div id="module" class="container row mt-3">
-      <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">Client information</a></h4>
-      <div class="collapse col-12 p-0" id="collapseInfo" aria-labelledby="headingInfo">
-        <div id="module" class="container row mt-3 m-0 p-0">
-          <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left font-italic" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal">Personal</a></h5>
-          <div class="collapse col-12 p-0" id="collapsePersonal" aria-labelledby="headingPersonal">
-            <div class="table-responsive">
-              <table class="table table-bordered table-sm text-left">
-                <thead>
-                  <th colspan="3" class="bg-primary">Personal Information</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th class="text-primary">Title</th>
-                    <td contenteditable="true" spellcheck="true">Mrs</td>
-                    <td><div>
-                      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-                      <div id="popoverHistory1Content" class="row" style="display: none">
-                        <div class="table-responsive">
-                         <table class="table table-bordered table-sm text-left">
-                           <thead class="table-info">
-                             <tr>
-                              <th class="p-1">Entry</th>
-                              <th class="p-1">Date & time</th>
-                              <th class="p-1">By</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Mrs</td>
-                              <td>04/04/2018 16:12</td>
-                              <td>EA</td>
-                            </tr>
-                            <tr>
-                              <td>Miss</td>
-                              <td>01/01/2018 13:42</td>
-                              <td>EA</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th class="text-primary">Forename</th>
-                <td contenteditable="true" spellcheck="true">Citizen</td>
-                <td><div>
-                  <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-                  <div id="popoverHistory2Content" class="row" style="display: none">
-                    <div class="table-responsive">
-                      <table class="table table-bordered table-sm text-left">
-                       <thead class="table-info">
-                         <tr>
-                          <th class="p-1">Entry</th>
-                          <th class="p-1">Date & time</th>
-                          <th class="p-1">By</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Citizen</td>
-                          <td>01/01/2018 13:42</td>
-                          <td>EA</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th class="text-primary">Surname</th>
-            <td contenteditable="true" spellcheck="true">Twenty</td>
-            <td><div>
-              <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-              <div id="popoverHistory3Content" class="row" style="display: none">
-                <div class="table-responsive">
-                 <table class="table table-bordered table-sm text-left" style="width:200%;">
-                   <thead class="table-info">
-                     <tr>
-                      <th class="p-1">Entry</th>
-                      <th class="p-1">Date & time</th>
-                      <th class="p-1">By</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Twenty</td>
-                      <td>04/04/2018 16:12</td>
-                      <td>EA</td>
-                    </tr>
-                    <tr>
-                      <td>Twelve</td>
-                      <td>01/01/2018 13:42</td>
-                      <td>EA</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th class="text-primary">Address</th>
-        <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
-        <td><div style="max-width: 1000%; max-width: none">
-          <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-          <div id="popoverHistory4Content" class="row" style="display: none">
-            <div class="table-responsive">
-             <table class="table table-bordered table-sm text-left" style="width:200%;">
-               <thead class="table-info">
-                 <tr>
-                  <th class="p-1">Entry</th>
-                  <th class="p-1">Date & time</th>
-                  <th class="p-1">By</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>12 Fake Street<br>FakeTown</td>
-                  <td>01/01/2018 13:42</td>
-                  <td>EA</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <th class="text-primary">Postcode</th>
-    <td contenteditable="true" spellcheck="true">FA12 3KE</td>
-    <td><div style="max-width: 1000%; max-width: none">
-      <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
-      <div id="popoverHistory5Content" class="row" style="display: none">
-        <div class="table-responsive">
-         <table class="table table-bordered table-sm text-left" style="width:200%;">
+         <div class="table-responsive mt-4">
+          <table class="order-table table table-bordered table-sm text-left sortable" id="messageTable">
            <thead class="table-info">
              <tr>
-              <th class="p-1">Entry</th>
-              <th class="p-1">Date & time</th>
-              <th class="p-1">By</th>
+              <th data-sort="name">Interaction <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th data-sort="date">Date <img class="rounded" src="https://mydex.github.io/ea_interactive_wireframe/images/arrow.png" alt="logo" width="10"></th>
+              <th>Time</th>
+              <th>Notes</th>
+              <th>Details</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>FA12 8KE</td>
-              <td>01/01/2018 13:42</td>
-              <td>EA</td>
+              <td>Home Visit</td>
+              <td>01/09/2018</td>
+              <td>09:30</td>
+              <td>First home visit</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Message from Citizen Twenty</td>
+              <td>03/03/2018</td>
+              <td>10:23</td>
+              <td>Message from client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageOne" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageOne" aria-expanded="false" aria-controls="messageOne"></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Message to Citizen Twenty</td>
+              <td>03/03/2018</td>
+              <td>14:47</td>
+              <td>Message to client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageTwo" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageTwo" aria-expanded="false" aria-controls="messageTwo"></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Message from Citizen Twenty</td>
+              <td>02/02/2018</td>
+              <td>15:26</td>
+              <td>Message from client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageThree" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageThree" aria-expanded="false" aria-controls="messageThree"></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Message to Citizen Twenty</td>
+              <td>01/02/2018</td>
+              <td>09:12</td>
+              <td>Message to client</td>
+              <td>
+                <div id="moduleMessages" class="row">
+                  <p class="collapse col-10" id="messageFour" aria-expanded="false">
+                    <i>All message details can be read here and replied to.</i>
+                    <textarea class='form-control form-control-sm' rows='3' spellcheck='true' type='text'></textarea>
+                    <button href='#/' class='btn btn-outline-primary mt-2 mb-0'>Reply</button>
+                  </p>
+                  <a role="button" class="collapsed btn btn-outline-info"data-toggle="collapse" href="#messageFour" aria-expanded="false" aria-controls="messageFour"></a>
+                </div>
+              </td>
             </tr>
           </tbody>
-        </table>
+        </table> 
       </div>
     </div>
   </div>
-</td>
+  <div class="row">
+    <div class="col-12">
+      <div id="module" class="container row mt-3">
+        <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">Client information</a></h4>
+        <div class="collapse col-12 p-0" id="collapseInfo" aria-labelledby="headingInfo">
+          <div id="module" class="container row mt-3 m-0 p-0">
+            <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left font-italic" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal">Personal</a></h5>
+            <div class="collapse col-12 p-0" id="collapsePersonal" aria-labelledby="headingPersonal">
+              <div class="table-responsive">
+                <table class="table table-bordered table-sm text-left">
+                  <thead>
+                    <th colspan="3" class="bg-primary">Personal Information</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="text-primary">Title</th>
+                      <td contenteditable="true" spellcheck="true">Mrs</td>
+                      <td><div>
+                        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory1" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                        <div id="popoverHistory1Content" class="row" style="display: none">
+                          <div class="table-responsive">
+                           <table class="table table-bordered table-sm text-left">
+                             <thead class="table-info">
+                               <tr>
+                                <th class="p-1">Entry</th>
+                                <th class="p-1">Date & time</th>
+                                <th class="p-1">By</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Mrs</td>
+                                <td>04/04/2018 16:12</td>
+                                <td>EA</td>
+                              </tr>
+                              <tr>
+                                <td>Miss</td>
+                                <td>01/01/2018 13:42</td>
+                                <td>EA</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-primary">Forename</th>
+                  <td contenteditable="true" spellcheck="true">Citizen</td>
+                  <td><div>
+                    <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                    <div id="popoverHistory2Content" class="row" style="display: none">
+                      <div class="table-responsive">
+                        <table class="table table-bordered table-sm text-left">
+                         <thead class="table-info">
+                           <tr>
+                            <th class="p-1">Entry</th>
+                            <th class="p-1">Date & time</th>
+                            <th class="p-1">By</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Citizen</td>
+                            <td>01/01/2018 13:42</td>
+                            <td>EA</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-primary">Surname</th>
+              <td contenteditable="true" spellcheck="true">Twenty</td>
+              <td><div>
+                <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory3" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+                <div id="popoverHistory3Content" class="row" style="display: none">
+                  <div class="table-responsive">
+                   <table class="table table-bordered table-sm text-left" style="width:200%;">
+                     <thead class="table-info">
+                       <tr>
+                        <th class="p-1">Entry</th>
+                        <th class="p-1">Date & time</th>
+                        <th class="p-1">By</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Twenty</td>
+                        <td>04/04/2018 16:12</td>
+                        <td>EA</td>
+                      </tr>
+                      <tr>
+                        <td>Twelve</td>
+                        <td>01/01/2018 13:42</td>
+                        <td>EA</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="text-primary">Address</th>
+          <td contenteditable="true" spellcheck="true">12 Fake Street<br>FakeTown</td>
+          <td><div style="max-width: 1000%; max-width: none">
+            <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory4" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+            <div id="popoverHistory4Content" class="row" style="display: none">
+              <div class="table-responsive">
+               <table class="table table-bordered table-sm text-left" style="width:200%;">
+                 <thead class="table-info">
+                   <tr>
+                    <th class="p-1">Entry</th>
+                    <th class="p-1">Date & time</th>
+                    <th class="p-1">By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>12 Fake Street<br>FakeTown</td>
+                    <td>01/01/2018 13:42</td>
+                    <td>EA</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-primary">Postcode</th>
+      <td contenteditable="true" spellcheck="true">FA12 3KE</td>
+      <td><div style="max-width: 1000%; max-width: none">
+        <a tabindex="0" role="button" class="btn btn-outline-info" data-placement="bottom" data-trigger="click" data-container="body" id="popoverHistory5" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">History</a>
+        <div id="popoverHistory5Content" class="row" style="display: none">
+          <div class="table-responsive">
+           <table class="table table-bordered table-sm text-left" style="width:200%;">
+             <thead class="table-info">
+               <tr>
+                <th class="p-1">Entry</th>
+                <th class="p-1">Date & time</th>
+                <th class="p-1">By</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FA12 8KE</td>
+                <td>01/01/2018 13:42</td>
+                <td>EA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </td>
 </tr>
 <tr>
   <th class="text-primary">Telephone</th>
