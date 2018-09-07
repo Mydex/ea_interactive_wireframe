@@ -64,7 +64,30 @@
         <div id="module" class="container row mt-3">
           <h4 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseInteractions" aria-expanded="false" aria-controls="collapseInteractions">Client Interactions</a></h4>
           <div class="collapse col-12 p-0" id="collapseInteractions" aria-labelledby="headingInteractions">
-
+               <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                 <h6 class="mt-4 mb-2">Client prefers contact via:</h6>
+                 <div class="mainSelector contact-selector mt-2">
+                   <input type="checkbox" id="Text"/><label for="Text">Text</label>
+                   <input type="checkbox" id="Message"/><label for="Message">App Messages</label>
+                   <input type="checkbox" id="Phone"/><label for="Phone">Phone</label>
+                 </div>
+               </div>
+               <div class="col-12 col-md-6 col-lg-6">
+                <h5 class="mt-4 mb-2">Home Visit Preferences</h5>
+                <div class="mainSelector homeVisit-selector">
+                  <input type="checkbox" id="mon" checked/><label for="mon">M</label>
+                  <input type="checkbox" id="tue"/><label for="tue">T</label>
+                  <input type="checkbox" id="wed"/><label for="wed">W</label>
+                  <input type="checkbox" id="thu"/><label for="thu">T</label>
+                  <input type="checkbox" id="fri" checked/><label for="fri">F</label>
+                </div>
+                <div class="mainSelector homeVisit-selector mt-2">
+                  <input type="checkbox" id="am" checked/><label for="am">AM</label>
+                  <input type="checkbox" id="pm"/><label for="pm">PM</label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
