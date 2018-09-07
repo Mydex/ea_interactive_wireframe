@@ -133,97 +133,97 @@
       </div>
       <div id="newAccordionOne" class="m-0 p-0"></div>
       <button onclick="addAccordion('newAccordionOne')" required class="btn btn-outline-primary mt-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);">Add complaint</button>
-    </main>
+    </div>
+  </main>
 
-    <style>
-    #line {
-      border-bottom: 2px solid #1F5F8D;
-    }
+  <style>
+  #line {
+    border-bottom: 2px solid #1F5F8D;
+  }
 
-    #module #accordionHeading.collapsed:after  {
-      content: '+';
-      float: right;
-      color: black;
-    }
+  #module #accordionHeading.collapsed:after  {
+    content: '+';
+    float: right;
+    color: black;
+  }
 
-    #module #accordionHeading:not(.collapsed):after {
-      content: '-';
-      float: right;
-      color: black;
-    }
-  </style>
+  #module #accordionHeading:not(.collapsed):after {
+    content: '-';
+    float: right;
+    color: black;
+  }
+</style>
 
-  <script>
-    var counter = 2 ;
+<script>
+  var counter = 2 ;
+  function addAccordion(name) {
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = 
+    '<div id="module" class="container row mt-4">\
+    <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseComplaint'+ counter+'" aria-expanded="false" aria-controls="collapseComplaint'+ counter+'">Complaint '+ counter+'</a></h5>\
+    <div class="collapse col-12 p-0" id="collapseComplaint'+ counter+'" aria-labelledby="headingComplaint'+ counter+'">\
+    <form action="">\
+    <h4 class="mt-4 mb-4">Supplier Information</h4>\
+    <div class="form-group">\
+    <label>Energy Supplier</label>\
+    <input type="text" class="form-control" id="supplier'+ counter+'" name="supplier'+ counter+'" spellcheck="true" value="Scottish Power">\
+    </div>\
+    <div class="form-group">\
+    <label>Complaint Contact Number</label>\
+    <input type="text" class="form-control" id="complaintNumber'+ counter+'" name="complaintNumber'+ counter+'" spellcheck="true" value="0800 027 0072">\
+    </div>\
+    <div class="form-group">\
+    <label>Complaint Email</label>\
+    <input type="text" class="form-control" id="complaintEmail'+ counter+'" name="complaintEmail'+ counter+'" spellcheck="true" value="contactus@scottishpower.com">\
+    </div>\
+    <div class="form-group">\
+    <label>Client Customer Number</label>\
+    <input type="text" class="form-control" id="name'+ counter+'" name="name'+ counter+'" spellcheck="true" value="SP1234567">\
+    </div>\
+    <h4 class="mt-4 mb-4">Complaint Information</h4>\
+    <div class="form-group">\
+    <label>What is the complaint about? Detail required before calling</label>\
+    <textarea class="form-control" id="complaintDetails'+ counter+'" name="complaintDetails'+ counter+'" spellcheck="true" rows="3"></textarea>\
+    </div>\
+    <div class="form-group">\
+    <label>Unique Complaint Reference Number</label>\
+    <input type="text" class="form-control" id="ucrn'+ counter+'" name="ucrn'+ counter+'" spellcheck="true" value="">\
+    </div>\
+    <div class="form-group">\
+    <label>Customer Service Advisor Name</label>\
+    <input type="text" class="form-control" id="advisorName'+ counter+'" name="advisorName'+ counter+'" spellcheck="true" value="">\
+    </div>\
+    <div class="form-group">\
+    <label>What did they say they were going to do?</label>\
+    <textarea class="form-control" id="goingToDo'+ counter+'" name="goingToDo'+ counter+'" spellcheck="true" rows="3"></textarea>\
+    </div>\
+    <div class="form-group">\
+    <label>Letters and emails sent to client</label>\
+    <br>\
+    <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">\
+    <input id="image0" type="file" accept="image/*" style="display:none" onchange="$("#upload-file-info").html(this.files[0].name)"> Choose file</label><span class="font-italic" id="upload-file-info"> No file chosen</span>\
+    </div>\
+    <h4 class="mt-4 mb-4">Outcome</h4>\
+    <div class="form-group">\
+    <label>Notes/outcome</label>\
+    <textarea class="form-control" id="outcome" name="outcome" spellcheck="true" rows="3"></textarea>\
+    </div>\
+    </form>\
+    </div>\
+    </div>'
+    document.getElementById(name).appendChild(newDiv);
+    counter ++;
+  }
+</script>
 
-    function addAccordion(name) {
-      var newDiv = document.createElement('div');
-      newDiv.innerHTML = 
-      '<div id="module" class="container row mt-4">\
-      <h5 id="line" class="col-12 col-md-6 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseComplaint'+ counter+'" aria-expanded="false" aria-controls="collapseComplaint'+ counter+'">Complaint '+ counter+'</a></h5>\
-      <div class="collapse col-12 p-0" id="collapseComplaint'+ counter+'" aria-labelledby="headingComplaint'+ counter+'">\
-      <form action="">\
-      <h4 class="mt-4 mb-4">Supplier Information</h4>\
-      <div class="form-group">\
-      <label>Energy Supplier</label>\
-      <input type="text" class="form-control" id="supplier'+ counter+'" name="supplier'+ counter+'" spellcheck="true" value="Scottish Power">\
-      </div>\
-      <div class="form-group">\
-      <label>Complaint Contact Number</label>\
-      <input type="text" class="form-control" id="complaintNumber'+ counter+'" name="complaintNumber'+ counter+'" spellcheck="true" value="0800 027 0072">\
-      </div>\
-      <div class="form-group">\
-      <label>Complaint Email</label>\
-      <input type="text" class="form-control" id="complaintEmail'+ counter+'" name="complaintEmail'+ counter+'" spellcheck="true" value="contactus@scottishpower.com">\
-      </div>\
-      <div class="form-group">\
-      <label>Client Customer Number</label>\
-      <input type="text" class="form-control" id="name'+ counter+'" name="name'+ counter+'" spellcheck="true" value="SP1234567">\
-      </div>\
-      <h4 class="mt-4 mb-4">Complaint Information</h4>\
-      <div class="form-group">\
-      <label>What is the complaint about? Detail required before calling</label>\
-      <textarea class="form-control" id="complaintDetails'+ counter+'" name="complaintDetails'+ counter+'" spellcheck="true" rows="3"></textarea>\
-      </div>\
-      <div class="form-group">\
-      <label>Unique Complaint Reference Number</label>\
-      <input type="text" class="form-control" id="ucrn'+ counter+'" name="ucrn'+ counter+'" spellcheck="true" value="">\
-      </div>\
-      <div class="form-group">\
-      <label>Customer Service Advisor Name</label>\
-      <input type="text" class="form-control" id="advisorName'+ counter+'" name="advisorName'+ counter+'" spellcheck="true" value="">\
-      </div>\
-      <div class="form-group">\
-      <label>What did they say they were going to do?</label>\
-      <textarea class="form-control" id="goingToDo'+ counter+'" name="goingToDo'+ counter+'" spellcheck="true" rows="3"></textarea>\
-      </div>\
-      <div class="form-group">\
-      <label>Letters and emails sent to client</label>\
-      <br>\
-      <label class="btn btn-outline-primary mb-2" style="box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);" for="image0">\
-      <input id="image0" type="file" accept="image/*" style="display:none" onchange="$("#upload-file-info").html(this.files[0].name)"> Choose file</label><span class="font-italic" id="upload-file-info"> No file chosen</span>\
-      </div>\
-      <h4 class="mt-4 mb-4">Outcome</h4>\
-      <div class="form-group">\
-      <label>Notes/outcome</label>\
-      <textarea class="form-control" id="outcome" name="outcome" spellcheck="true" rows="3"></textarea>\
-      </div>\
-      </form>\
-      </div>\
-      </div>'
-      document.getElementById(name).appendChild(newDiv);
-      counter ++;
-    }
-  </script>
 
-
-  <footer class="mt-2" style="height:30px; margin-top:-30px;">
-    <nav class="navbar navbar-expand-sm">  
-      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
-      <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
-      <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
-    </nav>
-  </footer>
+<footer class="mt-2" style="height:30px; margin-top:-30px;">
+  <nav class="navbar navbar-expand-sm">  
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/EPCAS-web.png" alt="logo" width="250">
+    <small class="ml-3 mr-3 mt-2 mb-2  font-italic font-weight-light">The EPCAS Project is funded by the European Social Fund under the Social Innovation Fund.</small>
+    <img class="rounded mx-auto" src="https://mydex.github.io/ea_interactive_wireframe/images/esf.png" alt="logo" width="250">
+  </nav>
+</footer>
 </body>
 
 
