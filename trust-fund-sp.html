@@ -59,7 +59,7 @@
       <h4 class="mt-4">Information required for application</h4>
       <div class="mt-2">Check the details under each of the headings below. Add missing details or type over incorrect details. When you have checked and closed each section you will be able to request that your energy advocate submits your application.</div>
       <div id="module" class="container row mt-4">
-        <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton');" data-text="Complete">About You</a></h5>
+        <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapsePersonal" aria-expanded="false" aria-controls="collapsePersonal" id="personalButton" onclick="checkData('personal', 'personalButton');" data-text="Complete">About You</a></h5>
         <div class="collapse col-12 p-0" id="collapsePersonal" aria-labelledby="headingPersonal">
           <div class="table-responsive">
             <table class="table table-bordered table-sm text-left" id="personal">
@@ -202,7 +202,7 @@
         </div>
       </div>
       <div id="module" class="container row mt-3">
-       <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBills" aria-expanded="false" aria-controls="collapseBills" id="billsButton" onclick="checkData('bills', 'billsButton');" data-text="Complete">Your Bills</a></h5>
+       <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseBills" aria-expanded="false" aria-controls="collapseBills" id="billsButton" onclick="checkData('bills', 'billsButton');" data-text="Complete">Your Bills</a></h5>
        <div class="collapse col-12 p-0" id="collapseBills" aria-labelledby="headingBills">
          <div class="table-responsive">
            <table class="table table-bordered table-sm text-left" id="bills">
@@ -289,7 +289,7 @@
       </div>
     </div>
     <div id="module" class="container row mt-3">
-      <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEligibility" aria-expanded="false" aria-controls="collapseEligibility" id="eligibilityButton" onclick="checkData('eligibility', 'eligibilityButton');" data-text="Complete">Eligibility</a></h5>
+      <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEligibility" aria-expanded="false" aria-controls="collapseEligibility" id="eligibilityButton" onclick="checkData('eligibility', 'eligibilityButton');" data-text="Complete">Eligibility</a></h5>
       <div class="collapse col-12 p-0" id="collapseEligibility" aria-labelledby="headingEligibility">
        <div class="table-responsive">
          <table class="table table-bordered table-sm text-left"id="eligibility">
@@ -461,7 +461,7 @@
     </div>
   </div>
   <div id="module" class="container row mt-3">
-   <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseOther" aria-expanded="false" aria-controls="collapseOther" id="otherButton" onclick="checkData('otherInfo', 'otherButton');" data-text="Complete">Other Relevant Circumstances</a></h5>
+   <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseOther" aria-expanded="false" aria-controls="collapseOther" id="otherButton" onclick="checkData('otherInfo', 'otherButton');" data-text="Complete">Other Relevant Circumstances</a></h5>
    <div class="collapse col-12 p-0" id="collapseOther" aria-labelledby="headingOther">
      <div class="table-responsive">
        <table class="table table-bordered table-sm text-left" id="otherInfo">
@@ -483,7 +483,7 @@
   </div>
 </div>
 <div id="module" class="container row mt-3">
- <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEvidence" aria-expanded="false" aria-controls="collapseEvidence" id="evidenceButton" data-text="Complete">Evidence</a></h5>
+ <h5 id="line" class="col-12 col-md-8 col-lg-6 p-0 pb-3"><a id="accordionHeading" class="collapsed text-primary text-left" role="button" data-toggle="collapse" data-target="#collapseEvidence" aria-expanded="false" aria-controls="collapseEvidence" id="evidenceButton" data-text="Complete">Evidence</a></h5>
  <div class="collapse col-12 p-0 m-0" id="collapseEvidence" aria-labelledby="headingEvidence">
   <div class="row">
     <div class="col-12">
@@ -640,7 +640,7 @@
   border-bottom: 2px solid #1F5F8D;
 }
 
-#module a.collapsed:after  {
+#module #accordionHeading.collapsed:after  {
   content: attr(data-text);
   float: right;
   display:inline-block;
@@ -665,7 +665,7 @@
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
-#module a:not(.collapsed):after {
+#module #accordionHeading:not(.collapsed):after {
   content: 'Confirm';
   float: right;
   display:inline-block;
